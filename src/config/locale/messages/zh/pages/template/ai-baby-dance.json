@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "title": "AI 宝宝跳舞生成器 - 让宝宝照片在 TikTok 上跳舞",
+    "description": "将任何宝宝照片变成搞笑的跳舞视频。AI 宝宝跳舞热潮席卷 TikTok - 几秒钟创建你自己的。无需编辑技能。",
+    "keywords": "AI 宝宝跳舞, 宝宝跳舞生成器, 宝宝照片跳舞视频, TikTok 宝宝跳舞热潮, 让宝宝跳舞 AI, 跳舞宝宝视频制作"
+  },
+  "page": {
+    "show_sections": [
+      "hero",
+      "generator",
+      "about",
+      "howto",
+      "examples",
+      "faq",
+      "cta"
+    ],
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "AI 宝宝跳舞生成器",
+        "highlight_text": "宝宝跳舞",
+        "description": "AI 宝宝跳舞热潮已经完全占领了 TikTok 和 Instagram。把任何宝宝照片变成搞笑、暖心的跳舞视频，完美适合无限刷屏。<br/><br/>爸妈们正在爆火。轮到你了。",
+        "announcement": {
+          "badge": "病毒热潮",
+          "title": "宝宝跳舞视频平均播放量 50 万+",
+          "url": "#generator"
+        },
+        "buttons": [
+          {
+            "title": "让你的宝宝跳舞",
+            "icon": "Sparkles",
+            "url": "#generator",
+            "target": "_self",
+            "variant": "default"
+          },
+          {
+            "title": "看宝宝跳舞案例",
+            "icon": "Play",
+            "url": "#examples",
+            "target": "_self",
+            "variant": "outline"
+          }
+        ],
+        "show_avatars": true,
+        "avatars_tip": "今天已创建 8,000+ 个宝宝跳舞视频",
+        "show_award": false
+      },
+      "generator": {
+        "id": "generator",
+        "block": "dance-generator"
+      },
+      "about": {
+        "id": "about",
+        "block": "features-list",
+        "title": "为什么 AI 宝宝跳舞视频会爆火",
+        "label": "可爱的科学",
+        "description": "宝宝内容统治社交媒体是有原因的。AI 宝宝跳舞热潮结合了普遍吸引力和尖端 AI，创造出让人无法滑过的视频。看到宝宝做出完美协调的舞蹈动作，瞬间触发快乐。",
+        "items": [
+          {
+            "title": "普遍吸引力",
+            "description": "宝宝是终极内容。加上跳舞？无敌了。这些视频跨越所有年龄层、语言和文化。爷爷奶奶分享，青少年转发。",
+            "icon": "RiHeartLine"
+          },
+          {
+            "title": "高观看时长",
+            "description": "TikTok 算法奖励被反复观看的视频。宝宝跳舞视频太可爱了，观众会循环看 3-4 遍，把你的内容推送给更多推荐页。",
+            "icon": "RiTimeLine"
+          },
+          {
+            "title": "完美的家庭分享",
+            "description": "不像一些边缘内容，AI 宝宝跳舞视频会被分享到家庭群聊。这种跨平台分享让你的传播力成倍增长。",
+            "icon": "RiShareLine"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "howto": {
+        "id": "howto",
+        "block": "features-step",
+        "title": "如何让你的宝宝跳舞",
+        "description": "简单 3 步创建病毒级宝宝跳舞视频：",
+        "items": [
+          {
+            "title": "上传宝宝照片",
+            "description": "清晰的正面照片效果最好。宝宝可以坐着、站着，甚至在安全座椅里。AI 会处理剩下的。"
+          },
+          {
+            "title": "选择舞蹈风格",
+            "description": "从可爱弹跳、韩流舞步、嘻哈律动或经典宝宝摇摆中选择。每种风格都适龄且可爱。"
+          },
+          {
+            "title": "生成并分享",
+            "description": "不到一分钟获得你的视频。分享到 TikTok，发给爷爷奶奶，或者保存为数字纪念。"
+          }
+        ]
+      },
+      "examples": {
+        "id": "examples",
+        "title": "融化人心的宝宝跳舞视频",
+        "description": "看看为什么爸妈们停不下来",
+        "items": [
+          {
+            "title": "嘻哈宝宝",
+            "description": "6 个月宝宝打节拍 - 120 万播放",
+            "image": {
+              "src": "/imgs/showcases/baby-1.jpg",
+              "alt": "嘻哈宝宝跳舞"
+            }
+          },
+          {
+            "title": "韩流小舞者",
+            "description": "学步宝宝完美跳编舞 - 89 万播放",
+            "image": {
+              "src": "/imgs/showcases/baby-2.jpg",
+              "alt": "韩流宝宝跳舞"
+            }
+          },
+          {
+            "title": "经典宝宝摇摆",
+            "description": "奶奶看了 47 遍的视频 - 230 万播放",
+            "image": {
+              "src": "/imgs/showcases/baby-3.jpg",
+              "alt": "宝宝摇摆跳舞"
+            }
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "faq": {
+        "id": "faq",
+        "title": "AI 宝宝跳舞常见问题",
+        "description": "关于制作宝宝跳舞视频的常见问题",
+        "items": [
+          {
+            "question": "什么年龄的宝宝效果最好？",
+            "answer": "从新生儿到学步期任何年龄都很棒。AI 针对各种宝宝身体比例进行了训练。坐着的宝宝和站着的学步儿都能产生可爱的结果。"
+          },
+          {
+            "question": "发布 AI 宝宝视频安全吗？",
+            "answer": "这些视频明显是 AI 生成的，大多数平台现在要求披露这一点。很多父母会在标题中添加「AI 制作」。和任何儿童内容一样，请自行判断你愿意公开分享什么。"
+          },
+          {
+            "question": "可以用旧宝宝照片吗？",
+            "answer": "当然可以！很多父母正在使用多年前的照片。这是一种有趣的方式来创建「如果当时」的视频，让现在已经是青少年的孩子变成跳舞宝宝，或者让亲人小时候的照片动起来。"
+          },
+          {
+            "question": "为什么宝宝跳舞视频获得这么多播放？",
+            "answer": "宝宝 + 跳舞 = 多巴胺。可爱会触发感觉良好的反应，让人反复观看并分享给别人。TikTok 算法检测到高互动率后会把这些视频推送给更多用户。"
+          },
+          {
+            "question": "包含什么音乐？",
+            "answer": "每个舞蹈模板都带有预同步的、适合家庭的音频。选项包括欢快流行音乐、可爱音效，以及适合宝宝内容的热门 TikTok 声音。"
+          },
+          {
+            "question": "爷爷奶奶能用这个吗？",
+            "answer": "当然！我们设计的界面足够简单，任何人都能用。上传照片 → 选舞蹈 → 生成。很多爷爷奶奶正在给孙子孙女创建视频并在家庭群里分享。"
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "title": "让你的宝宝成为下一个病毒明星",
+        "description": "加入数千名创建可爱 AI 跳舞视频的父母。",
+        "buttons": [
+          {
+            "title": "创建宝宝跳舞视频",
+            "url": "#generator",
+            "target": "_self",
+            "icon": "Sparkles"
+          },
+          {
+            "title": "尝试其他舞蹈风格",
+            "url": "/",
+            "target": "_self",
+            "variant": "outline",
+            "icon": "Grid"
+          }
+        ],
+        "className": "bg-muted"
+      }
+    }
+  }
+}

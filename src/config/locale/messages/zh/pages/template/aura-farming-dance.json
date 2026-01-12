@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "title": "Aura Farming 舞蹈 AI 生成器 - 创建 TikTok 病毒热潮",
+    "description": "用任何照片生成病毒式 Aura Farming 跳舞视频。Travis Kelce、PSG 和数百万人模仿的印尼船舞。上传照片，几秒钟创建你的 aura。",
+    "keywords": "Aura farming 舞蹈 AI, Aura farming 生成器, TikTok 病毒舞蹈, Rayyan Arkan Dikha 舞蹈, Travis Kelce aura 舞蹈, AI 跳舞生成器"
+  },
+  "page": {
+    "show_sections": [
+      "hero",
+      "generator",
+      "about",
+      "howto",
+      "examples",
+      "faq",
+      "cta"
+    ],
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "Aura Farming 舞蹈 AI 生成器",
+        "highlight_text": "Aura Farming",
+        "description": "创建席卷互联网的病毒式 Aura Farming 舞蹈。从 Travis Kelce 到 PSG，名人们都忍不住模仿的丝滑节奏舞步。<br/><br/>培养你的 aura。无需舞蹈技能。",
+        "announcement": {
+          "badge": "爆火",
+          "title": "Travis Kelce 版本获得 1400 万播放",
+          "url": "#generator"
+        },
+        "buttons": [
+          {
+            "title": "现在就培养你的 Aura",
+            "icon": "Sparkles",
+            "url": "#generator",
+            "target": "_self",
+            "variant": "default"
+          },
+          {
+            "title": "什么是 Aura Farming？",
+            "icon": "Info",
+            "url": "#about",
+            "target": "_self",
+            "variant": "outline"
+          }
+        ],
+        "show_avatars": true,
+        "avatars_tip": "本周已创建 25,000+ 个 aura 视频",
+        "show_award": false
+      },
+      "generator": {
+        "id": "generator",
+        "block": "dance-generator"
+      },
+      "about": {
+        "id": "about",
+        "block": "features-list",
+        "title": "什么是 Aura Farming？",
+        "label": "病毒现象解读",
+        "description": "Aura Farming 始于 11 岁的印尼男孩 Rayyan Arkan Dikha，他在 Pacu Jalur 节日期间站在传统赛船上表演了一段平静、有节奏的舞蹈。身穿传统马来服装、戴着墨镜的他，用毫不费力的「酷」能量创造了「aura farming」这个词 - 不用刻意就能看起来超级酷的艺术。",
+        "items": [
+          {
+            "title": "全球名人追捧",
+            "description": "Travis Kelce（1400 万播放）、巴黎圣日耳曼、F1 车手 Alex Albon 以及无数运动员都模仿了这个舞蹈。它瞬间跨越了文化界限。",
+            "icon": "RiStarLine"
+          },
+          {
+            "title": "完美的「酷」模板",
+            "description": "这个舞蹈完全是关于毫不费力的魅力 - 流畅、重复的动作让任何人看起来都像有无限的「rizz」。Z 世代称之为主角能量。",
+            "icon": "RiMagicLine"
+          },
+          {
+            "title": "适合任何角色",
+            "description": "从企业头像到动漫角色，主体与丝滑舞步之间的反差感立即创造病毒内容。",
+            "icon": "RiUserLine"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "howto": {
+        "id": "howto",
+        "block": "features-step",
+        "title": "如何创建你的 Aura Farming 视频",
+        "description": "简单 3 步培养你的数字 aura：",
+        "items": [
+          {
+            "title": "上传你的照片",
+            "description": "任何正面照片都可以。主体越出人意料（CEO 头像、历史人物、宠物），效果越搞笑。"
+          },
+          {
+            "title": "选择 Aura Farming 模板",
+            "description": "标志性的丝滑舞步和节奏已预加载。包含让这个热门可辨识的原版音频。"
+          },
+          {
+            "title": "生成并分享",
+            "description": "30-60 秒获得最大 aura。高清下载，Pro 用户无水印。发布后看你的 rizz 等级病毒式传播。"
+          }
+        ]
+      },
+      "examples": {
+        "id": "examples",
+        "title": "正在病毒传播的 Aura Farming 视频",
+        "description": "看看创作者们如何使用 Aura Farming 模板",
+        "items": [
+          {
+            "title": "职场版",
+            "description": "当 CEO 开始培养 aura - 89 万播放",
+            "image": {
+              "src": "/imgs/showcases/aura-1.jpg",
+              "alt": "职场 aura farming"
+            }
+          },
+          {
+            "title": "体育传奇",
+            "description": "运动员在大赛前培养 aura - 210 万播放",
+            "image": {
+              "src": "/imgs/showcases/aura-2.jpg",
+              "alt": "体育 aura farming"
+            }
+          },
+          {
+            "title": "历史人物",
+            "description": "如果爱因斯坦培养 aura 会怎样？- 150 万播放",
+            "image": {
+              "src": "/imgs/showcases/aura-3.jpg",
+              "alt": "历史人物 aura farming"
+            }
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "faq": {
+        "id": "faq",
+        "title": "Aura Farming 生成器常见问题",
+        "description": "关于 aura farming 热潮和我们的 AI 生成器的一切",
+        "items": [
+          {
+            "question": "'Aura Farming' 是什么意思？",
+            "answer": "Aura farming 是 Z 世代/Alpha 世代的俚语，意思是培养你的「aura」- 一个代表魅力、酷感或「rizz」的词。Rayyan Arkan Dikha 的舞蹈成为了通过流畅、毫不费力的动作主动培养（accumulating）aura 的视觉代表。"
+          },
+          {
+            "question": "谁发明了 Aura Farming 舞蹈？",
+            "answer": "11 岁的印尼廖内省男孩 Rayyan Arkan Dikha。他在 2025 年 Pacu Jalur 节日期间站在传统赛船上即兴表演了这段舞蹈。他的视频在全球病毒式传播，被 Travis Kelce、PSG 和 F1 车手 Alex Albon 等名人模仿。"
+          },
+          {
+            "question": "为什么 Travis Kelce 的版本获得了 1400 万播放？",
+            "answer": "一个著名的 NFL 球员做一个来自印尼小孩的丝滑「酷」舞蹈，这种组合创造了完美的互联网内容 - 出人意料、温馨、而且百看不厌。这个热潮展示了「aura」是如何跨越文化的。"
+          },
+          {
+            "question": "什么照片创建的 Aura Farming 视频效果最好？",
+            "answer": "反差越搞笑越好。严肃的企业头像、历史人物、新闻主播或表情严肃的角色，当他们开始丝滑地培养 aura 时，都能创造很棒的喜剧效果。"
+          },
+          {
+            "question": "这和「rizz」视频一样吗？",
+            "answer": "相关但不同。Rizz 是关于社交场合中的魅力。Aura farming 特指通过重复动作培养毫不费力的酷感外表。Aura Farming 舞蹈是视觉展示建立你的 aura/rizz 的一种方式。"
+          },
+          {
+            "question": "生成的视频有多长？",
+            "answer": "Aura Farming 模板生成 6-10 秒可循环播放的视频 - 完美适配 TikTok 算法，而且足够催眠让观众反复观看。"
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "title": "准备好培养你的 Aura 了吗？",
+        "description": "加入全球热潮。创建散发主角能量的视频。",
+        "buttons": [
+          {
+            "title": "开始培养 Aura",
+            "url": "#generator",
+            "target": "_self",
+            "icon": "Sparkles"
+          },
+          {
+            "title": "探索更多舞蹈",
+            "url": "/",
+            "target": "_self",
+            "variant": "outline",
+            "icon": "Grid"
+          }
+        ],
+        "className": "bg-muted"
+      }
+    }
+  }
+}

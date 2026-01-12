@@ -35,9 +35,20 @@ import { Tabs, TabsList, TabsTrigger } from '@/shared/components/ui/tabs';
 import { Textarea } from '@/shared/components/ui/textarea';
 import { useAppContext } from '@/shared/contexts/app';
 
+type VideoGeneratorTab = 'text-to-video' | 'image-to-video' | 'video-to-video';
+
 interface VideoGeneratorProps {
   maxSizeMB?: number;
   srOnlyTitle?: string;
+  i18nNamespace?: string;
+  initialTab?: VideoGeneratorTab;
+  initialProvider?: string;
+  initialModel?: string;
+  initialPrompt?: string;
+  allowedTabs?: VideoGeneratorTab[];
+  hideTabs?: boolean;
+  lockPrompt?: boolean;
+  allowReferenceImagesInVideoToVideo?: boolean;
 }
 
 interface GeneratedVideo {
@@ -57,8 +68,6 @@ interface BackendTask {
   taskInfo: string | null;
   taskResult: string | null;
 }
-
-type VideoGeneratorTab = 'text-to-video' | 'image-to-video' | 'video-to-video';
 
 const POLL_INTERVAL = 15000;
 const GENERATION_TIMEOUT = 600000; // 10 minutes for video
@@ -130,6 +139,37 @@ const PROVIDER_OPTIONS = [
     label: 'Kie',
   },
 ];
+
+function pickFirstModel({
+  provider,
+  tab,
+}: {
+  provider: string;
+  tab: VideoGeneratorTab;
+}) {
+  return (
+    MODEL_OPTIONS.find(
+      (option) => option.provider === provider && option.scenes.includes(tab)
+    )?.value ?? ''
+  );
+}
+
+function isModelAvailable({
+  provider,
+  tab,
+  model,
+}: {
+  provider: string;
+  tab: VideoGeneratorTab;
+  model: string;
+}) {
+  return MODEL_OPTIONS.some(
+    (option) =>
+      option.provider === provider &&
+      option.value === model &&
+      option.scenes.includes(tab)
+  );
+}
 
 function parseTaskResult(taskResult: string | null): any {
   if (!taskResult) {
@@ -206,16 +246,58 @@ function extractVideoUrls(result: any): string[] {
 export function VideoGenerator({
   maxSizeMB = 50,
   srOnlyTitle,
+  i18nNamespace = 'ai.video.generator',
+  initialTab = 'text-to-video',
+  initialProvider,
+  initialModel,
+  initialPrompt = '',
+  allowedTabs,
+  hideTabs = false,
+  lockPrompt = false,
+  allowReferenceImagesInVideoToVideo = false,
 }: VideoGeneratorProps) {
-  const t = useTranslations('ai.video.generator');
+  const t = useTranslations(i18nNamespace);
+
+  const resolvedAllowedTabs = useMemo<VideoGeneratorTab[]>(() => {
+    if (allowedTabs && allowedTabs.length > 0) {
+      return allowedTabs;
+    }
+    return ['text-to-video', 'image-to-video', 'video-to-video'];
+  }, [allowedTabs]);
+
+  const safeInitialTab: VideoGeneratorTab = useMemo(() => {
+    return resolvedAllowedTabs.includes(initialTab)
+      ? initialTab
+      : resolvedAllowedTabs[0] ?? 'text-to-video';
+  }, [initialTab, resolvedAllowedTabs]);
 
   const [activeTab, setActiveTab] =
-    useState<VideoGeneratorTab>('text-to-video');
+    useState<VideoGeneratorTab>(safeInitialTab);
 
-  const [costCredits, setCostCredits] = useState<number>(textToVideoCredits);
-  const [provider, setProvider] = useState(PROVIDER_OPTIONS[0]?.value ?? '');
-  const [model, setModel] = useState(MODEL_OPTIONS[0]?.value ?? '');
-  const [prompt, setPrompt] = useState('');
+  const [costCredits, setCostCredits] = useState<number>(() => {
+    if (safeInitialTab === 'image-to-video') return imageToVideoCredits;
+    if (safeInitialTab === 'video-to-video') return videoToVideoCredits;
+    return textToVideoCredits;
+  });
+
+  const [provider, setProvider] = useState(() => {
+    return initialProvider ?? PROVIDER_OPTIONS[0]?.value ?? '';
+  });
+
+  const [model, setModel] = useState(() => {
+    if (!provider) {
+      return '';
+    }
+    if (
+      initialModel &&
+      isModelAvailable({ provider, tab: safeInitialTab, model: initialModel })
+    ) {
+      return initialModel;
+    }
+    return pickFirstModel({ provider, tab: safeInitialTab });
+  });
+
+  const [prompt, setPrompt] = useState(initialPrompt);
   const [referenceImageItems, setReferenceImageItems] = useState<
     ImageUploaderValue[]
   >([]);
@@ -247,9 +329,18 @@ export function VideoGenerator({
   const isTextToVideoMode = activeTab === 'text-to-video';
   const isImageToVideoMode = activeTab === 'image-to-video';
   const isVideoToVideoMode = activeTab === 'video-to-video';
+  const showTabs = !hideTabs && resolvedAllowedTabs.length > 1;
+  const showReferenceImages =
+    isImageToVideoMode ||
+    (isVideoToVideoMode && allowReferenceImagesInVideoToVideo);
+  const tabsGridColsClass =
+    resolvedAllowedTabs.length === 2 ? 'grid-cols-2' : 'grid-cols-3';
 
   const handleTabChange = (value: string) => {
     const tab = value as VideoGeneratorTab;
+    if (!resolvedAllowedTabs.includes(tab)) {
+      return;
+    }
     setActiveTab(tab);
 
     const availableModels = MODEL_OPTIONS.filter(
@@ -516,7 +607,11 @@ export function VideoGenerator({
     try {
       const options: any = {};
 
-      if (isImageToVideoMode) {
+      if (
+        referenceImageUrls.length > 0 &&
+        (isImageToVideoMode ||
+          (isVideoToVideoMode && allowReferenceImagesInVideoToVideo))
+      ) {
         options.image_input = referenceImageUrls;
       }
 
@@ -632,19 +727,29 @@ export function VideoGenerator({
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6 pb-8">
-                <Tabs value={activeTab} onValueChange={handleTabChange}>
-                  <TabsList className="bg-primary/10 grid w-full grid-cols-3">
-                    <TabsTrigger value="text-to-video">
-                      {t('tabs.text-to-video')}
-                    </TabsTrigger>
-                    <TabsTrigger value="image-to-video">
-                      {t('tabs.image-to-video')}
-                    </TabsTrigger>
-                    <TabsTrigger value="video-to-video">
-                      {t('tabs.video-to-video')}
-                    </TabsTrigger>
-                  </TabsList>
-                </Tabs>
+                {showTabs && (
+                  <Tabs value={activeTab} onValueChange={handleTabChange}>
+                    <TabsList
+                      className={`bg-primary/10 grid w-full ${tabsGridColsClass}`}
+                    >
+                      {resolvedAllowedTabs.includes('text-to-video') && (
+                        <TabsTrigger value="text-to-video">
+                          {t('tabs.text-to-video')}
+                        </TabsTrigger>
+                      )}
+                      {resolvedAllowedTabs.includes('image-to-video') && (
+                        <TabsTrigger value="image-to-video">
+                          {t('tabs.image-to-video')}
+                        </TabsTrigger>
+                      )}
+                      {resolvedAllowedTabs.includes('video-to-video') && (
+                        <TabsTrigger value="video-to-video">
+                          {t('tabs.video-to-video')}
+                        </TabsTrigger>
+                      )}
+                    </TabsList>
+                  </Tabs>
+                )}
 
                 <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-2">
@@ -687,7 +792,7 @@ export function VideoGenerator({
                   </div>
                 </div>
 
-                {isImageToVideoMode && (
+                {showReferenceImages && (
                   <div className="space-y-4">
                     <ImageUploader
                       title={t('form.reference_image')}
@@ -729,6 +834,7 @@ export function VideoGenerator({
                     onChange={(e) => setPrompt(e.target.value)}
                     placeholder={t('form.prompt_placeholder')}
                     className="min-h-32"
+                    disabled={lockPrompt}
                   />
                   <div className="text-muted-foreground flex items-center justify-between text-xs">
                     <span>

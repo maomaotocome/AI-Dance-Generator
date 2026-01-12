@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "title": "Lil Yachty 走路 AI 生成器 - 免费创建 TikTok 病毒视频",
+    "description": "将任何照片变成病毒式 Lil Yachty Walkout 跳舞视频。无需 Discord，无需复杂命令。上传照片，几秒钟生成标志性的自信步伐。",
+    "keywords": "Lil Yachty 走路 AI, Lil Yachty walkout 生成器, AI 跳舞生成器, Viggle AI 替代品, TikTok 病毒舞蹈, 让照片走路"
+  },
+  "page": {
+    "show_sections": [
+      "hero",
+      "generator",
+      "about",
+      "howto",
+      "examples",
+      "faq",
+      "cta"
+    ],
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "Lil Yachty 走路 AI 生成器",
+        "highlight_text": "Lil Yachty 走路",
+        "description": "用任何照片创建病毒式 Lil Yachty Walkout 视频。这个在 TikTok 上爆火的标志性自信步伐 - 现在可以让任何人都这样走。<br/><br/>无需 Discord。无需命令。上传即生成。",
+        "announcement": {
+          "badge": "爆款",
+          "title": "用此模板制作的视频累计播放量超 5000 万",
+          "url": "#generator"
+        },
+        "buttons": [
+          {
+            "title": "让你的照片像 Yachty 一样走路",
+            "icon": "Sparkles",
+            "url": "#generator",
+            "target": "_self",
+            "variant": "default"
+          },
+          {
+            "title": "查看案例",
+            "icon": "Play",
+            "url": "#examples",
+            "target": "_self",
+            "variant": "outline"
+          }
+        ],
+        "show_avatars": true,
+        "avatars_tip": "今天已创建 12,000+ 个 Yachty 走路视频",
+        "show_award": false
+      },
+      "generator": {
+        "id": "generator",
+        "block": "dance-generator"
+      },
+      "about": {
+        "id": "about",
+        "block": "features-list",
+        "title": "什么是 Lil Yachty 走路？",
+        "label": "关于这个热潮",
+        "description": "Lil Yachty Walkout 是一个病毒式模因，源自他 2021 年在 Lyrical Lemonade Summer Smash 音乐节的表演。当《Coffin》的音乐响起时，Yachty 带着夸张、自信的步伐走上舞台，这成为了 AI 跳舞视频的完美模板。",
+        "items": [
+          {
+            "title": "为什么会爆火",
+            "description": "魔力在于反差感。当你把这种自信、霸气的走路方式放到意想不到的角色身上 - 从耶稣到你奶奶 - 产生的荒诞感瞬间成为喜剧黄金。",
+            "icon": "RiFireLine"
+          },
+          {
+            "title": "适合任何照片",
+            "description": "名人、动漫角色、历史人物、宠物、宝宝 - 任何正面照片都能变成 Lil Yachty 走路视频。",
+            "icon": "RiImageLine"
+          },
+          {
+            "title": "TikTok 算法最爱",
+            "description": "使用这个热门的视频稳定获得 10 万+ 播放量。音频辨识度高，格式已被验证，惊喜元素让观众停不下来。",
+            "icon": "RiTiktokLine"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "howto": {
+        "id": "howto",
+        "block": "features-step",
+        "title": "如何创建你的 Lil Yachty 走路视频",
+        "description": "与 Viggle AI 不同，你不需要 Discord 或复杂命令。只需简单 3 步：",
+        "items": [
+          {
+            "title": "上传任意照片",
+            "description": "选择一张清晰的正面照片。人物、角色、宠物、表情包都可以 - 任何有可辨识形态的图片都行。"
+          },
+          {
+            "title": "选择 Lil Yachty 走路模板",
+            "description": "动作和音频已预先加载。不需要自己找或上传任何参考视频。"
+          },
+          {
+            "title": "生成并下载",
+            "description": "30-60 秒获得你的视频。Pro 用户无水印。可直接发布到 TikTok、Reels 或 Shorts。"
+          }
+        ]
+      },
+      "examples": {
+        "id": "examples",
+        "title": "病毒式 Lil Yachty 走路视频",
+        "description": "在 TikTok 上获得数百万播放的真实案例",
+        "items": [
+          {
+            "title": "历史人物版",
+            "description": "爱因斯坦、拿破仑走起来 - 210 万播放",
+            "image": {
+              "src": "/imgs/showcases/yachty-1.jpg",
+              "alt": "历史人物 Lil Yachty 走路"
+            }
+          },
+          {
+            "title": "动漫角色合集",
+            "description": "当悟空遇到 Yachty 能量 - 180 万播放",
+            "image": {
+              "src": "/imgs/showcases/yachty-2.jpg",
+              "alt": "动漫 Lil Yachty 走路"
+            }
+          },
+          {
+            "title": "宠物版",
+            "description": "猫狗也能走出最强气场 - 320 万播放",
+            "image": {
+              "src": "/imgs/showcases/yachty-3.jpg",
+              "alt": "宠物 Lil Yachty 走路"
+            }
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "faq": {
+        "id": "faq",
+        "title": "Lil Yachty 走路生成器常见问题",
+        "description": "关于创建 Lil Yachty 走路视频的一切",
+        "items": [
+          {
+            "question": "这比 Viggle AI 好用吗？",
+            "answer": "对于这个特定热门，是的。Viggle 需要 Discord 和命令行输入。我们的工具是网页版的 - 上传点击即可。同样的质量，10 倍简单。"
+          },
+          {
+            "question": "什么照片效果最好？",
+            "answer": "正面照片、能看到全身或至少上半身的效果最好。AI 需要看到足够的身体来应用走路动作。分辨率越高效果越好。"
+          },
+          {
+            "question": "可以用名人照片吗？",
+            "answer": "可以，这正是让这些视频爆火的原因 - 意想不到的反差感。只是在公开发布时要注意你所在地区关于深度伪造的法律。"
+          },
+          {
+            "question": "视频包含 Coffin 的音频吗？",
+            "answer": "是的！音频已经与动作模板预同步。生成的视频可以直接发布，无需任何编辑。"
+          },
+          {
+            "question": "生成的视频有多长？",
+            "answer": "Lil Yachty 走路模板生成 5-8 秒的视频 - 这是 TikTok 算法推送内容的完美长度。"
+          },
+          {
+            "question": "为什么叫 'Lil Yachty Walk' 或 'Lil Yachty Walkout'？",
+            "answer": "它来自说唱歌手 Lil Yachty 在 2021 年 Lyrical Lemonade Summer Smash 音乐节上的登场。他带着标志性步伐走上舞台的原始视频在 2024-2025 年再次爆火，因为 AI 工具让把任何脸放到这个走路动作上成为可能。"
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "title": "准备好让某人像 Yachty 一样走路了吗？",
+        "description": "加入数千名用 Lil Yachty 走路模板创作病毒内容的创作者。",
+        "buttons": [
+          {
+            "title": "立即创建你的视频",
+            "url": "#generator",
+            "target": "_self",
+            "icon": "Sparkles"
+          },
+          {
+            "title": "查看全部模板",
+            "url": "/",
+            "target": "_self",
+            "variant": "outline",
+            "icon": "Grid"
+          }
+        ],
+        "className": "bg-muted"
+      }
+    }
+  }
+}

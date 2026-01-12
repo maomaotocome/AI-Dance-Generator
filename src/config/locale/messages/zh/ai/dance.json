@@ -1,0 +1,52 @@
+{
+  "metadata": {
+    "title": "AI 跳舞生成器 - 用 AI 让照片跳舞",
+    "description": "用 AI 将任何照片变成病毒式跳舞视频。上传照片，选择舞蹈风格，几秒钟内创建令人惊叹的 TikTok 跳舞视频。",
+    "keywords": "AI跳舞生成器, AI跳舞视频, 让照片跳舞, TikTok跳舞AI, 跳舞照片生成器, 病毒式跳舞视频制作"
+  },
+  "page": {
+    "title": "AI 跳舞生成器",
+    "description": "上传任何照片，让它随着病毒式舞步动起来。为 TikTok、Instagram 等创建令人惊叹的 AI 跳舞视频。"
+  },
+  "generator": {
+    "title": "创建你的跳舞视频",
+    "step1_title": "上传你的照片",
+    "step2_title": "选择舞蹈风格",
+    "upload_title": "上传照片",
+    "upload_hint": "上传一张人物或角色的清晰照片（正面照效果最佳）",
+    "upload_error": "图片上传失败，请删除后重试",
+    "category_all": "全部",
+    "category_tiktok": "TikTok",
+    "category_kpop": "韩流",
+    "category_hiphop": "嘻哈",
+    "category_fun": "趣味",
+    "generate": "生成跳舞视频",
+    "generating": "正在生成视频...",
+    "checking_account": "正在检查账号...",
+    "loading": "加载中...",
+    "sign_in_to_generate": "登录后生成",
+    "credits_cost": "{credits} 积分",
+    "credits_remaining": "剩余 {credits}",
+    "buy_credits": "获取更多积分",
+    "progress": "生成中",
+    "result_title": "你的跳舞视频",
+    "generating_hint": "AI 正在创建你的跳舞视频...",
+    "no_video": "你的跳舞视频将在这里显示",
+    "download": "下载",
+    "share_tip": "下载后分享到 TikTok、Instagram 或 YouTube！",
+    "download_success": "视频下载成功！",
+    "download_error": "视频下载失败",
+    "success": "你的跳舞视频已准备好！",
+    "status_pending": "等待 AI 模型启动...",
+    "status_processing": "AI 正在生成你的跳舞视频...",
+    "status_success": "跳舞视频已完成！",
+    "status_failed": "生成失败",
+    "error_timeout": "生成超时，请重试。",
+    "error_no_video": "没有生成视频，请重试。",
+    "error_generation": "生成跳舞视频失败",
+    "error_query": "查询生成状态失败",
+    "error_insufficient_credits": "积分不足，请充值后继续。",
+    "error_no_image": "请先上传一张照片",
+    "error_no_template": "请先选择一个舞蹈风格"
+  }
+}

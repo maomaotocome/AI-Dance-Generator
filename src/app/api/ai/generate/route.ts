@@ -59,6 +59,8 @@ export async function POST(request: Request) {
         costCredits = 8;
       } else if (scene === 'video-to-video') {
         costCredits = 10;
+      } else if (scene === 'dance-generation') {
+        costCredits = 10;
       } else {
         throw new Error('invalid scene');
       }

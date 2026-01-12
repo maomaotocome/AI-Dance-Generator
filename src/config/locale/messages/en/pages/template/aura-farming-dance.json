@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "title": "Aura Farming Dance AI Generator - Create the Viral TikTok Trend",
+    "description": "Generate the viral Aura Farming dance video with any photo. The Indonesian boat dance that Travis Kelce, PSG, and millions recreated. Upload a photo and create your aura in seconds.",
+    "keywords": "Aura farming dance AI, Aura farming generator, viral TikTok dance, Rayyan Arkan Dikha dance, Travis Kelce aura dance, AI dance generator"
+  },
+  "page": {
+    "show_sections": [
+      "hero",
+      "generator",
+      "about",
+      "howto",
+      "examples",
+      "faq",
+      "cta"
+    ],
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "Aura Farming Dance AI Generator",
+        "highlight_text": "Aura Farming",
+        "description": "Create the viral Aura Farming dance that broke the internet. The smooth, rhythmic moves that celebrities from Travis Kelce to PSG couldn't resist copying.<br/><br/>Cultivate your aura. No dancing skills required.",
+        "announcement": {
+          "badge": "Trending",
+          "title": "Travis Kelce's version hit 14M views",
+          "url": "#generator"
+        },
+        "buttons": [
+          {
+            "title": "Farm Your Aura Now",
+            "icon": "Sparkles",
+            "url": "#generator",
+            "target": "_self",
+            "variant": "default"
+          },
+          {
+            "title": "What is Aura Farming?",
+            "icon": "Info",
+            "url": "#about",
+            "target": "_self",
+            "variant": "outline"
+          }
+        ],
+        "show_avatars": true,
+        "avatars_tip": "25,000+ aura videos created this week",
+        "show_award": false
+      },
+      "generator": {
+        "id": "generator",
+        "block": "dance-generator"
+      },
+      "about": {
+        "id": "about",
+        "block": "features-list",
+        "title": "What is Aura Farming?",
+        "label": "The Viral Phenomenon",
+        "description": "Aura Farming started with 11-year-old Rayyan Arkan Dikha from Indonesia, performing a calm, rhythmic dance on a traditional racing boat during the Pacu Jalur festival. Wearing traditional Malay attire and sunglasses, his effortless 'cool' energy created the term 'aura farming' - the art of looking impossibly cool without trying.",
+        "items": [
+          {
+            "title": "Global Celebrity Adoption",
+            "description": "Travis Kelce (14M views), Paris Saint-Germain, F1 driver Alex Albon, and countless athletes have recreated this dance. It transcended cultures instantly.",
+            "icon": "RiStarLine"
+          },
+          {
+            "title": "The Perfect 'Cool' Template",
+            "description": "The dance is all about effortless charisma - smooth, repetitive movements that make anyone look like they have unlimited 'rizz'. Gen Z calls it main character energy.",
+            "icon": "RiMagicLine"
+          },
+          {
+            "title": "Works With Any Character",
+            "description": "From corporate headshots to anime characters, the contrast between the subject and the smooth dance moves creates instant viral content.",
+            "icon": "RiUserLine"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "howto": {
+        "id": "howto",
+        "block": "features-step",
+        "title": "How to Create Your Aura Farming Video",
+        "description": "Cultivate your digital aura in 3 simple steps:",
+        "items": [
+          {
+            "title": "Upload Your Photo",
+            "description": "Any front-facing photo works. The more unexpected the subject (CEO headshot, historical figure, pet), the funnier the result."
+          },
+          {
+            "title": "Select Aura Farming Template",
+            "description": "The iconic smooth moves and rhythm are pre-loaded. Complete with the original audio that makes the trend recognizable."
+          },
+          {
+            "title": "Generate & Share",
+            "description": "30-60 seconds to maximum aura. Download in HD, no watermark for Pro users. Post and watch your rizz levels go viral."
+          }
+        ]
+      },
+      "examples": {
+        "id": "examples",
+        "title": "Aura Farming Videos Going Viral",
+        "description": "See how creators are using the Aura Farming template",
+        "items": [
+          {
+            "title": "Corporate Edition",
+            "description": "When the CEO starts farming aura - 890K views",
+            "image": {
+              "src": "/imgs/showcases/aura-1.jpg",
+              "alt": "Corporate aura farming"
+            }
+          },
+          {
+            "title": "Sports Legends",
+            "description": "Athletes farming aura before big games - 2.1M views",
+            "image": {
+              "src": "/imgs/showcases/aura-2.jpg",
+              "alt": "Sports aura farming"
+            }
+          },
+          {
+            "title": "Historical Figures",
+            "description": "What if Einstein farmed aura? - 1.5M views",
+            "image": {
+              "src": "/imgs/showcases/aura-3.jpg",
+              "alt": "Historical aura farming"
+            }
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "faq": {
+        "id": "faq",
+        "title": "Aura Farming Generator FAQ",
+        "description": "Everything about the aura farming trend and our AI generator",
+        "items": [
+          {
+            "question": "What does 'Aura Farming' mean?",
+            "answer": "Aura farming is Gen Z/Gen Alpha slang for the act of building up your 'aura' - a term meaning charisma, coolness, or 'rizz'. The dance from Rayyan Arkan Dikha became the visual representation of someone actively farming (accumulating) their aura through smooth, effortless movements."
+          },
+          {
+            "question": "Who started the Aura Farming dance?",
+            "answer": "11-year-old Rayyan Arkan Dikha from Riau, Indonesia. He performed the dance spontaneously on a traditional racing boat during the Pacu Jalur festival in 2025. His video went viral globally and was recreated by celebrities including Travis Kelce, PSG, and F1 driver Alex Albon."
+          },
+          {
+            "question": "Why did Travis Kelce's version get 14 million views?",
+            "answer": "The combination of a famous NFL player doing a smooth, 'cool' dance from an Indonesian kid created perfect internet content - unexpected, wholesome, and endlessly rewatchable. The trend shows how universal 'aura' is across cultures."
+          },
+          {
+            "question": "What photos create the best Aura Farming videos?",
+            "answer": "The funnier the contrast, the better. Serious corporate headshots, historical figures, news anchors, or stern-looking characters all create great comedy when they start smoothly farming aura."
+          },
+          {
+            "question": "Is this the same as 'rizz' videos?",
+            "answer": "Related but different. Rizz is about charm in social situations. Aura farming is specifically about cultivating an appearance of effortless coolness through repetitive movements. The Aura Farming dance is one way to visually represent building your aura/rizz."
+          },
+          {
+            "question": "How long is the generated video?",
+            "answer": "The Aura Farming template generates 6-10 second videos with loopable motion - perfect for the TikTok algorithm and hypnotic enough to make viewers watch multiple times."
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "title": "Ready to Farm Your Aura?",
+        "description": "Join the global trend. Create videos that radiate main character energy.",
+        "buttons": [
+          {
+            "title": "Start Farming Aura",
+            "url": "#generator",
+            "target": "_self",
+            "icon": "Sparkles"
+          },
+          {
+            "title": "Explore More Dances",
+            "url": "/",
+            "target": "_self",
+            "variant": "outline",
+            "icon": "Grid"
+          }
+        ],
+        "className": "bg-muted"
+      }
+    }
+  }
+}

@@ -2,12 +2,10 @@
   "page": {
     "show_sections": [
       "hero",
-      "logos",
-      "introduce",
-      "benefits",
+      "generator",
+      "showcases",
       "usage",
       "features",
-      "stats",
       "testimonials",
       "faq",
       "cta"
@@ -15,408 +13,242 @@
     "sections": {
       "hero": {
         "id": "hero",
-        "title": "Ship AI Startups in hours, not days",
-        "highlight_text": "in hours",
-        "description": "ShipAny is a NextJS boilerplate for building AI SaaS startups.<br/>Ship Fast with a variety of templates and components.",
+        "block": "hero-premium",
+        "title": "Transform Any Photo Into a Viral Dance Video",
+        "highlight_text": "Viral Dance Video",
+        "description": "Make anyone dance with AI - upload a photo, pick a trending dance, and create TikTok-ready videos in seconds.<br/><br/>No watermarks. No dancing skills needed. Just pure viral magic.",
         "announcement": {
-          "badge": "New",
-          "title": "🎉 ShipAny Template Two",
-          "url": "/pricing"
+          "badge": "Trending",
+          "title": "50M+ views generated this month",
+          "url": "#generator"
         },
-        "tip": "🎁 Special offer for the first 1000 users",
+        "tip": "Trusted by 50,000+ creators worldwide",
         "buttons": [
           {
-            "title": "Get Started",
-            "icon": "Zap",
-            "url": "/pricing",
+            "title": "Make Your Photo Dance - Free",
+            "icon": "Sparkles",
+            "url": "#generator",
             "target": "_self",
             "variant": "default"
           },
           {
-            "title": "Read Document",
-            "icon": "BookOpenText",
-            "url": "/docs",
-            "target": "_blank",
+            "title": "Watch Examples",
+            "icon": "Play",
+            "url": "#showcases",
+            "target": "_self",
             "variant": "outline"
           }
         ],
         "show_avatars": true,
-        "avatars_tip": "999+ users are using ShipAny",
-        "show_award": false,
-        "image": {
-          "src": "/imgs/features/admin.png",
-          "alt": "hero",
-          "width": 1200,
-          "height": 800
-        },
-        "image_invert": {
-          "src": "/imgs/features/admin-dark.png",
-          "alt": "hero",
-          "width": 1200,
-          "height": 800
-        },
-        "background_image": {
-          "src": "/imgs/bg/tree.jpg",
-          "alt": "hero"
-        }
+        "avatars_tip": "Join 50,000+ creators",
+        "show_award": false
       },
-      "logos": {
-        "id": "logos",
-        "title": "ShipAny is built on the shoulders of giants",
+      "generator": {
+        "id": "generator",
+        "block": "dance-generator-premium"
+      },
+      "showcases": {
+        "id": "showcases",
+        "block": "showcases-premium",
+        "title": "Videos Going Viral Right Now",
+        "description": "Real results from our users. These videos were made in under 60 seconds.",
         "items": [
           {
-            "title": "Next.js",
+            "title": "2.3M Views on TikTok",
+            "description": "Baby dance trend - made in 30 seconds",
             "image": {
-              "src": "/imgs/logos/nextjs.svg",
-              "alt": "Next.js"
+              "src": "/imgs/showcases/dance-1.jpg",
+              "alt": "Viral AI Dance Video"
             }
           },
           {
-            "title": "React",
+            "title": "850K Views on Reels",
+            "description": "K-Pop style with perfect sync",
             "image": {
-              "src": "/imgs/logos/react.svg",
-              "alt": "React"
+              "src": "/imgs/showcases/dance-2.jpg",
+              "alt": "K-Pop AI Dance"
             }
           },
           {
-            "title": "TailwindCSS",
+            "title": "1.5M Views on Shorts",
+            "description": "Aura farming dance trend",
             "image": {
-              "src": "/imgs/logos/tailwindcss.svg",
-              "alt": "TailwindCSS"
-            }
-          },
-          {
-            "title": "Shadcn/UI",
-            "image": {
-              "src": "/imgs/logos/shadcn.svg",
-              "alt": "Shadcn/UI"
-            }
-          },
-          {
-            "title": "Vercel",
-            "image": {
-              "src": "/imgs/logos/vercel.svg",
-              "alt": "Vercel"
-            }
-          }
-        ]
-      },
-      "introduce": {
-        "block": "features-list",
-        "id": "introduce",
-        "title": "What is ShipAny",
-        "label": "Introduce",
-        "description": "ShipAny is a NextJS boilerplate for building AI SaaS startups, including templates, components, and documentation.",
-        "image": {
-          "src": "/imgs/features/landing-page.png",
-          "alt": "introduce"
-        },
-        "items": [
-          {
-            "title": "Ready-to-use Templates",
-            "description": "Choose from dozens of production-ready AI SaaS templates to quickly start your project.",
-            "icon": "RiNextjsFill",
-            "image": {
-              "src": "/imgs/features/1.png",
-              "alt": "introduce"
-            }
-          },
-          {
-            "title": "Infrastructure Setup",
-            "description": "Get instant access to scalable infrastructure with best practices built-in.",
-            "icon": "RiDatabase2Line",
-            "image": {
-              "src": "/imgs/features/2.png",
-              "alt": "introduce"
-            }
-          },
-          {
-            "title": "Quick Deployment",
-            "description": "Deploy your AI SaaS application to production in hours, not days.",
-            "icon": "RiCloudyFill",
-            "image": {
-              "src": "/imgs/features/3.png",
-              "alt": "introduce"
-            }
-          },
-          {
-            "title": "AI Integration",
-            "description": "Integrate AI into your project with ease using our built-in AI SDK.",
-            "icon": "RiRobot2Line",
-            "image": {
-              "src": "/imgs/features/4.png",
-              "alt": "introduce"
+              "src": "/imgs/showcases/dance-3.jpg",
+              "alt": "Aura Dance Trend"
             }
           }
         ],
         "className": "bg-muted"
       },
-      "benefits": {
-        "block": "features-accordion",
-        "id": "benefits",
-        "title": "Why Choose ShipAny",
-        "label": "Benefits",
-        "description": "Get everything you need to launch your AI startup - from ready-to-use templates to technical support.",
-        "items": [
-          {
-            "title": "Complete Framework",
-            "description": "Built on Next.js with authentication, payments, and AI integration - everything works out of the box.",
-            "icon": "RiNextjsFill",
-            "image": {
-              "src": "/imgs/features/user-billing.png",
-              "alt": "benefits"
-            }
-          },
-          {
-            "title": "Rich Templates Library",
-            "description": "Choose from various AI SaaS templates to kickstart your project - chatbots, image generation, and more.",
-            "icon": "RiClapperboardAiLine",
-            "image": {
-              "src": "/imgs/features/admin-settings.png",
-              "alt": "benefits"
-            }
-          },
-          {
-            "title": "Technical Guidance",
-            "description": "Get dedicated support and join our developer community to ensure your successful launch.",
-            "icon": "RiCodeFill",
-            "image": {
-              "src": "/imgs/features/landing-page.png",
-              "alt": "benefits"
-            }
-          }
-        ]
-      },
       "usage": {
         "block": "features-step",
         "id": "usage",
-        "title": "How to Launch with ShipAny",
-        "description": "Get your AI SaaS startup running in three simple steps:",
+        "title": "3 Steps to Your First Viral Video",
+        "description": "No editing skills needed. No filming required. Just AI magic.",
         "image": {
-          "src": "/imgs/features/1.png",
-          "alt": "usage"
+          "src": "/imgs/features/dance-demo.png",
+          "alt": "AI Dance Generator Demo"
         },
         "image_position": "left",
         "text_align": "center",
         "items": [
           {
-            "title": "Get ShipAny",
-            "description": "Buy ShipAny with a one-time payment. Check your email for the code and documentation.",
+            "title": "Drop Your Photo",
+            "description": "Upload any photo - selfie, pet, baby, anime character, or even a historical figure. Front-facing works best.",
             "image": {
-              "src": "/imgs/features/5.png",
-              "alt": "usage"
+              "src": "/imgs/steps/upload.png",
+              "alt": "Upload photo"
             }
           },
           {
-            "title": "Start Your Project",
-            "description": "Read the documentation and clone the code of ShipAny. Start building your AI SaaS startup.",
+            "title": "Pick a Trending Dance",
+            "description": "Choose from viral TikTok dances, K-Pop choreo, Aura farming, or hip-hop moves. Updated weekly with latest trends.",
             "image": {
-              "src": "/imgs/features/6.png",
-              "alt": "usage"
+              "src": "/imgs/steps/select.png",
+              "alt": "Select dance"
             }
           },
           {
-            "title": "Customize Your Project",
-            "description": "Modify the template with your data and contents. Specific AI functionality needs.",
+            "title": "Download & Go Viral",
+            "description": "Get your HD video in 30-60 seconds. No watermark. Ready for TikTok, Instagram Reels, and YouTube Shorts.",
             "image": {
-              "src": "/imgs/features/7.png",
-              "alt": "usage"
+              "src": "/imgs/steps/generate.png",
+              "alt": "Generate and share"
             }
-          },
-          {
-            "title": "Deploy to Production",
-            "description": "Deploy your project to production with a few steps and start serving customers immediately.",
-            "image": {
-              "src": "/imgs/features/8.png",
-              "alt": "usage"
-            }
-          }
-        ],
-        "className": "bg-muted"
-      },
-      "features": {
-        "id": "features",
-        "title": "Key Features of ShipAny",
-        "description": "Everything you need to launch your AI SaaS startup quickly and efficiently.",
-        "items": [
-          {
-            "title": "Next.js Boilerplate",
-            "description": "Production-ready Next.js templates with SEO-friendly structure and i18n support.",
-            "icon": "RiNextjsFill"
-          },
-          {
-            "title": "Authentication & Payments",
-            "description": "Integrated Google OAuth, one-tap login, and Stripe payment processing.",
-            "icon": "RiKey2Fill"
-          },
-          {
-            "title": "Data Infrastructure",
-            "description": "Built-in Supabase integration for reliable and scalable data storage.",
-            "icon": "RiDatabase2Line"
-          },
-          {
-            "title": "One-Click Deployment",
-            "description": "Seamless deployment to Vercel or Cloudflare with automated setup.",
-            "icon": "RiCloudy2Fill"
-          },
-          {
-            "title": "Business Analytics",
-            "description": "Integrated Google Analytics and Search Console for tracking growth.",
-            "icon": "RiBarChart2Line"
-          },
-          {
-            "title": "AI-Ready Infrastructure",
-            "description": "Pre-configured AI integration with built-in credits system and API sales.",
-            "icon": "RiRobot2Line"
           }
         ]
       },
-      "stats": {
-        "id": "stats",
-        "title": "People Love ShipAny",
-        "description": "for it's easy to use and fast to ship.",
+      "features": {
+        "id": "features",
+        "title": "Why Creators Choose Us",
+        "description": "The fastest way to turn photos into viral dance content.",
         "items": [
           {
-            "title": "999+",
-            "description": "Customers"
+            "title": "Any Photo Can Dance",
+            "description": "Transform selfies, pets, babies, anime characters, memes - even historical figures into smooth dancers.",
+            "icon": "RiImageLine"
           },
           {
-            "title": "200+",
-            "description": "Blocks"
+            "title": "Trending Dances Updated Weekly",
+            "description": "Access the latest viral moves - Aura farming, TikTok trends, K-Pop hits, and classic hip-hop.",
+            "icon": "RiMusic2Line"
           },
           {
-            "title": "50+",
-            "description": "Templates"
+            "title": "Ultra-Realistic Motion",
+            "description": "Advanced AI creates natural, fluid movements that look real - not like cheap filters.",
+            "icon": "RiRobot2Line"
+          },
+          {
+            "title": "30-Second Generation",
+            "description": "From upload to download in under a minute. Post while the trend is still hot.",
+            "icon": "RiFlashlightLine"
+          },
+          {
+            "title": "No Watermark, Full HD",
+            "description": "Clean, professional 9:16 vertical videos optimized for TikTok, Reels, and Shorts.",
+            "icon": "RiVideoLine"
+          },
+          {
+            "title": "Zero Dancing Skills Needed",
+            "description": "Let AI do the moves. You take the views. No choreography learning required.",
+            "icon": "RiUserSmileLine"
           }
         ],
         "className": "bg-muted"
       },
       "testimonials": {
         "id": "testimonials",
-        "title": "What Users Say About ShipAny",
-        "description": "Hear from developers and founders who launched their AI startups with ShipAny.",
+        "title": "Creators Are Going Viral",
+        "description": "Real stories from content creators who transformed their reach with AI dance videos.",
         "items": [
           {
-            "name": "David Chen",
-            "role": "Founder of AIWallpaper.shop",
-            "quote": "ShipAny saved us months of development time. We launched our AI wallpaper business in just 2 days and got our first paying customer within a week!",
+            "name": "Sarah M.",
+            "role": "TikTok Creator • 500K followers",
+            "quote": "Made my baby dance to K-Pop. Got 2.3 million views overnight. This is the easiest viral hack ever!",
             "image": {
               "src": "/imgs/avatars/1.png",
-              "alt": "david"
+              "alt": "Sarah"
             }
           },
           {
-            "name": "Rachel Kim",
-            "role": "CTO at HeyBeauty.ai",
-            "quote": "The pre-built AI infrastructure is a game-changer. We didn't have to worry about architecture - just focused on our AI beauty tech and went live fast.",
+            "name": "Mike Chen",
+            "role": "Content Creator • 1.2M subscribers",
+            "quote": "I made my grandma do the Aura farming dance. Video hit 5M views. My analytics exploded.",
             "image": {
               "src": "/imgs/avatars/2.png",
-              "alt": "rachel"
+              "alt": "Mike"
             }
           },
           {
-            "name": "Marcus Thompson",
-            "role": "Solo Developer",
-            "quote": "As a solo developer, ShipAny gave me everything I needed - auth, payments, AI integration, and beautiful UI. Launched my SaaS in a weekend!",
+            "name": "Jessica L.",
+            "role": "Instagram Influencer • 800K followers",
+            "quote": "Finally posting dance content without actually learning choreo. Engagement up 300% this month.",
             "image": {
               "src": "/imgs/avatars/3.png",
-              "alt": "marcus"
+              "alt": "Jessica"
             }
           },
           {
-            "name": "Sofia Garcia",
-            "role": "CEO of Melodisco",
-            "quote": "The templates are production-ready and highly customizable. We built our AI music platform in hours instead of months. Incredible time-to-market!",
+            "name": "David K.",
+            "role": "YouTuber • 2M subscribers",
+            "quote": "The quality is insane. Subscribers can't tell it's AI. Best tool I've discovered this year.",
             "image": {
               "src": "/imgs/avatars/4.png",
-              "alt": "sofia"
-            }
-          },
-          {
-            "name": "James Wilson",
-            "role": "Tech Lead at GPTs.works",
-            "quote": "ShipAny's infrastructure is rock-solid. We scaled from 0 to 10k users without touching the backend. Best investment for our AI startup.",
-            "image": {
-              "src": "/imgs/avatars/5.png",
-              "alt": "james"
-            }
-          },
-          {
-            "name": "Anna Zhang",
-            "role": "Startup Founder",
-            "quote": "From idea to launch in 3 days! ShipAny's templates and deployment tools made it possible to test our AI business concept incredibly fast.",
-            "image": {
-              "src": "/imgs/avatars/6.png",
-              "alt": "anna"
+              "alt": "David"
             }
           }
         ]
       },
       "faq": {
         "id": "faq",
-        "title": "Frequently Asked Questions About ShipAny",
-        "description": "Have another question? Contact us on Discord or by email.",
+        "title": "Quick Answers",
+        "description": "Everything you need to start creating viral dance videos.",
         "items": [
           {
-            "question": "What exactly is ShipAny and how does it work?",
-            "answer": "ShipAny is a comprehensive NextJS boilerplate designed specifically for building AI SaaS startups. It provides ready-to-use templates, infrastructure setup, and deployment tools that help you launch your AI business in hours instead of days."
+            "question": "What is AI Dance Generator?",
+            "answer": "It's an AI tool that transforms any photo into a realistic dancing video. Upload a photo, pick a dance style, and get your video in under 60 seconds. No dancing or editing skills required."
           },
           {
-            "question": "Do I need advanced technical skills to use ShipAny?",
-            "answer": "While basic programming knowledge is helpful, ShipAny is designed to be developer-friendly. Our templates and documentation make it easy to get started, even if you're not an expert in AI or cloud infrastructure."
+            "question": "What photos work best?",
+            "answer": "Front-facing photos with clear face visibility work best. You can use selfies, baby photos, pet pictures, anime characters, memes, or even historical figures. Higher resolution = better results."
           },
           {
-            "question": "What types of AI SaaS can I build with ShipAny?",
-            "answer": "ShipAny supports a wide range of AI applications, from content generation to data analysis tools. Our templates cover popular use cases like AI chatbots, content generators, image processing apps, and more."
+            "question": "How fast can I get my video?",
+            "answer": "Most videos are ready in 30-60 seconds. You can download immediately and post while the trend is still hot."
           },
           {
-            "question": "How long does it typically take to launch with ShipAny?",
-            "answer": "With ShipAny, you can have a working prototype in hours and a production-ready application in hours. Our one-click deployment and pre-configured infrastructure significantly reduce the traditional months-long development cycle."
+            "question": "Will there be a watermark?",
+            "answer": "No! All videos are watermark-free and exported in full HD 9:16 vertical format - perfect for TikTok, Instagram Reels, and YouTube Shorts."
           },
           {
-            "question": "What's included in the ShipAny infrastructure?",
-            "answer": "ShipAny provides a complete infrastructure stack including authentication, database setup, API integration, payment processing, and scalable cloud deployment. Everything is pre-configured following industry best practices."
+            "question": "What dances are available?",
+            "answer": "We update our dance library weekly with trending moves: TikTok viral dances, Aura farming, K-Pop choreography, hip-hop, and more. Stay ahead of trends."
           },
           {
-            "question": "Can I customize the templates to match my brand?",
-            "answer": "Absolutely! All ShipAny templates are fully customizable. You can modify the design, features, and functionality to match your brand identity and specific business requirements while maintaining the robust underlying infrastructure."
+            "question": "How much does it cost?",
+            "answer": "Each video costs 10 credits. New users get free credits to try it out. Check our pricing page for credit packages - the more you buy, the more you save."
           }
         ]
       },
       "cta": {
         "id": "cta",
-        "title": "Ship your first AI SaaS Startup",
-        "description": "Start from here, ship with ShipAny.",
+        "title": "Your Next Viral Video is 60 Seconds Away",
+        "description": "Join 50,000+ creators already making AI dance videos. Start free today.",
         "buttons": [
           {
-            "title": "Get ShipAny",
-            "url": "https://shipany.ai",
-            "target": "_blank",
-            "icon": "Zap"
+            "title": "Create Your First Video Free",
+            "url": "#generator",
+            "target": "_self",
+            "icon": "Sparkles"
           },
           {
-            "title": "Read Document",
-            "url": "/docs",
-            "target": "_blank",
+            "title": "See Pricing",
+            "url": "/pricing",
+            "target": "_self",
             "variant": "outline",
-            "icon": "BookOpenText"
+            "icon": "CreditCard"
           }
         ],
-        "className": "bg-muted"
-      },
-      "subscribe": {
-        "id": "subscribe",
-        "title": "Subscribe to our newsletter",
-        "description": "Get the latest news and updates from ShipAny.",
-        "submit": {
-          "input": {
-            "placeholder": "Enter your email"
-          },
-          "button": {
-            "title": "Subscribe"
-          },
-          "action": "/api/subscribe"
-        },
         "className": "bg-muted"
       }
     }
