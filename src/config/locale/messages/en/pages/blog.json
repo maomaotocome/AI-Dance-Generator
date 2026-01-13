@@ -1,15 +1,15 @@
 {
   "metadata": {
     "title": "Blog",
-    "description": "Read latest product features, solutions, and updates."
+    "description": "Tips, tutorials and updates for creating viral dance videos with AI"
   },
   "page": {
-    "title": "ShipAny Blog",
+    "title": "AI Dance Generator Blog",
     "sections": {
       "blog": {
         "id": "blog",
         "title": "Blog",
-        "description": "Read latest product features, solutions, and updates."
+        "description": "Tips, tutorials and updates for creating viral dance videos with AI"
       }
     }
   },

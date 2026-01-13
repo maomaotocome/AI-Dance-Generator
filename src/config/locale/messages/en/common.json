@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "title": "ShipAny Template Two",
-    "description": "ShipAny is a NextJS boilerplate for building AI SaaS startups. Ship Fast with a variety of templates and components.",
-    "keywords": "shipany, shipany-boilerplate, shipany-template-two-demo"
+    "title": "AI Dance Generator",
+    "description": "Transform any photo into viral dance videos with AI. Create TikTok-ready dancing videos in seconds.",
+    "keywords": "ai dance generator, ai dance video, tiktok dance, viral dance, dance video maker"
   },
   "sign": {
     "sign_in_title": "Sign In",

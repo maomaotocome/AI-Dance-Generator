@@ -148,25 +148,25 @@
         {
           "title": "抖音",
           "icon": "RiTiktokFill",
-          "url": "https://tiktok.com/@your-app-name",
+          "url": "https://tiktok.com/@aidancegenerator",
           "target": "_blank"
         },
         {
           "title": "X",
           "icon": "RiTwitterXFill",
-          "url": "https://x.com/your-app-name",
+          "url": "https://x.com/aidancegen",
           "target": "_blank"
         },
         {
           "title": "Instagram",
           "icon": "RiInstagramFill",
-          "url": "https://instagram.com/your-app-name",
+          "url": "https://instagram.com/aidancegenerator",
           "target": "_blank"
         },
         {
           "title": "邮箱",
           "icon": "Mail",
-          "url": "mailto:support@your-domain.com",
+          "url": "mailto:support@aidancegenerator.io",
           "target": "_self"
         }
       ]
@@ -183,6 +183,7 @@
         }
       ]
     },
+    "show_built_with": false,
     "show_theme": true,
     "show_locale": true
   }
