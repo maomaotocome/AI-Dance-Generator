@@ -3,6 +3,7 @@ export * from './header';
 export * from './footer';
 
 export * from './hero';
+export * from './hero-premium';
 
 export * from './features';
 export * from './features-list';
@@ -13,6 +14,7 @@ export * from './features-media';
 
 export * from './showcases';
 export * from './showcases-flow';
+export * from './showcases-premium';
 
 export * from './logos';
 export * from './stats';
@@ -25,3 +27,6 @@ export * from './pricing';
 export * from './blog';
 export * from './blog-detail';
 export * from './page-detail';
+
+export * from './dance-generator';
+export * from './dance-generator-premium';

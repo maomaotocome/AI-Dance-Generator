@@ -2,10 +2,10 @@
   "header": {
     "id": "header",
     "brand": {
-      "title": "ShipAny Two",
+      "title": "AI 跳舞生成器",
       "logo": {
         "src": "/logo.png",
-        "alt": "ShipAny Two",
+        "alt": "AI 跳舞生成器",
         "width": 100,
         "height": 100
       },
@@ -14,72 +14,41 @@
     "nav": {
       "items": [
         {
-          "title": "功能亮点",
-          "url": "/#features",
+          "title": "开始创作",
+          "url": "/#generator",
           "icon": "Sparkles"
         },
         {
-          "title": "案例展示",
-          "url": "/showcases",
-          "icon": "Box"
+          "title": "案例",
+          "url": "/#showcases",
+          "icon": "Play"
         },
         {
-          "title": "价格",
+          "title": "定价",
           "url": "/pricing",
           "icon": "DollarSign"
         },
         {
-          "title": "AI",
+          "title": "工具",
           "icon": "RiRobot2Line",
           "children": [
             {
-              "title": "AI 图片生成器",
-              "description": "使用 AI 生成图片",
-              "url": "/ai-image-generator",
-              "icon": "RiImage2Line"
-            },
-            {
-              "title": "AI 音乐生成器",
-              "description": "使用 AI 生成美妙的音乐",
-              "url": "/ai-music-generator",
-              "icon": "RiMusic2Line"
+              "title": "AI 跳舞生成器",
+              "description": "把照片变成病毒跳舞视频",
+              "url": "/",
+              "icon": "RiRunLine"
             },
             {
               "title": "AI 视频生成器",
-              "description": "使用 AI 生成视频",
+              "description": "用文字或图片创建视频",
               "url": "/ai-video-generator",
               "icon": "RiVideoLine"
             },
             {
-              "title": "AI 聊天机器人",
-              "description": "与 AI 聊天机器人对话",
-              "url": "/chat",
-              "icon": "RiMessage2Line"
-            }
-          ]
-        },
-        {
-          "title": "内容",
-          "icon": "FileText",
-          "children": [
-            {
-              "title": "博客",
-              "description": "阅读博客文章",
-              "url": "/blog",
-              "icon": "Newspaper"
-            },
-            {
-              "title": "更新日志",
-              "description": "阅读更新日志",
-              "url": "/updates",
-              "icon": "Clock"
-            },
-            {
-              "title": "文档",
-              "description": "阅读文档",
-              "url": "/docs",
-              "target": "_blank",
-              "icon": "BookOpenText"
+              "title": "AI 图片生成器",
+              "description": "用 AI 生成图片",
+              "url": "/ai-image-generator",
+              "icon": "RiImage2Line"
             }
           ]
         }
@@ -92,54 +61,51 @@
       "show_sign_out": true,
       "items": [
         {
-          "title": "账单",
-          "url": "/settings/billing",
-          "icon": "CreditCard"
+          "title": "我的视频",
+          "url": "/activity/ai-tasks",
+          "icon": "Video"
         },
         {
-          "title": "活动",
-          "url": "/activity",
-          "icon": "Activity"
+          "title": "积分",
+          "url": "/settings/credits",
+          "icon": "CreditCard"
         }
       ]
     },
     "show_sign": true,
     "show_theme": true,
-    "show_locale": true,
-    "topbanner": {
-      "text": "此网站是 ShipAny 模板的演示站点，购买 ShipAny 模板，请访问 <a href='https://shipany.ai/zh/pricing' class='text-orange-300' target='_blank'>ShipAny 官网</a>"
-    }
+    "show_locale": true
   },
   "footer": {
     "id": "footer",
     "brand": {
-      "title": "ShipAny Two",
-      "description": "ShipAny 是专为 AI SaaS 创业项目打造的 NextJS 模板。丰富模板与组件，极速交付你的产品。",
+      "title": "AI 跳舞生成器",
+      "description": "用 AI 将任何照片变成病毒式跳舞视频。上传照片，选择舞蹈风格，几秒钟内创建 TikTok 爆款视频。",
       "logo": {
         "src": "/logo.png",
-        "alt": "ShipAny Two",
-        "width": 100,
-        "height": 100
+        "alt": "AI 跳舞生成器",
+        "width": 1024,
+        "height": 1024
       },
       "url": "/"
     },
     "nav": {
       "items": [
         {
-          "title": "关于我们",
+          "title": "产品",
           "children": [
             {
-              "title": "功能亮点",
-              "url": "/#features",
+              "title": "创建跳舞视频",
+              "url": "/#generator",
               "target": "_self"
             },
             {
               "title": "案例展示",
-              "url": "/showcases",
+              "url": "/#showcases",
               "target": "_self"
             },
             {
-              "title": "价格",
+              "title": "定价",
               "url": "/pricing",
               "target": "_self"
             }
@@ -149,39 +115,29 @@
           "title": "资源",
           "children": [
             {
-              "title": "文档",
-              "url": "/docs",
-              "target": "_self"
-            },
-            {
               "title": "博客",
               "url": "/blog",
               "target": "_self"
             },
             {
-              "title": "对话",
-              "url": "/chat",
-              "target": "_blank"
+              "title": "常见问题",
+              "url": "/#faq",
+              "target": "_self"
             }
           ]
         },
         {
-          "title": "合作伙伴",
+          "title": "更多工具",
           "children": [
             {
-              "title": "ShipAny",
-              "url": "https://shipany.ai",
-              "target": "_blank"
+              "title": "AI 视频生成器",
+              "url": "/ai-video-generator",
+              "target": "_self"
             },
             {
-              "title": "ThinkAny",
-              "url": "https://thinkany.ai",
-              "target": "_blank"
-            },
-            {
-              "title": "MCP.so",
-              "url": "https://mcp.so",
-              "target": "_blank"
+              "title": "AI 图片生成器",
+              "url": "/ai-image-generator",
+              "target": "_self"
             }
           ]
         }
@@ -190,27 +146,27 @@
     "social": {
       "items": [
         {
+          "title": "抖音",
+          "icon": "RiTiktokFill",
+          "url": "https://tiktok.com/@aidancegenerator",
+          "target": "_blank"
+        },
+        {
           "title": "X",
           "icon": "RiTwitterXFill",
-          "url": "https://x.com/your-app-name",
+          "url": "https://x.com/aidancegen",
           "target": "_blank"
         },
         {
-          "title": "Github",
-          "icon": "Github",
-          "url": "https://github.com/your-app-name",
-          "target": "_blank"
-        },
-        {
-          "title": "Discord",
-          "icon": "RiDiscordFill",
-          "url": "https://discord.gg/your-app-name",
+          "title": "Instagram",
+          "icon": "RiInstagramFill",
+          "url": "https://instagram.com/aidancegenerator",
           "target": "_blank"
         },
         {
           "title": "邮箱",
           "icon": "Mail",
-          "url": "mailto:support@your-domain.com",
+          "url": "mailto:support@aidancegenerator.io",
           "target": "_self"
         }
       ]
@@ -227,6 +183,7 @@
         }
       ]
     },
+    "show_built_with": false,
     "show_theme": true,
     "show_locale": true
   }

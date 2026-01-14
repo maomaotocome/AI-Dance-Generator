@@ -1,15 +1,15 @@
 {
   "metadata": {
     "title": "博客",
-    "description": "阅读我们最新的产品功能、解决方案和更新内容。"
+    "description": "AI 跳舞视频制作技巧、教程和更新"
   },
   "page": {
-    "title": "ShipAny 博客",
+    "title": "AI 跳舞生成器博客",
     "sections": {
       "blog": {
         "id": "blog",
         "title": "博客",
-        "description": "阅读我们最新的产品功能、解决方案和更新内容。"
+        "description": "AI 跳舞视频制作技巧、教程和更新"
       }
     }
   },

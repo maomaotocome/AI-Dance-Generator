@@ -1,0 +1,52 @@
+{
+  "metadata": {
+    "title": "AI Dance Video Generator - Create Viral Dancing Videos from Photos | Free Tool",
+    "description": "Upload any photo and transform it into a professional dance video using AI. Choose from trending TikTok dances, K-Pop moves, and viral choreography. HD quality, no watermark. Generate in 30 seconds!",
+    "keywords": "AI dance video generator, photo to dance video, TikTok dance maker, K-Pop dance AI, viral dance creator, dancing video generator, AI choreography, make anyone dance, Viggle alternative, free dance video tool"
+  },
+  "page": {
+    "title": "AI Dance Generator",
+    "description": "Upload any photo and watch it come alive with viral dance moves. Create stunning AI dance videos for TikTok, Instagram, and more."
+  },
+  "generator": {
+    "title": "Create Your Dance Video",
+    "step1_title": "Upload Your Photo",
+    "step2_title": "Choose a Dance Style",
+    "upload_title": "Upload Photo",
+    "upload_hint": "Upload a clear photo of a person or character (front-facing works best)",
+    "upload_error": "Image failed to upload, please delete and try again",
+    "category_all": "All",
+    "category_tiktok": "TikTok",
+    "category_kpop": "K-Pop",
+    "category_hiphop": "Hip-Hop",
+    "category_fun": "Fun",
+    "generate": "Generate Dance Video",
+    "generating": "Creating your video...",
+    "checking_account": "Checking Account...",
+    "loading": "Loading...",
+    "sign_in_to_generate": "Sign In to Generate",
+    "credits_cost": "{credits} credits",
+    "credits_remaining": "{credits} remaining",
+    "buy_credits": "Get More Credits",
+    "progress": "Generating",
+    "result_title": "Your Dance Video",
+    "generating_hint": "AI is creating your dance video...",
+    "no_video": "Your dance video will appear here",
+    "download": "Download",
+    "share_tip": "Download and share on TikTok, Instagram, or YouTube!",
+    "download_success": "Video downloaded successfully!",
+    "download_error": "Failed to download video",
+    "success": "Your dance video is ready!",
+    "status_pending": "Waiting for AI model to start...",
+    "status_processing": "AI is generating your dance video...",
+    "status_success": "Dance video ready!",
+    "status_failed": "Generation failed",
+    "error_timeout": "Generation timed out. Please try again.",
+    "error_no_video": "No video was generated. Please try again.",
+    "error_generation": "Failed to generate dance video",
+    "error_query": "Failed to check generation status",
+    "error_insufficient_credits": "Not enough credits. Please top up to continue.",
+    "error_no_image": "Please upload a photo first",
+    "error_no_template": "Please select a dance style first"
+  }
+}

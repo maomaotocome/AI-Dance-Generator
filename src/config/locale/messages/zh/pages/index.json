@@ -2,12 +2,10 @@
   "page": {
     "show_sections": [
       "hero",
-      "logos",
-      "introduce",
-      "benefits",
+      "generator",
+      "showcases",
       "usage",
       "features",
-      "stats",
       "testimonials",
       "faq",
       "cta"
@@ -15,407 +13,242 @@
     "sections": {
       "hero": {
         "id": "hero",
-        "title": "一小时快速上线你的 AI 创业项目",
-        "highlight_text": "一小时",
-        "description": "ShipAny 是用于构建 AI SaaS 创业项目的 NextJS 项目模板。<br/>集成常用功能，快速上线你的产品。",
+        "block": "hero-premium",
+        "title": "让任何照片秒变病毒跳舞视频",
+        "highlight_text": "病毒跳舞视频",
+        "description": "用 AI 让任何人跳舞 - 上传照片，选择热门舞蹈，几秒钟创建 TikTok 爆款视频。<br/><br/>无水印。无需舞蹈技能。纯粹的病毒魔法。",
         "announcement": {
-          "badge": "全新",
-          "title": "🎉 ShipAny 模板二已发布",
-          "url": "/pricing"
+          "badge": "爆火",
+          "title": "本月视频累计播放量突破 5000 万",
+          "url": "#generator"
         },
-        "tip": "🎁 前 1000 名用户特价优惠",
+        "tip": "全球 50,000+ 创作者都在用",
         "buttons": [
           {
-            "title": "立即开始",
-            "icon": "Zap",
-            "url": "/pricing",
+            "title": "免费让照片跳舞",
+            "icon": "Sparkles",
+            "url": "#generator",
             "target": "_self",
             "variant": "default"
           },
           {
-            "title": "阅读文档",
-            "icon": "BookOpenText",
-            "url": "/docs",
-            "target": "_blank",
+            "title": "看看案例",
+            "icon": "Play",
+            "url": "#showcases",
+            "target": "_self",
             "variant": "outline"
           }
         ],
         "show_avatars": true,
-        "avatars_tip": "999+ 用户在使用 ShipAny 上站",
-        "show_award": false,
-        "image": {
-          "src": "/imgs/features/admin.png",
-          "alt": "hero",
-          "width": 1200,
-          "height": 800
-        },
-        "image_invert": {
-          "src": "/imgs/features/admin-dark.png",
-          "alt": "hero",
-          "width": 1200,
-          "height": 800
-        },
-        "background_image": {
-          "src": "/imgs/bg/tree.jpg",
-          "alt": "hero"
-        }
+        "avatars_tip": "加入 50,000+ 创作者",
+        "show_award": false
       },
-      "logos": {
-        "title": "ShipAny 使用以下技术栈构建",
+      "generator": {
+        "id": "generator",
+        "block": "dance-generator-premium"
+      },
+      "showcases": {
+        "id": "showcases",
+        "block": "showcases-premium",
+        "title": "正在病毒式传播的视频",
+        "description": "用户真实案例。这些视频都在 60 秒内制作完成。",
         "items": [
           {
-            "title": "Next.js",
+            "title": "TikTok 230万播放",
+            "description": "宝宝跳舞热门 - 30秒制作",
             "image": {
-              "src": "/imgs/logos/nextjs.svg",
-              "alt": "Next.js"
+              "src": "/imgs/showcases/dance-1.jpg",
+              "alt": "病毒式 AI 跳舞视频"
             }
           },
           {
-            "title": "React",
+            "title": "Reels 85万播放",
+            "description": "韩流风格完美同步",
             "image": {
-              "src": "/imgs/logos/react.svg",
-              "alt": "React"
+              "src": "/imgs/showcases/dance-2.jpg",
+              "alt": "韩流 AI 跳舞"
             }
           },
           {
-            "title": "TailwindCSS",
+            "title": "Shorts 150万播放",
+            "description": "Aura farming 舞蹈热潮",
             "image": {
-              "src": "/imgs/logos/tailwindcss.svg",
-              "alt": "TailwindCSS"
-            }
-          },
-          {
-            "title": "Shadcn/UI",
-            "image": {
-              "src": "/imgs/logos/shadcn.svg",
-              "alt": "Shadcn/UI"
-            }
-          },
-          {
-            "title": "Vercel",
-            "image": {
-              "src": "/imgs/logos/vercel.svg",
-              "alt": "Vercel"
-            }
-          }
-        ]
-      },
-      "introduce": {
-        "block": "features-list",
-        "id": "introduce",
-        "title": "ShipAny 是什么？",
-        "label": "产品简介",
-        "description": "ShipAny 是专为 AI SaaS 创业项目打造的 NextJS 脚手架，包括丰富模板、组件及文档。",
-        "image": {
-          "src": "/imgs/features/landing-page.png",
-          "alt": "introduce"
-        },
-        "items": [
-          {
-            "title": "开箱即用的模板",
-            "description": "从数十款生产级 AI SaaS 模板中选择，快速开启你的项目。",
-            "icon": "RiNextjsFill",
-            "image": {
-              "src": "/imgs/features/1.png",
-              "alt": "introduce"
-            }
-          },
-          {
-            "title": "基础设施搭建",
-            "description": "内置最佳实践，即刻拥有可扩展的基础设施。",
-            "icon": "RiDatabase2Line",
-            "image": {
-              "src": "/imgs/features/2.png",
-              "alt": "introduce"
-            }
-          },
-          {
-            "title": "极速部署",
-            "description": "AI SaaS 产品快速上线，助力小时级交付。",
-            "icon": "RiCloudyFill",
-            "image": {
-              "src": "/imgs/features/3.png",
-              "alt": "introduce"
-            }
-          },
-          {
-            "title": "AI 集成",
-            "description": "通过内置的 AI SDK，轻松为你的项目集成 AI 能力。",
-            "icon": "RiRobot2Line",
-            "image": {
-              "src": "/imgs/features/4.png",
-              "alt": "introduce"
+              "src": "/imgs/showcases/dance-3.jpg",
+              "alt": "Aura 跳舞热潮"
             }
           }
         ],
         "className": "bg-muted"
       },
-      "benefits": {
-        "block": "features-accordion",
-        "id": "benefits",
-        "title": "为何选择 ShipAny",
-        "label": "产品优势",
-        "description": "你获得一切 AI 创业所需——从开箱即用的模板到专业技术支持。",
-        "items": [
-          {
-            "title": "全栈解决方案",
-            "description": "基于 Next.js，集成认证、支付、AI，一站式开箱即用。",
-            "icon": "RiNextjsFill",
-            "image": {
-              "src": "/imgs/features/user-billing.png",
-              "alt": "benefits"
-            }
-          },
-          {
-            "title": "丰富模板库",
-            "description": "多样的 AI SaaS 模板，点击即用，涵盖聊天、图像生成等多场景。",
-            "icon": "RiClapperboardAiLine",
-            "image": {
-              "src": "/imgs/features/admin-settings.png",
-              "alt": "benefits"
-            }
-          },
-          {
-            "title": "专属技术指导",
-            "description": "享受专属技术支持与开发者社区，为你的成功保驾护航。",
-            "icon": "RiCodeFill",
-            "image": {
-              "src": "/imgs/features/landing-page.png",
-              "alt": "benefits"
-            }
-          }
-        ]
-      },
       "usage": {
         "block": "features-step",
         "id": "usage",
-        "title": "三步使用 ShipAny 极速上线",
-        "description": "只需三步，快速开启你的 AI SaaS 创业之路：",
+        "title": "3 步制作你的第一个爆款视频",
+        "description": "不需要剪辑技能。不需要拍摄。只要 AI 魔法。",
         "image": {
-          "src": "/imgs/features/1.png",
-          "alt": "usage"
+          "src": "/imgs/features/dance-demo.png",
+          "alt": "AI 跳舞生成器演示"
         },
         "image_position": "left",
         "text_align": "center",
         "items": [
           {
-            "title": "获取 ShipAny",
-            "description": "一次性购买 ShipAny，查收邮件获取代码与文档。",
+            "title": "上传照片",
+            "description": "任意照片 - 自拍、宠物、宝宝、动漫角色，甚至历史人物。正面照效果最佳。",
             "image": {
-              "src": "/imgs/features/5.png",
-              "alt": "usage"
+              "src": "/imgs/steps/upload.png",
+              "alt": "上传照片"
             }
           },
           {
-            "title": "启动你的项目",
-            "description": "阅读说明文档，克隆 ShipAny 代码，开始开发你的 AI SaaS 项目。",
+            "title": "选择热门舞蹈",
+            "description": "TikTok 病毒舞蹈、韩流编舞、Aura farming、嘻哈动作。每周更新最新热门。",
             "image": {
-              "src": "/imgs/features/6.png",
-              "alt": "usage"
+              "src": "/imgs/steps/select.png",
+              "alt": "选择舞蹈"
             }
           },
           {
-            "title": "个性化定制",
-            "description": "根据需求修改模板内容和数据，配置专属 AI 能力。",
+            "title": "下载去爆火",
+            "description": "30-60 秒获得高清视频。无水印。直接发 TikTok、Instagram Reels、YouTube Shorts。",
             "image": {
-              "src": "/imgs/features/7.png",
-              "alt": "usage"
+              "src": "/imgs/steps/generate.png",
+              "alt": "生成分享"
             }
-          },
-          {
-            "title": "部署上线",
-            "description": "简单几步将你的项目推向生产环境，立刻为客户提供服务。",
-            "image": {
-              "src": "/imgs/features/8.png",
-              "alt": "usage"
-            }
-          }
-        ],
-        "className": "bg-muted"
-      },
-      "features": {
-        "id": "features",
-        "title": "ShipAny 核心功能",
-        "description": "一切你需要的工具，助力 AI SaaS 项目高效上线。",
-        "items": [
-          {
-            "title": "Next.js 项目模板",
-            "description": "生产就绪、支持 SEO 与多语言的 Next.js 脚手架。",
-            "icon": "RiNextjsFill"
-          },
-          {
-            "title": "身份认证与支付",
-            "description": "集成谷歌 OAuth、一键登录，以及 Stripe 支付。",
-            "icon": "RiKey2Fill"
-          },
-          {
-            "title": "数据基础设施",
-            "description": "内置 Supabase，稳定可靠的数据存储。",
-            "icon": "RiDatabase2Line"
-          },
-          {
-            "title": "一键部署",
-            "description": "自动化部署到 Vercel 或 Cloudflare，极速上线。",
-            "icon": "RiCloudy2Fill"
-          },
-          {
-            "title": "商业分析",
-            "description": "集成 Google Analytics、Search Console，助力业务增长。",
-            "icon": "RiBarChart2Line"
-          },
-          {
-            "title": "AI 原生基础设施",
-            "description": "预置 AI 集成、积分系统和 API 售卖能力。",
-            "icon": "RiRobot2Line"
           }
         ]
       },
-      "stats": {
-        "id": "stats",
-        "title": "用户喜爱 ShipAny",
-        "description": "因其易用且上线飞快。",
+      "features": {
+        "id": "features",
+        "title": "为什么创作者选择我们",
+        "description": "把照片变成病毒跳舞内容最快的方式。",
         "items": [
           {
-            "title": "999+",
-            "description": "位用户"
+            "title": "任何照片都能跳舞",
+            "description": "自拍、宠物、宝宝、动漫角色、表情包 - 甚至历史人物都能变成丝滑舞者。",
+            "icon": "RiImageLine"
           },
           {
-            "title": "200+",
-            "description": "组件块"
+            "title": "热门舞蹈每周更新",
+            "description": "第一时间获取最新病毒舞蹈 - Aura farming、TikTok 热门、韩流编舞、经典嘻哈。",
+            "icon": "RiMusic2Line"
           },
           {
-            "title": "50+",
-            "description": "专业模板"
+            "title": "超逼真动作",
+            "description": "先进 AI 创造自然流畅的动作，看起来像真的 - 不是廉价滤镜效果。",
+            "icon": "RiRobot2Line"
+          },
+          {
+            "title": "30 秒生成",
+            "description": "从上传到下载不到一分钟。趁热门还在，赶紧发布。",
+            "icon": "RiFlashlightLine"
+          },
+          {
+            "title": "无水印 + 高清",
+            "description": "干净专业的 9:16 竖屏视频，针对 TikTok、Reels、Shorts 完美优化。",
+            "icon": "RiVideoLine"
+          },
+          {
+            "title": "零舞蹈技能要求",
+            "description": "让 AI 跳舞，你收割播放量。不需要学任何编舞。",
+            "icon": "RiUserSmileLine"
           }
         ],
         "className": "bg-muted"
       },
       "testimonials": {
         "id": "testimonials",
-        "title": "用户对 ShipAny 的评价",
-        "description": "听听开发者与创始人用 ShipAny 快速上线 AI 创业项目的故事。",
+        "title": "创作者们正在爆火",
+        "description": "用 AI 跳舞视频改变流量的创作者真实故事。",
         "items": [
           {
-            "name": "David Chen",
-            "role": "AIWallpaper.shop 创始人",
-            "quote": "ShipAny 为我们节省了数月开发时间。2 天上线 AI 壁纸业务，一周内就收到了第一笔付费订单！",
+            "name": "小红",
+            "role": "TikTok 创作者 • 50万粉丝",
+            "quote": "让宝宝跳韩流舞蹈，一夜 230 万播放。这是我用过最简单的爆款神器！",
             "image": {
               "src": "/imgs/avatars/1.png",
-              "alt": "david"
+              "alt": "小红"
             }
           },
           {
-            "name": "Rachel Kim",
-            "role": "HeyBeauty.ai CTO",
-            "quote": "内置 AI 基础设施颠覆了开发体验，无需担心架构，只需专注核心功能，极快落地。",
+            "name": "张明",
+            "role": "内容创作者 • 120万订阅",
+            "quote": "让奶奶跳 Aura farming 舞蹈，视频冲到 500 万播放。数据直接爆了。",
             "image": {
               "src": "/imgs/avatars/2.png",
-              "alt": "rachel"
+              "alt": "张明"
             }
           },
           {
-            "name": "Marcus Thompson",
-            "role": "独立开发者",
-            "quote": "作为独立开发者，ShipAny 满足了全部需求——认证、支付、AI 集成、美观界面，一个周末上线 SaaS！",
+            "name": "李娜",
+            "role": "Instagram 博主 • 80万粉丝",
+            "quote": "终于可以发跳舞内容而不用学编舞了。这个月互动率涨了 300%。",
             "image": {
               "src": "/imgs/avatars/3.png",
-              "alt": "marcus"
+              "alt": "李娜"
             }
           },
           {
-            "name": "Sofia Garcia",
-            "role": "Melodisco CEO",
-            "quote": "模板高度可定制且生产级。我们几小时内搭建出了 AI 音乐平台，上市周期大大缩短！",
+            "name": "王强",
+            "role": "YouTuber • 200万订阅",
+            "quote": "质量太疯狂了。粉丝完全看不出是 AI 做的。今年发现的最佳工具。",
             "image": {
               "src": "/imgs/avatars/4.png",
-              "alt": "sofia"
-            }
-          },
-          {
-            "name": "James Wilson",
-            "role": "GPTs.works 技术负责人",
-            "quote": "ShipAny 基础设施极其稳定。我们从 0 到 1 万用户，无需关心后端维护，是最棒的 AI 创业投资。",
-            "image": {
-              "src": "/imgs/avatars/5.png",
-              "alt": "james"
-            }
-          },
-          {
-            "name": "Anna Zhang",
-            "role": "创业者",
-            "quote": "从想法到上线，仅用 3 天！ShipAny 模板和部署工具让我们极快验证 AI 商业创意。",
-            "image": {
-              "src": "/imgs/avatars/6.png",
-              "alt": "anna"
+              "alt": "王强"
             }
           }
         ]
       },
       "faq": {
         "id": "faq",
-        "title": "关于 ShipAny 的常见问题",
-        "description": "还有其他问题？欢迎加入 Discord 或发邮件联系我们。",
+        "title": "快速解答",
+        "description": "开始创建病毒跳舞视频需要知道的一切。",
         "items": [
           {
-            "question": "ShipAny 是什么？怎么帮到我？",
-            "answer": "ShipAny 是专为 AI SaaS 创业设计的 NextJS 全套脚手架，内含开箱即用的模板、基础设施搭建和部署工具，让你数小时内上线 AI 产品。"
+            "question": "什么是 AI 跳舞生成器？",
+            "answer": "它是一个 AI 工具，能把任何照片变成逼真的跳舞视频。上传照片，选择舞蹈风格，60 秒内拿到视频。不需要舞蹈或剪辑技能。"
           },
           {
-            "question": "使用 ShipAny 需要很高的技术水平吗？",
-            "answer": "有基础编程知识即可上手。ShipAny 面向开发者友好，详细文档和模板让初学者也能轻松起步，不需深厚 AI 或云计算背景。"
+            "question": "什么照片效果最好？",
+            "answer": "正面照、脸部清晰可见的效果最好。你可以用自拍、宝宝照片、宠物、动漫角色、表情包，甚至历史人物。分辨率越高效果越好。"
           },
           {
-            "question": "ShipAny 支持哪些类型的 AI SaaS 项目？",
-            "answer": "ShipAny 支持内容生成、数据分析、AI 聊天机器人、图片/内容生成器等多种主流 AI 应用场景。"
+            "question": "多快能拿到视频？",
+            "answer": "大多数视频 30-60 秒就好了。可以立即下载，趁热门还在赶紧发布。"
           },
           {
-            "question": "用 ShipAny 一般多久能上线？",
-            "answer": "借助 ShipAny，可在数小时内拿到产品原型并上线生产环境，预配置的一键部署大幅缩短开发周期。"
+            "question": "会有水印吗？",
+            "answer": "没有！所有视频无水印，全高清 9:16 竖屏格式导出 - 完美适配 TikTok、Instagram Reels 和 YouTube Shorts。"
           },
           {
-            "question": "ShipAny 的基础设施包括哪些内容？",
-            "answer": "包含认证、数据库、API 集成、支付、云端部署等全栈解决方案，全部遵循业界最佳实践预配置。"
+            "question": "有哪些舞蹈可选？",
+            "answer": "我们每周更新舞蹈库，包含最新热门：TikTok 病毒舞蹈、Aura farming、韩流编舞、嘻哈等。始终走在潮流前面。"
           },
           {
-            "question": "模板是否支持定制自己的品牌？",
-            "answer": "当然支持！所有模板均可自定义设计、功能和品牌，既保持基础架构稳定，又能满足个性扩展需求。"
+            "question": "多少钱？",
+            "answer": "每个视频消耗 10 积分。新用户有免费积分试用。查看定价页面了解积分套餐 - 买得越多，省得越多。"
           }
         ]
       },
       "cta": {
         "id": "cta",
-        "title": "发布你的第一个 AI SaaS 项目",
-        "description": "从这里出发，用 ShipAny 极速交付。",
+        "title": "你的下一个爆款视频只需 60 秒",
+        "description": "加入 50,000+ 已经在做 AI 跳舞视频的创作者。今天免费开始。",
         "buttons": [
           {
-            "title": "获取 ShipAny",
-            "url": "https://shipany.ai",
-            "target": "_blank",
-            "icon": "Zap"
+            "title": "免费创建第一个视频",
+            "url": "#generator",
+            "target": "_self",
+            "icon": "Sparkles"
           },
           {
-            "title": "阅读文档",
-            "url": "/docs",
-            "target": "_blank",
+            "title": "查看定价",
+            "url": "/pricing",
+            "target": "_self",
             "variant": "outline",
-            "icon": "BookOpenText"
+            "icon": "CreditCard"
           }
         ],
-        "className": "bg-muted"
-      },
-      "subscribe": {
-        "id": "subscribe",
-        "title": "订阅我们的邮件通知",
-        "description": "获取 ShipAny 最新资讯与产品动态。",
-        "submit": {
-          "input": {
-            "placeholder": "输入邮箱"
-          },
-          "button": {
-            "title": "订阅"
-          },
-          "action": "/api/subscribe"
-        },
         "className": "bg-muted"
       }
     }

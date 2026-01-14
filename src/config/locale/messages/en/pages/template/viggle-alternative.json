@@ -1,0 +1,173 @@
+{
+  "metadata": {
+    "title": "Viggle AI Alternative - No Discord Required | Web-Based AI Dance Generator",
+    "description": "Looking for a Viggle AI alternative without Discord? Our web-based AI dance generator lets you create viral dance videos instantly. No commands, no waiting - just upload and generate.",
+    "keywords": "Viggle AI alternative, Viggle alternative no Discord, AI dance generator web, Viggle AI replacement, dance video generator online, free Viggle alternative"
+  },
+  "page": {
+    "show_sections": [
+      "hero",
+      "comparison",
+      "generator",
+      "features",
+      "faq",
+      "cta"
+    ],
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "The Viggle AI Alternative You've Been Waiting For",
+        "highlight_text": "Viggle AI Alternative",
+        "description": "Love what Viggle AI does but hate Discord commands? We built the same powerful AI dance generation - directly in your browser.<br/><br/>No Discord. No /mix commands. No queue waiting. Just results.",
+        "announcement": {
+          "badge": "Web-Based",
+          "title": "Switch from Viggle in 30 seconds",
+          "url": "#generator"
+        },
+        "buttons": [
+          {
+            "title": "Try It Free - No Discord Needed",
+            "icon": "Sparkles",
+            "url": "#generator",
+            "target": "_self",
+            "variant": "default"
+          },
+          {
+            "title": "See Feature Comparison",
+            "icon": "Scale",
+            "url": "#comparison",
+            "target": "_self",
+            "variant": "outline"
+          }
+        ],
+        "show_avatars": true,
+        "avatars_tip": "15,000+ Viggle users switched this month",
+        "show_award": false
+      },
+      "comparison": {
+        "id": "comparison",
+        "block": "features-list",
+        "title": "Why Creators Are Switching from Viggle",
+        "label": "Honest Comparison",
+        "description": "Viggle AI has amazing technology, but the Discord-based interface creates friction. Here's why thousands of creators are switching to a web-native experience.",
+        "items": [
+          {
+            "title": "No Discord Required",
+            "description": "Viggle requires joining their Discord server, learning /mix commands, and navigating bot interactions. We give you a simple web form - upload, click, done.",
+            "icon": "RiCheckLine"
+          },
+          {
+            "title": "No Queue Waiting",
+            "description": "Viggle's free tier often has 10-30 minute queues. Our serverless infrastructure means your video starts generating immediately.",
+            "icon": "RiTimeLine"
+          },
+          {
+            "title": "Pre-Made Templates",
+            "description": "Stop hunting for reference videos. We've pre-loaded Lil Yachty Walk, Aura Farming, K-Pop dances, and more. One click selection.",
+            "icon": "RiGridLine"
+          },
+          {
+            "title": "Mobile-Friendly",
+            "description": "Creating TikTok content on your phone? Our web interface is fully responsive. Viggle's Discord bot is clunky on mobile.",
+            "icon": "RiSmartphoneLine"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "generator": {
+        "id": "generator",
+        "block": "dance-generator"
+      },
+      "features": {
+        "id": "features",
+        "title": "Same Power, Better Experience",
+        "description": "Everything you love about AI dance generation, without the friction.",
+        "items": [
+          {
+            "title": "Comparable Quality",
+            "description": "Using the same underlying AI models (Kling, Wan 2.1) that power the best dance generators. Your videos look just as good.",
+            "icon": "RiAwardLine"
+          },
+          {
+            "title": "Trending Templates",
+            "description": "Lil Yachty Walk, Aura Farming, Tyla Dance, K-Pop hits - all pre-loaded with motion and audio. Updated weekly.",
+            "icon": "RiFireLine"
+          },
+          {
+            "title": "No Watermark (Pro)",
+            "description": "Free tier has a small watermark. Pro users get clean, professional exports ready for posting.",
+            "icon": "RiShieldCheckLine"
+          },
+          {
+            "title": "Instant Preview",
+            "description": "See template previews before committing credits. Know exactly what dance style you're getting.",
+            "icon": "RiEyeLine"
+          },
+          {
+            "title": "Progress Tracking",
+            "description": "Real-time progress bar shows generation status. No refreshing Discord channels to check if your video is done.",
+            "icon": "RiLoaderLine"
+          },
+          {
+            "title": "One-Click Download",
+            "description": "Video ready? Download immediately in 9:16 format, perfect for TikTok, Reels, and Shorts.",
+            "icon": "RiDownloadLine"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "faq": {
+        "id": "faq",
+        "title": "Viggle AI Alternative FAQ",
+        "description": "Common questions from Viggle users switching to our platform",
+        "items": [
+          {
+            "question": "Is the quality as good as Viggle?",
+            "answer": "We use similar AI models (Kling AI, Wan 2.1) for motion transfer. For standard dance videos, quality is comparable. Viggle's proprietary JST-1 model may have slight advantages in complex physics scenarios, but for viral dance content, you won't notice a difference."
+          },
+          {
+            "question": "Why doesn't this require Discord?",
+            "answer": "We built a proper web application with a dedicated API infrastructure. Viggle started as a Discord community project and grew from there. Different approaches - we prioritized user experience over community features."
+          },
+          {
+            "question": "Is it really free to try?",
+            "answer": "Yes. New users get free credits to test the platform. No credit card required to start. If you like it, you can purchase more credits or subscribe."
+          },
+          {
+            "question": "Can I use my own reference videos like Viggle?",
+            "answer": "Currently we focus on pre-made templates for the fastest, easiest experience. Custom video upload is on our roadmap for Pro users who want Viggle-style flexibility."
+          },
+          {
+            "question": "What if Viggle has a dance I want that you don't?",
+            "answer": "Request it! We add new templates weekly based on user requests and trending content. Most popular requests are added within days."
+          },
+          {
+            "question": "Do I need to learn any commands?",
+            "answer": "Zero commands. The entire flow is: click template → upload photo → click generate → download. That's it. No /mix, no parameters, no syntax to learn."
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "title": "Ready to Leave Discord Behind?",
+        "description": "Experience AI dance generation the way it should be - instant, simple, and directly in your browser.",
+        "buttons": [
+          {
+            "title": "Generate Your First Video",
+            "url": "#generator",
+            "target": "_self",
+            "icon": "Sparkles"
+          },
+          {
+            "title": "View All Dance Templates",
+            "url": "/",
+            "target": "_self",
+            "variant": "outline",
+            "icon": "Grid"
+          }
+        ],
+        "className": "bg-muted"
+      }
+    }
+  }
+}

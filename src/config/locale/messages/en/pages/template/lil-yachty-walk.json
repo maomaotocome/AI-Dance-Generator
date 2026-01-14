@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "title": "Lil Yachty Walk AI Generator - Create Viral TikTok Videos Free",
+    "description": "Transform any photo into the viral Lil Yachty Walkout dance video. No Discord needed, no complex commands. Upload a photo and generate the iconic confident walk in seconds.",
+    "keywords": "Lil Yachty walk AI, Lil Yachty walkout generator, AI dance generator, Viggle AI alternative, TikTok viral dance, make photo walk"
+  },
+  "page": {
+    "show_sections": [
+      "hero",
+      "generator",
+      "about",
+      "howto",
+      "examples",
+      "faq",
+      "cta"
+    ],
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "Lil Yachty Walk AI Generator",
+        "highlight_text": "Lil Yachty Walk",
+        "description": "Create the viral Lil Yachty Walkout video with any photo. The iconic confident swagger that broke TikTok - now you can make anyone do it.<br/><br/>No Discord. No commands. Just upload and generate.",
+        "announcement": {
+          "badge": "Viral",
+          "title": "50M+ views on videos made with this template",
+          "url": "#generator"
+        },
+        "buttons": [
+          {
+            "title": "Make Your Photo Walk Like Yachty",
+            "icon": "Sparkles",
+            "url": "#generator",
+            "target": "_self",
+            "variant": "default"
+          },
+          {
+            "title": "See Examples",
+            "icon": "Play",
+            "url": "#examples",
+            "target": "_self",
+            "variant": "outline"
+          }
+        ],
+        "show_avatars": true,
+        "avatars_tip": "12,000+ Yachty walks created today",
+        "show_award": false
+      },
+      "generator": {
+        "id": "generator",
+        "block": "dance-generator"
+      },
+      "about": {
+        "id": "about",
+        "block": "features-list",
+        "title": "What is the Lil Yachty Walk?",
+        "label": "About This Trend",
+        "description": "The Lil Yachty Walkout is a viral meme from his 2021 Lyrical Lemonade Summer Smash performance. As \"Coffin\" plays, Yachty walks on stage with an exaggerated, confident swagger that became the perfect template for AI dance videos.",
+        "items": [
+          {
+            "title": "Why It Went Viral",
+            "description": "The magic is in the contrast. When you put this confident, aggressive walk on unexpected characters - from Jesus to your grandma - the absurdity creates instant comedy gold.",
+            "icon": "RiFireLine"
+          },
+          {
+            "title": "Perfect for Any Photo",
+            "description": "Celebrities, anime characters, historical figures, pets, babies - literally any front-facing photo can become a Lil Yachty walk video.",
+            "icon": "RiImageLine"
+          },
+          {
+            "title": "TikTok Algorithm Loves It",
+            "description": "Videos with this trend consistently hit 100K+ views. The audio is recognizable, the format is proven, and the surprise factor keeps viewers watching.",
+            "icon": "RiTiktokLine"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "howto": {
+        "id": "howto",
+        "block": "features-step",
+        "title": "How to Create Your Lil Yachty Walk Video",
+        "description": "Unlike Viggle AI, you don't need Discord or complex commands. Just 3 simple steps:",
+        "items": [
+          {
+            "title": "Upload Any Photo",
+            "description": "Choose a photo with a clear, front-facing view. Works with people, characters, pets, memes - anything with a recognizable form."
+          },
+          {
+            "title": "Select Lil Yachty Walk Template",
+            "description": "The motion and audio are pre-loaded. No need to find or upload any reference videos yourself."
+          },
+          {
+            "title": "Generate & Download",
+            "description": "Get your video in 30-60 seconds. No watermark for Pro users. Ready to post on TikTok, Reels, or Shorts."
+          }
+        ]
+      },
+      "examples": {
+        "id": "examples",
+        "title": "Viral Lil Yachty Walk Videos",
+        "description": "Real examples that got millions of views on TikTok",
+        "items": [
+          {
+            "title": "Historical Figures Edition",
+            "description": "Einstein, Napoleon, and more doing the walk - 2.1M views",
+            "image": {
+              "src": "/imgs/showcases/yachty-1.jpg",
+              "alt": "Historical figures Lil Yachty walk"
+            }
+          },
+          {
+            "title": "Anime Characters Compilation",
+            "description": "When Goku meets Yachty energy - 1.8M views",
+            "image": {
+              "src": "/imgs/showcases/yachty-2.jpg",
+              "alt": "Anime Lil Yachty walk"
+            }
+          },
+          {
+            "title": "Pet Edition",
+            "description": "Cats and dogs with maximum swagger - 3.2M views",
+            "image": {
+              "src": "/imgs/showcases/yachty-3.jpg",
+              "alt": "Pets Lil Yachty walk"
+            }
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "faq": {
+        "id": "faq",
+        "title": "Lil Yachty Walk Generator FAQ",
+        "description": "Everything you need to know about creating Lil Yachty walk videos",
+        "items": [
+          {
+            "question": "Is this better than Viggle AI?",
+            "answer": "For this specific trend, yes. Viggle requires Discord and command-line inputs. Our tool is web-based - just upload and click. Same quality, 10x easier."
+          },
+          {
+            "question": "What photos work best?",
+            "answer": "Front-facing photos with the full body or at least torso visible work best. The AI needs to see enough of the figure to apply the walking motion. High resolution photos produce better results."
+          },
+          {
+            "question": "Can I use celebrity photos?",
+            "answer": "Yes, that's actually what makes these videos go viral - the unexpected contrast. Just be mindful of your country's laws regarding deepfakes when posting publicly."
+          },
+          {
+            "question": "Does the video include the Coffin audio?",
+            "answer": "Yes! The audio is pre-synced with the motion template. Your generated video is ready to post with no editing needed."
+          },
+          {
+            "question": "How long is the generated video?",
+            "answer": "The Lil Yachty Walk template generates 5-8 second videos - the perfect length for TikTok's algorithm to boost your content."
+          },
+          {
+            "question": "Why is this called 'Lil Yachty Walk' or 'Lil Yachty Walkout'?",
+            "answer": "It comes from rapper Lil Yachty's entrance at the 2021 Lyrical Lemonade Summer Smash festival. The original video of him walking on stage with his signature swagger went viral again in 2024-2025 when AI tools made it possible to put any face on the walk."
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "title": "Ready to Make Someone Walk Like Yachty?",
+        "description": "Join thousands of creators making viral content with the Lil Yachty walk template.",
+        "buttons": [
+          {
+            "title": "Create Your Video Now",
+            "url": "#generator",
+            "target": "_self",
+            "icon": "Sparkles"
+          },
+          {
+            "title": "View All Templates",
+            "url": "/",
+            "target": "_self",
+            "variant": "outline",
+            "icon": "Grid"
+          }
+        ],
+        "className": "bg-muted"
+      }
+    }
+  }
+}

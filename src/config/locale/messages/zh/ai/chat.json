@@ -2,10 +2,10 @@
   "sidebar": {
     "header": {
       "brand": {
-        "title": "ShipAny Chat",
+        "title": "AI 跳舞生成器",
         "logo": {
           "src": "/logo.png",
-          "alt": "ShipAny Chat"
+          "alt": "AI 跳舞生成器"
         },
         "url": "/chat"
       },
@@ -59,26 +59,26 @@
             "target": "_blank"
           },
           {
-            "title": "GitHub",
-            "url": "https://github.com/your-app-name",
-            "icon": "Github",
+            "title": "抖音",
+            "url": "https://tiktok.com/@aidancegenerator",
+            "icon": "RiTiktokFill",
             "target": "_blank"
           },
           {
             "title": "推特",
-            "url": "https://twitter.com/your-app-name",
+            "url": "https://x.com/aidancegen",
             "icon": "RiTwitterXFill",
             "target": "_blank"
           },
           {
-            "title": "Discord",
-            "url": "https://discord.gg/your-app-name",
-            "icon": "RiDiscordFill",
+            "title": "Instagram",
+            "url": "https://instagram.com/aidancegenerator",
+            "icon": "RiInstagramFill",
             "target": "_blank"
           },
           {
             "title": "邮箱",
-            "url": "mailto:support@your-domain.com",
+            "url": "mailto:support@aidancegenerator.io",
             "icon": "Mail",
             "target": "_blank"
           }

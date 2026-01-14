@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "title": "AI Baby Dance Generator - Make Baby Photos Dance on TikTok",
+    "description": "Transform any baby photo into a hilarious dancing video. The AI Baby Dance trend has taken over TikTok - create your own in seconds. No editing skills required.",
+    "keywords": "AI baby dance, baby dance generator, baby photo dance video, TikTok baby dance trend, make baby dance AI, dancing baby video maker"
+  },
+  "page": {
+    "show_sections": [
+      "hero",
+      "generator",
+      "about",
+      "howto",
+      "examples",
+      "faq",
+      "cta"
+    ],
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "AI Baby Dance Generator",
+        "highlight_text": "Baby Dance",
+        "description": "The AI Baby Dance trend has completely taken over TikTok and Instagram. Turn any baby photo into a hilarious, heartwarming dance video that's perfect for endless scrolling.<br/><br/>Parents are going viral. Your turn.",
+        "announcement": {
+          "badge": "Viral Trend",
+          "title": "Baby dance videos averaging 500K+ views",
+          "url": "#generator"
+        },
+        "buttons": [
+          {
+            "title": "Make Your Baby Dance",
+            "icon": "Sparkles",
+            "url": "#generator",
+            "target": "_self",
+            "variant": "default"
+          },
+          {
+            "title": "See Baby Dance Examples",
+            "icon": "Play",
+            "url": "#examples",
+            "target": "_self",
+            "variant": "outline"
+          }
+        ],
+        "show_avatars": true,
+        "avatars_tip": "8,000+ baby dances created today",
+        "show_award": false
+      },
+      "generator": {
+        "id": "generator",
+        "block": "dance-generator"
+      },
+      "about": {
+        "id": "about",
+        "block": "features-list",
+        "title": "Why AI Baby Dance Videos Go Viral",
+        "label": "The Science of Cute",
+        "description": "There's a reason baby content dominates social media. The AI Baby Dance trend combines universal appeal with cutting-edge AI to create videos that are impossible to scroll past. The sight of a baby doing perfectly coordinated dance moves triggers instant joy.",
+        "items": [
+          {
+            "title": "Universal Appeal",
+            "description": "Babies are the ultimate content. Add dancing? Unstoppable. These videos work across all demographics, languages, and cultures. Grandparents share them, teens repost them.",
+            "icon": "RiHeartLine"
+          },
+          {
+            "title": "High Watch Time",
+            "description": "TikTok's algorithm rewards videos people watch multiple times. Baby dance videos are so cute that viewers loop them 3-4x, sending your content to more For You pages.",
+            "icon": "RiTimeLine"
+          },
+          {
+            "title": "Perfect for Family Sharing",
+            "description": "Unlike edgy content, AI baby dance videos get shared in family group chats. That cross-platform sharing multiplies your reach exponentially.",
+            "icon": "RiShareLine"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "howto": {
+        "id": "howto",
+        "block": "features-step",
+        "title": "How to Make Your Baby Dance",
+        "description": "Create viral-worthy baby dance videos in 3 easy steps:",
+        "items": [
+          {
+            "title": "Upload a Baby Photo",
+            "description": "Works best with clear, front-facing photos. The baby can be sitting, standing, or even in a car seat. AI handles the rest."
+          },
+          {
+            "title": "Choose a Dance Style",
+            "description": "Pick from cute bounces, K-Pop moves, hip-hop grooves, or the classic baby shuffle. Each style is age-appropriate and adorable."
+          },
+          {
+            "title": "Generate & Share",
+            "description": "Get your video in under a minute. Share to TikTok, send to grandparents, or save as a digital keepsake."
+          }
+        ]
+      },
+      "examples": {
+        "id": "examples",
+        "title": "Baby Dance Videos Melting Hearts",
+        "description": "See why parents can't stop making these",
+        "items": [
+          {
+            "title": "Hip-Hop Baby",
+            "description": "6-month-old drops beat - 1.2M views",
+            "image": {
+              "src": "/imgs/showcases/baby-1.jpg",
+              "alt": "Hip-hop baby dance"
+            }
+          },
+          {
+            "title": "K-Pop Tiny Dancer",
+            "description": "Toddler nails the choreo - 890K views",
+            "image": {
+              "src": "/imgs/showcases/baby-2.jpg",
+              "alt": "K-Pop baby dance"
+            }
+          },
+          {
+            "title": "Classic Baby Shuffle",
+            "description": "The video grandma watched 47 times - 2.3M views",
+            "image": {
+              "src": "/imgs/showcases/baby-3.jpg",
+              "alt": "Baby shuffle dance"
+            }
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "faq": {
+        "id": "faq",
+        "title": "AI Baby Dance FAQ",
+        "description": "Common questions about making baby dance videos",
+        "items": [
+          {
+            "question": "What age babies work best?",
+            "answer": "Any age from newborn to toddler works great. The AI is trained on various baby body proportions. Sitting babies and standing toddlers both produce adorable results."
+          },
+          {
+            "question": "Is it safe to post AI baby videos?",
+            "answer": "The videos are clearly AI-generated, which most platforms now require disclosing. Many parents add 'Made with AI' in their caption. As with any child content, use your judgment about what you're comfortable sharing publicly."
+          },
+          {
+            "question": "Can I use old baby photos?",
+            "answer": "Absolutely! Many parents are using photos from years ago. It's a fun way to create 'what if' videos of your now-teenager as a dancing baby, or to animate photos of relatives as babies."
+          },
+          {
+            "question": "Why do baby dance videos get so many views?",
+            "answer": "Babies + dancing = dopamine. The cuteness triggers feel-good responses that make people watch multiple times and share with others. TikTok's algorithm detects high engagement and pushes these videos to more users."
+          },
+          {
+            "question": "What music is included?",
+            "answer": "Each dance template comes with pre-synced, family-friendly audio. Options include upbeat pop, cute sound effects, and trending TikTok sounds that work well with baby content."
+          },
+          {
+            "question": "Can grandparents use this?",
+            "answer": "Yes! We designed the interface to be simple enough for anyone. Upload photo → pick dance → generate. Many grandparents are creating videos of their grandkids and sharing in family groups."
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "title": "Make Your Baby the Next Viral Star",
+        "description": "Join thousands of parents creating adorable AI dance videos.",
+        "buttons": [
+          {
+            "title": "Create Baby Dance Video",
+            "url": "#generator",
+            "target": "_self",
+            "icon": "Sparkles"
+          },
+          {
+            "title": "Try Other Dance Styles",
+            "url": "/",
+            "target": "_self",
+            "variant": "outline",
+            "icon": "Grid"
+          }
+        ],
+        "className": "bg-muted"
+      }
+    }
+  }
+}

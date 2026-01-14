@@ -1,0 +1,173 @@
+{
+  "metadata": {
+    "title": "Viggle AI 替代品 - 无需 Discord | 网页版 AI 跳舞生成器",
+    "description": "寻找无需 Discord 的 Viggle AI 替代品？我们的网页版 AI 跳舞生成器让你即刻创建病毒跳舞视频。无需命令，无需等待 - 上传即可生成。",
+    "keywords": "Viggle AI 替代品, Viggle 替代无需 Discord, AI 跳舞生成器网页版, Viggle AI 替换, 在线跳舞视频生成器, 免费 Viggle 替代品"
+  },
+  "page": {
+    "show_sections": [
+      "hero",
+      "comparison",
+      "generator",
+      "features",
+      "faq",
+      "cta"
+    ],
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "你一直在等待的 Viggle AI 替代品",
+        "highlight_text": "Viggle AI 替代品",
+        "description": "喜欢 Viggle AI 的功能但讨厌 Discord 命令？我们在浏览器中构建了同样强大的 AI 跳舞生成功能。<br/><br/>无需 Discord。无需 /mix 命令。无需排队等待。只有结果。",
+        "announcement": {
+          "badge": "网页版",
+          "title": "30 秒从 Viggle 切换过来",
+          "url": "#generator"
+        },
+        "buttons": [
+          {
+            "title": "免费试用 - 无需 Discord",
+            "icon": "Sparkles",
+            "url": "#generator",
+            "target": "_self",
+            "variant": "default"
+          },
+          {
+            "title": "查看功能对比",
+            "icon": "Scale",
+            "url": "#comparison",
+            "target": "_self",
+            "variant": "outline"
+          }
+        ],
+        "show_avatars": true,
+        "avatars_tip": "本月已有 15,000+ Viggle 用户切换过来",
+        "show_award": false
+      },
+      "comparison": {
+        "id": "comparison",
+        "block": "features-list",
+        "title": "为什么创作者正在从 Viggle 切换",
+        "label": "真实对比",
+        "description": "Viggle AI 拥有出色的技术，但基于 Discord 的界面造成了使用障碍。以下是为什么成千上万的创作者正在切换到原生网页体验。",
+        "items": [
+          {
+            "title": "无需 Discord",
+            "description": "Viggle 需要加入他们的 Discord 服务器，学习 /mix 命令，并与机器人互动。我们只需一个简单的网页表单 - 上传，点击，完成。",
+            "icon": "RiCheckLine"
+          },
+          {
+            "title": "无需排队等待",
+            "description": "Viggle 的免费版通常需要排队 10-30 分钟。我们的无服务器架构意味着你的视频立即开始生成。",
+            "icon": "RiTimeLine"
+          },
+          {
+            "title": "预设模板",
+            "description": "不用再找参考视频了。我们已预装 Lil Yachty Walk、Aura Farming、K-Pop 舞蹈等。一键选择。",
+            "icon": "RiGridLine"
+          },
+          {
+            "title": "移动端友好",
+            "description": "在手机上创作 TikTok 内容？我们的网页界面完全响应式。Viggle 的 Discord 机器人在手机上很难用。",
+            "icon": "RiSmartphoneLine"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "generator": {
+        "id": "generator",
+        "block": "dance-generator"
+      },
+      "features": {
+        "id": "features",
+        "title": "同样强大，体验更好",
+        "description": "你喜欢的所有 AI 跳舞生成功能，没有使用障碍。",
+        "items": [
+          {
+            "title": "媲美的质量",
+            "description": "使用与最佳跳舞生成器相同的底层 AI 模型（Kling、Wan 2.1）。你的视频效果一样好。",
+            "icon": "RiAwardLine"
+          },
+          {
+            "title": "热门模板",
+            "description": "Lil Yachty Walk、Aura Farming、Tyla Dance、K-Pop 热曲 - 全部预装动作和音频。每周更新。",
+            "icon": "RiFireLine"
+          },
+          {
+            "title": "无水印（Pro）",
+            "description": "免费版有小水印。Pro 用户获得干净、专业的导出，可直接发布。",
+            "icon": "RiShieldCheckLine"
+          },
+          {
+            "title": "即时预览",
+            "description": "在使用积分前查看模板预览。确切知道你将获得什么舞蹈风格。",
+            "icon": "RiEyeLine"
+          },
+          {
+            "title": "进度追踪",
+            "description": "实时进度条显示生成状态。无需刷新 Discord 频道来检查视频是否完成。",
+            "icon": "RiLoaderLine"
+          },
+          {
+            "title": "一键下载",
+            "description": "视频准备好了？立即以 9:16 格式下载，完美适配 TikTok、Reels 和 Shorts。",
+            "icon": "RiDownloadLine"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "faq": {
+        "id": "faq",
+        "title": "Viggle AI 替代品常见问题",
+        "description": "从 Viggle 切换过来的用户常见问题",
+        "items": [
+          {
+            "question": "质量和 Viggle 一样好吗？",
+            "answer": "我们使用类似的 AI 模型（Kling AI、Wan 2.1）进行动作迁移。对于标准跳舞视频，质量相当。Viggle 的专有 JST-1 模型在复杂物理场景中可能略有优势，但对于病毒跳舞内容，你不会注意到差异。"
+          },
+          {
+            "question": "为什么这个不需要 Discord？",
+            "answer": "我们构建了一个拥有专用 API 基础设施的完整网页应用。Viggle 最初是一个 Discord 社区项目，然后从那里发展起来。不同的方法 - 我们优先考虑用户体验而非社区功能。"
+          },
+          {
+            "question": "真的可以免费试用吗？",
+            "answer": "是的。新用户获得免费积分来测试平台。无需信用卡即可开始。如果你喜欢，可以购买更多积分或订阅。"
+          },
+          {
+            "question": "可以像 Viggle 一样使用自己的参考视频吗？",
+            "answer": "目前我们专注于预设模板以提供最快、最简单的体验。自定义视频上传已在我们的规划中，将为想要 Viggle 式灵活性的 Pro 用户提供。"
+          },
+          {
+            "question": "如果 Viggle 有我想要但你们没有的舞蹈怎么办？",
+            "answer": "提出请求！我们根据用户请求和热门内容每周添加新模板。大多数热门请求会在几天内添加。"
+          },
+          {
+            "question": "需要学习任何命令吗？",
+            "answer": "零命令。整个流程是：点击模板 → 上传照片 → 点击生成 → 下载。就这样。没有 /mix，没有参数，没有需要学习的语法。"
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "title": "准备告别 Discord 了吗？",
+        "description": "体验 AI 跳舞生成应有的方式 - 即时、简单，直接在浏览器中完成。",
+        "buttons": [
+          {
+            "title": "生成你的第一个视频",
+            "url": "#generator",
+            "target": "_self",
+            "icon": "Sparkles"
+          },
+          {
+            "title": "查看所有舞蹈模板",
+            "url": "/",
+            "target": "_self",
+            "variant": "outline",
+            "icon": "Grid"
+          }
+        ],
+        "className": "bg-muted"
+      }
+    }
+  }
+}

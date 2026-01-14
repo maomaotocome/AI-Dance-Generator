@@ -1,15 +1,15 @@
 {
   "metadata": {
     "title": "价格",
-    "description": "选择方案，立即开始"
+    "description": "购买积分创建 AI 跳舞视频"
   },
   "page": {
-    "title": "ShipAny 价格表",
+    "title": "AI 跳舞生成器价格",
     "sections": {
       "pricing": {
         "id": "pricing",
-        "title": "价格",
-        "description": "获取 ShipAny 的全部功能，极速交付你的 AI SaaS 创业项目。",
+        "title": "简单透明的定价",
+        "description": "购买积分创建病毒式跳舞视频。每个视频消耗 10 积分。",
         "groups": [
           {
             "name": "one-time",
@@ -19,7 +19,7 @@
             "name": "monthly",
             "title": "包月",
             "is_featured": true,
-            "label": "立省15%"
+            "label": "最划算"
           },
           {
             "name": "yearly",
@@ -29,330 +29,309 @@
         "items": [
           {
             "title": "入门版",
-            "description": "开启你的第一个 SaaS 创业项目。",
+            "description": "体验 AI 跳舞视频的最佳选择。",
             "features_title": "包含",
             "features": [
-              "100 积分，有效期 1 个月",
-              "NextJS 项目模板",
-              "SEO 友好结构",
-              "支持 Stripe 支付",
-              "Supabase 数据存储",
-              "Google Oauth & 一键登录",
-              "多语言（i18n）支持"
+              "50 积分（5 个跳舞视频）",
+              "全部舞蹈模板",
+              "高清视频质量",
+              "即时下载分享",
+              "无水印"
             ],
             "interval": "one-time",
-            "amount": 9900,
+            "amount": 990,
             "currency": "USD",
-            "price": "$99",
-            "original_price": "$199",
+            "price": "$9.90",
+            "original_price": "$19.90",
             "currencies": [
               {
                 "currency": "CNY",
-                "amount": 69900,
-                "price": "¥699",
-                "original_price": "¥1399",
+                "amount": 6900,
+                "price": "¥69",
+                "original_price": "¥139",
                 "payment_providers": ["stripe"]
               }
             ],
             "unit": "",
             "is_featured": false,
-            "tip": "一次付费，畅享无限项目部署！",
+            "tip": "先试试看，无需订阅！",
             "button": {
-              "title": "获取 ShipAny",
+              "title": "立即开始",
               "url": "/#pricing",
               "icon": "RiFlashlightFill"
             },
             "product_id": "starter",
-            "product_name": "ShipAny 模板入门版",
-            "credits": 100,
+            "product_name": "AI 跳舞生成器入门版",
+            "credits": 50,
             "valid_days": 30,
             "group": "one-time"
           },
           {
-            "title": "标准版",
-            "description": "快速交付你的 SaaS 创业项目。",
+            "title": "创作者版",
+            "description": "适合经常发布内容的创作者。",
             "label": "热门",
-            "features_title": "包含入门版功能，此外",
+            "features_title": "入门版全部功能，此外",
             "features": [
-              "200 积分，有效期 3 个月",
-              "支持 Vercel 或 Cloudflare 部署",
-              "自动生成隐私政策&服务条款",
-              "集成 Google Analytics",
-              "集成 Google Search Console",
-              "Discord 技术社区",
-              "首个上线项目技术支持",
-              "终身免费更新"
+              "200 积分（20 个跳舞视频）",
+              "优先生成队列",
+              "全部热门模板",
+              "商业使用许可",
+              "邮件支持"
             ],
             "interval": "one-time",
-            "amount": 19900,
+            "amount": 2990,
             "currency": "USD",
-            "price": "$199",
-            "original_price": "$299",
+            "price": "$29.90",
+            "original_price": "$49.90",
             "currencies": [
               {
                 "currency": "CNY",
-                "amount": 139900,
-                "price": "¥1399",
-                "original_price": "¥1999",
+                "amount": 19900,
+                "price": "¥199",
+                "original_price": "¥349",
                 "payment_providers": ["stripe"]
               }
             ],
             "unit": "",
             "is_featured": true,
-            "tip": "一次付费，畅享无限项目部署！",
+            "tip": "抖音创作者最受欢迎！",
             "button": {
-              "title": "获取 ShipAny",
+              "title": "获取创作者版",
               "url": "/#pricing",
               "icon": "RiFlashlightFill"
             },
-            "product_id": "standard",
-            "product_name": "ShipAny 模板标准版",
+            "product_id": "creator",
+            "product_name": "AI 跳舞生成器创作者版",
             "credits": 200,
             "valid_days": 90,
             "group": "one-time"
           },
           {
-            "title": "高级版",
-            "description": "交付任意 AI SaaS 创业项目。",
-            "features_title": "包含标准版功能，此外",
+            "title": "专业版",
+            "description": "适合机构和高级用户。",
+            "features_title": "创作者版全部功能，此外",
             "features": [
-              "300 积分，有效期 1 年",
-              "内置 AI 业务功能",
-              "用户中心",
-              "积分系统",
-              "为你的 SaaS 售卖 API",
-              "后台管理系统",
-              "优先技术支持"
+              "500 积分（50 个跳舞视频）",
+              "最快生成速度",
+              "抢先体验新模板",
+              "API 访问",
+              "优先支持"
             ],
             "interval": "one-time",
-            "amount": 29900,
+            "amount": 5990,
             "currency": "USD",
-            "price": "$299",
-            "original_price": "$399",
+            "price": "$59.90",
+            "original_price": "$99.90",
             "currencies": [
               {
                 "currency": "CNY",
-                "amount": 199900,
-                "price": "¥1999",
-                "original_price": "¥2799",
-                "payment_providers": ["stripe", "creem"]
+                "amount": 39900,
+                "price": "¥399",
+                "original_price": "¥699",
+                "payment_providers": ["stripe"]
               }
             ],
             "unit": "",
             "is_featured": false,
-            "tip": "一次付费，畅享无限项目部署！",
+            "tip": "高产创作者最佳选择！",
             "button": {
-              "title": "获取 ShipAny",
+              "title": "获取专业版",
               "url": "/#pricing",
               "icon": "RiFlashlightFill"
             },
-            "product_id": "premium",
-            "product_name": "ShipAny 模板高级版",
-            "credits": 300,
+            "product_id": "pro",
+            "product_name": "AI 跳舞生成器专业版",
+            "credits": 500,
             "valid_days": 365,
             "group": "one-time"
           },
           {
             "title": "入门版",
-            "description": "开启你的第一个 SaaS 创业项目。",
+            "description": "体验 AI 跳舞视频的最佳选择。",
             "features_title": "包含",
             "features": [
-              "100 积分，有效期 1 个月",
-              "NextJS 项目模板",
-              "SEO 友好结构",
-              "支持 Stripe 支付",
-              "Supabase 数据存储",
-              "Google Oauth & 一键登录",
-              "多语言（i18n）支持"
+              "100 积分/月（10 个视频）",
+              "全部舞蹈模板",
+              "高清视频质量",
+              "即时下载分享",
+              "无水印"
             ],
             "interval": "month",
-            "amount": 8900,
+            "amount": 990,
             "currency": "USD",
-            "price": "$89",
-            "original_price": "$99",
+            "price": "$9.90",
+            "original_price": "$14.90",
             "unit": "/ 月",
             "is_featured": false,
-            "tip": "按月付费，畅享无限项目部署！",
+            "tip": "随时取消！",
             "button": {
-              "title": "获取 ShipAny",
+              "title": "订阅",
               "url": "/#pricing",
               "icon": "RiFlashlightFill"
             },
             "product_id": "starter-monthly",
-            "product_name": "ShipAny 模板入门版包月",
+            "product_name": "AI 跳舞生成器入门版包月",
             "credits": 100,
             "valid_days": 30,
             "group": "monthly",
             "plan_name": "入门版"
           },
           {
-            "title": "标准版",
-            "description": "快速交付你的 SaaS 创业项目。",
+            "title": "创作者版",
+            "description": "适合经常发布内容的创作者。",
             "label": "热门",
-            "features_title": "包含入门版功能，此外",
+            "features_title": "入门版全部功能，此外",
             "features": [
-              "200 积分，有效期 1 个月",
-              "支持 Vercel 或 Cloudflare 部署",
-              "自动生成隐私政策&服务条款",
-              "集成 Google Analytics",
-              "集成 Google Search Console",
-              "Discord 技术社区",
-              "首个上线项目技术支持",
-              "终身免费更新"
+              "300 积分/月（30 个视频）",
+              "优先生成队列",
+              "全部热门模板",
+              "商业使用许可",
+              "邮件支持"
             ],
             "interval": "month",
-            "amount": 16900,
+            "amount": 1990,
             "currency": "USD",
-            "price": "$169",
-            "original_price": "$199",
+            "price": "$19.90",
+            "original_price": "$29.90",
             "unit": "/ 月",
             "is_featured": true,
-            "tip": "按月付费，极速上线你的 SaaS 项目。",
+            "tip": "抖音创作者最受欢迎！",
             "button": {
-              "title": "获取 ShipAny",
+              "title": "订阅",
               "url": "/#pricing",
               "icon": "RiFlashlightFill"
             },
-            "product_id": "standard-monthly",
-            "product_name": "ShipAny 模板标准版包月",
-            "credits": 200,
-            "valid_days": 30,
-            "group": "monthly",
-            "plan_name": "标准版"
-          },
-          {
-            "title": "高级版",
-            "description": "交付任意 AI SaaS 创业项目。",
-            "features_title": "包含标准版功能，此外",
-            "features": [
-              "300 积分，有效期 1 个月",
-              "内置 AI 业务功能",
-              "用户中心",
-              "积分系统",
-              "为你的 SaaS 售卖 API",
-              "后台管理系统",
-              "优先技术支持"
-            ],
-            "interval": "month",
-            "amount": 24900,
-            "currency": "USD",
-            "price": "$249",
-            "original_price": "$299",
-            "unit": "/ 月",
-            "is_featured": false,
-            "tip": "按月付费，助你交付任何 AI SaaS 项目。",
-            "button": {
-              "title": "获取 ShipAny",
-              "url": "/#pricing",
-              "icon": "RiFlashlightFill"
-            },
-            "product_id": "premium-monthly",
-            "product_name": "ShipAny 模板高级版包月",
+            "product_id": "creator-monthly",
+            "product_name": "AI 跳舞生成器创作者版包月",
             "credits": 300,
             "valid_days": 30,
             "group": "monthly",
-            "plan_name": "高级版"
+            "plan_name": "创作者版"
+          },
+          {
+            "title": "专业版",
+            "description": "适合机构和高级用户。",
+            "features_title": "创作者版全部功能，此外",
+            "features": [
+              "1000 积分/月（100 个视频）",
+              "最快生成速度",
+              "抢先体验新模板",
+              "API 访问",
+              "优先支持"
+            ],
+            "interval": "month",
+            "amount": 4990,
+            "currency": "USD",
+            "price": "$49.90",
+            "original_price": "$79.90",
+            "unit": "/ 月",
+            "is_featured": false,
+            "tip": "机构最佳选择！",
+            "button": {
+              "title": "订阅",
+              "url": "/#pricing",
+              "icon": "RiFlashlightFill"
+            },
+            "product_id": "pro-monthly",
+            "product_name": "AI 跳舞生成器专业版包月",
+            "credits": 1000,
+            "valid_days": 30,
+            "group": "monthly",
+            "plan_name": "专业版"
           },
           {
             "title": "入门版",
-            "description": "开启你的第一个 SaaS 创业项目。",
+            "description": "体验 AI 跳舞视频的最佳选择。",
             "features_title": "包含",
             "features": [
-              "100 积分，有效期 1 年",
-              "NextJS 项目模板",
-              "SEO 友好结构",
-              "支持 Stripe 支付",
-              "Supabase 数据存储",
-              "Google Oauth & 一键登录",
-              "多语言（i18n）支持"
+              "1200 积分/年（120 个视频）",
+              "全部舞蹈模板",
+              "高清视频质量",
+              "即时下载分享",
+              "无水印"
             ],
             "interval": "year",
-            "amount": 82800,
+            "amount": 7900,
             "currency": "USD",
-            "price": "$69",
-            "original_price": "$89",
+            "price": "$6.58",
+            "original_price": "$9.90",
             "unit": "/ 月",
             "is_featured": false,
-            "tip": "按年付费，畅享无限项目部署！",
+            "tip": "年付立省33%！",
             "button": {
-              "title": "获取 ShipAny",
+              "title": "订阅",
               "url": "/#pricing",
               "icon": "RiFlashlightFill"
             },
             "product_id": "starter-yearly",
-            "product_name": "ShipAny 模板入门版包年",
+            "product_name": "AI 跳舞生成器入门版包年",
             "credits": 1200,
             "valid_days": 365,
             "group": "yearly",
             "plan_name": "入门版"
           },
           {
-            "title": "标准版",
-            "description": "快速交付你的 SaaS 创业项目。",
+            "title": "创作者版",
+            "description": "适合经常发布内容的创作者。",
             "label": "热门",
-            "features_title": "包含入门版功能，此外",
+            "features_title": "入门版全部功能，此外",
             "features": [
-              "200 积分，有效期 1 年",
-              "支持 Vercel 或 Cloudflare 部署",
-              "自动生成隐私政策&服务条款",
-              "集成 Google Analytics",
-              "集成 Google Search Console",
-              "Discord 技术社区",
-              "首个上线项目技术支持",
-              "终身免费更新"
+              "3600 积分/年（360 个视频）",
+              "优先生成队列",
+              "全部热门模板",
+              "商业使用许可",
+              "邮件支持"
             ],
             "interval": "year",
-            "amount": 154800,
+            "amount": 15900,
             "currency": "USD",
-            "price": "$129",
-            "original_price": "$169",
+            "price": "$13.25",
+            "original_price": "$19.90",
             "unit": "/ 月",
             "is_featured": true,
-            "tip": "按年付费，极速上线你的 SaaS 项目。",
+            "tip": "立省33% - 创作者最佳选择！",
             "button": {
-              "title": "获取 ShipAny",
+              "title": "订阅",
               "url": "/#pricing",
               "icon": "RiFlashlightFill"
             },
-            "product_id": "standard-yearly",
-            "product_name": "ShipAny 模板标准版包年",
-            "credits": 2400,
-            "valid_days": 365,
-            "group": "yearly",
-            "plan_name": "标准版"
-          },
-          {
-            "title": "高级版",
-            "description": "交付任意 AI SaaS 创业项目。",
-            "features_title": "包含标准版功能，此外",
-            "features": [
-              "300 积分，有效期 1 年",
-              "内置 AI 业务功能",
-              "用户中心",
-              "积分系统",
-              "为你的 SaaS 售卖 API",
-              "后台管理系统",
-              "优先技术支持"
-            ],
-            "interval": "year",
-            "amount": 226800,
-            "currency": "USD",
-            "price": "$189",
-            "original_price": "$249",
-            "unit": "/ 月",
-            "is_featured": false,
-            "tip": "按年付费，助你交付任何 AI SaaS 项目。",
-            "button": {
-              "title": "获取 ShipAny",
-              "url": "/#pricing",
-              "icon": "RiFlashlightFill"
-            },
-            "product_id": "premium-yearly",
-            "product_name": "ShipAny 模板高级版包年",
+            "product_id": "creator-yearly",
+            "product_name": "AI 跳舞生成器创作者版包年",
             "credits": 3600,
             "valid_days": 365,
             "group": "yearly",
-            "plan_name": "高级版"
+            "plan_name": "创作者版"
+          },
+          {
+            "title": "专业版",
+            "description": "适合机构和高级用户。",
+            "features_title": "创作者版全部功能，此外",
+            "features": [
+              "12000 积分/年（1200 个视频）",
+              "最快生成速度",
+              "抢先体验新模板",
+              "API 访问",
+              "优先支持"
+            ],
+            "interval": "year",
+            "amount": 39900,
+            "currency": "USD",
+            "price": "$33.25",
+            "original_price": "$49.90",
+            "unit": "/ 月",
+            "is_featured": false,
+            "tip": "立省33% - 机构最佳选择！",
+            "button": {
+              "title": "订阅",
+              "url": "/#pricing",
+              "icon": "RiFlashlightFill"
+            },
+            "product_id": "pro-yearly",
+            "product_name": "AI 跳舞生成器专业版包年",
+            "credits": 12000,
+            "valid_days": 365,
+            "group": "yearly",
+            "plan_name": "专业版"
           }
         ]
       }

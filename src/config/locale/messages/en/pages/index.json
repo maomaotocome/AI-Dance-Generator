@@ -1,13 +1,16 @@
 {
+  "metadata": {
+    "title": "AI Dance Generator - Make Photos Dance | Free Tool",
+    "description": "Transform any photo into viral dance videos with AI. Upload selfies, pets, or characters - get TikTok-ready videos in 30 seconds. Free to try!",
+    "keywords": "AI dance generator, AI dance video maker, make photos dance, TikTok dance AI, viral dance video, dancing photo generator, AI video generator, photo to dance video, free dance video maker, Viggle AI alternative"
+  },
   "page": {
     "show_sections": [
       "hero",
-      "logos",
-      "introduce",
-      "benefits",
+      "generator",
+      "showcases",
       "usage",
       "features",
-      "stats",
       "testimonials",
       "faq",
       "cta"
@@ -15,408 +18,250 @@
     "sections": {
       "hero": {
         "id": "hero",
-        "title": "Ship AI Startups in hours, not days",
-        "highlight_text": "in hours",
-        "description": "ShipAny is a NextJS boilerplate for building AI SaaS startups.<br/>Ship Fast with a variety of templates and components.",
+        "block": "hero-premium",
+        "title": "AI Dance Generator: Turn Any Photo Into Viral Dance Videos",
+        "highlight_text": "AI Dance Generator",
+        "description": "Make anyone dance with our AI dance video generator - upload a photo, pick a trending dance template, and create TikTok-ready dance videos in seconds.<br/><br/>No watermarks. No dancing skills needed. The best AI dance generator for viral content.",
         "announcement": {
-          "badge": "New",
-          "title": "🎉 ShipAny Template Two",
-          "url": "/pricing"
+          "badge": "Trending",
+          "title": "50M+ AI dance videos generated",
+          "url": "#generator"
         },
-        "tip": "🎁 Special offer for the first 1000 users",
+        "tip": "Trusted by 50,000+ creators using our AI dance generator",
         "buttons": [
           {
-            "title": "Get Started",
-            "icon": "Zap",
-            "url": "/pricing",
+            "title": "Create AI Dance Video Free",
+            "icon": "Sparkles",
+            "url": "#generator",
             "target": "_self",
             "variant": "default"
           },
           {
-            "title": "Read Document",
-            "icon": "BookOpenText",
-            "url": "/docs",
-            "target": "_blank",
+            "title": "Watch AI Dance Examples",
+            "icon": "Play",
+            "url": "#showcases",
+            "target": "_self",
             "variant": "outline"
           }
         ],
         "show_avatars": true,
-        "avatars_tip": "999+ users are using ShipAny",
-        "show_award": false,
-        "image": {
-          "src": "/imgs/features/admin.png",
-          "alt": "hero",
-          "width": 1200,
-          "height": 800
-        },
-        "image_invert": {
-          "src": "/imgs/features/admin-dark.png",
-          "alt": "hero",
-          "width": 1200,
-          "height": 800
-        },
-        "background_image": {
-          "src": "/imgs/bg/tree.jpg",
-          "alt": "hero"
-        }
+        "avatars_tip": "Join 50,000+ AI dance creators",
+        "show_award": false
       },
-      "logos": {
-        "id": "logos",
-        "title": "ShipAny is built on the shoulders of giants",
+      "generator": {
+        "id": "generator",
+        "block": "dance-generator-premium"
+      },
+      "showcases": {
+        "id": "showcases",
+        "block": "showcases-premium",
+        "title": "AI Dance Videos Going Viral Right Now",
+        "description": "Real AI dance generator results from our users. These AI dance videos were created in under 60 seconds using our photo to dance video technology.",
         "items": [
           {
-            "title": "Next.js",
+            "title": "2.3M Views - AI Dance Video",
+            "description": "Baby made to dance with AI dance generator - viral on TikTok",
             "image": {
-              "src": "/imgs/logos/nextjs.svg",
-              "alt": "Next.js"
+              "src": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=600&fit=crop",
+              "alt": "AI Dance Generator viral video example"
             }
           },
           {
-            "title": "React",
+            "title": "850K Views - K-Pop AI Dance",
+            "description": "K-Pop style AI dance video with perfect motion sync",
             "image": {
-              "src": "/imgs/logos/react.svg",
-              "alt": "React"
+              "src": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=400&h=600&fit=crop",
+              "alt": "K-Pop AI dance video maker result"
             }
           },
           {
-            "title": "TailwindCSS",
+            "title": "1.5M Views - Trending Dance",
+            "description": "Viral AI dance video created with our dance generator",
             "image": {
-              "src": "/imgs/logos/tailwindcss.svg",
-              "alt": "TailwindCSS"
-            }
-          },
-          {
-            "title": "Shadcn/UI",
-            "image": {
-              "src": "/imgs/logos/shadcn.svg",
-              "alt": "Shadcn/UI"
-            }
-          },
-          {
-            "title": "Vercel",
-            "image": {
-              "src": "/imgs/logos/vercel.svg",
-              "alt": "Vercel"
-            }
-          }
-        ]
-      },
-      "introduce": {
-        "block": "features-list",
-        "id": "introduce",
-        "title": "What is ShipAny",
-        "label": "Introduce",
-        "description": "ShipAny is a NextJS boilerplate for building AI SaaS startups, including templates, components, and documentation.",
-        "image": {
-          "src": "/imgs/features/landing-page.png",
-          "alt": "introduce"
-        },
-        "items": [
-          {
-            "title": "Ready-to-use Templates",
-            "description": "Choose from dozens of production-ready AI SaaS templates to quickly start your project.",
-            "icon": "RiNextjsFill",
-            "image": {
-              "src": "/imgs/features/1.png",
-              "alt": "introduce"
-            }
-          },
-          {
-            "title": "Infrastructure Setup",
-            "description": "Get instant access to scalable infrastructure with best practices built-in.",
-            "icon": "RiDatabase2Line",
-            "image": {
-              "src": "/imgs/features/2.png",
-              "alt": "introduce"
-            }
-          },
-          {
-            "title": "Quick Deployment",
-            "description": "Deploy your AI SaaS application to production in hours, not days.",
-            "icon": "RiCloudyFill",
-            "image": {
-              "src": "/imgs/features/3.png",
-              "alt": "introduce"
-            }
-          },
-          {
-            "title": "AI Integration",
-            "description": "Integrate AI into your project with ease using our built-in AI SDK.",
-            "icon": "RiRobot2Line",
-            "image": {
-              "src": "/imgs/features/4.png",
-              "alt": "introduce"
+              "src": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&h=600&fit=crop",
+              "alt": "AI dance generator trending video"
             }
           }
         ],
         "className": "bg-muted"
       },
-      "benefits": {
-        "block": "features-accordion",
-        "id": "benefits",
-        "title": "Why Choose ShipAny",
-        "label": "Benefits",
-        "description": "Get everything you need to launch your AI startup - from ready-to-use templates to technical support.",
-        "items": [
-          {
-            "title": "Complete Framework",
-            "description": "Built on Next.js with authentication, payments, and AI integration - everything works out of the box.",
-            "icon": "RiNextjsFill",
-            "image": {
-              "src": "/imgs/features/user-billing.png",
-              "alt": "benefits"
-            }
-          },
-          {
-            "title": "Rich Templates Library",
-            "description": "Choose from various AI SaaS templates to kickstart your project - chatbots, image generation, and more.",
-            "icon": "RiClapperboardAiLine",
-            "image": {
-              "src": "/imgs/features/admin-settings.png",
-              "alt": "benefits"
-            }
-          },
-          {
-            "title": "Technical Guidance",
-            "description": "Get dedicated support and join our developer community to ensure your successful launch.",
-            "icon": "RiCodeFill",
-            "image": {
-              "src": "/imgs/features/landing-page.png",
-              "alt": "benefits"
-            }
-          }
-        ]
-      },
       "usage": {
         "block": "features-step",
         "id": "usage",
-        "title": "How to Launch with ShipAny",
-        "description": "Get your AI SaaS startup running in three simple steps:",
+        "title": "How to Create AI Dance Videos in 3 Steps",
+        "description": "Our AI dance generator makes it easy. No editing skills needed. No filming required. Just upload and let AI create your dance video.",
         "image": {
-          "src": "/imgs/features/1.png",
-          "alt": "usage"
+          "src": "https://images.unsplash.com/photo-1547153760-18fc86324498?w=800&h=600&fit=crop",
+          "alt": "AI Dance Generator Demo - Photo to dance video"
         },
         "image_position": "left",
         "text_align": "center",
         "items": [
           {
-            "title": "Get ShipAny",
-            "description": "Buy ShipAny with a one-time payment. Check your email for the code and documentation.",
+            "title": "Upload Photo to AI Dance Generator",
+            "description": "Upload any photo to our AI dance generator - selfies, pets, babies, anime characters, or even historical figures. Our AI dance video maker works with any face. Front-facing photos work best for realistic AI dance videos.",
             "image": {
-              "src": "/imgs/features/5.png",
-              "alt": "usage"
+              "src": "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=200&h=200&fit=crop",
+              "alt": "Upload photo to AI dance generator"
             }
           },
           {
-            "title": "Start Your Project",
-            "description": "Read the documentation and clone the code of ShipAny. Start building your AI SaaS startup.",
+            "title": "Pick a Dance Template for Your AI Video",
+            "description": "Choose from our library of viral dance templates for your AI dance video. TikTok trends, K-Pop choreography, hip-hop moves - our AI dance generator has all the trending dances. Updated weekly with the latest viral dance moves.",
             "image": {
-              "src": "/imgs/features/6.png",
-              "alt": "usage"
+              "src": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop",
+              "alt": "Select dance template for AI dance video"
             }
           },
           {
-            "title": "Customize Your Project",
-            "description": "Modify the template with your data and contents. Specific AI functionality needs.",
+            "title": "Download Your AI Dance Video",
+            "description": "Get your AI-generated dance video in 30-60 seconds. No watermark. Full HD 9:16 vertical format. Ready for TikTok, Instagram Reels, and YouTube Shorts. Share your AI dance video and go viral!",
             "image": {
-              "src": "/imgs/features/7.png",
-              "alt": "usage"
+              "src": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=200&h=200&fit=crop",
+              "alt": "Download AI dance video"
             }
-          },
-          {
-            "title": "Deploy to Production",
-            "description": "Deploy your project to production with a few steps and start serving customers immediately.",
-            "image": {
-              "src": "/imgs/features/8.png",
-              "alt": "usage"
-            }
-          }
-        ],
-        "className": "bg-muted"
-      },
-      "features": {
-        "id": "features",
-        "title": "Key Features of ShipAny",
-        "description": "Everything you need to launch your AI SaaS startup quickly and efficiently.",
-        "items": [
-          {
-            "title": "Next.js Boilerplate",
-            "description": "Production-ready Next.js templates with SEO-friendly structure and i18n support.",
-            "icon": "RiNextjsFill"
-          },
-          {
-            "title": "Authentication & Payments",
-            "description": "Integrated Google OAuth, one-tap login, and Stripe payment processing.",
-            "icon": "RiKey2Fill"
-          },
-          {
-            "title": "Data Infrastructure",
-            "description": "Built-in Supabase integration for reliable and scalable data storage.",
-            "icon": "RiDatabase2Line"
-          },
-          {
-            "title": "One-Click Deployment",
-            "description": "Seamless deployment to Vercel or Cloudflare with automated setup.",
-            "icon": "RiCloudy2Fill"
-          },
-          {
-            "title": "Business Analytics",
-            "description": "Integrated Google Analytics and Search Console for tracking growth.",
-            "icon": "RiBarChart2Line"
-          },
-          {
-            "title": "AI-Ready Infrastructure",
-            "description": "Pre-configured AI integration with built-in credits system and API sales.",
-            "icon": "RiRobot2Line"
           }
         ]
       },
-      "stats": {
-        "id": "stats",
-        "title": "People Love ShipAny",
-        "description": "for it's easy to use and fast to ship.",
+      "features": {
+        "id": "features",
+        "title": "Why Our AI Dance Generator is the Best Choice",
+        "description": "The fastest AI dance video maker to turn photos into viral dance content. Better than Viggle AI for creating realistic AI dance videos.",
         "items": [
           {
-            "title": "999+",
-            "description": "Customers"
+            "title": "Any Photo Can Dance with AI",
+            "description": "Our AI dance generator transforms selfies, pets, babies, anime characters, memes - even historical figures into smooth AI dance videos. The most versatile AI dance video maker available.",
+            "icon": "RiImageLine"
           },
           {
-            "title": "200+",
-            "description": "Blocks"
+            "title": "Trending AI Dance Templates",
+            "description": "Access the latest viral dance moves in our AI dance generator. TikTok trends, K-Pop hits, hip-hop classics - all optimized for the best AI dance video results.",
+            "icon": "RiMusic2Line"
           },
           {
-            "title": "50+",
-            "description": "Templates"
+            "title": "Ultra-Realistic AI Dance Motion",
+            "description": "Advanced AI creates natural, fluid dance movements that look real - not like cheap filters. Our AI dance generator uses state-of-the-art motion transfer technology.",
+            "icon": "RiRobot2Line"
+          },
+          {
+            "title": "30-Second AI Dance Generation",
+            "description": "From upload to download in under a minute with our fast AI dance video maker. Create AI dance videos while the trend is still hot.",
+            "icon": "RiFlashlightLine"
+          },
+          {
+            "title": "No Watermark AI Dance Videos",
+            "description": "Clean, professional AI dance videos in 9:16 vertical format. Our AI dance generator exports without watermarks - perfect for TikTok, Reels, and Shorts.",
+            "icon": "RiVideoLine"
+          },
+          {
+            "title": "Zero Dancing Skills Required",
+            "description": "Let AI do the dancing. You take the views. Our AI dance generator means no choreography learning needed - just upload and create viral AI dance videos.",
+            "icon": "RiUserSmileLine"
           }
         ],
         "className": "bg-muted"
       },
       "testimonials": {
         "id": "testimonials",
-        "title": "What Users Say About ShipAny",
-        "description": "Hear from developers and founders who launched their AI startups with ShipAny.",
+        "title": "Creators Love Our AI Dance Generator",
+        "description": "Real stories from content creators who transformed their reach with our AI dance video maker. See why they call it the best AI dance generator.",
         "items": [
           {
-            "name": "David Chen",
-            "role": "Founder of AIWallpaper.shop",
-            "quote": "ShipAny saved us months of development time. We launched our AI wallpaper business in just 2 days and got our first paying customer within a week!",
+            "name": "Sarah M.",
+            "role": "TikTok Creator - 500K followers",
+            "quote": "This AI dance generator is insane! Made my baby dance to K-Pop, got 2.3 million views overnight. The best AI dance video maker I've ever used!",
             "image": {
               "src": "/imgs/avatars/1.png",
-              "alt": "david"
+              "alt": "Sarah - AI dance generator user"
             }
           },
           {
-            "name": "Rachel Kim",
-            "role": "CTO at HeyBeauty.ai",
-            "quote": "The pre-built AI infrastructure is a game-changer. We didn't have to worry about architecture - just focused on our AI beauty tech and went live fast.",
+            "name": "Mike Chen",
+            "role": "Content Creator - 1.2M subscribers",
+            "quote": "Used this AI dance generator to make my grandma do trending dances. Video hit 5M views! Way better than other AI dance video makers.",
             "image": {
               "src": "/imgs/avatars/2.png",
-              "alt": "rachel"
+              "alt": "Mike - AI dance generator user"
             }
           },
           {
-            "name": "Marcus Thompson",
-            "role": "Solo Developer",
-            "quote": "As a solo developer, ShipAny gave me everything I needed - auth, payments, AI integration, and beautiful UI. Launched my SaaS in a weekend!",
+            "name": "Jessica L.",
+            "role": "Instagram Influencer - 800K followers",
+            "quote": "Finally posting dance content without learning choreo thanks to this AI dance generator. Engagement up 300% since I started using this AI dance video maker!",
             "image": {
               "src": "/imgs/avatars/3.png",
-              "alt": "marcus"
+              "alt": "Jessica - AI dance generator user"
             }
           },
           {
-            "name": "Sofia Garcia",
-            "role": "CEO of Melodisco",
-            "quote": "The templates are production-ready and highly customizable. We built our AI music platform in hours instead of months. Incredible time-to-market!",
+            "name": "David K.",
+            "role": "YouTuber - 2M subscribers",
+            "quote": "The AI dance video quality is incredible. Subscribers can't tell it's AI-generated. Best AI dance generator tool I've discovered this year!",
             "image": {
               "src": "/imgs/avatars/4.png",
-              "alt": "sofia"
-            }
-          },
-          {
-            "name": "James Wilson",
-            "role": "Tech Lead at GPTs.works",
-            "quote": "ShipAny's infrastructure is rock-solid. We scaled from 0 to 10k users without touching the backend. Best investment for our AI startup.",
-            "image": {
-              "src": "/imgs/avatars/5.png",
-              "alt": "james"
-            }
-          },
-          {
-            "name": "Anna Zhang",
-            "role": "Startup Founder",
-            "quote": "From idea to launch in 3 days! ShipAny's templates and deployment tools made it possible to test our AI business concept incredibly fast.",
-            "image": {
-              "src": "/imgs/avatars/6.png",
-              "alt": "anna"
+              "alt": "David - AI dance generator user"
             }
           }
         ]
       },
       "faq": {
         "id": "faq",
-        "title": "Frequently Asked Questions About ShipAny",
-        "description": "Have another question? Contact us on Discord or by email.",
+        "title": "AI Dance Generator FAQ",
+        "description": "Everything you need to know about our AI dance video maker and how to create viral AI dance videos.",
         "items": [
           {
-            "question": "What exactly is ShipAny and how does it work?",
-            "answer": "ShipAny is a comprehensive NextJS boilerplate designed specifically for building AI SaaS startups. It provides ready-to-use templates, infrastructure setup, and deployment tools that help you launch your AI business in hours instead of days."
+            "question": "What is an AI Dance Generator?",
+            "answer": "An AI dance generator is an artificial intelligence tool that transforms any photo into a realistic dancing video. Our AI dance video maker lets you upload a photo, pick a dance style, and get your AI dance video in under 60 seconds. No dancing or editing skills required - the AI handles all the motion generation."
           },
           {
-            "question": "Do I need advanced technical skills to use ShipAny?",
-            "answer": "While basic programming knowledge is helpful, ShipAny is designed to be developer-friendly. Our templates and documentation make it easy to get started, even if you're not an expert in AI or cloud infrastructure."
+            "question": "What photos work best with the AI Dance Generator?",
+            "answer": "Front-facing photos with clear face visibility work best in our AI dance generator. You can use selfies, baby photos, pet pictures, anime characters, memes, or even historical figures. The AI dance video maker produces better results with higher resolution images and good lighting."
           },
           {
-            "question": "What types of AI SaaS can I build with ShipAny?",
-            "answer": "ShipAny supports a wide range of AI applications, from content generation to data analysis tools. Our templates cover popular use cases like AI chatbots, content generators, image processing apps, and more."
+            "question": "How fast does the AI Dance Generator create videos?",
+            "answer": "Our AI dance generator creates videos in 30-60 seconds. This fast AI dance video maker lets you download immediately and post while the trend is still hot. Processing time may vary slightly based on video complexity and server load."
           },
           {
-            "question": "How long does it typically take to launch with ShipAny?",
-            "answer": "With ShipAny, you can have a working prototype in hours and a production-ready application in hours. Our one-click deployment and pre-configured infrastructure significantly reduce the traditional months-long development cycle."
+            "question": "Will my AI dance videos have watermarks?",
+            "answer": "No! All AI dance videos from our generator are watermark-free and exported in full HD 9:16 vertical format. This makes our AI dance generator perfect for TikTok, Instagram Reels, and YouTube Shorts without any branding."
           },
           {
-            "question": "What's included in the ShipAny infrastructure?",
-            "answer": "ShipAny provides a complete infrastructure stack including authentication, database setup, API integration, payment processing, and scalable cloud deployment. Everything is pre-configured following industry best practices."
+            "question": "What dance styles are available in the AI Dance Generator?",
+            "answer": "Our AI dance generator includes trending TikTok dances, K-Pop choreography, hip-hop moves, and fun dance styles. We update our AI dance video maker with new viral dance templates weekly so you can stay ahead of trends."
           },
           {
-            "question": "Can I customize the templates to match my brand?",
-            "answer": "Absolutely! All ShipAny templates are fully customizable. You can modify the design, features, and functionality to match your brand identity and specific business requirements while maintaining the robust underlying infrastructure."
+            "question": "How much does the AI Dance Generator cost?",
+            "answer": "Each AI dance video costs 10 credits. New users get free credits to try our AI dance generator. Check our pricing page for credit packages - the more you buy, the more you save on creating AI dance videos."
+          },
+          {
+            "question": "Is this AI Dance Generator better than Viggle AI?",
+            "answer": "Our AI dance generator offers competitive features to Viggle AI including high-quality motion transfer, no watermarks, fast generation, and a wide variety of dance templates. Many users prefer our AI dance video maker for its ease of use and consistent results."
+          },
+          {
+            "question": "Can I use AI Dance Generator videos commercially?",
+            "answer": "Yes! AI dance videos created with our generator can be used for personal and commercial purposes including social media content, marketing, and entertainment. You own the videos you create with our AI dance video maker."
           }
         ]
       },
       "cta": {
         "id": "cta",
-        "title": "Ship your first AI SaaS Startup",
-        "description": "Start from here, ship with ShipAny.",
+        "title": "Create Your First AI Dance Video Now",
+        "description": "Join 50,000+ creators already making viral AI dance videos. Try our AI dance generator free today and see why it's the best AI dance video maker.",
         "buttons": [
           {
-            "title": "Get ShipAny",
-            "url": "https://shipany.ai",
-            "target": "_blank",
-            "icon": "Zap"
+            "title": "Start AI Dance Generator Free",
+            "url": "#generator",
+            "target": "_self",
+            "icon": "Sparkles"
           },
           {
-            "title": "Read Document",
-            "url": "/docs",
-            "target": "_blank",
+            "title": "See Pricing",
+            "url": "/pricing",
+            "target": "_self",
             "variant": "outline",
-            "icon": "BookOpenText"
+            "icon": "CreditCard"
           }
         ],
-        "className": "bg-muted"
-      },
-      "subscribe": {
-        "id": "subscribe",
-        "title": "Subscribe to our newsletter",
-        "description": "Get the latest news and updates from ShipAny.",
-        "submit": {
-          "input": {
-            "placeholder": "Enter your email"
-          },
-          "button": {
-            "title": "Subscribe"
-          },
-          "action": "/api/subscribe"
-        },
         "className": "bg-muted"
       }
     }
