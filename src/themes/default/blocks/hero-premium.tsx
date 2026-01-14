@@ -2,17 +2,44 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import { ArrowRight, Play, Sparkles, Star, Zap } from 'lucide-react';
+import {
+  ArrowRight,
+  CheckCircle2,
+  Instagram,
+  Music,
+  PlaySquare,
+  Sparkles,
+  Star,
+  TrendingUp,
+  Upload,
+  Wand2,
+  Youtube,
+  Zap,
+} from 'lucide-react';
 
 import { Link } from '@/core/i18n/navigation';
-import { SmartIcon } from '@/shared/blocks/common';
 import { Button } from '@/shared/components/ui/button';
 import { cn } from '@/shared/lib/utils';
 import { Section } from '@/shared/types/blocks/landing';
 
 import { SocialAvatars } from './social-avatars';
 
-// Floating particle component
+// --- Assets & Icons ---
+
+const TikTokIcon = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
+    <path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.687a8.182 8.182 0 0 0 4.773 1.526V6.79a4.831 4.831 0 0 1-1.003-.104z" />
+  </svg>
+);
+
+const YouTubeShortsIcon = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
+    <path d="M17.7 7.7a2.3 2.3 0 0 0-1.2-1l-8-3.3a2.4 2.4 0 0 0-2.4.4 2.3 2.3 0 0 0-.8 2.3v.1l1.1 5.3a1.5 1.5 0 0 1-.5 1.4L4.8 14a2.3 2.3 0 0 0 .1 3.2 2.3 2.3 0 0 0 2 .5l8 3.3a2.3 2.3 0 0 0 3.2-2.7l-1-5.3a1.5 1.5 0 0 1 .4-1.4l1.1-1a2.3 2.3 0 0 0-.9-2.9zM7.2 9l6.5 3-6.5 3V9z" />
+  </svg>
+);
+
+// --- Sub-components ---
+
 function FloatingParticle({
   delay,
   duration,
@@ -28,7 +55,7 @@ function FloatingParticle({
 }) {
   return (
     <div
-      className="absolute rounded-full opacity-40"
+      className="absolute rounded-full opacity-40 mix-blend-screen"
       style={{
         width: size,
         height: size,
@@ -37,12 +64,12 @@ function FloatingParticle({
         background:
           'radial-gradient(circle, oklch(0.72 0.25 300 / 0.8) 0%, transparent 70%)',
         animation: `float ${duration}s ease-in-out ${delay}s infinite`,
+        boxShadow: `0 0 ${size * 2}px oklch(0.72 0.25 300 / 0.4)`,
       }}
     />
   );
 }
 
-// Animated gradient orb
 function GradientOrb({
   className,
   size = 400,
@@ -53,14 +80,17 @@ function GradientOrb({
   color?: 'primary' | 'accent' | 'secondary';
 }) {
   const colors = {
-    primary: 'oklch(0.72 0.25 300 / 0.3)',
-    accent: 'oklch(0.7 0.22 330 / 0.25)',
-    secondary: 'oklch(0.65 0.2 270 / 0.2)',
+    primary: 'oklch(0.72 0.25 300 / 0.2)',
+    accent: 'oklch(0.7 0.22 330 / 0.15)',
+    secondary: 'oklch(0.65 0.2 270 / 0.15)',
   };
 
   return (
     <div
-      className={cn('absolute rounded-full blur-3xl', className)}
+      className={cn(
+        'absolute rounded-full mix-blend-screen blur-[100px]',
+        className
+      )}
       style={{
         width: size,
         height: size,
@@ -71,69 +101,159 @@ function GradientOrb({
   );
 }
 
-// Video showcase mockup
-function VideoShowcase({ className }: { className?: string }) {
-  return (
-    <div
-      className={cn(
-        'group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/0 p-1 shadow-2xl backdrop-blur-sm',
-        className
-      )}
-    >
-      {/* Phone frame */}
-      <div className="relative aspect-[9/16] w-full overflow-hidden rounded-xl bg-black/80">
-        {/* Placeholder video content */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20" />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
-            <Play className="ml-1 h-8 w-8 text-white" fill="white" />
-          </div>
-        </div>
-        {/* Dancing figure silhouette */}
-        <div className="absolute bottom-8 left-1/2 h-32 w-20 -translate-x-1/2 rounded-t-full bg-gradient-to-t from-primary/40 to-transparent" />
-        {/* Glow effect */}
-        <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-primary/30 to-transparent" />
-      </div>
-      {/* Decorative elements */}
-      <div className="absolute -right-2 -top-2 h-4 w-4 animate-pulse rounded-full bg-primary" />
-      <div
-        className="absolute -bottom-1 -left-1 h-3 w-3 rounded-full bg-accent"
-        style={{ animationDelay: '0.5s' }}
-      />
-    </div>
-  );
-}
-
-// Stats badge
-function StatBadge({
-  icon: Icon,
-  value,
-  label,
+function VideoShowcase({
   className,
-  delay = 0,
+  gradient = 'from-blue-600 via-violet-600 to-purple-600',
+  active = false,
 }: {
-  icon: React.ElementType;
-  value: string;
-  label: string;
   className?: string;
-  delay?: number;
+  gradient?: string;
+  active?: boolean;
 }) {
   return (
     <div
       className={cn(
-        'glass flex items-center gap-3 rounded-2xl px-4 py-3 opacity-0',
+        'group relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-black shadow-2xl backdrop-blur-md',
         className
       )}
-      style={{
-        animation: `slide-up 0.6s cubic-bezier(0.4, 0, 0.2, 1) ${delay}s forwards`,
-      }}
     >
-      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary/20 to-accent/20">
-        <Icon className="h-5 w-5 text-primary" />
+      {/* Phone frame UI */}
+      <div className="absolute top-0 right-0 left-0 z-20 flex h-7 items-center justify-center bg-gradient-to-b from-black/80 to-transparent pt-3">
+        <div className="h-2 w-20 rounded-full bg-black/80 backdrop-blur-md" />
       </div>
-      <div>
-        <p className="text-lg font-bold text-foreground">{value}</p>
-        <p className="text-xs text-muted-foreground">{label}</p>
+
+      {/* Screen Content */}
+      <div className="relative aspect-[9/18] w-full overflow-hidden bg-gray-900">
+        {/* Animated Gradient Placeholder */}
+        <div
+          className={cn(
+            'absolute inset-0 bg-gradient-to-br bg-[length:400%_400%]',
+            gradient,
+            active ? 'animate-gradient-xy' : 'opacity-80'
+          )}
+        />
+
+        {/* Silhouette / Content Placeholder */}
+        <div className="absolute inset-0 flex items-center justify-center opacity-50 mix-blend-overlay">
+          <div className="h-full w-full bg-[url('https://images.unsplash.com/photo-1547153760-18fc86324498?q=80&w=1000&auto=format&fit=crop')] bg-cover bg-center grayscale" />
+        </div>
+
+        {/* Overlay gradient */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20" />
+
+        {/* Floating UI Elements (Simulating an App Interface) */}
+        <div className="absolute right-5 bottom-6 left-5 z-10 flex items-end justify-between">
+          <div className="flex flex-col gap-1.5">
+            <div className="h-2 w-24 rounded-full bg-white/40" />
+            <div className="h-2 w-16 rounded-full bg-white/20" />
+            <div className="mt-2 flex items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 backdrop-blur-md">
+              <Music className="h-3 w-3 text-white" />
+              <span className="text-[10px] font-medium text-white">
+                Original Audio
+              </span>
+            </div>
+          </div>
+          <div className="flex flex-col gap-3">
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-md">
+              <Star className="h-5 w-5 text-white" />
+            </div>
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-md">
+              <ArrowRight className="h-5 w-5 text-white" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Border glow & Reflections */}
+      <div className="pointer-events-none absolute inset-0 rounded-[2.5rem] border border-white/10 ring-1 ring-white/5" />
+
+      {/* Dynamic Shine effect */}
+      <div className="group-hover:animate-shine absolute -inset-full top-0 block h-full w-1/2 -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-20" />
+    </div>
+  );
+}
+
+function TransformationStep({
+  icon: Icon,
+  label,
+  isLast = false,
+}: {
+  icon: any;
+  label: string;
+  isLast?: boolean;
+}) {
+  return (
+    <div className="flex items-center gap-3">
+      <div className="flex flex-col items-center gap-2">
+        <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/10 shadow-inner backdrop-blur-sm transition-colors hover:bg-white/20">
+          <Icon className="h-5 w-5 text-white" />
+        </div>
+        <span className="text-xs font-medium text-white/70">{label}</span>
+      </div>
+      {!isLast && <ArrowRight className="mb-5 h-4 w-4 text-white/20" />}
+    </div>
+  );
+}
+
+function HeroVideoCarousel() {
+  const [active, setActive] = useState(0);
+
+  const items = [
+    { id: 0, gradient: 'from-violet-600 via-fuchsia-600 to-pink-600' },
+    { id: 1, gradient: 'from-cyan-500 via-blue-600 to-indigo-600' },
+    { id: 2, gradient: 'from-orange-500 via-amber-500 to-yellow-500' },
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActive((prev) => (prev + 1) % items.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const getStyles = (index: number) => {
+    const position = (index - active + items.length) % items.length;
+
+    if (position === 0) {
+      return 'z-30 scale-100 opacity-100 translate-x-0 rotate-0 shadow-[0_0_50px_-10px_rgba(168,85,247,0.4)]';
+    } else if (position === 1) {
+      return 'z-10 scale-[0.85] opacity-40 translate-x-[60%] rotate-6 blur-[1px] grayscale-[0.5] hidden sm:block';
+    } else {
+      return 'z-10 scale-[0.85] opacity-40 -translate-x-[60%] -rotate-6 blur-[1px] grayscale-[0.5] hidden sm:block';
+    }
+  };
+
+  return (
+    <div className="relative flex h-[400px] w-full items-center justify-center sm:h-[500px]">
+      <div className="absolute -top-10 left-1/2 -translate-x-1/2 rounded-full border border-white/10 bg-black/40 px-3 py-1 backdrop-blur-md sm:-top-12 sm:px-4 sm:py-1.5">
+        <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-xs font-bold tracking-wider text-transparent uppercase sm:text-sm">
+          Before → After
+        </span>
+      </div>
+
+      {items.map((item, index) => (
+        <div
+          key={item.id}
+          className={cn(
+            'absolute transition-all duration-700 ease-in-out will-change-transform',
+            getStyles(index)
+          )}
+          style={{ width: 'clamp(200px, 70vw, 280px)' }}
+        >
+          <VideoShowcase gradient={item.gradient} active={index === active} />
+        </div>
+      ))}
+
+      <div className="animate-bounce-subtle absolute -right-4 bottom-20 z-40 hidden lg:block">
+        <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-black/60 p-4 shadow-xl backdrop-blur-xl">
+          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-green-500/20">
+            <TrendingUp className="h-5 w-5 text-green-400" />
+          </div>
+          <div>
+            <p className="text-sm font-bold text-white">Viral Ready</p>
+            <p className="text-xs text-white/50">Optimized for TikTok</p>
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -146,12 +266,7 @@ export function HeroPremium({
   section: Section;
   className?: string;
 }) {
-  const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
 
   const highlightText = section.highlight_text ?? '';
   let texts: (string | undefined)[] | null = null;
@@ -164,98 +279,127 @@ export function HeroPremium({
       ref={sectionRef}
       id={section.id}
       className={cn(
-        'relative min-h-[90vh] overflow-hidden pt-20 pb-16 md:pt-28 md:pb-24',
+        'relative min-h-[100vh] overflow-hidden pt-20 pb-16 md:pt-28 md:pb-24',
         section.className,
         className
       )}
     >
       {/* Background effects */}
-      <div className="absolute inset-0 -z-10">
-        {/* Animated gradient background for dark mode */}
-        <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-background dark:animated-gradient-bg" />
+      <div className="absolute inset-0 -z-10 bg-[#0A0A0A]">
+        <div className="via-background dark:animated-gradient-bg absolute inset-0 bg-gradient-to-br from-indigo-950/20 to-purple-950/20" />
 
-        {/* Gradient orbs */}
         <GradientOrb
-          className="-left-32 -top-32"
-          size={600}
+          className="-top-[10%] -left-[10%]"
+          size={800}
           color="primary"
         />
         <GradientOrb
-          className="-right-48 top-1/4"
-          size={500}
+          className="top-[20%] right-[10%]"
+          size={600}
           color="accent"
         />
         <GradientOrb
-          className="bottom-0 left-1/4"
-          size={400}
+          className="bottom-[10%] left-[20%]"
+          size={500}
           color="secondary"
         />
 
-        {/* Grid pattern overlay */}
         <div
-          className="absolute inset-0 opacity-[0.015] dark:opacity-[0.03]"
+          className="absolute inset-0 opacity-[0.03]"
           style={{
-            backgroundImage: `linear-gradient(oklch(0.5 0.02 280) 1px, transparent 1px),
-                             linear-gradient(90deg, oklch(0.5 0.02 280) 1px, transparent 1px)`,
-            backgroundSize: '60px 60px',
+            backgroundImage: `linear-gradient(to right, #4a4a4a 1px, transparent 1px),
+                             linear-gradient(to bottom, #4a4a4a 1px, transparent 1px)`,
+            backgroundSize: '4rem 4rem',
+            maskImage:
+              'radial-gradient(ellipse at center, black 40%, transparent 80%)',
           }}
         />
 
-        {/* Floating particles */}
         <div className="particles-container">
-          <FloatingParticle delay={0} duration={8} size={6} left="10%" top="20%" />
-          <FloatingParticle delay={2} duration={10} size={4} left="85%" top="15%" />
-          <FloatingParticle delay={4} duration={9} size={5} left="70%" top="60%" />
-          <FloatingParticle delay={1} duration={11} size={3} left="20%" top="70%" />
-          <FloatingParticle delay={3} duration={7} size={4} left="50%" top="30%" />
-          <FloatingParticle delay={5} duration={12} size={6} left="30%" top="85%" />
+          <FloatingParticle
+            delay={0}
+            duration={8}
+            size={4}
+            left="15%"
+            top="25%"
+          />
+          <FloatingParticle
+            delay={2}
+            duration={12}
+            size={6}
+            left="85%"
+            top="15%"
+          />
+          <FloatingParticle
+            delay={1}
+            duration={10}
+            size={3}
+            left="75%"
+            top="65%"
+          />
         </div>
       </div>
 
-      <div className="container relative z-10">
-        {/* Announcement badge */}
-        {section.announcement && (
-          <div
-            className="mb-8 flex justify-center opacity-0"
-            style={{ animation: 'slide-down 0.6s ease 0.1s forwards' }}
-          >
-            <Link
-              href={section.announcement.url || '#generator'}
-              target={section.announcement.target || '_self'}
-              className="group flex items-center gap-3 rounded-full border border-primary/20 bg-primary/5 px-2 py-1.5 pl-4 backdrop-blur-sm transition-all duration-300 hover:border-primary/40 hover:bg-primary/10"
-            >
-              {section.announcement.badge && (
-                <span className="rounded-full bg-gradient-to-r from-primary to-accent px-3 py-0.5 text-xs font-semibold text-white">
-                  {section.announcement.badge}
-                </span>
-              )}
-              <span className="text-sm font-medium text-foreground">
-                {section.announcement.title}
-              </span>
-              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-primary/10 transition-colors group-hover:bg-primary/20">
-                <ArrowRight className="h-3.5 w-3.5 text-primary transition-transform group-hover:translate-x-0.5" />
-              </span>
-            </Link>
-          </div>
-        )}
-
-        {/* Main content grid */}
+      <div className="relative z-10 container">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          {/* Left column - Text content */}
-          <div className="text-center lg:text-left">
-            {/* Main heading */}
+          {/* Left column - Content */}
+          <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
+            {/* Announcement Pill */}
+            <div
+              className="animate-fade-in-up mb-8 inline-flex opacity-0"
+              style={{ animationDelay: '0.1s' }}
+            >
+              <div className="group relative flex items-center gap-2 rounded-full border border-violet-500/20 bg-violet-500/5 px-4 py-1.5 backdrop-blur-md transition-all hover:border-violet-500/40 hover:bg-violet-500/10">
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-violet-500 opacity-75"></span>
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-violet-500"></span>
+                </span>
+                <span className="text-sm font-medium text-violet-200">
+                  New: V2 Motion Model Released
+                </span>
+                <ArrowRight className="h-3.5 w-3.5 text-violet-400 transition-transform group-hover:translate-x-0.5" />
+              </div>
+            </div>
+
+            {/* Headline */}
             <h1
-              className="text-4xl font-bold tracking-tight text-foreground opacity-0 sm:text-5xl md:text-6xl lg:text-7xl"
+              className="animate-fade-in-up relative max-w-3xl text-5xl font-extrabold tracking-tight text-white opacity-0 sm:text-6xl md:text-7xl lg:text-7xl"
               style={{
-                animation: 'slide-up 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards',
+                animationDelay: '0.2s',
                 fontFamily: 'var(--font-display)',
-                lineHeight: '1.1',
+                lineHeight: '0.95',
               }}
             >
               {texts && texts.length > 0 ? (
                 <>
                   {texts[0]}
-                  <span className="gradient-text">{highlightText}</span>
+                  <span className="relative inline-block bg-gradient-to-r from-violet-400 via-fuchsia-400 to-pink-400 bg-clip-text text-transparent">
+                    {highlightText}
+                    <svg
+                      className="absolute -bottom-2 left-0 h-3 w-full opacity-60"
+                      viewBox="0 0 100 10"
+                      preserveAspectRatio="none"
+                    >
+                      <path
+                        d="M0 5 Q 50 10 100 5"
+                        stroke="url(#gradient)"
+                        strokeWidth="4"
+                        fill="none"
+                      />
+                      <defs>
+                        <linearGradient
+                          id="gradient"
+                          x1="0"
+                          y1="0"
+                          x2="1"
+                          y2="0"
+                        >
+                          <stop offset="0%" stopColor="oklch(0.72 0.25 300)" />
+                          <stop offset="100%" stopColor="oklch(0.7 0.22 330)" />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </span>
                   {texts[1]}
                 </>
               ) : (
@@ -263,44 +407,53 @@ export function HeroPremium({
               )}
             </h1>
 
-            {/* Description */}
+            {/* Subheadline */}
             <p
-              className="mx-auto mt-6 max-w-xl text-base text-muted-foreground opacity-0 sm:text-lg md:text-xl lg:mx-0"
-              style={{ animation: 'slide-up 0.8s ease 0.4s forwards' }}
+              className="text-muted-foreground/90 animate-fade-in-up mt-6 max-w-xl text-lg opacity-0 sm:text-xl"
+              style={{ animationDelay: '0.3s' }}
               dangerouslySetInnerHTML={{ __html: section.description ?? '' }}
             />
+
+            {/* Transformation Steps */}
+            <div
+              className="animate-fade-in-up mt-8 flex items-center gap-2 opacity-0 lg:gap-4"
+              style={{ animationDelay: '0.4s' }}
+            >
+              <TransformationStep icon={Upload} label="Upload" />
+              <TransformationStep icon={Wand2} label="AI Magic" />
+              <TransformationStep icon={PlaySquare} label="Video" isLast />
+            </div>
 
             {/* CTA Buttons */}
             {section.buttons && (
               <div
-                className="mt-8 flex flex-col items-center gap-4 opacity-0 sm:flex-row lg:justify-start"
-                style={{ animation: 'slide-up 0.8s ease 0.5s forwards' }}
+                className="animate-fade-in-up mt-10 flex flex-col gap-4 opacity-0 sm:flex-row"
+                style={{ animationDelay: '0.5s' }}
               >
                 {section.buttons.map((button, idx) => (
                   <Button
                     asChild
                     key={idx}
                     size="lg"
-                    variant={button.variant || (idx === 0 ? 'default' : 'outline')}
                     className={cn(
-                      'group relative h-14 min-w-[200px] overflow-hidden rounded-xl px-8 text-base font-semibold transition-all duration-300',
-                      idx === 0 &&
-                        'bg-gradient-to-r from-primary via-primary to-accent shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30'
+                      'relative h-16 min-w-[180px] overflow-hidden rounded-full text-base font-bold transition-all hover:scale-105',
+                      idx === 0
+                        ? 'border-none bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white shadow-[0_0_30px_-5px_oklch(0.72_0.25_300_/_0.5)] hover:shadow-[0_0_40px_-5px_oklch(0.72_0.25_300_/_0.7)]'
+                        : 'border border-white/20 bg-white/5 text-white backdrop-blur-sm hover:border-white/30 hover:bg-white/10'
                     )}
                   >
                     <Link
                       href={button.url ?? '#generator'}
                       target={button.target ?? '_self'}
+                      className="flex items-center justify-center gap-2"
                     >
-                      {button.icon && (
-                        <SmartIcon
-                          name={button.icon as string}
-                          className="mr-2 h-5 w-5"
-                        />
+                      {idx === 0 && (
+                        <Sparkles className="h-5 w-5 animate-pulse" />
                       )}
                       <span>{button.title}</span>
+                      {idx === 0 && <ArrowRight className="h-5 w-5" />}
                       {idx === 0 && (
-                        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                        <div className="absolute inset-0 -z-10 bg-white/20 opacity-0 blur-xl transition-opacity group-hover:opacity-100" />
                       )}
                     </Link>
                   </Button>
@@ -308,91 +461,80 @@ export function HeroPremium({
               </div>
             )}
 
-            {/* Social proof */}
-            {section.show_avatars && (
-              <div
-                className="mt-8 opacity-0"
-                style={{ animation: 'slide-up 0.8s ease 0.6s forwards' }}
-              >
-                <SocialAvatars tip={section.avatars_tip || ''} />
-              </div>
-            )}
-
-            {/* Trust badges */}
-            {section.tip && (
-              <p
-                className="mt-6 text-sm text-muted-foreground opacity-0"
-                style={{ animation: 'fade-in 0.8s ease 0.7s forwards' }}
-                dangerouslySetInnerHTML={{ __html: section.tip }}
-              />
-            )}
-          </div>
-
-          {/* Right column - Visual showcase */}
-          <div className="relative flex items-center justify-center lg:justify-end">
-            {/* Main video showcase */}
+            {/* Social Proof & Platforms */}
             <div
-              className="relative opacity-0"
-              style={{ animation: 'scale-in 0.8s ease 0.4s forwards' }}
+              className="animate-fade-in-up mt-12 flex flex-col items-center gap-6 opacity-0 lg:flex-row lg:items-center"
+              style={{ animationDelay: '0.7s' }}
             >
-              {/* Glow behind */}
-              <div className="absolute -inset-8 rounded-3xl bg-gradient-to-br from-primary/20 via-accent/10 to-transparent blur-2xl" />
-
-              {/* Video cards arrangement */}
-              <div className="relative flex items-center gap-4">
-                {/* Secondary video - left */}
-                <VideoShowcase className="hidden w-32 rotate-[-6deg] opacity-60 transition-transform duration-500 hover:rotate-0 hover:opacity-100 sm:block" />
-
-                {/* Main video */}
-                <div className="relative">
-                  <VideoShowcase className="w-48 sm:w-56 md:w-64" />
-                  {/* Floating badge */}
-                  <div
-                    className="absolute -right-4 -top-4 flex items-center gap-2 rounded-full bg-gradient-to-r from-primary to-accent px-4 py-2 text-white shadow-lg opacity-0"
-                    style={{ animation: 'scale-in 0.5s ease 0.8s forwards' }}
-                  >
-                    <Zap className="h-4 w-4" fill="currentColor" />
-                    <span className="text-sm font-bold">AI Powered</span>
+              {section.show_avatars && (
+                <div className="flex items-center gap-4">
+                  <div className="relative">
+                    <SocialAvatars tip={section.avatars_tip || ''} />
+                    <div className="absolute -right-2 -bottom-2 flex items-center justify-center rounded-full border border-white/10 bg-black px-1.5 py-0.5">
+                      <Star className="h-3 w-3 fill-yellow-500 text-yellow-500" />
+                      <span className="ml-1 text-[10px] font-bold text-white">
+                        4.9
+                      </span>
+                    </div>
+                  </div>
+                  <div className="flex flex-col text-left">
+                    <span className="text-sm font-bold text-white">
+                      Trusted by 50k+
+                    </span>
+                    <span className="text-muted-foreground text-xs">
+                      Content Creators
+                    </span>
                   </div>
                 </div>
+              )}
 
-                {/* Secondary video - right */}
-                <VideoShowcase className="hidden w-32 rotate-[6deg] opacity-60 transition-transform duration-500 hover:rotate-0 hover:opacity-100 sm:block" />
+              <div className="hidden h-8 w-px bg-white/10 lg:block" />
+
+              <div className="flex flex-col gap-2">
+                <span className="text-muted-foreground/80 text-[10px] font-semibold tracking-wider uppercase">
+                  Works with
+                </span>
+                <div className="flex items-center gap-4 text-white/60">
+                  <div
+                    className="flex items-center gap-1.5 transition-colors hover:text-white"
+                    title="TikTok"
+                  >
+                    <TikTokIcon className="h-4 w-4" />
+                    <span className="text-xs font-medium">TikTok</span>
+                  </div>
+                  <div
+                    className="flex items-center gap-1.5 transition-colors hover:text-white"
+                    title="Instagram"
+                  >
+                    <Instagram className="h-4 w-4" />
+                    <span className="text-xs font-medium">Reels</span>
+                  </div>
+                  <div
+                    className="flex items-center gap-1.5 transition-colors hover:text-white"
+                    title="YouTube Shorts"
+                  >
+                    <YouTubeShortsIcon className="h-4 w-4" />
+                    <span className="text-xs font-medium">Shorts</span>
+                  </div>
+                </div>
               </div>
-
-              {/* Floating stat badges */}
-              <StatBadge
-                icon={Star}
-                value="50M+"
-                label="Views Generated"
-                className="absolute -left-8 bottom-8 hidden lg:flex"
-                delay={0.9}
-              />
-              <StatBadge
-                icon={Sparkles}
-                value="50K+"
-                label="Happy Creators"
-                className="absolute -right-8 top-8 hidden lg:flex"
-                delay={1.0}
-              />
             </div>
           </div>
-        </div>
 
-        {/* Bottom trust bar */}
-        <div
-          className="mt-16 border-t border-border/50 pt-8 opacity-0 md:mt-24"
-          style={{ animation: 'fade-in 0.8s ease 1s forwards' }}
-        >
-          <p className="mb-4 text-center text-xs font-medium uppercase tracking-wider text-muted-foreground">
-            Trusted by creators worldwide
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-8 opacity-50 grayscale transition-all duration-300 hover:opacity-70 hover:grayscale-0 md:gap-12">
-            {['TikTok', 'Instagram', 'YouTube', 'Twitter'].map((platform) => (
-              <div key={platform} className="text-lg font-semibold text-muted-foreground">
-                {platform}
+          {/* Right column - Carousel */}
+          <div className="relative flex items-center justify-center lg:justify-end">
+            <div
+              className="relative w-full max-w-[600px]"
+              style={{ animation: 'fade-in 1s ease 0.4s forwards' }}
+            >
+              {/* Glow effects behind carousel */}
+              <div className="pointer-events-none absolute top-1/2 left-1/2 -z-10 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 opacity-20">
+                <div className="animate-pulse-glow absolute inset-0 rounded-full bg-violet-600 blur-[120px]" />
+                <div className="animate-pulse-glow absolute inset-0 rounded-full bg-fuchsia-600 blur-[100px] delay-1000" />
               </div>
-            ))}
+
+              <HeroVideoCarousel />
+            </div>
           </div>
         </div>
       </div>

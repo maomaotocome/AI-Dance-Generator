@@ -7,7 +7,7 @@ import {
   text,
   timestamp,
 } from 'drizzle-orm/pg-core';
-
+export * from './schema.postgres';
 import { envConfigs } from '@/config';
 
 const schemaName = (envConfigs.db_schema || 'public').trim();

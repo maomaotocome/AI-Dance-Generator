@@ -1,9 +1,10 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import Image from 'next/image';
 import {
   Check,
+  ChevronLeft,
   ChevronRight,
   CreditCard,
   Download,
@@ -23,17 +24,17 @@ import { toast } from 'sonner';
 
 import { Link } from '@/core/i18n/navigation';
 import {
+  DANCE_TEMPLATES,
   DanceCategory,
   DanceTemplate,
-  DANCE_CATEGORIES,
-  DANCE_TEMPLATES,
+  getDanceCategoriesWithCount,
   getDanceTemplatesByCategory,
+  getTrendingTemplates,
 } from '@/config/dance-templates';
 import { AIMediaType, AITaskStatus } from '@/extensions/ai/types';
 import { ImageUploader, ImageUploaderValue } from '@/shared/blocks/common';
 import { Button } from '@/shared/components/ui/button';
 import { Progress } from '@/shared/components/ui/progress';
-import { Tabs, TabsList, TabsTrigger } from '@/shared/components/ui/tabs';
 import { useAppContext } from '@/shared/contexts/app';
 import { cn } from '@/shared/lib/utils';
 
@@ -83,7 +84,9 @@ function extractVideoUrls(result: any): string[] {
         if (!item) return null;
         if (typeof item === 'string') return item;
         if (typeof item === 'object') {
-          return item.url ?? item.uri ?? item.video ?? item.src ?? item.videoUrl;
+          return (
+            item.url ?? item.uri ?? item.video ?? item.src ?? item.videoUrl
+          );
         }
         return null;
       })
@@ -98,7 +101,8 @@ function extractVideoUrls(result: any): string[] {
         if (!item) return [];
         if (typeof item === 'string') return [item];
         if (typeof item === 'object') {
-          const candidate = item.url ?? item.uri ?? item.video ?? item.src ?? item.videoUrl;
+          const candidate =
+            item.url ?? item.uri ?? item.video ?? item.src ?? item.videoUrl;
           return typeof candidate === 'string' ? [candidate] : [];
         }
         return [];
@@ -106,13 +110,13 @@ function extractVideoUrls(result: any): string[] {
       .filter(Boolean);
   }
   if (typeof output === 'object') {
-    const candidate = output.url ?? output.uri ?? output.video ?? output.src ?? output.videoUrl;
+    const candidate =
+      output.url ?? output.uri ?? output.video ?? output.src ?? output.videoUrl;
     if (typeof candidate === 'string') return [candidate];
   }
   return [];
 }
 
-// Step indicator component
 function StepIndicator({
   step,
   title,
@@ -125,22 +129,22 @@ function StepIndicator({
   isActive: boolean;
 }) {
   return (
-    <div className="flex items-center gap-3">
+    <div className="flex items-center gap-2 md:gap-3">
       <div
         className={cn(
-          'flex h-10 w-10 items-center justify-center rounded-xl text-sm font-bold transition-all duration-300',
+          'flex h-8 w-8 items-center justify-center rounded-lg text-xs font-bold transition-all duration-300 md:h-10 md:w-10 md:rounded-xl md:text-sm',
           isComplete
-            ? 'bg-gradient-to-br from-primary to-accent text-white shadow-lg shadow-primary/25'
+            ? 'from-primary to-accent shadow-primary/25 bg-gradient-to-br text-white shadow-lg'
             : isActive
-              ? 'border-2 border-primary bg-primary/10 text-primary'
-              : 'border border-border bg-muted/50 text-muted-foreground'
+              ? 'border-primary bg-primary/10 text-primary border-2'
+              : 'border-border bg-muted/50 text-muted-foreground border'
         )}
       >
-        {isComplete ? <Check className="h-5 w-5" /> : step}
+        {isComplete ? <Check className="h-4 w-4 md:h-5 md:w-5" /> : step}
       </div>
       <span
         className={cn(
-          'text-sm font-medium transition-colors',
+          'hidden text-sm font-medium transition-colors sm:inline',
           isComplete || isActive ? 'text-foreground' : 'text-muted-foreground'
         )}
       >
@@ -150,22 +154,24 @@ function StepIndicator({
   );
 }
 
-// Template card component - refined design with better visual hierarchy
 function TemplateCard({
   template,
   isSelected,
   onSelect,
   onPreview,
+  featured = false,
 }: {
   template: DanceTemplate;
   isSelected: boolean;
   onSelect: () => void;
   onPreview: () => void;
+  featured?: boolean;
 }) {
+  const [isHovering, setIsHovering] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const [imageError, setImageError] = useState(false);
   const hasValidImage = template.thumbnailUrl && !imageError;
 
-  // Generate a consistent gradient based on template name
   const gradientIndex = template.name.charCodeAt(0) % 4;
   const gradients = [
     'from-violet-500/30 via-purple-500/20 to-fuchsia-500/30',
@@ -174,101 +180,325 @@ function TemplateCard({
     'from-emerald-500/30 via-green-500/20 to-lime-500/30',
   ];
 
+  useEffect(() => {
+    if (isHovering && videoRef.current) {
+      videoRef.current.play().catch(() => {});
+    } else if (videoRef.current) {
+      videoRef.current.pause();
+      videoRef.current.currentTime = 0;
+    }
+  }, [isHovering]);
+
   return (
     <button
       type="button"
       onClick={onSelect}
+      onMouseEnter={() => setIsHovering(true)}
+      onMouseLeave={() => setIsHovering(false)}
       className={cn(
-        'group relative overflow-hidden rounded-xl transition-all duration-300',
+        'group relative flex-shrink-0 overflow-hidden rounded-2xl transition-all duration-300',
+        featured ? 'w-40 md:w-44' : 'w-36',
         isSelected
-          ? 'ring-2 ring-primary ring-offset-2 ring-offset-background scale-[1.02]'
-          : 'hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/10'
+          ? 'ring-primary ring-offset-background scale-[1.02] ring-4 ring-offset-2'
+          : 'hover:shadow-primary/10 ring-border/50 ring-1 hover:scale-[1.03] hover:shadow-xl'
       )}
     >
-      {/* 9:16 aspect ratio card */}
-      <div className={cn(
-        'relative aspect-[9/16] overflow-hidden rounded-xl',
-        !hasValidImage && `bg-gradient-to-br ${gradients[gradientIndex]}`
-      )}>
-        {/* Background pattern for placeholder */}
+      <div
+        className={cn(
+          'bg-muted relative aspect-[9/16] w-full overflow-hidden',
+          !hasValidImage && `bg-gradient-to-br ${gradients[gradientIndex]}`
+        )}
+      >
         {!hasValidImage && (
           <div className="absolute inset-0">
-            {/* Animated gradient background */}
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10" />
-            {/* Decorative circles */}
-            <div className="absolute -right-4 -top-4 h-20 w-20 rounded-full bg-white/10 blur-xl" />
-            <div className="absolute -bottom-4 -left-4 h-16 w-16 rounded-full bg-white/10 blur-xl" />
-            {/* Center icon */}
+            <div className="from-primary/10 to-accent/10 absolute inset-0 bg-gradient-to-br via-transparent" />
+            <div className="absolute -top-4 -right-4 h-20 w-20 rounded-full bg-white/10 blur-xl" />
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/20 backdrop-blur-sm">
-                <Play className="ml-0.5 h-6 w-6 text-white/80" />
-              </div>
+              <Play className="h-8 w-8 text-white/50" />
             </div>
           </div>
         )}
 
-        {/* Actual image if exists */}
         {template.thumbnailUrl && !imageError && (
           <Image
             src={template.thumbnailUrl}
             alt={template.name}
             fill
-            className="object-cover transition-transform duration-500 group-hover:scale-110"
-            sizes="(max-width: 640px) 25vw, 20vw"
+            className={cn(
+              'object-cover transition-opacity duration-300',
+              isHovering ? 'opacity-0' : 'opacity-100'
+            )}
+            sizes={featured ? '(max-width: 640px) 176px, 176px' : '144px'}
             onError={() => setImageError(true)}
           />
         )}
 
-        {/* Always visible gradient overlay at bottom */}
-        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
+        <video
+          ref={videoRef}
+          src={template.videoUrl}
+          muted
+          loop
+          playsInline
+          className={cn(
+            'absolute inset-0 h-full w-full object-cover transition-opacity duration-300',
+            isHovering ? 'opacity-100' : 'opacity-0'
+          )}
+        />
 
-        {/* Hover overlay */}
-        <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/20" />
+        <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
 
-        {/* Preview button on hover */}
-        <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-          <button
-            type="button"
+        {featured && (
+          <div className="absolute top-0 left-0 rounded-br-xl bg-gradient-to-r from-orange-500 to-red-600 px-2.5 py-1 text-[10px] font-bold tracking-wider text-white uppercase shadow-lg">
+            HOT
+          </div>
+        )}
+
+        {!featured && template.new && (
+          <div className="absolute top-2 left-2 rounded-full bg-blue-500 px-2 py-0.5 text-[10px] font-bold tracking-wide text-white uppercase shadow-sm">
+            NEW
+          </div>
+        )}
+
+        {isSelected && (
+          <div className="bg-primary shadow-primary/50 absolute top-2 right-2 flex h-6 w-6 items-center justify-center rounded-full text-white shadow-lg">
+            <Check className="h-3.5 w-3.5" strokeWidth={3} />
+          </div>
+        )}
+
+        <div
+          className={cn(
+            'absolute inset-0 flex items-center justify-center transition-opacity duration-300',
+            isHovering && !isSelected ? 'opacity-100' : 'opacity-0'
+          )}
+        >
+          <div
+            role="button"
             onClick={(e) => {
               e.stopPropagation();
               onPreview();
             }}
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-white/30 backdrop-blur-md transition-transform hover:scale-110"
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 backdrop-blur-md transition-transform hover:scale-110 hover:bg-white/30"
           >
-            <Play className="ml-0.5 h-4 w-4 text-white" fill="white" />
-          </button>
+            <Play className="ml-0.5 h-5 w-5 text-white" fill="currentColor" />
+          </div>
         </div>
 
-        {/* Selected indicator - top right */}
-        {isSelected && (
-          <div className="absolute right-1.5 top-1.5 flex h-5 w-5 items-center justify-center rounded-full bg-primary shadow-lg shadow-primary/50">
-            <Check className="h-3 w-3 text-white" />
-          </div>
-        )}
-
-        {/* Trending badge - moved to avoid overlap with name */}
-        {template.trending && (
-          <div className="absolute left-1.5 top-1.5 flex items-center gap-0.5 rounded-md bg-gradient-to-r from-orange-500 to-red-500 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wide text-white shadow-lg">
-            <Flame className="h-2.5 w-2.5" />
-            <span>Hot</span>
-          </div>
-        )}
-
-        {/* Bottom content - always visible */}
-        <div className="absolute inset-x-0 bottom-0 p-2">
-          {/* Template name */}
-          <p className="mb-1 truncate text-center text-xs font-semibold text-white drop-shadow-lg">
+        <div className="absolute inset-x-0 bottom-0 p-3 text-left">
+          <h4 className="line-clamp-2 text-sm leading-tight font-bold text-white drop-shadow-md">
             {template.name}
-          </p>
-          {/* Duration badge */}
-          <div className="flex justify-center">
-            <span className="rounded-md bg-black/50 px-1.5 py-0.5 text-[10px] font-medium text-white/90 backdrop-blur-sm">
+          </h4>
+          <div className="mt-1 flex items-center gap-2">
+            <span className="flex items-center gap-1 text-[10px] font-medium text-white/80">
+              <Video className="h-3 w-3" />
               {template.duration}s
             </span>
+            {template.popularity > 85 && (
+              <span className="flex items-center gap-0.5 text-[10px] font-medium text-orange-400">
+                <Flame className="h-3 w-3" />
+                Trending
+              </span>
+            )}
           </div>
         </div>
       </div>
     </button>
+  );
+}
+
+function MobileStickyBar({
+  canGenerate,
+  isGenerating,
+  remainingCredits,
+  costCredits,
+  onGenerate,
+  onSignIn,
+  isLoggedIn,
+  generateLabel,
+  generatingLabel,
+}: {
+  canGenerate: boolean;
+  isGenerating: boolean;
+  remainingCredits: number;
+  costCredits: number;
+  onGenerate: () => void;
+  onSignIn: () => void;
+  isLoggedIn: boolean;
+  generateLabel: string;
+  generatingLabel: string;
+}) {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const generatorSection = document.getElementById('generator');
+    if (!generatorSection) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // Show sticky bar when generator section is NOT visible (scrolled past it)
+        setIsVisible(!entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(generatorSection);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div
+      className={cn(
+        'fixed right-0 bottom-0 left-0 z-50 border-t border-white/10 bg-black/95 px-4 py-3 backdrop-blur-xl transition-transform duration-300 md:hidden',
+        isVisible ? 'translate-y-0' : 'translate-y-full'
+      )}
+    >
+      <div className="mx-auto flex max-w-md items-center gap-3">
+        {isLoggedIn ? (
+          <>
+            <Button
+              size="lg"
+              className={cn(
+                'h-12 flex-1 rounded-xl font-bold transition-all',
+                canGenerate
+                  ? 'bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white shadow-lg shadow-violet-500/25'
+                  : 'bg-muted text-muted-foreground'
+              )}
+              onClick={onGenerate}
+              disabled={!canGenerate}
+            >
+              {isGenerating ? (
+                <>
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  {generatingLabel}
+                </>
+              ) : (
+                <>
+                  <Sparkles className="mr-2 h-4 w-4" />
+                  {generateLabel}
+                </>
+              )}
+            </Button>
+            <div className="flex flex-col items-end text-right">
+              <span className="text-xs font-medium text-white">
+                {costCredits} credits
+              </span>
+              <span
+                className={cn(
+                  'text-[10px]',
+                  remainingCredits < costCredits
+                    ? 'text-red-400'
+                    : 'text-green-400'
+                )}
+              >
+                {remainingCredits} left
+              </span>
+            </div>
+          </>
+        ) : (
+          <Button
+            size="lg"
+            className="h-12 w-full rounded-xl bg-gradient-to-r from-violet-600 to-fuchsia-600 font-bold text-white"
+            onClick={onSignIn}
+          >
+            <User className="mr-2 h-4 w-4" />
+            Sign in to Generate
+          </Button>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function FeaturedTemplatesRow({
+  templates,
+  selectedId,
+  onSelect,
+  onPreview,
+}: {
+  templates: DanceTemplate[];
+  selectedId?: string;
+  onSelect: (t: DanceTemplate) => void;
+  onPreview: (t: DanceTemplate) => void;
+}) {
+  return (
+    <div className="mb-8">
+      <div className="mb-3 flex items-center gap-2 px-1">
+        <Flame className="h-5 w-5 text-orange-500" fill="currentColor" />
+        <h3 className="text-foreground text-lg font-bold tracking-tight">
+          Trending Now
+        </h3>
+      </div>
+      <div className="scrollbar-hide flex gap-4 overflow-x-auto pb-4 md:gap-5">
+        {templates.slice(0, 4).map((template) => (
+          <TemplateCard
+            key={template.id}
+            template={template}
+            isSelected={selectedId === template.id}
+            onSelect={() => onSelect(template)}
+            onPreview={() => onPreview(template)}
+            featured
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function TemplateCarousel({
+  templates,
+  selectedId,
+  onSelect,
+  onPreview,
+}: {
+  templates: DanceTemplate[];
+  selectedId?: string;
+  onSelect: (t: DanceTemplate) => void;
+  onPreview: (t: DanceTemplate) => void;
+}) {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollRef.current) {
+      const scrollAmount = 600;
+      scrollRef.current.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth',
+      });
+    }
+  };
+
+  return (
+    <div className="group/carousel relative">
+      <button
+        onClick={() => scroll('left')}
+        className="border-border/50 bg-background/80 text-foreground hover:bg-background absolute top-1/2 -left-3 z-10 hidden -translate-y-1/2 rounded-full border p-2 shadow-lg backdrop-blur-md transition-all hover:scale-110 disabled:opacity-0 md:flex"
+        aria-label="Scroll left"
+      >
+        <ChevronLeft className="h-5 w-5" />
+      </button>
+
+      <button
+        onClick={() => scroll('right')}
+        className="border-border/50 bg-background/80 text-foreground hover:bg-background absolute top-1/2 -right-3 z-10 hidden -translate-y-1/2 rounded-full border p-2 shadow-lg backdrop-blur-md transition-all hover:scale-110 disabled:opacity-0 md:flex"
+        aria-label="Scroll right"
+      >
+        <ChevronRight className="h-5 w-5" />
+      </button>
+
+      <div
+        ref={scrollRef}
+        className="scrollbar-hide flex gap-3 overflow-x-auto pt-1 pb-4 md:gap-4"
+      >
+        {templates.map((template) => (
+          <TemplateCard
+            key={template.id}
+            template={template}
+            isSelected={selectedId === template.id}
+            onSelect={() => onSelect(template)}
+            onPreview={() => onPreview(template)}
+          />
+        ))}
+      </div>
+    </div>
   );
 }
 
@@ -279,21 +509,32 @@ export function DanceGeneratorPremium({
 }: DanceGeneratorPremiumProps) {
   const t = useTranslations('ai.dance.generator');
 
-  const [activeCategory, setActiveCategory] = useState<DanceCategory | 'all'>('all');
-  const [selectedTemplate, setSelectedTemplate] = useState<DanceTemplate | null>(null);
-  const [uploadedImageItems, setUploadedImageItems] = useState<ImageUploaderValue[]>([]);
+  const [activeCategory, setActiveCategory] = useState<DanceCategory | 'all'>(
+    'all'
+  );
+  const [selectedTemplate, setSelectedTemplate] =
+    useState<DanceTemplate | null>(null);
+  const [uploadedImageItems, setUploadedImageItems] = useState<
+    ImageUploaderValue[]
+  >([]);
   const [uploadedImageUrl, setUploadedImageUrl] = useState<string | null>(null);
-  const [generatedVideo, setGeneratedVideo] = useState<GeneratedVideo | null>(null);
+  const [generatedVideo, setGeneratedVideo] = useState<GeneratedVideo | null>(
+    null
+  );
   const [isGenerating, setIsGenerating] = useState(false);
   const [progress, setProgress] = useState(0);
   const [taskId, setTaskId] = useState<string | null>(null);
-  const [generationStartTime, setGenerationStartTime] = useState<number | null>(null);
+  const [generationStartTime, setGenerationStartTime] = useState<number | null>(
+    null
+  );
   const [taskStatus, setTaskStatus] = useState<AITaskStatus | null>(null);
   const [isDownloading, setIsDownloading] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
-  const [previewingTemplate, setPreviewingTemplate] = useState<DanceTemplate | null>(null);
+  const [previewingTemplate, setPreviewingTemplate] =
+    useState<DanceTemplate | null>(null);
 
-  const { user, isCheckSign, setIsShowSignModal, fetchUserCredits } = useAppContext();
+  const { user, isCheckSign, setIsShowSignModal, fetchUserCredits } =
+    useAppContext();
 
   useEffect(() => {
     setIsMounted(true);
@@ -309,9 +550,15 @@ export function DanceGeneratorPremium({
     return getDanceTemplatesByCategory(activeCategory);
   }, [activeCategory]);
 
+  const trendingTemplates = useMemo(() => getTrendingTemplates(), []);
+
+  const categories = useMemo(() => getDanceCategoriesWithCount(), []);
+
   const handleImageChange = useCallback((items: ImageUploaderValue[]) => {
     setUploadedImageItems(items);
-    const uploadedItem = items.find((item) => item.status === 'uploaded' && item.url);
+    const uploadedItem = items.find(
+      (item) => item.status === 'uploaded' && item.url
+    );
     setUploadedImageUrl(uploadedItem?.url ?? null);
   }, []);
 
@@ -352,7 +599,10 @@ export function DanceGeneratorPremium({
   const pollTaskStatus = useCallback(
     async (id: string) => {
       try {
-        if (generationStartTime && Date.now() - generationStartTime > GENERATION_TIMEOUT) {
+        if (
+          generationStartTime &&
+          Date.now() - generationStartTime > GENERATION_TIMEOUT
+        ) {
           resetTaskState();
           toast.error(t('error_timeout'));
           return true;
@@ -362,7 +612,8 @@ export function DanceGeneratorPremium({
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ taskId: id }),
         });
-        if (!resp.ok) throw new Error(`request failed with status: ${resp.status}`);
+        if (!resp.ok)
+          throw new Error(`request failed with status: ${resp.status}`);
         const { code, message, data } = await resp.json();
         if (code !== 0) throw new Error(message || 'Query task failed');
         const task = data as BackendTask;
@@ -405,7 +656,8 @@ export function DanceGeneratorPremium({
           return true;
         }
         if (currentStatus === AITaskStatus.FAILED) {
-          const errorMessage = parsedResult?.errorMessage || t('error_generation');
+          const errorMessage =
+            parsedResult?.errorMessage || t('error_generation');
           toast.error(errorMessage);
           resetTaskState();
           fetchUserCredits();
@@ -486,7 +738,8 @@ export function DanceGeneratorPremium({
           options,
         }),
       });
-      if (!resp.ok) throw new Error(`request failed with status: ${resp.status}`);
+      if (!resp.ok)
+        throw new Error(`request failed with status: ${resp.status}`);
       const { code, message, data } = await resp.json();
       if (code !== 0) throw new Error(message || 'Failed to create dance task');
       const newTaskId = data?.id;
@@ -522,7 +775,9 @@ export function DanceGeneratorPremium({
     if (!generatedVideo?.url) return;
     try {
       setIsDownloading(true);
-      const resp = await fetch(`/api/proxy/file?url=${encodeURIComponent(generatedVideo.url)}`);
+      const resp = await fetch(
+        `/api/proxy/file?url=${encodeURIComponent(generatedVideo.url)}`
+      );
       if (!resp.ok) throw new Error('Failed to fetch video');
       const blob = await resp.blob();
       const blobUrl = URL.createObjectURL(blob);
@@ -543,58 +798,61 @@ export function DanceGeneratorPremium({
   };
 
   const canGenerate =
-    uploadedImageUrl && selectedTemplate && !isGenerating && !isImageUploading && !hasImageUploadError;
+    uploadedImageUrl &&
+    selectedTemplate &&
+    !isGenerating &&
+    !isImageUploading &&
+    !hasImageUploadError;
 
   const step1Complete = !!uploadedImageUrl;
   const step2Complete = !!selectedTemplate;
 
   return (
     <section id="generator" className="relative py-16 md:py-24">
-      {/* Background decoration */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute left-1/4 top-0 h-96 w-96 rounded-full bg-primary/5 blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 h-96 w-96 rounded-full bg-accent/5 blur-3xl" />
+        <div className="bg-primary/5 absolute top-0 left-1/4 h-96 w-96 rounded-full blur-3xl" />
+        <div className="bg-accent/5 absolute right-1/4 bottom-0 h-96 w-96 rounded-full blur-3xl" />
       </div>
 
       <div className="container">
-        <div className="mx-auto max-w-6xl">
-          {/* Section header */}
+        <div className="mx-auto max-w-7xl">
           <div className="mb-12 text-center">
             {srOnlyTitle && <h2 className="sr-only">{srOnlyTitle}</h2>}
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5">
-              <Zap className="h-4 w-4 text-primary" />
-              <span className="text-sm font-medium text-primary">AI-Powered Generation</span>
+            <div className="border-primary/20 bg-primary/5 mb-4 inline-flex items-center gap-2 rounded-full border px-4 py-1.5">
+              <Zap className="text-primary h-4 w-4" />
+              <span className="text-primary text-sm font-medium">
+                AI-Powered Generation
+              </span>
             </div>
             <h2
-              className="text-3xl font-bold text-foreground sm:text-4xl md:text-5xl"
+              className="text-foreground text-3xl font-bold sm:text-4xl md:text-5xl"
               style={{ fontFamily: 'var(--font-display)' }}
             >
               Create Your <span className="gradient-text">Dance Video</span>
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-              Upload a photo, choose a trending dance, and watch AI bring it to life in seconds.
+            <p className="text-muted-foreground mx-auto mt-4 max-w-2xl">
+              Upload a photo, choose a trending dance, and watch AI bring it to
+              life in seconds.
             </p>
           </div>
 
-          {/* Main generator card */}
-          <div className="overflow-hidden rounded-3xl border border-border/50 bg-card/50 shadow-2xl backdrop-blur-sm">
-            {/* Steps progress bar */}
-            <div className="border-b border-border/50 bg-muted/30 px-6 py-4 md:px-8">
-              <div className="flex items-center justify-between gap-4">
+          <div className="border-border/50 bg-card/50 overflow-hidden rounded-3xl border shadow-2xl backdrop-blur-sm">
+            <div className="border-border/50 bg-muted/30 border-b px-4 py-4 md:px-8">
+              <div className="mx-auto flex max-w-3xl items-center justify-between gap-2 md:gap-4">
                 <StepIndicator
                   step={1}
                   title={t('step1_title')}
                   isComplete={step1Complete}
                   isActive={!step1Complete}
                 />
-                <ChevronRight className="h-5 w-5 text-muted-foreground/50" />
+                <ChevronRight className="text-muted-foreground/50 hidden h-5 w-5 sm:block" />
                 <StepIndicator
                   step={2}
                   title={t('step2_title')}
                   isComplete={step2Complete}
                   isActive={step1Complete && !step2Complete}
                 />
-                <ChevronRight className="h-5 w-5 text-muted-foreground/50" />
+                <ChevronRight className="text-muted-foreground/50 hidden h-5 w-5 sm:block" />
                 <StepIndicator
                   step={3}
                   title="Generate"
@@ -604,16 +862,18 @@ export function DanceGeneratorPremium({
               </div>
             </div>
 
-            <div className="grid lg:grid-cols-[1fr_1.2fr]">
-              {/* Left side - Upload & Templates */}
-              <div className="border-r border-border/50 p-6 md:p-8">
-                {/* Step 1: Upload */}
-                <div className="mb-8">
+            <div className="grid lg:grid-cols-[1.5fr_1fr]">
+              <div className="border-border/50 border-r p-6 md:p-8">
+                <div className="mb-10">
                   <div className="mb-4 flex items-center gap-2">
-                    <Upload className="h-5 w-5 text-primary" />
-                    <h3 className="text-lg font-semibold text-foreground">{t('step1_title')}</h3>
+                    <div className="bg-primary/10 flex h-8 w-8 items-center justify-center rounded-lg">
+                      <Upload className="text-primary h-4 w-4" />
+                    </div>
+                    <h3 className="text-foreground text-xl font-bold">
+                      {t('step1_title')}
+                    </h3>
                   </div>
-                  <div className="overflow-hidden rounded-2xl border-2 border-dashed border-border bg-muted/30 transition-colors hover:border-primary/50">
+                  <div className="border-border bg-muted/30 hover:border-primary/50 overflow-hidden rounded-2xl border-2 border-dashed transition-colors">
                     <ImageUploader
                       title={t('upload_title')}
                       allowMultiple={false}
@@ -624,71 +884,84 @@ export function DanceGeneratorPremium({
                     />
                   </div>
                   {hasImageUploadError && (
-                    <p className="mt-2 text-sm text-destructive">{t('upload_error')}</p>
+                    <p className="text-destructive mt-2 text-sm">
+                      {t('upload_error')}
+                    </p>
                   )}
                 </div>
 
-                {/* Step 2: Select Template */}
                 <div>
-                  <div className="mb-4 flex items-center gap-2">
-                    <Video className="h-5 w-5 text-primary" />
-                    <h3 className="text-lg font-semibold text-foreground">{t('step2_title')}</h3>
+                  <div className="mb-6 flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <div className="bg-primary/10 flex h-8 w-8 items-center justify-center rounded-lg">
+                        <Video className="text-primary h-4 w-4" />
+                      </div>
+                      <h3 className="text-foreground text-xl font-bold">
+                        {t('step2_title')}
+                      </h3>
+                    </div>
                   </div>
 
-                  {/* Category tabs */}
-                  <Tabs
-                    value={activeCategory}
-                    onValueChange={(v) => setActiveCategory(v as DanceCategory | 'all')}
-                    className="mb-4"
-                  >
-                    <TabsList className="flex h-auto flex-wrap justify-start gap-1 bg-transparent p-0">
-                      <TabsTrigger
-                        value="all"
-                        className="rounded-full border border-border bg-muted/50 px-4 py-1.5 text-xs font-medium data-[state=active]:border-primary data-[state=active]:bg-primary data-[state=active]:text-white"
-                      >
-                        All
-                      </TabsTrigger>
-                      {DANCE_CATEGORIES.map((cat) => (
-                        <TabsTrigger
-                          key={cat.value}
-                          value={cat.value}
-                          className="rounded-full border border-border bg-muted/50 px-4 py-1.5 text-xs font-medium data-[state=active]:border-primary data-[state=active]:bg-primary data-[state=active]:text-white"
-                        >
-                          {t(`category_${cat.value}`)}
-                        </TabsTrigger>
-                      ))}
-                    </TabsList>
-                  </Tabs>
+                  <FeaturedTemplatesRow
+                    templates={trendingTemplates}
+                    selectedId={selectedTemplate?.id}
+                    onSelect={setSelectedTemplate}
+                    onPreview={setPreviewingTemplate}
+                  />
 
-                  {/* Template grid */}
-                  <div className="grid max-h-80 grid-cols-3 gap-3 overflow-y-auto pr-2 scrollbar-hide sm:grid-cols-4">
-                    {filteredTemplates.map((template) => (
-                      <TemplateCard
-                        key={template.id}
-                        template={template}
-                        isSelected={selectedTemplate?.id === template.id}
-                        onSelect={() => setSelectedTemplate(template)}
-                        onPreview={() => setPreviewingTemplate(template)}
-                      />
+                  <div className="mb-5 flex flex-wrap gap-2">
+                    {categories.map((cat) => (
+                      <button
+                        key={cat.value}
+                        onClick={() => setActiveCategory(cat.value)}
+                        className={cn(
+                          'rounded-full px-4 py-1.5 text-sm font-medium transition-all duration-300',
+                          activeCategory === cat.value
+                            ? 'scale-105 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white shadow-lg'
+                            : 'bg-muted hover:bg-muted/80 text-muted-foreground hover:scale-105'
+                        )}
+                      >
+                        {cat.value === 'all'
+                          ? 'All'
+                          : t(`category_${cat.value}`)}
+                        <span
+                          className={cn(
+                            'ml-1.5 text-xs opacity-70',
+                            activeCategory === cat.value
+                              ? 'text-white'
+                              : 'text-muted-foreground'
+                          )}
+                        >
+                          ({cat.count})
+                        </span>
+                      </button>
                     ))}
                   </div>
+
+                  <TemplateCarousel
+                    templates={filteredTemplates}
+                    selectedId={selectedTemplate?.id}
+                    onSelect={setSelectedTemplate}
+                    onPreview={setPreviewingTemplate}
+                  />
                 </div>
               </div>
 
-              {/* Right side - Preview & Generate */}
-              <div className="flex flex-col p-6 md:p-8">
-                {/* Result preview */}
-                <div className="mb-6 flex-1">
-                  <div className="mb-4 flex items-center gap-2">
-                    <Sparkles className="h-5 w-5 text-primary" />
-                    <h3 className="text-lg font-semibold text-foreground">{t('result_title')}</h3>
+              <div className="bg-muted/10 flex flex-col p-6 md:p-8">
+                <div className="sticky top-8 mb-6 flex-1">
+                  <div className="mb-6 flex items-center gap-2">
+                    <div className="bg-primary/10 flex h-8 w-8 items-center justify-center rounded-lg">
+                      <Sparkles className="text-primary h-4 w-4" />
+                    </div>
+                    <h3 className="text-foreground text-xl font-bold">
+                      {t('result_title')}
+                    </h3>
                   </div>
 
                   {generatedVideo ? (
-                    <div className="flex flex-col items-center">
-                      {/* Video in phone mockup */}
+                    <div className="animate-in fade-in zoom-in flex flex-col items-center duration-500">
                       <div className="relative mx-auto w-full max-w-xs">
-                        <div className="relative overflow-hidden rounded-3xl border-4 border-foreground/10 bg-black shadow-2xl">
+                        <div className="border-foreground/10 relative overflow-hidden rounded-[2rem] border-4 bg-black shadow-2xl">
                           <div className="aspect-[9/16]">
                             <video
                               src={generatedVideo.url}
@@ -701,17 +974,15 @@ export function DanceGeneratorPremium({
                             />
                           </div>
                         </div>
-                        {/* Glow effect */}
-                        <div className="absolute -inset-4 -z-10 rounded-3xl bg-gradient-to-br from-primary/20 via-accent/10 to-transparent blur-2xl" />
+                        <div className="from-primary/20 via-accent/10 absolute -inset-4 -z-10 rounded-[2.5rem] bg-gradient-to-br to-transparent blur-2xl" />
                       </div>
 
-                      {/* Action buttons */}
-                      <div className="mt-6 flex gap-3">
+                      <div className="mt-8 flex w-full flex-col gap-3">
                         <Button
                           size="lg"
                           onClick={handleDownloadVideo}
                           disabled={isDownloading}
-                          className="rounded-xl bg-gradient-to-r from-primary to-accent px-6 shadow-lg shadow-primary/25"
+                          className="from-primary to-accent shadow-primary/25 w-full rounded-xl bg-gradient-to-r py-6 text-lg shadow-lg"
                         >
                           {isDownloading ? (
                             <Loader2 className="mr-2 h-5 w-5 animate-spin" />
@@ -722,124 +993,166 @@ export function DanceGeneratorPremium({
                         </Button>
                       </div>
 
-                      {/* Share tip */}
-                      <div className="mt-4 flex items-center gap-2 rounded-full bg-primary/5 px-4 py-2 text-sm text-muted-foreground">
+                      <div className="bg-primary/5 text-muted-foreground mt-6 flex items-center gap-2 rounded-full px-4 py-2 text-sm">
                         <Share2 className="h-4 w-4" />
                         {t('share_tip')}
                       </div>
                     </div>
                   ) : (
-                    <div className="flex h-full flex-col items-center justify-center py-12 text-center">
-                      {/* Empty state mockup */}
+                    <div className="border-border/60 bg-muted/20 flex h-full min-h-[500px] flex-col items-center justify-center rounded-3xl border border-dashed py-12 text-center">
                       <div className="relative mx-auto mb-6 w-48">
-                        <div className="aspect-[9/16] overflow-hidden rounded-3xl border-2 border-dashed border-border bg-muted/30">
-                          <div className="flex h-full items-center justify-center">
-                            {isGenerating ? (
-                              <div className="text-center">
-                                <Loader2 className="mx-auto mb-3 h-10 w-10 animate-spin text-primary" />
-                                <p className="text-sm font-medium text-muted-foreground">
-                                  {taskStatusLabel || t('generating_hint')}
-                                </p>
-                              </div>
-                            ) : (
-                              <Video className="h-12 w-12 text-muted-foreground/30" />
-                            )}
+                        {isGenerating ? (
+                          <div className="flex aspect-[9/16] items-center justify-center overflow-hidden rounded-3xl bg-black/5">
+                            <div className="p-4 text-center">
+                              <Loader2 className="text-primary mx-auto mb-4 h-12 w-12 animate-spin" />
+                              <p className="text-foreground text-sm font-bold">
+                                Generating...
+                              </p>
+                              <p className="text-muted-foreground mt-1 text-xs">
+                                {taskStatusLabel}
+                              </p>
+                            </div>
                           </div>
-                        </div>
+                        ) : selectedTemplate ? (
+                          <div className="group relative aspect-[9/16] overflow-hidden rounded-3xl shadow-xl">
+                            <Image
+                              src={selectedTemplate.thumbnailUrl}
+                              alt="Preview"
+                              fill
+                              className="scale-110 object-cover opacity-50 blur-sm"
+                            />
+                            <div className="absolute inset-0 flex items-center justify-center">
+                              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white/20 backdrop-blur-md">
+                                <Sparkles className="h-8 w-8 text-white" />
+                              </div>
+                            </div>
+                          </div>
+                        ) : (
+                          <div className="border-border bg-muted/30 aspect-[9/16] overflow-hidden rounded-3xl border-2 border-dashed">
+                            <div className="flex h-full flex-col items-center justify-center gap-3">
+                              <Video className="text-muted-foreground/30 h-12 w-12" />
+                              <p className="text-muted-foreground px-4 text-xs">
+                                Select a template to preview
+                              </p>
+                            </div>
+                          </div>
+                        )}
                       </div>
-                      <p className="text-sm text-muted-foreground">
-                        {isGenerating ? t('generating_hint') : t('no_video')}
+                      <p className="text-muted-foreground max-w-[240px] text-sm">
+                        {isGenerating
+                          ? t('generating_hint')
+                          : selectedTemplate
+                            ? 'Ready to generate your video!'
+                            : t('no_video')}
                       </p>
                     </div>
                   )}
-                </div>
 
-                {/* Progress bar */}
-                {isGenerating && (
-                  <div className="mb-6 rounded-2xl border border-primary/20 bg-primary/5 p-4">
-                    <div className="mb-2 flex items-center justify-between text-sm">
-                      <span className="font-medium text-foreground">{t('progress')}</span>
-                      <span className="font-bold text-primary">{progress}%</span>
+                  {isGenerating && (
+                    <div className="border-primary/20 bg-primary/5 mt-6 rounded-2xl border p-4">
+                      <div className="mb-2 flex items-center justify-between text-sm">
+                        <span className="text-foreground font-medium">
+                          {t('progress')}
+                        </span>
+                        <span className="text-primary font-bold">
+                          {progress}%
+                        </span>
+                      </div>
+                      <Progress value={progress} className="h-2" />
                     </div>
-                    <Progress value={progress} className="h-2" />
-                  </div>
-                )}
-
-                {/* Generate button */}
-                <div className="space-y-4">
-                  {!isMounted ? (
-                    <Button className="h-14 w-full rounded-xl text-base" disabled size="lg">
-                      <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                      {t('loading')}
-                    </Button>
-                  ) : isCheckSign ? (
-                    <Button className="h-14 w-full rounded-xl text-base" disabled size="lg">
-                      <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                      {t('checking_account')}
-                    </Button>
-                  ) : user ? (
-                    <Button
-                      size="lg"
-                      className={cn(
-                        'btn-glow h-14 w-full rounded-xl text-base font-semibold transition-all duration-300',
-                        canGenerate
-                          ? 'bg-gradient-to-r from-primary via-primary to-accent shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30'
-                          : ''
-                      )}
-                      onClick={handleGenerate}
-                      disabled={!canGenerate}
-                    >
-                      {isGenerating ? (
-                        <>
-                          <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                          {t('generating')}
-                        </>
-                      ) : (
-                        <>
-                          <Sparkles className="mr-2 h-5 w-5" />
-                          {t('generate')}
-                        </>
-                      )}
-                    </Button>
-                  ) : (
-                    <Button
-                      size="lg"
-                      className="h-14 w-full rounded-xl bg-gradient-to-r from-primary to-accent text-base font-semibold shadow-lg shadow-primary/25"
-                      onClick={() => setIsShowSignModal(true)}
-                    >
-                      <User className="mr-2 h-5 w-5" />
-                      {t('sign_in_to_generate')}
-                    </Button>
                   )}
 
-                  {/* Credits info */}
-                  <div className="flex items-center justify-between rounded-xl bg-muted/50 px-4 py-3 text-sm">
-                    <div className="flex items-center gap-2">
-                      <Zap className="h-4 w-4 text-primary" />
-                      <span className="text-muted-foreground">
-                        {t('credits_cost', { credits: costCredits })}
-                      </span>
-                    </div>
-                    {isMounted && (
-                      <span
-                        className={cn(
-                          'font-medium',
-                          remainingCredits < costCredits ? 'text-destructive' : 'text-foreground'
-                        )}
+                  <div className="mt-6 space-y-4">
+                    {!isMounted ? (
+                      <Button
+                        className="h-14 w-full rounded-xl text-base"
+                        disabled
+                        size="lg"
                       >
-                        {t('credits_remaining', { credits: remainingCredits })}
-                      </span>
+                        <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                        {t('loading')}
+                      </Button>
+                    ) : isCheckSign ? (
+                      <Button
+                        className="h-14 w-full rounded-xl text-base"
+                        disabled
+                        size="lg"
+                      >
+                        <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                        {t('checking_account')}
+                      </Button>
+                    ) : user ? (
+                      <Button
+                        size="lg"
+                        className={cn(
+                          'btn-glow h-14 w-full rounded-xl text-base font-semibold transition-all duration-300',
+                          canGenerate
+                            ? 'from-primary via-primary to-accent shadow-primary/25 hover:shadow-primary/30 bg-gradient-to-r shadow-lg hover:scale-[1.02] hover:shadow-xl'
+                            : 'opacity-80'
+                        )}
+                        onClick={handleGenerate}
+                        disabled={!canGenerate}
+                      >
+                        {isGenerating ? (
+                          <>
+                            <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                            {t('generating')}
+                          </>
+                        ) : (
+                          <>
+                            <Sparkles className="mr-2 h-5 w-5" />
+                            {t('generate')}{' '}
+                            <span className="ml-1 opacity-80">
+                              ({costCredits} credits)
+                            </span>
+                          </>
+                        )}
+                      </Button>
+                    ) : (
+                      <Button
+                        size="lg"
+                        className="from-primary to-accent shadow-primary/25 h-14 w-full rounded-xl bg-gradient-to-r text-base font-semibold shadow-lg"
+                        onClick={() => setIsShowSignModal(true)}
+                      >
+                        <User className="mr-2 h-5 w-5" />
+                        {t('sign_in_to_generate')}
+                      </Button>
+                    )}
+
+                    <div className="bg-muted/50 flex items-center justify-between rounded-xl px-4 py-3 text-sm">
+                      <div className="flex items-center gap-2">
+                        <Zap className="text-primary h-4 w-4" />
+                        <span className="text-muted-foreground">
+                          Required: {costCredits} credits
+                        </span>
+                      </div>
+                      {isMounted && (
+                        <span
+                          className={cn(
+                            'font-medium',
+                            remainingCredits < costCredits
+                              ? 'text-destructive'
+                              : 'text-green-600 dark:text-green-400'
+                          )}
+                        >
+                          You have: {remainingCredits}
+                        </span>
+                      )}
+                    </div>
+
+                    {isMounted && user && remainingCredits < costCredits && (
+                      <Link href="/pricing" className="block">
+                        <Button
+                          variant="outline"
+                          className="h-12 w-full rounded-xl border-dashed"
+                          size="lg"
+                        >
+                          <CreditCard className="mr-2 h-4 w-4" />
+                          {t('buy_credits')}
+                        </Button>
+                      </Link>
                     )}
                   </div>
-
-                  {isMounted && user && remainingCredits < costCredits && (
-                    <Link href="/pricing" className="block">
-                      <Button variant="outline" className="h-12 w-full rounded-xl" size="lg">
-                        <CreditCard className="mr-2 h-4 w-4" />
-                        {t('buy_credits')}
-                      </Button>
-                    </Link>
-                  )}
                 </div>
               </div>
             </div>
@@ -847,17 +1160,16 @@ export function DanceGeneratorPremium({
         </div>
       </div>
 
-      {/* Template Preview Modal */}
       {previewingTemplate && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm"
           onClick={() => setPreviewingTemplate(null)}
         >
           <div
-            className="relative max-h-[85vh] w-full max-w-sm overflow-hidden rounded-3xl bg-black shadow-2xl"
+            className="relative max-h-[90vh] w-full max-w-sm overflow-hidden rounded-[2rem] bg-black shadow-2xl ring-1 ring-white/10"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="aspect-[9/16]">
+            <div className="relative aspect-[9/16]">
               <video
                 src={previewingTemplate.videoUrl}
                 controls
@@ -866,29 +1178,52 @@ export function DanceGeneratorPremium({
                 playsInline
                 className="h-full w-full object-contain"
               />
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black via-black/60 to-transparent" />
             </div>
+
             <button
               type="button"
               onClick={() => setPreviewingTemplate(null)}
-              className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-black/60 text-white backdrop-blur-sm transition-colors hover:bg-black/80"
+              className="absolute top-4 right-4 flex h-10 w-10 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur-md transition-colors hover:bg-black/80"
             >
               <X className="h-5 w-5" />
             </button>
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-6 pt-12">
-              <p className="text-xl font-bold text-white">{previewingTemplate.name}</p>
-              <p className="mt-1 text-sm text-white/70">{previewingTemplate.description}</p>
+
+            <div className="absolute right-0 bottom-0 left-0 p-6 pt-0">
+              <h3 className="mb-1 text-2xl font-bold text-white">
+                {previewingTemplate.name}
+              </h3>
+              <p className="mb-6 line-clamp-2 text-sm text-white/80">
+                {previewingTemplate.description}
+              </p>
+
               <Button
-                className="mt-4 w-full rounded-xl bg-gradient-to-r from-primary to-accent"
+                size="lg"
+                className="w-full rounded-xl bg-white font-bold text-black hover:bg-white/90"
                 onClick={() => {
                   setSelectedTemplate(previewingTemplate);
                   setPreviewingTemplate(null);
                 }}
               >
-                Select This Dance
+                Use This Template
               </Button>
             </div>
           </div>
         </div>
+      )}
+
+      {isMounted && (
+        <MobileStickyBar
+          canGenerate={!!canGenerate}
+          isGenerating={isGenerating}
+          remainingCredits={remainingCredits}
+          costCredits={costCredits}
+          onGenerate={handleGenerate}
+          onSignIn={() => setIsShowSignModal(true)}
+          isLoggedIn={!!user}
+          generateLabel={t('generate')}
+          generatingLabel={t('generating')}
+        />
       )}
     </section>
   );
