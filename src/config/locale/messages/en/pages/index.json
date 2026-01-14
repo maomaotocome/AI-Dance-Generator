@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "AI Dance Generator - Make Any Photo Dance with AI | Free Online Tool",
-    "description": "Transform any photo into viral dance videos with AI. Upload a selfie, pet, or character and create TikTok-ready dancing videos in 30 seconds. No watermark, HD quality. Free to try!",
+    "title": "AI Dance Generator - Make Photos Dance | Free Tool",
+    "description": "Transform any photo into viral dance videos with AI. Upload selfies, pets, or characters - get TikTok-ready videos in 30 seconds. Free to try!",
     "keywords": "AI dance generator, AI dance video maker, make photos dance, TikTok dance AI, viral dance video, dancing photo generator, AI video generator, photo to dance video, free dance video maker, Viggle AI alternative"
   },
   "page": {
@@ -19,25 +19,25 @@
       "hero": {
         "id": "hero",
         "block": "hero-premium",
-        "title": "Transform Any Photo Into a Viral Dance Video",
-        "highlight_text": "Viral Dance Video",
-        "description": "Make anyone dance with AI - upload a photo, pick a trending dance, and create TikTok-ready videos in seconds.<br/><br/>No watermarks. No dancing skills needed. Just pure viral magic.",
+        "title": "AI Dance Generator: Turn Any Photo Into Viral Dance Videos",
+        "highlight_text": "AI Dance Generator",
+        "description": "Make anyone dance with our AI dance video generator - upload a photo, pick a trending dance template, and create TikTok-ready dance videos in seconds.<br/><br/>No watermarks. No dancing skills needed. The best AI dance generator for viral content.",
         "announcement": {
           "badge": "Trending",
-          "title": "50M+ views generated this month",
+          "title": "50M+ AI dance videos generated",
           "url": "#generator"
         },
-        "tip": "Trusted by 50,000+ creators worldwide",
+        "tip": "Trusted by 50,000+ creators using our AI dance generator",
         "buttons": [
           {
-            "title": "Make Your Photo Dance - Free",
+            "title": "Create AI Dance Video Free",
             "icon": "Sparkles",
             "url": "#generator",
             "target": "_self",
             "variant": "default"
           },
           {
-            "title": "Watch Examples",
+            "title": "Watch AI Dance Examples",
             "icon": "Play",
             "url": "#showcases",
             "target": "_self",
@@ -45,7 +45,7 @@
           }
         ],
         "show_avatars": true,
-        "avatars_tip": "Join 50,000+ creators",
+        "avatars_tip": "Join 50,000+ AI dance creators",
         "show_award": false
       },
       "generator": {
@@ -55,31 +55,31 @@
       "showcases": {
         "id": "showcases",
         "block": "showcases-premium",
-        "title": "Videos Going Viral Right Now",
-        "description": "Real results from our users. These videos were made in under 60 seconds.",
+        "title": "AI Dance Videos Going Viral Right Now",
+        "description": "Real AI dance generator results from our users. These AI dance videos were created in under 60 seconds using our photo to dance video technology.",
         "items": [
           {
-            "title": "2.3M Views on TikTok",
-            "description": "Baby dance trend - made in 30 seconds",
+            "title": "2.3M Views - AI Dance Video",
+            "description": "Baby made to dance with AI dance generator - viral on TikTok",
             "image": {
-              "src": "/imgs/showcases/dance-1.jpg",
-              "alt": "Viral AI Dance Video"
+              "src": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=600&fit=crop",
+              "alt": "AI Dance Generator viral video example"
             }
           },
           {
-            "title": "850K Views on Reels",
-            "description": "K-Pop style with perfect sync",
+            "title": "850K Views - K-Pop AI Dance",
+            "description": "K-Pop style AI dance video with perfect motion sync",
             "image": {
-              "src": "/imgs/showcases/dance-2.jpg",
-              "alt": "K-Pop AI Dance"
+              "src": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=400&h=600&fit=crop",
+              "alt": "K-Pop AI dance video maker result"
             }
           },
           {
-            "title": "1.5M Views on Shorts",
-            "description": "Aura farming dance trend",
+            "title": "1.5M Views - Trending Dance",
+            "description": "Viral AI dance video created with our dance generator",
             "image": {
-              "src": "/imgs/showcases/dance-3.jpg",
-              "alt": "Aura Dance Trend"
+              "src": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&h=600&fit=crop",
+              "alt": "AI dance generator trending video"
             }
           }
         ],
@@ -88,74 +88,74 @@
       "usage": {
         "block": "features-step",
         "id": "usage",
-        "title": "3 Steps to Your First Viral Video",
-        "description": "No editing skills needed. No filming required. Just AI magic.",
+        "title": "How to Create AI Dance Videos in 3 Steps",
+        "description": "Our AI dance generator makes it easy. No editing skills needed. No filming required. Just upload and let AI create your dance video.",
         "image": {
-          "src": "/imgs/features/dance-demo.png",
-          "alt": "AI Dance Generator Demo"
+          "src": "https://images.unsplash.com/photo-1547153760-18fc86324498?w=800&h=600&fit=crop",
+          "alt": "AI Dance Generator Demo - Photo to dance video"
         },
         "image_position": "left",
         "text_align": "center",
         "items": [
           {
-            "title": "Drop Your Photo",
-            "description": "Upload any photo - selfie, pet, baby, anime character, or even a historical figure. Front-facing works best.",
+            "title": "Upload Photo to AI Dance Generator",
+            "description": "Upload any photo to our AI dance generator - selfies, pets, babies, anime characters, or even historical figures. Our AI dance video maker works with any face. Front-facing photos work best for realistic AI dance videos.",
             "image": {
-              "src": "/imgs/steps/upload.png",
-              "alt": "Upload photo"
+              "src": "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=200&h=200&fit=crop",
+              "alt": "Upload photo to AI dance generator"
             }
           },
           {
-            "title": "Pick a Trending Dance",
-            "description": "Choose from viral TikTok dances, K-Pop choreo, Aura farming, or hip-hop moves. Updated weekly with latest trends.",
+            "title": "Pick a Dance Template for Your AI Video",
+            "description": "Choose from our library of viral dance templates for your AI dance video. TikTok trends, K-Pop choreography, hip-hop moves - our AI dance generator has all the trending dances. Updated weekly with the latest viral dance moves.",
             "image": {
-              "src": "/imgs/steps/select.png",
-              "alt": "Select dance"
+              "src": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop",
+              "alt": "Select dance template for AI dance video"
             }
           },
           {
-            "title": "Download & Go Viral",
-            "description": "Get your HD video in 30-60 seconds. No watermark. Ready for TikTok, Instagram Reels, and YouTube Shorts.",
+            "title": "Download Your AI Dance Video",
+            "description": "Get your AI-generated dance video in 30-60 seconds. No watermark. Full HD 9:16 vertical format. Ready for TikTok, Instagram Reels, and YouTube Shorts. Share your AI dance video and go viral!",
             "image": {
-              "src": "/imgs/steps/generate.png",
-              "alt": "Generate and share"
+              "src": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=200&h=200&fit=crop",
+              "alt": "Download AI dance video"
             }
           }
         ]
       },
       "features": {
         "id": "features",
-        "title": "Why Creators Choose Us",
-        "description": "The fastest way to turn photos into viral dance content.",
+        "title": "Why Our AI Dance Generator is the Best Choice",
+        "description": "The fastest AI dance video maker to turn photos into viral dance content. Better than Viggle AI for creating realistic AI dance videos.",
         "items": [
           {
-            "title": "Any Photo Can Dance",
-            "description": "Transform selfies, pets, babies, anime characters, memes - even historical figures into smooth dancers.",
+            "title": "Any Photo Can Dance with AI",
+            "description": "Our AI dance generator transforms selfies, pets, babies, anime characters, memes - even historical figures into smooth AI dance videos. The most versatile AI dance video maker available.",
             "icon": "RiImageLine"
           },
           {
-            "title": "Trending Dances Updated Weekly",
-            "description": "Access the latest viral moves - Aura farming, TikTok trends, K-Pop hits, and classic hip-hop.",
+            "title": "Trending AI Dance Templates",
+            "description": "Access the latest viral dance moves in our AI dance generator. TikTok trends, K-Pop hits, hip-hop classics - all optimized for the best AI dance video results.",
             "icon": "RiMusic2Line"
           },
           {
-            "title": "Ultra-Realistic Motion",
-            "description": "Advanced AI creates natural, fluid movements that look real - not like cheap filters.",
+            "title": "Ultra-Realistic AI Dance Motion",
+            "description": "Advanced AI creates natural, fluid dance movements that look real - not like cheap filters. Our AI dance generator uses state-of-the-art motion transfer technology.",
             "icon": "RiRobot2Line"
           },
           {
-            "title": "30-Second Generation",
-            "description": "From upload to download in under a minute. Post while the trend is still hot.",
+            "title": "30-Second AI Dance Generation",
+            "description": "From upload to download in under a minute with our fast AI dance video maker. Create AI dance videos while the trend is still hot.",
             "icon": "RiFlashlightLine"
           },
           {
-            "title": "No Watermark, Full HD",
-            "description": "Clean, professional 9:16 vertical videos optimized for TikTok, Reels, and Shorts.",
+            "title": "No Watermark AI Dance Videos",
+            "description": "Clean, professional AI dance videos in 9:16 vertical format. Our AI dance generator exports without watermarks - perfect for TikTok, Reels, and Shorts.",
             "icon": "RiVideoLine"
           },
           {
-            "title": "Zero Dancing Skills Needed",
-            "description": "Let AI do the moves. You take the views. No choreography learning required.",
+            "title": "Zero Dancing Skills Required",
+            "description": "Let AI do the dancing. You take the views. Our AI dance generator means no choreography learning needed - just upload and create viral AI dance videos.",
             "icon": "RiUserSmileLine"
           }
         ],
@@ -163,85 +163,93 @@
       },
       "testimonials": {
         "id": "testimonials",
-        "title": "Creators Are Going Viral",
-        "description": "Real stories from content creators who transformed their reach with AI dance videos.",
+        "title": "Creators Love Our AI Dance Generator",
+        "description": "Real stories from content creators who transformed their reach with our AI dance video maker. See why they call it the best AI dance generator.",
         "items": [
           {
             "name": "Sarah M.",
-            "role": "TikTok Creator • 500K followers",
-            "quote": "Made my baby dance to K-Pop. Got 2.3 million views overnight. This is the easiest viral hack ever!",
+            "role": "TikTok Creator - 500K followers",
+            "quote": "This AI dance generator is insane! Made my baby dance to K-Pop, got 2.3 million views overnight. The best AI dance video maker I've ever used!",
             "image": {
               "src": "/imgs/avatars/1.png",
-              "alt": "Sarah"
+              "alt": "Sarah - AI dance generator user"
             }
           },
           {
             "name": "Mike Chen",
-            "role": "Content Creator • 1.2M subscribers",
-            "quote": "I made my grandma do the Aura farming dance. Video hit 5M views. My analytics exploded.",
+            "role": "Content Creator - 1.2M subscribers",
+            "quote": "Used this AI dance generator to make my grandma do trending dances. Video hit 5M views! Way better than other AI dance video makers.",
             "image": {
               "src": "/imgs/avatars/2.png",
-              "alt": "Mike"
+              "alt": "Mike - AI dance generator user"
             }
           },
           {
             "name": "Jessica L.",
-            "role": "Instagram Influencer • 800K followers",
-            "quote": "Finally posting dance content without actually learning choreo. Engagement up 300% this month.",
+            "role": "Instagram Influencer - 800K followers",
+            "quote": "Finally posting dance content without learning choreo thanks to this AI dance generator. Engagement up 300% since I started using this AI dance video maker!",
             "image": {
               "src": "/imgs/avatars/3.png",
-              "alt": "Jessica"
+              "alt": "Jessica - AI dance generator user"
             }
           },
           {
             "name": "David K.",
-            "role": "YouTuber • 2M subscribers",
-            "quote": "The quality is insane. Subscribers can't tell it's AI. Best tool I've discovered this year.",
+            "role": "YouTuber - 2M subscribers",
+            "quote": "The AI dance video quality is incredible. Subscribers can't tell it's AI-generated. Best AI dance generator tool I've discovered this year!",
             "image": {
               "src": "/imgs/avatars/4.png",
-              "alt": "David"
+              "alt": "David - AI dance generator user"
             }
           }
         ]
       },
       "faq": {
         "id": "faq",
-        "title": "Quick Answers",
-        "description": "Everything you need to start creating viral dance videos.",
+        "title": "AI Dance Generator FAQ",
+        "description": "Everything you need to know about our AI dance video maker and how to create viral AI dance videos.",
         "items": [
           {
-            "question": "What is AI Dance Generator?",
-            "answer": "It's an AI tool that transforms any photo into a realistic dancing video. Upload a photo, pick a dance style, and get your video in under 60 seconds. No dancing or editing skills required."
+            "question": "What is an AI Dance Generator?",
+            "answer": "An AI dance generator is an artificial intelligence tool that transforms any photo into a realistic dancing video. Our AI dance video maker lets you upload a photo, pick a dance style, and get your AI dance video in under 60 seconds. No dancing or editing skills required - the AI handles all the motion generation."
           },
           {
-            "question": "What photos work best?",
-            "answer": "Front-facing photos with clear face visibility work best. You can use selfies, baby photos, pet pictures, anime characters, memes, or even historical figures. Higher resolution = better results."
+            "question": "What photos work best with the AI Dance Generator?",
+            "answer": "Front-facing photos with clear face visibility work best in our AI dance generator. You can use selfies, baby photos, pet pictures, anime characters, memes, or even historical figures. The AI dance video maker produces better results with higher resolution images and good lighting."
           },
           {
-            "question": "How fast can I get my video?",
-            "answer": "Most videos are ready in 30-60 seconds. You can download immediately and post while the trend is still hot."
+            "question": "How fast does the AI Dance Generator create videos?",
+            "answer": "Our AI dance generator creates videos in 30-60 seconds. This fast AI dance video maker lets you download immediately and post while the trend is still hot. Processing time may vary slightly based on video complexity and server load."
           },
           {
-            "question": "Will there be a watermark?",
-            "answer": "No! All videos are watermark-free and exported in full HD 9:16 vertical format - perfect for TikTok, Instagram Reels, and YouTube Shorts."
+            "question": "Will my AI dance videos have watermarks?",
+            "answer": "No! All AI dance videos from our generator are watermark-free and exported in full HD 9:16 vertical format. This makes our AI dance generator perfect for TikTok, Instagram Reels, and YouTube Shorts without any branding."
           },
           {
-            "question": "What dances are available?",
-            "answer": "We update our dance library weekly with trending moves: TikTok viral dances, Aura farming, K-Pop choreography, hip-hop, and more. Stay ahead of trends."
+            "question": "What dance styles are available in the AI Dance Generator?",
+            "answer": "Our AI dance generator includes trending TikTok dances, K-Pop choreography, hip-hop moves, and fun dance styles. We update our AI dance video maker with new viral dance templates weekly so you can stay ahead of trends."
           },
           {
-            "question": "How much does it cost?",
-            "answer": "Each video costs 10 credits. New users get free credits to try it out. Check our pricing page for credit packages - the more you buy, the more you save."
+            "question": "How much does the AI Dance Generator cost?",
+            "answer": "Each AI dance video costs 10 credits. New users get free credits to try our AI dance generator. Check our pricing page for credit packages - the more you buy, the more you save on creating AI dance videos."
+          },
+          {
+            "question": "Is this AI Dance Generator better than Viggle AI?",
+            "answer": "Our AI dance generator offers competitive features to Viggle AI including high-quality motion transfer, no watermarks, fast generation, and a wide variety of dance templates. Many users prefer our AI dance video maker for its ease of use and consistent results."
+          },
+          {
+            "question": "Can I use AI Dance Generator videos commercially?",
+            "answer": "Yes! AI dance videos created with our generator can be used for personal and commercial purposes including social media content, marketing, and entertainment. You own the videos you create with our AI dance video maker."
           }
         ]
       },
       "cta": {
         "id": "cta",
-        "title": "Your Next Viral Video is 60 Seconds Away",
-        "description": "Join 50,000+ creators already making AI dance videos. Start free today.",
+        "title": "Create Your First AI Dance Video Now",
+        "description": "Join 50,000+ creators already making viral AI dance videos. Try our AI dance generator free today and see why it's the best AI dance video maker.",
         "buttons": [
           {
-            "title": "Create Your First Video Free",
+            "title": "Start AI Dance Generator Free",
             "url": "#generator",
             "target": "_self",
             "icon": "Sparkles"

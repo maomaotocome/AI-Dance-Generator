@@ -2,8 +2,8 @@
  * Dance Template Configuration
  * Pre-defined dance video templates for AI Dance Generator
  *
- * Templates are organized by category and sorted by popularity.
- * Replace videoUrl and thumbnailUrl with actual cloud storage URLs.
+ * Using Mixkit CDN videos (100% free for commercial use, no attribution required)
+ * Videos are vertical 9:16 format, optimized for TikTok/Reels/Shorts
  */
 
 export type DanceCategory = 'tiktok' | 'kpop' | 'hiphop' | 'fun';
@@ -13,13 +13,13 @@ export interface DanceTemplate {
   name: string;
   category: DanceCategory;
   description: string;
-  videoUrl: string; // Reference video in cloud storage
-  thumbnailUrl: string; // Preview thumbnail
-  duration: number; // Duration in seconds
-  creditCost: number; // Credits required
-  popularity: number; // For sorting (higher = more popular)
-  trending?: boolean; // Show "Hot" badge
-  new?: boolean; // Show "New" badge
+  videoUrl: string;
+  thumbnailUrl: string;
+  duration: number;
+  creditCost: number;
+  popularity: number;
+  trending?: boolean;
+  new?: boolean;
 }
 
 export const DANCE_CATEGORIES: { value: DanceCategory; label: string }[] = [
@@ -30,271 +30,147 @@ export const DANCE_CATEGORIES: { value: DanceCategory; label: string }[] = [
 ];
 
 /**
- * Dance Templates - Viral 2025 Collection
- *
- * Top trending templates based on market research:
- * - Lil Yachty Walk: 50M+ views on TikTok
- * - Aura Farming: Travis Kelce version hit 14M views
- * - Baby Dance: Dominating TikTok and Instagram
+ * Dance Templates - Real Video Collection
+ * All videos from Mixkit (free commercial license)
  */
 export const DANCE_TEMPLATES: DanceTemplate[] = [
-  // ========== TOP VIRAL TEMPLATES ==========
-
-  // Lil Yachty Walkout - The most requested template
+  // ========== TRENDING TEMPLATES ==========
   {
-    id: 'tiktok-lil-yachty-walk',
-    name: 'Lil Yachty Walk',
+    id: 'tiktok-silhouette-dance',
+    name: 'Silhouette Groove',
     category: 'tiktok',
-    description: 'The iconic confident swagger from Lyrical Lemonade 2021. Put this walk on anyone for instant comedy.',
-    videoUrl: '/videos/templates/lil-yachty-walk.mp4',
-    thumbnailUrl: '/imgs/templates/lil-yachty-walk.jpg',
-    duration: 8,
+    description:
+      'Colorful silhouette dance with vibrant neon background. Perfect for dramatic TikTok videos.',
+    videoUrl: 'https://assets.mixkit.co/videos/51282/51282-720.mp4',
+    thumbnailUrl: 'https://assets.mixkit.co/videos/51282/51282-thumb-0-0.jpg',
+    duration: 20,
     creditCost: 10,
     popularity: 100,
     trending: true,
   },
-
-  // Aura Farming - 2025's hottest trend
   {
-    id: 'tiktok-aura-farming',
-    name: 'Aura Farming',
+    id: 'tiktok-elegant-dance',
+    name: 'Elegant Flow',
     category: 'tiktok',
-    description: 'The Indonesian boat dance that Travis Kelce, PSG & millions recreated. Cultivate your aura.',
-    videoUrl: '/videos/templates/aura-farming.mp4',
-    thumbnailUrl: '/imgs/templates/aura-farming.jpg',
-    duration: 8,
+    description:
+      'Graceful dance movements in white attire. Smooth, flowing choreography for elegant content.',
+    videoUrl: 'https://assets.mixkit.co/videos/51275/51275-720.mp4',
+    thumbnailUrl: 'https://assets.mixkit.co/videos/51275/51275-thumb-0-0.jpg',
+    duration: 28,
     creditCost: 10,
     popularity: 98,
     trending: true,
     new: true,
   },
-
-  // Baby Dance - Universal appeal
   {
-    id: 'fun-baby-dance',
-    name: 'Baby Bounce',
+    id: 'fun-happy-dance',
+    name: 'Happy Vibes',
     category: 'fun',
-    description: 'The adorable baby dance taking over TikTok. Perfect for baby photos or anyone you want to look cute.',
-    videoUrl: '/videos/templates/baby-dance.mp4',
-    thumbnailUrl: '/imgs/templates/baby-dance.jpg',
-    duration: 6,
+    description:
+      'Joyful, energetic dance moves that spread happiness. Great for fun, upbeat content.',
+    videoUrl: 'https://assets.mixkit.co/videos/34497/34497-720.mp4',
+    thumbnailUrl: 'https://assets.mixkit.co/videos/34497/34497-thumb-0-0.jpg',
+    duration: 12,
     creditCost: 10,
-    popularity: 96,
+    popularity: 95,
     trending: true,
   },
 
-  // ========== TIKTOK VIRAL DANCES ==========
-
+  // ========== KPOP STYLE ==========
   {
-    id: 'tiktok-renegade',
-    name: 'Renegade',
-    category: 'tiktok',
-    description: 'The iconic TikTok dance that took the world by storm',
-    videoUrl: '/videos/templates/tiktok-renegade.mp4',
-    thumbnailUrl: '/imgs/templates/tiktok-renegade.jpg',
-    duration: 8,
+    id: 'kpop-studio-dance',
+    name: 'K-Pop Studio',
+    category: 'kpop',
+    description:
+      'Professional K-Pop style dance in a studio setting. Sharp, synchronized movements.',
+    videoUrl: 'https://assets.mixkit.co/videos/42397/42397-720.mp4',
+    thumbnailUrl: 'https://assets.mixkit.co/videos/42397/42397-thumb-0-0.jpg',
+    duration: 15,
     creditCost: 10,
     popularity: 90,
   },
   {
-    id: 'tiktok-savage',
-    name: 'Savage',
-    category: 'tiktok',
-    description: 'Megan Thee Stallion viral dance challenge',
-    videoUrl: '/videos/templates/tiktok-savage.mp4',
-    thumbnailUrl: '/imgs/templates/tiktok-savage.jpg',
-    duration: 6,
-    creditCost: 10,
-    popularity: 88,
-  },
-  {
-    id: 'tiktok-blinding-lights',
-    name: 'Blinding Lights',
-    category: 'tiktok',
-    description: 'The Weeknd dance challenge',
-    videoUrl: '/videos/templates/tiktok-blinding-lights.mp4',
-    thumbnailUrl: '/imgs/templates/tiktok-blinding-lights.jpg',
-    duration: 8,
-    creditCost: 10,
-    popularity: 85,
-  },
-  {
-    id: 'tiktok-tyla-water',
-    name: 'Tyla Water Dance',
-    category: 'tiktok',
-    description: 'The viral water dance from Tyla. Smooth, fluid movements.',
-    videoUrl: '/videos/templates/tyla-water.mp4',
-    thumbnailUrl: '/imgs/templates/tyla-water.jpg',
-    duration: 8,
-    creditCost: 10,
-    popularity: 92,
-    trending: true,
-  },
-
-  // ========== K-POP DANCES ==========
-
-  {
-    id: 'kpop-blackpink',
-    name: 'BLACKPINK Style',
+    id: 'kpop-neon-dance',
+    name: 'Neon Pop',
     category: 'kpop',
-    description: 'Iconic K-Pop dance moves from BLACKPINK',
-    videoUrl: '/videos/templates/kpop-blackpink.mp4',
-    thumbnailUrl: '/imgs/templates/kpop-blackpink.jpg',
+    description:
+      'Dynamic dance with neon lighting effects. Modern K-Pop aesthetic for viral content.',
+    videoUrl: 'https://assets.mixkit.co/videos/34540/34540-720.mp4',
+    thumbnailUrl: 'https://assets.mixkit.co/videos/34540/34540-thumb-0-0.jpg',
     duration: 10,
     creditCost: 10,
-    popularity: 85,
-  },
-  {
-    id: 'kpop-bts',
-    name: 'BTS Style',
-    category: 'kpop',
-    description: 'Popular BTS-inspired choreography',
-    videoUrl: '/videos/templates/kpop-bts.mp4',
-    thumbnailUrl: '/imgs/templates/kpop-bts.jpg',
-    duration: 8,
-    creditCost: 10,
     popularity: 88,
-  },
-  {
-    id: 'kpop-newjeans',
-    name: 'NewJeans Style',
-    category: 'kpop',
-    description: 'Fresh NewJeans-inspired dance moves',
-    videoUrl: '/videos/templates/kpop-newjeans.mp4',
-    thumbnailUrl: '/imgs/templates/kpop-newjeans.jpg',
-    duration: 8,
-    creditCost: 10,
-    popularity: 86,
     new: true,
   },
 
-  // ========== HIP-HOP DANCES ==========
-
+  // ========== HIP-HOP ==========
   {
-    id: 'hiphop-groove',
-    name: 'Hip-Hop Groove',
+    id: 'hiphop-street-dance',
+    name: 'Street Style',
     category: 'hiphop',
-    description: 'Classic hip-hop dance moves',
-    videoUrl: '/videos/templates/hiphop-groove.mp4',
-    thumbnailUrl: '/imgs/templates/hiphop-groove.jpg',
-    duration: 8,
+    description:
+      'Urban hip-hop dance moves with street vibes. Raw, authentic energy.',
+    videoUrl: 'https://assets.mixkit.co/videos/34555/34555-720.mp4',
+    thumbnailUrl: 'https://assets.mixkit.co/videos/34555/34555-thumb-0-0.jpg',
+    duration: 14,
     creditCost: 10,
-    popularity: 75,
+    popularity: 85,
   },
   {
     id: 'hiphop-freestyle',
-    name: 'Freestyle',
+    name: 'Urban Freestyle',
     category: 'hiphop',
-    description: 'Smooth freestyle hip-hop moves',
-    videoUrl: '/videos/templates/hiphop-freestyle.mp4',
-    thumbnailUrl: '/imgs/templates/hiphop-freestyle.jpg',
-    duration: 10,
+    description:
+      'Smooth freestyle hip-hop moves. Cool, casual choreography for laid-back content.',
+    videoUrl: 'https://assets.mixkit.co/videos/34563/34563-720.mp4',
+    thumbnailUrl: 'https://assets.mixkit.co/videos/34563/34563-thumb-0-0.jpg',
+    duration: 16,
     creditCost: 10,
-    popularity: 70,
-  },
-  {
-    id: 'hiphop-moonwalk',
-    name: 'Moonwalk',
-    category: 'hiphop',
-    description: 'The classic moonwalk - make anyone glide like MJ',
-    videoUrl: '/videos/templates/hiphop-moonwalk.mp4',
-    thumbnailUrl: '/imgs/templates/hiphop-moonwalk.jpg',
-    duration: 6,
-    creditCost: 10,
-    popularity: 78,
+    popularity: 82,
   },
 
-  // ========== FUN DANCES ==========
-
+  // ========== FUN ==========
   {
-    id: 'fun-shuffle',
-    name: 'Shuffle Dance',
+    id: 'fun-party-dance',
+    name: 'Party Mode',
     category: 'fun',
-    description: 'Energetic shuffle dance moves',
-    videoUrl: '/videos/templates/fun-shuffle.mp4',
-    thumbnailUrl: '/imgs/templates/fun-shuffle.jpg',
-    duration: 6,
+    description:
+      'Fun party dance moves everyone can enjoy. Perfect for celebrations and memes.',
+    videoUrl: 'https://assets.mixkit.co/videos/34521/34521-720.mp4',
+    thumbnailUrl: 'https://assets.mixkit.co/videos/34521/34521-thumb-0-0.jpg',
+    duration: 11,
     creditCost: 10,
     popularity: 80,
   },
-  {
-    id: 'fun-robot',
-    name: 'Robot Dance',
-    category: 'fun',
-    description: 'Classic robot dance moves - perfect for unexpected subjects',
-    videoUrl: '/videos/templates/fun-robot.mp4',
-    thumbnailUrl: '/imgs/templates/fun-robot.jpg',
-    duration: 8,
-    creditCost: 10,
-    popularity: 72,
-  },
-  {
-    id: 'fun-disco',
-    name: 'Disco Fever',
-    category: 'fun',
-    description: 'Retro disco dance moves',
-    videoUrl: '/videos/templates/fun-disco.mp4',
-    thumbnailUrl: '/imgs/templates/fun-disco.jpg',
-    duration: 8,
-    creditCost: 10,
-    popularity: 65,
-  },
-  {
-    id: 'fun-macarena',
-    name: 'Macarena',
-    category: 'fun',
-    description: 'The timeless party dance - everybody knows it',
-    videoUrl: '/videos/templates/fun-macarena.mp4',
-    thumbnailUrl: '/imgs/templates/fun-macarena.jpg',
-    duration: 10,
-    creditCost: 10,
-    popularity: 68,
-  },
 ];
 
-/**
- * Get dance template by ID
- */
 export function getDanceTemplateById(id: string): DanceTemplate | undefined {
   return DANCE_TEMPLATES.find((template) => template.id === id);
 }
 
-/**
- * Get dance templates by category
- * Returns sorted by popularity (highest first)
- */
 export function getDanceTemplatesByCategory(
   category?: DanceCategory
 ): DanceTemplate[] {
   if (!category) {
     return DANCE_TEMPLATES.sort((a, b) => b.popularity - a.popularity);
   }
-  return DANCE_TEMPLATES.filter((template) => template.category === category).sort(
-    (a, b) => b.popularity - a.popularity
-  );
+  return DANCE_TEMPLATES.filter(
+    (template) => template.category === category
+  ).sort((a, b) => b.popularity - a.popularity);
 }
 
-/**
- * Get trending dance templates
- */
 export function getTrendingTemplates(): DanceTemplate[] {
   return DANCE_TEMPLATES.filter((template) => template.trending).sort(
     (a, b) => b.popularity - a.popularity
   );
 }
 
-/**
- * Get new dance templates
- */
 export function getNewTemplates(): DanceTemplate[] {
   return DANCE_TEMPLATES.filter((template) => template.new).sort(
     (a, b) => b.popularity - a.popularity
   );
 }
 
-/**
- * Get all dance categories with their templates count
- */
 export function getDanceCategoriesWithCount(): {
   value: DanceCategory | 'all';
   label: string;
@@ -306,5 +182,8 @@ export function getDanceCategoriesWithCount(): {
     count: DANCE_TEMPLATES.filter((t) => t.category === cat.value).length,
   }));
 
-  return [{ value: 'all' as const, label: 'All Dances', count: allCount }, ...categoryCounts];
+  return [
+    { value: 'all' as const, label: 'All Dances', count: allCount },
+    ...categoryCounts,
+  ];
 }
