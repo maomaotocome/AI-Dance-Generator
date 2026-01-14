@@ -42,7 +42,7 @@ export const DANCE_TEMPLATES: DanceTemplate[] = [
     description:
       'Colorful silhouette dance with vibrant neon background. Perfect for dramatic TikTok videos.',
     videoUrl: 'https://assets.mixkit.co/videos/51282/51282-720.mp4',
-    thumbnailUrl: 'https://assets.mixkit.co/videos/51282/51282-thumb-0-0.jpg',
+    thumbnailUrl: '',
     duration: 20,
     creditCost: 10,
     popularity: 100,
@@ -55,7 +55,7 @@ export const DANCE_TEMPLATES: DanceTemplate[] = [
     description:
       'Graceful dance movements in white attire. Smooth, flowing choreography for elegant content.',
     videoUrl: 'https://assets.mixkit.co/videos/51275/51275-720.mp4',
-    thumbnailUrl: 'https://assets.mixkit.co/videos/51275/51275-thumb-0-0.jpg',
+    thumbnailUrl: '',
     duration: 28,
     creditCost: 10,
     popularity: 98,
@@ -69,7 +69,7 @@ export const DANCE_TEMPLATES: DanceTemplate[] = [
     description:
       'Joyful, energetic dance moves that spread happiness. Great for fun, upbeat content.',
     videoUrl: 'https://assets.mixkit.co/videos/34497/34497-720.mp4',
-    thumbnailUrl: 'https://assets.mixkit.co/videos/34497/34497-thumb-0-0.jpg',
+    thumbnailUrl: '',
     duration: 12,
     creditCost: 10,
     popularity: 95,
@@ -84,7 +84,7 @@ export const DANCE_TEMPLATES: DanceTemplate[] = [
     description:
       'Professional K-Pop style dance in a studio setting. Sharp, synchronized movements.',
     videoUrl: 'https://assets.mixkit.co/videos/42397/42397-720.mp4',
-    thumbnailUrl: 'https://assets.mixkit.co/videos/42397/42397-thumb-0-0.jpg',
+    thumbnailUrl: '',
     duration: 15,
     creditCost: 10,
     popularity: 90,
@@ -96,7 +96,7 @@ export const DANCE_TEMPLATES: DanceTemplate[] = [
     description:
       'Dynamic dance with neon lighting effects. Modern K-Pop aesthetic for viral content.',
     videoUrl: 'https://assets.mixkit.co/videos/34540/34540-720.mp4',
-    thumbnailUrl: 'https://assets.mixkit.co/videos/34540/34540-thumb-0-0.jpg',
+    thumbnailUrl: '',
     duration: 10,
     creditCost: 10,
     popularity: 88,
@@ -111,7 +111,7 @@ export const DANCE_TEMPLATES: DanceTemplate[] = [
     description:
       'Urban hip-hop dance moves with street vibes. Raw, authentic energy.',
     videoUrl: 'https://assets.mixkit.co/videos/34555/34555-720.mp4',
-    thumbnailUrl: 'https://assets.mixkit.co/videos/34555/34555-thumb-0-0.jpg',
+    thumbnailUrl: '',
     duration: 14,
     creditCost: 10,
     popularity: 85,
@@ -123,7 +123,7 @@ export const DANCE_TEMPLATES: DanceTemplate[] = [
     description:
       'Smooth freestyle hip-hop moves. Cool, casual choreography for laid-back content.',
     videoUrl: 'https://assets.mixkit.co/videos/34563/34563-720.mp4',
-    thumbnailUrl: 'https://assets.mixkit.co/videos/34563/34563-thumb-0-0.jpg',
+    thumbnailUrl: '',
     duration: 16,
     creditCost: 10,
     popularity: 82,
@@ -137,7 +137,7 @@ export const DANCE_TEMPLATES: DanceTemplate[] = [
     description:
       'Fun party dance moves everyone can enjoy. Perfect for celebrations and memes.',
     videoUrl: 'https://assets.mixkit.co/videos/34521/34521-720.mp4',
-    thumbnailUrl: 'https://assets.mixkit.co/videos/34521/34521-thumb-0-0.jpg',
+    thumbnailUrl: '',
     duration: 11,
     creditCost: 10,
     popularity: 80,
