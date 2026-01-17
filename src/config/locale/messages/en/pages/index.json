@@ -2,7 +2,7 @@
   "metadata": {
     "title": "AI Dance Generator - Make Photos Dance | Free Tool",
     "description": "Transform any photo into viral dance videos with AI. Upload selfies, pets, or characters - get TikTok-ready videos in 30 seconds. Free to try!",
-    "keywords": "AI dance generator, AI dance video maker, make photos dance, TikTok dance AI, viral dance video, dancing photo generator, AI video generator, photo to dance video, free dance video maker, Viggle AI alternative"
+    "keywords": "AI dance generator, dance video maker, photo to dance, TikTok dance AI, Viggle alternative"
   },
   "page": {
     "show_sections": [
@@ -59,20 +59,24 @@
         "description": "Real AI dance generator results from our users. These AI dance videos were created in under 60 seconds using our photo to dance video technology.",
         "items": [
           {
-            "title": "2.3M Views - AI Dance Video",
+            "title": "2.3M Views - Baby Dance",
             "description": "Baby made to dance with AI dance generator - viral on TikTok",
             "image": {
               "src": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=600&fit=crop",
               "alt": "AI Dance Generator viral video example"
-            }
+            },
+            "views": "2.3M",
+            "platform": "TikTok"
           },
           {
-            "title": "850K Views - K-Pop AI Dance",
+            "title": "1.8M Views - K-Pop Style",
             "description": "K-Pop style AI dance video with perfect motion sync",
             "image": {
               "src": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=400&h=600&fit=crop",
               "alt": "K-Pop AI dance video maker result"
-            }
+            },
+            "views": "1.8M",
+            "platform": "Instagram"
           },
           {
             "title": "1.5M Views - Trending Dance",
@@ -80,7 +84,59 @@
             "image": {
               "src": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&h=600&fit=crop",
               "alt": "AI dance generator trending video"
-            }
+            },
+            "views": "1.5M",
+            "platform": "YouTube"
+          },
+          {
+            "title": "3.2M Views - Pet Dancing",
+            "description": "Made my cat dance to viral TikTok music - AI magic!",
+            "image": {
+              "src": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=400&h=600&fit=crop",
+              "alt": "AI pet dance video viral"
+            },
+            "views": "3.2M",
+            "platform": "TikTok"
+          },
+          {
+            "title": "950K Views - Hip Hop Moves",
+            "description": "Street dance AI video with authentic hip-hop choreography",
+            "image": {
+              "src": "https://images.unsplash.com/photo-1547153760-18fc86324498?w=400&h=600&fit=crop",
+              "alt": "Hip hop AI dance generator"
+            },
+            "views": "950K",
+            "platform": "Instagram"
+          },
+          {
+            "title": "4.1M Views - Grandma Dancing",
+            "description": "Made grandma do the latest TikTok dance - family went viral!",
+            "image": {
+              "src": "https://images.unsplash.com/photo-1581579438747-104c53d7fbc4?w=400&h=600&fit=crop",
+              "alt": "AI dance video grandma viral"
+            },
+            "views": "4.1M",
+            "platform": "TikTok"
+          },
+          {
+            "title": "2.8M Views - Anime Dance",
+            "description": "Turned anime character into dancer - fans loved it!",
+            "image": {
+              "src": "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=400&h=600&fit=crop",
+              "alt": "Anime AI dance video"
+            },
+            "views": "2.8M",
+            "platform": "YouTube"
+          },
+          {
+            "title": "1.2M Views - Wedding Dance",
+            "description": "Created AI dance video for wedding surprise - bride cried!",
+            "image": {
+              "src": "https://images.unsplash.com/photo-1519741497674-611481863552?w=400&h=600&fit=crop",
+              "alt": "Wedding AI dance video"
+            },
+            "views": "1.2M",
+            "platform": "Instagram"
           }
         ],
         "className": "bg-muted"

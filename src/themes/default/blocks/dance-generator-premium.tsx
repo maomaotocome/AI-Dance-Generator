@@ -11,6 +11,7 @@ import {
   Flame,
   Loader2,
   Play,
+  ScanEye,
   Share2,
   Sparkles,
   Upload,
@@ -182,7 +183,10 @@ function TemplateCard({
 
   useEffect(() => {
     if (isHovering && videoRef.current) {
-      videoRef.current.play().catch(() => {});
+      const playPromise = videoRef.current.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {});
+      }
     } else if (videoRef.current) {
       videoRef.current.pause();
       videoRef.current.currentTime = 0;
@@ -196,27 +200,21 @@ function TemplateCard({
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
       className={cn(
-        'group relative flex-shrink-0 overflow-hidden rounded-2xl transition-all duration-300',
-        featured ? 'w-40 md:w-44' : 'w-36',
+        'group relative flex flex-col overflow-hidden rounded-xl border transition-all duration-300',
         isSelected
-          ? 'ring-primary ring-offset-background scale-[1.02] ring-4 ring-offset-2'
-          : 'hover:shadow-primary/10 ring-border/50 ring-1 hover:scale-[1.03] hover:shadow-xl'
+          ? 'border-purple-500/50 bg-white/10 shadow-[0_0_20px_rgba(168,85,247,0.2)] ring-2 ring-purple-500/50'
+          : 'border-white/10 bg-white/5 hover:scale-[1.02] hover:border-white/20 hover:bg-white/10 hover:shadow-xl hover:shadow-purple-500/10',
+        featured ? 'w-full' : 'w-full'
       )}
     >
-      <div
-        className={cn(
-          'bg-muted relative aspect-[9/16] w-full overflow-hidden',
-          !hasValidImage && `bg-gradient-to-br ${gradients[gradientIndex]}`
-        )}
-      >
+      <div className="relative aspect-[9/16] w-full overflow-hidden bg-black/20">
         {!hasValidImage && (
-          <div className="absolute inset-0">
-            <div className="from-primary/10 to-accent/10 absolute inset-0 bg-gradient-to-br via-transparent" />
-            <div className="absolute -top-4 -right-4 h-20 w-20 rounded-full bg-white/10 blur-xl" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <Play className="h-8 w-8 text-white/50" />
-            </div>
-          </div>
+          <div
+            className={cn(
+              'absolute inset-0 bg-gradient-to-br transition-opacity duration-500',
+              gradients[gradientIndex]
+            )}
+          />
         )}
 
         {template.thumbnailUrl && !imageError && (
@@ -225,10 +223,10 @@ function TemplateCard({
             alt={template.name}
             fill
             className={cn(
-              'object-cover transition-opacity duration-300',
-              isHovering ? 'opacity-0' : 'opacity-100'
+              'object-cover transition-all duration-500',
+              isHovering ? 'scale-105 opacity-0' : 'scale-100 opacity-100'
             )}
-            sizes={featured ? '(max-width: 640px) 176px, 176px' : '144px'}
+            sizes="(max-width: 640px) 50vw, 33vw"
             onError={() => setImageError(true)}
           />
         )}
@@ -245,61 +243,85 @@ function TemplateCard({
           )}
         />
 
-        <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+        {/* Overlays */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60" />
 
-        {featured && (
-          <div className="absolute top-0 left-0 rounded-br-xl bg-gradient-to-r from-orange-500 to-red-600 px-2.5 py-1 text-[10px] font-bold tracking-wider text-white uppercase shadow-lg">
-            HOT
-          </div>
-        )}
+        {/* Status Badges */}
+        <div className="absolute top-2 left-2 flex flex-col gap-1">
+          {featured && (
+            <div className="rounded-md bg-gradient-to-r from-orange-500 to-red-600 px-1.5 py-0.5 text-[10px] font-bold tracking-wider text-white uppercase shadow-lg">
+              HOT
+            </div>
+          )}
+          {!featured && template.new && (
+            <div className="rounded-md bg-blue-500 px-1.5 py-0.5 text-[10px] font-bold tracking-wide text-white uppercase shadow-sm">
+              NEW
+            </div>
+          )}
+        </div>
 
-        {!featured && template.new && (
-          <div className="absolute top-2 left-2 rounded-full bg-blue-500 px-2 py-0.5 text-[10px] font-bold tracking-wide text-white uppercase shadow-sm">
-            NEW
-          </div>
-        )}
-
-        {isSelected && (
-          <div className="bg-primary shadow-primary/50 absolute top-2 right-2 flex h-6 w-6 items-center justify-center rounded-full text-white shadow-lg">
-            <Check className="h-3.5 w-3.5" strokeWidth={3} />
-          </div>
-        )}
-
+        {/* Selection Indicator */}
         <div
           className={cn(
-            'absolute inset-0 flex items-center justify-center transition-opacity duration-300',
-            isHovering && !isSelected ? 'opacity-100' : 'opacity-0'
+            'absolute top-2 right-2 flex h-6 w-6 items-center justify-center rounded-full transition-all duration-300',
+            isSelected
+              ? 'scale-100 bg-purple-500 text-white shadow-lg shadow-purple-500/40'
+              : 'scale-0 bg-black/40 text-white/40 opacity-0'
           )}
         >
-          <div
-            role="button"
-            onClick={(e) => {
-              e.stopPropagation();
-              onPreview();
-            }}
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 backdrop-blur-md transition-transform hover:scale-110 hover:bg-white/30"
-          >
-            <Play className="ml-0.5 h-5 w-5 text-white" fill="currentColor" />
+          <Check className="h-3.5 w-3.5" strokeWidth={3} />
+        </div>
+
+        {/* Play Button Overlay (Hover) */}
+        <div
+          className={cn(
+            'absolute inset-0 flex items-center justify-center transition-all duration-300',
+            isHovering && !isSelected
+              ? 'scale-100 opacity-100'
+              : 'scale-90 opacity-0'
+          )}
+        >
+          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/20 shadow-lg backdrop-blur-md">
+            <Play className="ml-1 h-5 w-5 fill-white text-white" />
           </div>
         </div>
 
-        <div className="absolute inset-x-0 bottom-0 p-3 text-left">
-          <h4 className="line-clamp-2 text-sm leading-tight font-bold text-white drop-shadow-md">
-            {template.name}
-          </h4>
-          <div className="mt-1 flex items-center gap-2">
-            <span className="flex items-center gap-1 text-[10px] font-medium text-white/80">
-              <Video className="h-3 w-3" />
-              {template.duration}s
-            </span>
-            {template.popularity > 85 && (
-              <span className="flex items-center gap-0.5 text-[10px] font-medium text-orange-400">
-                <Flame className="h-3 w-3" />
-                Trending
-              </span>
-            )}
-          </div>
+        {/* Duration Badge */}
+        <div className="absolute top-2 right-2 rounded-md bg-black/40 px-1.5 py-0.5 text-[10px] font-medium text-white backdrop-blur-sm">
+          {template.duration}s
         </div>
+      </div>
+
+      {/* Card Footer - Always Visible */}
+      <div className="flex w-full flex-col gap-1 p-3 text-left">
+        <h4 className="line-clamp-1 text-sm font-semibold text-white transition-colors group-hover:text-purple-300">
+          {template.name}
+        </h4>
+        <div className="flex items-center justify-between text-[10px] text-white/50">
+          <span className="flex items-center gap-1">
+            <User className="h-3 w-3" />
+            {template.useCount || '1k+'} uses
+          </span>
+          {template.popularity > 80 && (
+            <span className="flex items-center gap-1 text-orange-400">
+              <Flame className="h-3 w-3" />
+              Trending
+            </span>
+          )}
+        </div>
+      </div>
+
+      {/* Quick Preview Button (Absolute position over image) */}
+      <div
+        role="button"
+        onClick={(e) => {
+          e.stopPropagation();
+          onPreview();
+        }}
+        className="absolute right-2 bottom-[4.5rem] rounded-full bg-black/40 p-1.5 text-white/70 opacity-0 backdrop-blur-sm transition-colors group-hover:opacity-100 hover:bg-black/60 hover:text-white"
+        title="Preview Full Screen"
+      >
+        <ScanEye className="h-4 w-4" />
       </div>
     </button>
   );
@@ -421,13 +443,15 @@ function FeaturedTemplatesRow({
 }) {
   return (
     <div className="mb-8">
-      <div className="mb-3 flex items-center gap-2 px-1">
-        <Flame className="h-5 w-5 text-orange-500" fill="currentColor" />
-        <h3 className="text-foreground text-lg font-bold tracking-tight">
+      <div className="mb-4 flex items-center gap-2 px-1">
+        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-orange-500/10">
+          <Flame className="h-5 w-5 text-orange-500" fill="currentColor" />
+        </div>
+        <h3 className="text-lg font-bold tracking-tight text-white">
           Trending Now
         </h3>
       </div>
-      <div className="scrollbar-hide flex gap-4 overflow-x-auto pb-4 md:gap-5">
+      <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
         {templates.slice(0, 4).map((template) => (
           <TemplateCard
             key={template.id}
@@ -443,7 +467,7 @@ function FeaturedTemplatesRow({
   );
 }
 
-function TemplateCarousel({
+function TemplateGrid({
   templates,
   selectedId,
   onSelect,
@@ -454,50 +478,17 @@ function TemplateCarousel({
   onSelect: (t: DanceTemplate) => void;
   onPreview: (t: DanceTemplate) => void;
 }) {
-  const scrollRef = useRef<HTMLDivElement>(null);
-
-  const scroll = (direction: 'left' | 'right') => {
-    if (scrollRef.current) {
-      const scrollAmount = 600;
-      scrollRef.current.scrollBy({
-        left: direction === 'left' ? -scrollAmount : scrollAmount,
-        behavior: 'smooth',
-      });
-    }
-  };
-
   return (
-    <div className="group/carousel relative">
-      <button
-        onClick={() => scroll('left')}
-        className="border-border/50 bg-background/80 text-foreground hover:bg-background absolute top-1/2 -left-3 z-10 hidden -translate-y-1/2 rounded-full border p-2 shadow-lg backdrop-blur-md transition-all hover:scale-110 disabled:opacity-0 md:flex"
-        aria-label="Scroll left"
-      >
-        <ChevronLeft className="h-5 w-5" />
-      </button>
-
-      <button
-        onClick={() => scroll('right')}
-        className="border-border/50 bg-background/80 text-foreground hover:bg-background absolute top-1/2 -right-3 z-10 hidden -translate-y-1/2 rounded-full border p-2 shadow-lg backdrop-blur-md transition-all hover:scale-110 disabled:opacity-0 md:flex"
-        aria-label="Scroll right"
-      >
-        <ChevronRight className="h-5 w-5" />
-      </button>
-
-      <div
-        ref={scrollRef}
-        className="scrollbar-hide flex gap-3 overflow-x-auto pt-1 pb-4 md:gap-4"
-      >
-        {templates.map((template) => (
-          <TemplateCard
-            key={template.id}
-            template={template}
-            isSelected={selectedId === template.id}
-            onSelect={() => onSelect(template)}
-            onPreview={() => onPreview(template)}
-          />
-        ))}
-      </div>
+    <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+      {templates.map((template) => (
+        <TemplateCard
+          key={template.id}
+          template={template}
+          isSelected={selectedId === template.id}
+          onSelect={() => onSelect(template)}
+          onPreview={() => onPreview(template)}
+        />
+      ))}
     </div>
   );
 }
@@ -809,116 +800,96 @@ export function DanceGeneratorPremium({
 
   return (
     <section id="generator" className="relative py-16 md:py-24">
-      <div className="absolute inset-0 -z-10">
-        <div className="bg-primary/5 absolute top-0 left-1/4 h-96 w-96 rounded-full blur-3xl" />
-        <div className="bg-accent/5 absolute right-1/4 bottom-0 h-96 w-96 rounded-full blur-3xl" />
+      <div className="absolute inset-0 -z-10 overflow-hidden">
+        <div className="absolute top-0 left-1/4 h-96 w-96 rounded-full bg-violet-500/10 blur-[100px]" />
+        <div className="absolute right-1/4 bottom-0 h-96 w-96 rounded-full bg-fuchsia-500/10 blur-[100px]" />
       </div>
 
-      <div className="container">
-        <div className="mx-auto max-w-7xl">
+      <div className="container px-4 md:px-6">
+        <div className="mx-auto max-w-[1400px]">
           <div className="mb-12 text-center">
             {srOnlyTitle && <h2 className="sr-only">{srOnlyTitle}</h2>}
-            <div className="border-primary/20 bg-primary/5 mb-4 inline-flex items-center gap-2 rounded-full border px-4 py-1.5">
-              <Zap className="text-primary h-4 w-4" />
-              <span className="text-primary text-sm font-medium">
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-purple-500/20 bg-purple-500/10 px-4 py-1.5 backdrop-blur-md">
+              <Zap className="h-4 w-4 text-purple-400" />
+              <span className="text-sm font-medium text-purple-200">
                 AI-Powered Generation
               </span>
             </div>
             <h2
-              className="text-foreground text-3xl font-bold sm:text-4xl md:text-5xl"
+              className="text-4xl font-bold text-white sm:text-5xl md:text-6xl"
               style={{ fontFamily: 'var(--font-display)' }}
             >
-              Create Your <span className="gradient-text">Dance Video</span>
+              Create Your{' '}
+              <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
+                Dance Video
+              </span>
             </h2>
-            <p className="text-muted-foreground mx-auto mt-4 max-w-2xl">
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-white/60">
               Upload a photo, choose a trending dance, and watch AI bring it to
               life in seconds.
             </p>
           </div>
 
-          <div className="border-border/50 bg-card/50 overflow-hidden rounded-3xl border shadow-2xl backdrop-blur-sm">
-            <div className="border-border/50 bg-muted/30 border-b px-4 py-4 md:px-8">
-              <div className="mx-auto flex max-w-3xl items-center justify-between gap-2 md:gap-4">
-                <StepIndicator
-                  step={1}
-                  title={t('step1_title')}
-                  isComplete={step1Complete}
-                  isActive={!step1Complete}
-                />
-                <ChevronRight className="text-muted-foreground/50 hidden h-5 w-5 sm:block" />
-                <StepIndicator
-                  step={2}
-                  title={t('step2_title')}
-                  isComplete={step2Complete}
-                  isActive={step1Complete && !step2Complete}
-                />
-                <ChevronRight className="text-muted-foreground/50 hidden h-5 w-5 sm:block" />
-                <StepIndicator
-                  step={3}
-                  title="Generate"
-                  isComplete={!!generatedVideo}
-                  isActive={step1Complete && step2Complete && !generatedVideo}
-                />
-              </div>
-            </div>
-
-            <div className="grid lg:grid-cols-[1.5fr_1fr]">
-              <div className="border-border/50 border-r p-6 md:p-8">
-                <div className="mb-10">
-                  <div className="mb-4 flex items-center gap-2">
-                    <div className="bg-primary/10 flex h-8 w-8 items-center justify-center rounded-lg">
-                      <Upload className="text-primary h-4 w-4" />
-                    </div>
-                    <h3 className="text-foreground text-xl font-bold">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-12">
+            <div className="space-y-8 lg:col-span-7 xl:col-span-8">
+              <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl md:p-8">
+                <div className="mb-6 flex items-center gap-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-violet-500/20 text-violet-300">
+                    <Upload className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white">
                       {t('step1_title')}
                     </h3>
-                  </div>
-                  <div className="border-border bg-muted/30 hover:border-primary/50 overflow-hidden rounded-2xl border-2 border-dashed transition-colors">
-                    <ImageUploader
-                      title={t('upload_title')}
-                      allowMultiple={false}
-                      maxImages={1}
-                      maxSizeMB={maxSizeMB}
-                      onChange={handleImageChange}
-                      emptyHint={t('upload_hint')}
-                    />
-                  </div>
-                  {hasImageUploadError && (
-                    <p className="text-destructive mt-2 text-sm">
-                      {t('upload_error')}
+                    <p className="text-sm text-white/50">
+                      Upload a full-body photo for best results
                     </p>
-                  )}
+                  </div>
                 </div>
 
-                <div>
-                  <div className="mb-6 flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <div className="bg-primary/10 flex h-8 w-8 items-center justify-center rounded-lg">
-                        <Video className="text-primary h-4 w-4" />
-                      </div>
-                      <h3 className="text-foreground text-xl font-bold">
+                <div className="overflow-hidden rounded-2xl border-2 border-dashed border-white/10 bg-white/5 transition-colors hover:border-violet-500/30 hover:bg-white/10">
+                  <ImageUploader
+                    title={t('upload_title')}
+                    allowMultiple={false}
+                    maxImages={1}
+                    maxSizeMB={maxSizeMB}
+                    onChange={handleImageChange}
+                    emptyHint={t('upload_hint')}
+                  />
+                </div>
+                {hasImageUploadError && (
+                  <p className="mt-2 text-sm text-red-400">
+                    {t('upload_error')}
+                  </p>
+                )}
+              </div>
+
+              <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl md:p-8">
+                <div className="mb-8">
+                  <div className="mb-6 flex items-center gap-3">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-pink-500/20 text-pink-300">
+                      <Video className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white">
                         {t('step2_title')}
                       </h3>
+                      <p className="text-sm text-white/50">
+                        Select a dance style from our library
+                      </p>
                     </div>
                   </div>
 
-                  <FeaturedTemplatesRow
-                    templates={trendingTemplates}
-                    selectedId={selectedTemplate?.id}
-                    onSelect={setSelectedTemplate}
-                    onPreview={setPreviewingTemplate}
-                  />
-
-                  <div className="mb-5 flex flex-wrap gap-2">
+                  <div className="mb-8 flex flex-wrap gap-2">
                     {categories.map((cat) => (
                       <button
                         key={cat.value}
                         onClick={() => setActiveCategory(cat.value)}
                         className={cn(
-                          'rounded-full px-4 py-1.5 text-sm font-medium transition-all duration-300',
+                          'rounded-full border px-4 py-1.5 text-sm font-medium transition-all duration-300',
                           activeCategory === cat.value
-                            ? 'scale-105 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white shadow-lg'
-                            : 'bg-muted hover:bg-muted/80 text-muted-foreground hover:scale-105'
+                            ? 'border-transparent bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white shadow-lg shadow-purple-500/25'
+                            : 'border-white/10 bg-white/5 text-white/60 hover:bg-white/10 hover:text-white'
                         )}
                       >
                         {cat.value === 'all'
@@ -926,19 +897,19 @@ export function DanceGeneratorPremium({
                           : t(`category_${cat.value}`)}
                         <span
                           className={cn(
-                            'ml-1.5 text-xs opacity-70',
+                            'ml-2 text-xs',
                             activeCategory === cat.value
-                              ? 'text-white'
-                              : 'text-muted-foreground'
+                              ? 'text-white/80'
+                              : 'text-white/40'
                           )}
                         >
-                          ({cat.count})
+                          {cat.count}
                         </span>
                       </button>
                     ))}
                   </div>
 
-                  <TemplateCarousel
+                  <TemplateGrid
                     templates={filteredTemplates}
                     selectedId={selectedTemplate?.id}
                     onSelect={setSelectedTemplate}
@@ -946,149 +917,114 @@ export function DanceGeneratorPremium({
                   />
                 </div>
               </div>
+            </div>
 
-              <div className="bg-muted/10 flex flex-col p-6 md:p-8">
-                <div className="sticky top-8 mb-6 flex-1">
-                  <div className="mb-6 flex items-center gap-2">
-                    <div className="bg-primary/10 flex h-8 w-8 items-center justify-center rounded-lg">
-                      <Sparkles className="text-primary h-4 w-4" />
+            <div className="lg:col-span-5 xl:col-span-4">
+              <div className="sticky top-24 space-y-6">
+                <div className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl backdrop-blur-xl md:p-8">
+                  <div className="mb-6 flex items-center gap-3">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-violet-500 to-fuchsia-500 text-white shadow-lg shadow-purple-500/20">
+                      <Sparkles className="h-5 w-5" />
                     </div>
-                    <h3 className="text-foreground text-xl font-bold">
+                    <h3 className="text-xl font-bold text-white">
                       {t('result_title')}
                     </h3>
                   </div>
 
-                  {generatedVideo ? (
-                    <div className="animate-in fade-in zoom-in flex flex-col items-center duration-500">
-                      <div className="relative mx-auto w-full max-w-xs">
-                        <div className="border-foreground/10 relative overflow-hidden rounded-[2rem] border-4 bg-black shadow-2xl">
-                          <div className="aspect-[9/16]">
-                            <video
-                              src={generatedVideo.url}
-                              controls
-                              autoPlay
-                              loop
-                              playsInline
-                              className="h-full w-full object-contain"
-                              preload="metadata"
-                            />
-                          </div>
-                        </div>
-                        <div className="from-primary/20 via-accent/10 absolute -inset-4 -z-10 rounded-[2.5rem] bg-gradient-to-br to-transparent blur-2xl" />
+                  <div className="relative aspect-[9/16] w-full overflow-hidden rounded-2xl border border-white/10 bg-black/40 shadow-inner">
+                    {generatedVideo ? (
+                      <div className="absolute inset-0 flex flex-col items-center justify-center bg-black">
+                        <video
+                          src={generatedVideo.url}
+                          controls
+                          autoPlay
+                          loop
+                          playsInline
+                          className="h-full w-full object-contain"
+                        />
                       </div>
-
-                      <div className="mt-8 flex w-full flex-col gap-3">
-                        <Button
-                          size="lg"
-                          onClick={handleDownloadVideo}
-                          disabled={isDownloading}
-                          className="from-primary to-accent shadow-primary/25 w-full rounded-xl bg-gradient-to-r py-6 text-lg shadow-lg"
-                        >
-                          {isDownloading ? (
-                            <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                          ) : (
-                            <Download className="mr-2 h-5 w-5" />
-                          )}
-                          {t('download')}
-                        </Button>
-                      </div>
-
-                      <div className="bg-primary/5 text-muted-foreground mt-6 flex items-center gap-2 rounded-full px-4 py-2 text-sm">
-                        <Share2 className="h-4 w-4" />
-                        {t('share_tip')}
-                      </div>
-                    </div>
-                  ) : (
-                    <div className="border-border/60 bg-muted/20 flex h-full min-h-[500px] flex-col items-center justify-center rounded-3xl border border-dashed py-12 text-center">
-                      <div className="relative mx-auto mb-6 w-48">
+                    ) : (
+                      <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
                         {isGenerating ? (
-                          <div className="flex aspect-[9/16] items-center justify-center overflow-hidden rounded-3xl bg-black/5">
-                            <div className="p-4 text-center">
-                              <Loader2 className="text-primary mx-auto mb-4 h-12 w-12 animate-spin" />
-                              <p className="text-foreground text-sm font-bold">
-                                Generating...
-                              </p>
-                              <p className="text-muted-foreground mt-1 text-xs">
-                                {taskStatusLabel}
-                              </p>
+                          <>
+                            <Loader2 className="mb-4 h-12 w-12 animate-spin text-purple-500" />
+                            <p className="text-sm font-medium text-white">
+                              {t('generating')}
+                            </p>
+                            <p className="mt-2 text-xs text-white/50">
+                              {taskStatusLabel}
+                            </p>
+                            <div className="mt-4 h-1.5 w-full max-w-[200px] rounded-full bg-white/10">
+                              <div
+                                className="h-full rounded-full bg-gradient-to-r from-violet-500 to-fuchsia-500 transition-all duration-500"
+                                style={{ width: `${progress}%` }}
+                              />
                             </div>
-                          </div>
+                          </>
                         ) : selectedTemplate ? (
-                          <div className="group relative aspect-[9/16] overflow-hidden rounded-3xl shadow-xl">
+                          <>
                             <Image
                               src={selectedTemplate.thumbnailUrl}
                               alt="Preview"
                               fill
-                              className="scale-110 object-cover opacity-50 blur-sm"
+                              className="object-cover opacity-30 blur-sm"
                             />
-                            <div className="absolute inset-0 flex items-center justify-center">
-                              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white/20 backdrop-blur-md">
-                                <Sparkles className="h-8 w-8 text-white" />
-                              </div>
+                            <div className="z-10 mb-4 flex h-20 w-20 items-center justify-center rounded-full border border-white/20 bg-white/10 shadow-xl backdrop-blur-md">
+                              <Sparkles className="h-8 w-8 text-white drop-shadow-lg" />
                             </div>
-                          </div>
+                            <p className="z-10 max-w-[200px] text-sm font-medium text-white/80">
+                              Ready to generate with
+                              <br />
+                              <span className="text-purple-300">
+                                "{selectedTemplate.name}"
+                              </span>
+                            </p>
+                          </>
                         ) : (
-                          <div className="border-border bg-muted/30 aspect-[9/16] overflow-hidden rounded-3xl border-2 border-dashed">
-                            <div className="flex h-full flex-col items-center justify-center gap-3">
-                              <Video className="text-muted-foreground/30 h-12 w-12" />
-                              <p className="text-muted-foreground px-4 text-xs">
-                                Select a template to preview
-                              </p>
+                          <>
+                            <div className="mb-4 rounded-full bg-white/5 p-4">
+                              <Video className="h-8 w-8 text-white/20" />
                             </div>
-                          </div>
+                            <p className="text-sm text-white/40">
+                              Select a template to see preview
+                            </p>
+                          </>
                         )}
                       </div>
-                      <p className="text-muted-foreground max-w-[240px] text-sm">
-                        {isGenerating
-                          ? t('generating_hint')
-                          : selectedTemplate
-                            ? 'Ready to generate your video!'
-                            : t('no_video')}
-                      </p>
-                    </div>
-                  )}
-
-                  {isGenerating && (
-                    <div className="border-primary/20 bg-primary/5 mt-6 rounded-2xl border p-4">
-                      <div className="mb-2 flex items-center justify-between text-sm">
-                        <span className="text-foreground font-medium">
-                          {t('progress')}
-                        </span>
-                        <span className="text-primary font-bold">
-                          {progress}%
-                        </span>
-                      </div>
-                      <Progress value={progress} className="h-2" />
-                    </div>
-                  )}
+                    )}
+                  </div>
 
                   <div className="mt-6 space-y-4">
-                    {!isMounted ? (
+                    {generatedVideo ? (
                       <Button
-                        className="h-14 w-full rounded-xl text-base"
-                        disabled
                         size="lg"
+                        onClick={handleDownloadVideo}
+                        disabled={isDownloading}
+                        className="h-14 w-full rounded-xl bg-gradient-to-r from-violet-600 to-fuchsia-600 text-lg font-bold text-white shadow-lg shadow-purple-500/25 transition-all hover:scale-[1.02] hover:shadow-purple-500/40"
+                      >
+                        {isDownloading ? (
+                          <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                        ) : (
+                          <Download className="mr-2 h-5 w-5" />
+                        )}
+                        {t('download')}
+                      </Button>
+                    ) : !isMounted ? (
+                      <Button
+                        className="h-14 w-full rounded-xl bg-white/10 text-white/50"
+                        disabled
                       >
                         <Loader2 className="mr-2 h-5 w-5 animate-spin" />
                         {t('loading')}
-                      </Button>
-                    ) : isCheckSign ? (
-                      <Button
-                        className="h-14 w-full rounded-xl text-base"
-                        disabled
-                        size="lg"
-                      >
-                        <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                        {t('checking_account')}
                       </Button>
                     ) : user ? (
                       <Button
                         size="lg"
                         className={cn(
-                          'btn-glow h-14 w-full rounded-xl text-base font-semibold transition-all duration-300',
+                          'h-14 w-full rounded-xl text-lg font-bold transition-all duration-300',
                           canGenerate
-                            ? 'from-primary via-primary to-accent shadow-primary/25 hover:shadow-primary/30 bg-gradient-to-r shadow-lg hover:scale-[1.02] hover:shadow-xl'
-                            : 'opacity-80'
+                            ? 'bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white shadow-lg shadow-purple-500/25 hover:scale-[1.02] hover:shadow-purple-500/40'
+                            : 'cursor-not-allowed bg-white/10 text-white/40'
                         )}
                         onClick={handleGenerate}
                         disabled={!canGenerate}
@@ -1101,17 +1037,14 @@ export function DanceGeneratorPremium({
                         ) : (
                           <>
                             <Sparkles className="mr-2 h-5 w-5" />
-                            {t('generate')}{' '}
-                            <span className="ml-1 opacity-80">
-                              ({costCredits} credits)
-                            </span>
+                            {t('generate')}
                           </>
                         )}
                       </Button>
                     ) : (
                       <Button
                         size="lg"
-                        className="from-primary to-accent shadow-primary/25 h-14 w-full rounded-xl bg-gradient-to-r text-base font-semibold shadow-lg"
+                        className="h-14 w-full rounded-xl bg-gradient-to-r from-violet-600 to-fuchsia-600 text-lg font-bold text-white shadow-lg shadow-purple-500/25 hover:scale-[1.02]"
                         onClick={() => setIsShowSignModal(true)}
                       >
                         <User className="mr-2 h-5 w-5" />
@@ -1119,11 +1052,14 @@ export function DanceGeneratorPremium({
                       </Button>
                     )}
 
-                    <div className="bg-muted/50 flex items-center justify-between rounded-xl px-4 py-3 text-sm">
-                      <div className="flex items-center gap-2">
-                        <Zap className="text-primary h-4 w-4" />
-                        <span className="text-muted-foreground">
-                          Required: {costCredits} credits
+                    <div className="flex items-center justify-between rounded-xl border border-white/5 bg-white/5 px-4 py-3 text-sm">
+                      <div className="flex items-center gap-2 text-white/60">
+                        <Zap className="h-4 w-4" />
+                        <span>
+                          Cost:{' '}
+                          <span className="font-medium text-white">
+                            {costCredits} credits
+                          </span>
                         </span>
                       </div>
                       {isMounted && (
@@ -1131,11 +1067,11 @@ export function DanceGeneratorPremium({
                           className={cn(
                             'font-medium',
                             remainingCredits < costCredits
-                              ? 'text-destructive'
-                              : 'text-green-600 dark:text-green-400'
+                              ? 'text-red-400'
+                              : 'text-emerald-400'
                           )}
                         >
-                          You have: {remainingCredits}
+                          Avail: {remainingCredits}
                         </span>
                       )}
                     </div>
@@ -1143,9 +1079,9 @@ export function DanceGeneratorPremium({
                     {isMounted && user && remainingCredits < costCredits && (
                       <Link href="/pricing" className="block">
                         <Button
-                          variant="outline"
-                          className="h-12 w-full rounded-xl border-dashed"
-                          size="lg"
+                          variant="ghost"
+                          className="w-full text-purple-300 hover:bg-white/5 hover:text-purple-200"
+                          size="sm"
                         >
                           <CreditCard className="mr-2 h-4 w-4" />
                           {t('buy_credits')}
@@ -1162,11 +1098,11 @@ export function DanceGeneratorPremium({
 
       {previewingTemplate && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm"
+          className="animate-in fade-in fixed inset-0 z-50 flex items-center justify-center bg-black/95 p-4 backdrop-blur-md"
           onClick={() => setPreviewingTemplate(null)}
         >
           <div
-            className="relative max-h-[90vh] w-full max-w-sm overflow-hidden rounded-[2rem] bg-black shadow-2xl ring-1 ring-white/10"
+            className="relative w-full max-w-sm overflow-hidden rounded-[2rem] bg-black shadow-2xl ring-1 ring-white/10"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="relative aspect-[9/16]">
@@ -1178,9 +1114,7 @@ export function DanceGeneratorPremium({
                 playsInline
                 className="h-full w-full object-contain"
               />
-              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black via-black/60 to-transparent" />
             </div>
-
             <button
               type="button"
               onClick={() => setPreviewingTemplate(null)}
@@ -1188,18 +1122,13 @@ export function DanceGeneratorPremium({
             >
               <X className="h-5 w-5" />
             </button>
-
-            <div className="absolute right-0 bottom-0 left-0 p-6 pt-0">
-              <h3 className="mb-1 text-2xl font-bold text-white">
+            <div className="absolute right-0 bottom-0 left-0 bg-gradient-to-t from-black via-black/80 to-transparent p-6 pt-20">
+              <h3 className="mb-2 text-2xl font-bold text-white">
                 {previewingTemplate.name}
               </h3>
-              <p className="mb-6 line-clamp-2 text-sm text-white/80">
-                {previewingTemplate.description}
-              </p>
-
               <Button
                 size="lg"
-                className="w-full rounded-xl bg-white font-bold text-black hover:bg-white/90"
+                className="w-full rounded-xl bg-white font-bold text-black hover:bg-gray-200"
                 onClick={() => {
                   setSelectedTemplate(previewingTemplate);
                   setPreviewingTemplate(null);
