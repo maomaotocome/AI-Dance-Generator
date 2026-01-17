@@ -20,6 +20,7 @@ export interface DanceTemplate {
   popularity: number;
   trending?: boolean;
   new?: boolean;
+  useCount?: string;
 }
 
 export const DANCE_CATEGORIES: { value: DanceCategory; label: string }[] = [
