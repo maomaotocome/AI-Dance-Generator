@@ -295,17 +295,14 @@ export class FalProvider implements AIProvider {
     }
   }
 
-  // get query model name (first two parts)
-  // e.g. fal-ai/bytedance/seedream/v4/edit -> fal-ai/bytedance
+  // get query model name for FAL API
+  // FAL API requires the full model path for querying task status
   private getQueryModel(model?: string): string {
     if (!model) {
       return '';
     }
-    const parts = model.split('/');
-    if (parts.length <= 2) {
-      return model;
-    }
-    return `${parts[0]}/${parts[1]}`;
+    // Return the full model path - FAL needs it for status queries
+    return model;
   }
 
   // format input
