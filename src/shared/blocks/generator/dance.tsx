@@ -19,10 +19,10 @@ import { toast } from 'sonner';
 
 import { Link } from '@/core/i18n/navigation';
 import {
-  DanceCategory,
-  DanceTemplate,
   DANCE_CATEGORIES,
   DANCE_TEMPLATES,
+  DanceCategory,
+  DanceTemplate,
   getDanceTemplatesByCategory,
 } from '@/config/dance-templates';
 import { AIMediaType, AITaskStatus } from '@/extensions/ai/types';
@@ -43,6 +43,7 @@ interface DanceGeneratorProps {
   templates?: DanceTemplate[];
   maxSizeMB?: number;
   srOnlyTitle?: string;
+  initialTemplateId?: string;
 }
 
 interface GeneratedVideo {
@@ -145,6 +146,7 @@ export function DanceGenerator({
   templates = DANCE_TEMPLATES,
   maxSizeMB = 50,
   srOnlyTitle,
+  initialTemplateId,
 }: DanceGeneratorProps) {
   const t = useTranslations('ai.dance.generator');
 
@@ -152,7 +154,11 @@ export function DanceGenerator({
     'all'
   );
   const [selectedTemplate, setSelectedTemplate] =
-    useState<DanceTemplate | null>(null);
+    useState<DanceTemplate | null>(
+      initialTemplateId
+        ? (templates.find((t) => t.id === initialTemplateId) ?? null)
+        : null
+    );
   const [uploadedImageItems, setUploadedImageItems] = useState<
     ImageUploaderValue[]
   >([]);
@@ -539,11 +545,7 @@ export function DanceGenerator({
                           : 'bg-muted text-muted-foreground'
                       )}
                     >
-                      {step1Complete ? (
-                        <Check className="h-3.5 w-3.5" />
-                      ) : (
-                        '1'
-                      )}
+                      {step1Complete ? <Check className="h-3.5 w-3.5" /> : '1'}
                     </div>
                     <h3 className="text-sm font-medium">{t('step1_title')}</h3>
                   </div>
@@ -573,11 +575,7 @@ export function DanceGenerator({
                           : 'bg-muted text-muted-foreground'
                       )}
                     >
-                      {step2Complete ? (
-                        <Check className="h-3.5 w-3.5" />
-                      ) : (
-                        '2'
-                      )}
+                      {step2Complete ? <Check className="h-3.5 w-3.5" /> : '2'}
                     </div>
                     <h3 className="text-sm font-medium">{t('step2_title')}</h3>
                   </div>
@@ -617,11 +615,11 @@ export function DanceGenerator({
                           'group relative overflow-hidden rounded-lg border-2 transition-all hover:scale-[1.02]',
                           selectedTemplate?.id === template.id
                             ? 'border-primary ring-primary/30 ring-2'
-                            : 'border-transparent hover:border-primary/30'
+                            : 'hover:border-primary/30 border-transparent'
                         )}
                       >
                         {/* 9:16 aspect ratio for TikTok format */}
-                        <div className="relative aspect-[9/16] bg-gradient-to-br from-primary/20 via-primary/10 to-primary/5">
+                        <div className="from-primary/20 via-primary/10 to-primary/5 relative aspect-[9/16] bg-gradient-to-br">
                           {template.thumbnailUrl &&
                           template.thumbnailUrl !== '' ? (
                             <Image
@@ -639,7 +637,7 @@ export function DanceGenerator({
 
                           {/* Selected indicator */}
                           {selectedTemplate?.id === template.id && (
-                            <div className="bg-primary absolute right-1 top-1 rounded-full p-0.5">
+                            <div className="bg-primary absolute top-1 right-1 rounded-full p-0.5">
                               <Check className="text-primary-foreground h-3 w-3" />
                             </div>
                           )}
@@ -663,7 +661,7 @@ export function DanceGenerator({
                         </div>
 
                         {/* Template name */}
-                        <div className="bg-background/80 absolute bottom-0 left-0 right-0 p-1.5 backdrop-blur-sm">
+                        <div className="bg-background/80 absolute right-0 bottom-0 left-0 p-1.5 backdrop-blur-sm">
                           <p className="truncate text-center text-[10px] font-medium">
                             {template.name}
                           </p>
@@ -745,10 +743,12 @@ export function DanceGenerator({
 
                 {/* Progress */}
                 {isGenerating && (
-                  <div className="space-y-2 rounded-lg border bg-muted/30 p-4">
+                  <div className="bg-muted/30 space-y-2 rounded-lg border p-4">
                     <div className="flex items-center justify-between text-sm">
                       <span className="font-medium">{t('progress')}</span>
-                      <span className="text-primary font-bold">{progress}%</span>
+                      <span className="text-primary font-bold">
+                        {progress}%
+                      </span>
                     </div>
                     <Progress value={progress} className="h-2" />
                     {taskStatusLabel && (
@@ -794,7 +794,7 @@ export function DanceGenerator({
                         size="lg"
                         onClick={handleDownloadVideo}
                         disabled={isDownloading}
-                        className="flex-1 max-w-40"
+                        className="max-w-40 flex-1"
                       >
                         {isDownloading ? (
                           <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -856,13 +856,13 @@ export function DanceGenerator({
             <button
               type="button"
               onClick={() => setPreviewingTemplate(null)}
-              className="absolute right-3 top-3 rounded-full bg-black/60 p-2 text-white transition-colors hover:bg-black/80"
+              className="absolute top-3 right-3 rounded-full bg-black/60 p-2 text-white transition-colors hover:bg-black/80"
             >
               <X className="h-5 w-5" />
             </button>
 
             {/* Template info */}
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+            <div className="absolute right-0 bottom-0 left-0 bg-gradient-to-t from-black/80 to-transparent p-4">
               <p className="text-lg font-bold text-white">
                 {previewingTemplate.name}
               </p>

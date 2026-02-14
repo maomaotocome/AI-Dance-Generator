@@ -1,9 +1,12 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 import { getThemePage } from '@/core/theme';
-import { VideoGenerator } from '@/shared/blocks/generator';
+import { DANCE_TEMPLATES } from '@/config/dance-templates';
+import { DanceGenerator } from '@/shared/blocks/generator';
 import { getMetadata } from '@/shared/lib/seo';
 import { DynamicPage } from '@/shared/types/blocks/landing';
+
+import { TemplateLinkGrid } from './template-link-grid';
 
 export const revalidate = 3600;
 
@@ -22,6 +25,20 @@ export default async function AiDanceGeneratorPage({
 
   const t = await getTranslations('ai.dance');
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'AI Dance Generator',
+    description: t.raw('page.description'),
+    applicationCategory: 'MultimediaApplication',
+    operatingSystem: 'Web',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+    },
+  };
+
   const page: DynamicPage = {
     sections: {
       hero: {
@@ -34,15 +51,9 @@ export default async function AiDanceGeneratorPage({
       },
       generator: {
         component: (
-          <VideoGenerator
+          <DanceGenerator
+            templates={DANCE_TEMPLATES}
             srOnlyTitle={t.raw('generator.title')}
-            i18nNamespace="ai.dance.generator"
-            initialTab="video-to-video"
-            initialProvider="fal"
-            initialModel="fal-ai/kling-video/o1/video-to-video/edit"
-            initialPrompt="Keep the same choreography, timing, and camera framing as the input video. Transform the dancer into a cute stylized character, high quality, smooth motion, consistent body."
-            allowedTabs={['video-to-video', 'text-to-video']}
-            allowReferenceImagesInVideoToVideo
           />
         ),
       },
@@ -51,5 +62,14 @@ export default async function AiDanceGeneratorPage({
 
   const Page = await getThemePage('dynamic-page');
 
-  return <Page locale={locale} page={page} />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <Page locale={locale} page={page} />
+      <TemplateLinkGrid templates={DANCE_TEMPLATES} />
+    </>
+  );
 }
