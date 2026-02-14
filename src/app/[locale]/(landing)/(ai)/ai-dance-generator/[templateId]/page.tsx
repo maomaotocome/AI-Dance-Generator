@@ -43,7 +43,15 @@ export async function generateMetadata({
     title,
     description,
     keywords: `${template.name} dance, AI ${template.category} dance, ${template.name} dance generator, photo to dance, AI dance video maker`,
-    alternates: { canonical: canonicalUrl },
+    alternates: {
+      canonical: canonicalUrl,
+      languages: Object.fromEntries(
+        locales.map((l) => {
+          const p = l === defaultLocale ? '' : `/${l}`;
+          return [l, `${appUrl}${p}/ai-dance-generator/${templateId}`];
+        })
+      ),
+    },
     openGraph: {
       type: 'website',
       locale,
