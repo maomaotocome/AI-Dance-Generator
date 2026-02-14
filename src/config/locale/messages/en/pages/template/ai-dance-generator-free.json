@@ -1,0 +1,179 @@
+{
+  "metadata": {
+    "title": "Free AI Dance Generator - Create Dance Videos Online for Free",
+    "description": "Create AI dance videos completely free. No download, no watermark, no credit card required. Upload a photo, choose a dance style, and generate HD dance videos in seconds.",
+    "keywords": "AI dance generator free, free dance video maker, free AI dance tool, dance video generator no watermark, free online dance maker, AI dance free trial"
+  },
+  "page": {
+    "show_sections": [
+      "hero",
+      "generator",
+      "about",
+      "howto",
+      "examples",
+      "faq",
+      "cta",
+      "related_pages"
+    ],
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "Free AI Dance Generator",
+        "highlight_text": "Free",
+        "description": "Create AI dance videos without spending a dime. Get free credits when you sign up — no credit card required. Generate HD dance videos with no watermarks.<br/><br/>The easiest free tool to make anyone dance.",
+        "announcement": {
+          "badge": "Free",
+          "title": "Sign up and get free credits to start creating immediately",
+          "url": "#generator"
+        },
+        "buttons": [
+          {
+            "title": "Start Free — No Card Needed",
+            "icon": "Sparkles",
+            "url": "#generator",
+            "target": "_self",
+            "variant": "default"
+          },
+          {
+            "title": "What's Included Free",
+            "icon": "Info",
+            "url": "#about",
+            "target": "_self",
+            "variant": "outline"
+          }
+        ],
+        "show_avatars": true,
+        "avatars_tip": "Thousands of creators started with free credits",
+        "show_award": false
+      },
+      "generator": { "id": "generator", "block": "dance-generator" },
+      "about": {
+        "id": "about",
+        "block": "features-list",
+        "title": "What You Get for Free",
+        "label": "No Strings Attached",
+        "description": "We believe everyone should be able to try AI dance generation. That's why we offer free credits with no credit card required. Here's what's included.",
+        "items": [
+          {
+            "title": "Free Starter Credits",
+            "description": "Sign up and receive free credits immediately. Each dance video costs 10 credits, so you can create multiple videos to try different styles and see what works best.",
+            "icon": "RiCheckLine"
+          },
+          {
+            "title": "No Watermarks",
+            "description": "Unlike many free tools, our generated videos have zero watermarks. Your free videos look exactly the same as paid ones — HD quality, ready to share.",
+            "icon": "RiStarLine"
+          },
+          {
+            "title": "Full Template Access",
+            "description": "Free users get access to the complete library of 20+ dance templates across all categories. No templates are locked behind a paywall.",
+            "icon": "RiGridLine"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "howto": {
+        "id": "howto",
+        "block": "features-step",
+        "title": "Get Started for Free",
+        "items": [
+          {
+            "title": "Sign Up (30 Seconds)",
+            "description": "Create a free account with your email. No credit card required, no hidden fees. You'll receive free credits instantly."
+          },
+          {
+            "title": "Upload & Choose",
+            "description": "Upload any photo and browse the full template library. All 20+ dance styles are available to free users — TikTok viral, K-Pop, hip-hop, baby dance, and more."
+          },
+          {
+            "title": "Generate & Download",
+            "description": "Click generate and get your HD dance video in about 30 seconds. Download with no watermarks. Share anywhere you want."
+          }
+        ]
+      },
+      "examples": {
+        "id": "examples",
+        "block": "showcases",
+        "title": "Made with Free Credits",
+        "description": "These videos were all created using free starter credits",
+        "items": [
+          {
+            "title": "Baby Dance Video — Free",
+            "description": "Adorable baby dance video created with zero cost"
+          },
+          {
+            "title": "Pet Dance — No Watermark",
+            "description": "Cute pet dance video, completely watermark-free"
+          },
+          {
+            "title": "TikTok Viral Dance — Free",
+            "description": "Trending dance content created with free credits"
+          },
+          {
+            "title": "Couple Sway — Free HD",
+            "description": "Romantic sway video in full HD quality, no payment needed"
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "block": "faq",
+        "title": "Free AI Dance Generator FAQ",
+        "items": [
+          {
+            "question": "How many free videos can I create?",
+            "answer": "You receive free starter credits when you sign up. Each dance video costs 10 credits. The exact number of free credits may vary, but it's enough to try multiple dance styles."
+          },
+          {
+            "question": "Do I need a credit card to sign up?",
+            "answer": "No. You can sign up with just an email address and start creating immediately. We'll never charge you without your explicit consent."
+          },
+          {
+            "question": "Are free videos lower quality?",
+            "answer": "No. Free videos are identical to paid ones — same HD quality, same resolution, no watermarks. There's no difference in output quality between free and paid credits."
+          },
+          {
+            "question": "What happens when I run out of free credits?",
+            "answer": "You can purchase additional credits from our pricing page. We offer affordable credit packages so you can continue creating dance videos."
+          },
+          {
+            "question": "Is there a daily limit for free users?",
+            "answer": "Free credits don't expire and there's no daily generation limit. You can use your free credits whenever you want, at your own pace."
+          },
+          {
+            "question": "Can I use free videos commercially?",
+            "answer": "Yes. Videos generated with free credits have the same usage rights as paid videos. You can use them for social media, marketing, or any other purpose."
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "title": "Start Creating for Free",
+        "description": "No credit card. No watermarks. No catch. Just free AI dance videos.",
+        "buttons": [
+          {
+            "title": "Get Free Credits Now",
+            "url": "#generator",
+            "target": "_self",
+            "icon": "Sparkles"
+          },
+          {
+            "title": "View Pricing",
+            "url": "/pricing",
+            "target": "_self",
+            "variant": "outline",
+            "icon": "Grid"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "related_pages": {
+        "id": "related_pages",
+        "block": "related-pages",
+        "title": "Explore More AI Dance Tools",
+        "description": "Discover all the ways you can create amazing dance videos with AI.",
+        "current_slug": "template/ai-dance-generator-free"
+      }
+    }
+  }
+}

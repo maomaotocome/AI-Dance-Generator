@@ -1,0 +1,171 @@
+{
+  "metadata": {
+    "title": "Hip-Hop Dance AI Generator - Create Street Dance Videos with AI",
+    "description": "Generate hip-hop dance videos from any photo using AI. From breakdancing to street dance moves, create urban dance content that hits hard. Perfect for TikTok and Instagram.",
+    "keywords": "hip hop dance AI generator, AI hip hop dance video, street dance AI, hip hop dance maker, breakdance AI generator, urban dance video maker"
+  },
+  "page": {
+    "show_sections": [
+      "hero",
+      "generator",
+      "about",
+      "howto",
+      "examples",
+      "faq",
+      "cta",
+      "related_pages"
+    ],
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "Hip-Hop Dance AI Generator",
+        "highlight_text": "Hip-Hop Dance",
+        "description": "Bring the energy of hip-hop to any photo. Our AI generates authentic street dance moves — from smooth grooves to hard-hitting choreography.<br/><br/>No dance skills needed. Just upload and let the beat drop.",
+        "announcement": {
+          "badge": "Street Style",
+          "title": "Hip-hop dance content consistently trends across all platforms",
+          "url": "#generator"
+        },
+        "buttons": [
+          {
+            "title": "Create Hip-Hop Dance Video",
+            "icon": "Sparkles",
+            "url": "#generator",
+            "target": "_self",
+            "variant": "default"
+          },
+          {
+            "title": "See Examples",
+            "icon": "Play",
+            "url": "#examples",
+            "target": "_self",
+            "variant": "outline"
+          }
+        ],
+        "show_avatars": true,
+        "avatars_tip": "Creators use AI hip-hop dance for viral content daily",
+        "show_award": false
+      },
+      "generator": { "id": "generator", "block": "dance-generator" },
+      "about": {
+        "id": "about",
+        "block": "features-list",
+        "title": "Why Hip-Hop Dance Videos Go Viral",
+        "label": "The Culture of Movement",
+        "description": "Hip-hop dance has been at the heart of internet culture since the beginning. AI-generated hip-hop dance videos combine the energy of street dance with the surprise of unexpected subjects.",
+        "items": [
+          {
+            "title": "High Energy Content",
+            "description": "Hip-hop moves are dynamic and attention-grabbing. The fast, rhythmic movements keep viewers watching and rewatching, which algorithms love.",
+            "icon": "RiFireLine"
+          },
+          {
+            "title": "Universal Appeal",
+            "description": "Hip-hop dance transcends language and culture. Whether your audience is in New York, Tokyo, or Lagos, the moves speak for themselves.",
+            "icon": "RiStarLine"
+          },
+          {
+            "title": "Comedy Gold Potential",
+            "description": "The contrast between unexpected subjects (babies, pets, historical figures) and hard-hitting hip-hop moves creates instant comedy that gets shared.",
+            "icon": "RiShareLine"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "howto": {
+        "id": "howto",
+        "block": "features-step",
+        "title": "Create Your Hip-Hop Dance Video",
+        "items": [
+          {
+            "title": "Upload Any Photo",
+            "description": "Choose a photo of anyone — yourself, a friend, a celebrity, a baby, or a pet. The funnier the contrast with hip-hop moves, the more viral potential."
+          },
+          {
+            "title": "Choose Hip-Hop Style",
+            "description": "Select from our hip-hop dance templates. Each template features different styles of street dance, from smooth grooves to energetic choreography."
+          },
+          {
+            "title": "Generate & Share",
+            "description": "Get your hip-hop dance video in about 30 seconds. Download in HD and post to TikTok, Instagram, or YouTube Shorts."
+          }
+        ]
+      },
+      "examples": {
+        "id": "examples",
+        "block": "showcases",
+        "title": "Hip-Hop Dance Video Examples",
+        "description": "See the energy of AI-generated hip-hop dance content",
+        "items": [
+          {
+            "title": "Baby Doing Street Dance Moves",
+            "description": "Adorable baby photos with hard-hitting hip-hop choreography"
+          },
+          {
+            "title": "Corporate Headshot Breaking It Down",
+            "description": "Serious business photos transformed into street dance videos"
+          },
+          {
+            "title": "Pet Cat with Hip-Hop Swagger",
+            "description": "Cute pet photos animated with urban dance moves"
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "block": "faq",
+        "title": "Hip-Hop Dance Generator FAQ",
+        "items": [
+          {
+            "question": "What hip-hop dance styles are available?",
+            "answer": "We offer several hip-hop dance templates including smooth groove, energetic choreography, and street dance moves. New hip-hop templates are added regularly based on trending styles."
+          },
+          {
+            "question": "Can I use any photo for hip-hop dance?",
+            "answer": "Yes! Any clear, front-facing photo works. The most entertaining results come from unexpected subjects — babies, pets, historical figures, or formal portraits doing hip-hop moves."
+          },
+          {
+            "question": "Are the dance moves realistic?",
+            "answer": "Our AI uses motion-control technology to generate smooth, natural-looking dance movements. The hip-hop templates are designed to capture the energy and rhythm of real street dance."
+          },
+          {
+            "question": "What music is included?",
+            "answer": "Each template comes with pre-synced audio that matches the dance style. The hip-hop templates feature urban beats and rhythms that complement the moves."
+          },
+          {
+            "question": "Can I use these for music videos?",
+            "answer": "Yes. The generated videos are yours to use for any purpose, including music video content, social media, and commercial projects."
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "title": "Ready to Drop the Beat?",
+        "description": "Create hip-hop dance videos that bring the energy of the streets to any photo.",
+        "buttons": [
+          {
+            "title": "Create Hip-Hop Dance",
+            "url": "#generator",
+            "target": "_self",
+            "icon": "Sparkles"
+          },
+          {
+            "title": "Explore All Styles",
+            "url": "/ai-dance-generator",
+            "target": "_self",
+            "variant": "outline",
+            "icon": "Grid"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "related_pages": {
+        "id": "related_pages",
+        "block": "related-pages",
+        "title": "Explore More AI Dance Tools",
+        "description": "Discover all the ways you can create amazing dance videos with AI.",
+        "current_slug": "template/hip-hop-dance-generator"
+      }
+    }
+  }
+}

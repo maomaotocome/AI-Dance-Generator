@@ -1,0 +1,172 @@
+{
+  "metadata": {
+    "title": "AI TikTok 舞蹈生成器 - 免费创建病毒式 TikTok 跳舞视频",
+    "description": "用 AI 将任何照片变成病毒式 TikTok 跳舞视频。选择热门 TikTok 舞蹈，应用最新舞蹈滤镜，几秒钟内创建刷屏内容。",
+    "keywords": "AI TikTok 舞蹈生成器, TikTok 跳舞滤镜 AI, 制作 TikTok 跳舞视频, TikTok 舞蹈趋势 AI, 病毒式 TikTok 舞蹈制作"
+  },
+  "page": {
+    "show_sections": [
+      "hero",
+      "generator",
+      "about",
+      "howto",
+      "examples",
+      "faq",
+      "cta",
+      "related_pages"
+    ],
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "AI TikTok 舞蹈生成器",
+        "highlight_text": "TikTok 舞蹈",
+        "description": "创建霸占推荐页的病毒式 TikTok 跳舞视频。上传任何照片，选择热门舞蹈，几秒钟内生成刷屏内容。<br/><br/>无需剪辑技巧。无需编舞。只需上传即可生成。",
+        "announcement": {
+          "badge": "热门",
+          "title": "TikTok 舞蹈内容拥有最高的互动率",
+          "url": "#generator"
+        },
+        "buttons": [
+          {
+            "title": "创建 TikTok 跳舞视频",
+            "icon": "Sparkles",
+            "url": "#generator",
+            "target": "_self",
+            "variant": "default"
+          },
+          {
+            "title": "了解使用方法",
+            "icon": "Play",
+            "url": "#howto",
+            "target": "_self",
+            "variant": "outline"
+          }
+        ],
+        "show_avatars": true,
+        "avatars_tip": "全球创作者使用 AI 舞蹈制作 TikTok 内容",
+        "show_award": false
+      },
+      "generator": { "id": "generator", "block": "dance-generator" },
+      "about": {
+        "id": "about",
+        "block": "features-list",
+        "title": "为什么 AI 舞蹈视频在 TikTok 上爆火",
+        "label": "算法优势",
+        "description": "舞蹈内容在 TikTok 上的表现始终优于其他格式。AI 生成的舞蹈视频将意想不到的角色跳舞的惊喜感与经过验证的病毒式编舞相结合。",
+        "items": [
+          {
+            "title": "算法优化内容",
+            "description": "TikTok 算法优先推荐高观看时长的内容。意想不到的主角跳舞的视频会被反复观看，从而大幅提升你的曝光量。",
+            "icon": "RiFireLine"
+          },
+          {
+            "title": "热门音频集成",
+            "description": "每个舞蹈模板都与热门音频同步。使用流行音效是 TikTok 推荐引擎最强的信号之一。",
+            "icon": "RiMusicLine"
+          },
+          {
+            "title": "即时内容创作",
+            "description": "跳过数小时的学舞和拍摄。不到一分钟即可生成专业品质的舞蹈内容，随时可以发布。",
+            "icon": "RiTimeLine"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "howto": {
+        "id": "howto",
+        "block": "features-step",
+        "title": "3 步创建你的 TikTok 舞蹈",
+        "items": [
+          {
+            "title": "上传任意照片",
+            "description": "选择任何人的照片——你自己、朋友、名人，甚至宠物。正面清晰的照片效果最佳。"
+          },
+          {
+            "title": "选择热门舞蹈",
+            "description": "浏览我们的 TikTok 病毒式舞蹈模板库。从最新趋势到经典病毒式动作，每个模板都针对最大互动量进行了优化。"
+          },
+          {
+            "title": "生成并发布",
+            "description": "点击生成，约 30 秒即可获得视频。下载高清品质，添加文案，直接发布到 TikTok。无水印。"
+          }
+        ]
+      },
+      "examples": {
+        "id": "examples",
+        "block": "showcases",
+        "title": "TikTok 舞蹈视频示例",
+        "description": "看看创作者们用 AI 舞蹈生成制作的内容",
+        "items": [
+          {
+            "title": "职业照跳病毒式舞蹈",
+            "description": "将严肃的证件照变成搞笑的舞蹈内容"
+          },
+          {
+            "title": "历史人物跳现代舞",
+            "description": "老照片与新舞蹈的反差创造即时喜剧效果"
+          },
+          {
+            "title": "合照舞蹈挑战",
+            "description": "让整个朋友圈同步跳舞，获得最大分享量"
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "block": "faq",
+        "title": "TikTok 舞蹈生成器常见问题",
+        "items": [
+          {
+            "question": "什么样的 TikTok 舞蹈视频效果最好？",
+            "answer": "最好的 TikTok 舞蹈视频将意想不到的主角与热门舞蹈结合。惊喜感驱动反复观看，这会向 TikTok 算法发出信号，将你的内容推送给更多观众。"
+          },
+          {
+            "question": "哪些舞蹈模板最适合 TikTok？",
+            "answer": "我们的热门模板会根据当前流行趋势定期更新。Silhouette Groove、Lil Yachty Walk 和 Aura Farming 模板在 TikTok 上表现一直很好。"
+          },
+          {
+            "question": "我可以将这些视频用于 TikTok 商业用途吗？",
+            "answer": "可以。你生成的视频可以随意使用，包括 TikTok 创作者计划、品牌内容和变现账号。"
+          },
+          {
+            "question": "什么视频格式最适合 TikTok？",
+            "answer": "我们所有模板都生成针对 TikTok 全屏格式优化的竖版 9:16 视频。无需裁剪或调整大小。"
+          },
+          {
+            "question": "如何让我的 AI 舞蹈视频在 TikTok 上获得更多观看？",
+            "answer": "使用热门模板，选择意想不到的照片主角，在高峰时段发布，并使用相关标签。反差越大，病毒传播潜力越大。"
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "title": "准备好创建病毒式 TikTok 内容了吗？",
+        "description": "上传照片，几秒钟内生成 TikTok 就绪的舞蹈视频。",
+        "buttons": [
+          {
+            "title": "创建 TikTok 舞蹈",
+            "url": "#generator",
+            "target": "_self",
+            "icon": "Sparkles"
+          },
+          {
+            "title": "浏览所有风格",
+            "url": "/ai-dance-generator",
+            "target": "_self",
+            "variant": "outline",
+            "icon": "Grid"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "related_pages": {
+        "id": "related_pages",
+        "block": "related-pages",
+        "title": "探索更多 AI 舞蹈工具",
+        "description": "发现所有用 AI 创建精彩舞蹈视频的方式。",
+        "current_slug": "template/ai-tiktok-dance-generator",
+        "locale": "zh"
+      }
+    }
+  }
+}

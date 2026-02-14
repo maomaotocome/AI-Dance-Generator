@@ -1,0 +1,179 @@
+{
+  "metadata": {
+    "title": "AI Dance Video Maker - Create Professional Dance Videos Online Free",
+    "description": "The easiest way to make dance videos with AI. Upload any photo, choose a dance style, and generate HD dance videos in seconds. No editing skills required. Free to try.",
+    "keywords": "AI dance video maker, dance video creator online, make dance video AI, dance video generator, online dance video maker, AI video maker free"
+  },
+  "page": {
+    "show_sections": [
+      "hero",
+      "generator",
+      "about",
+      "howto",
+      "examples",
+      "faq",
+      "cta",
+      "related_pages"
+    ],
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "AI Dance Video Maker",
+        "highlight_text": "Dance Video Maker",
+        "description": "The simplest way to create professional dance videos. No filming, no editing, no choreography. Just upload a photo, pick a dance, and let AI do the rest.<br/><br/>From TikTok trends to wedding dances — make any kind of dance video in seconds.",
+        "announcement": {
+          "badge": "Easy",
+          "title": "Create your first dance video in under 60 seconds",
+          "url": "#generator"
+        },
+        "buttons": [
+          {
+            "title": "Make a Dance Video Now",
+            "icon": "Sparkles",
+            "url": "#generator",
+            "target": "_self",
+            "variant": "default"
+          },
+          {
+            "title": "How It Works",
+            "icon": "Info",
+            "url": "#howto",
+            "target": "_self",
+            "variant": "outline"
+          }
+        ],
+        "show_avatars": true,
+        "avatars_tip": "Used by content creators, marketers, and families worldwide",
+        "show_award": false
+      },
+      "generator": { "id": "generator", "block": "dance-generator" },
+      "about": {
+        "id": "about",
+        "block": "features-list",
+        "title": "Why Choose Our AI Dance Video Maker",
+        "label": "Built for Everyone",
+        "description": "Whether you're a TikTok creator, a parent wanting fun family content, or a marketer looking for engaging videos — our AI dance video maker handles it all.",
+        "items": [
+          {
+            "title": "20+ Dance Styles",
+            "description": "From viral TikTok dances to elegant sways, hip-hop moves to K-pop choreography. Our template library covers every style and keeps growing.",
+            "icon": "RiGridLine"
+          },
+          {
+            "title": "HD Quality Output",
+            "description": "Every video is generated in high definition, ready for social media. Vertical 9:16 format optimized for TikTok, Instagram Reels, and YouTube Shorts.",
+            "icon": "RiVideoLine"
+          },
+          {
+            "title": "No Skills Required",
+            "description": "If you can upload a photo and click a button, you can make a dance video. Our AI handles all the complex motion generation automatically.",
+            "icon": "RiCheckLine"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "howto": {
+        "id": "howto",
+        "block": "features-step",
+        "title": "Make a Dance Video in 3 Steps",
+        "items": [
+          {
+            "title": "Upload Your Photo",
+            "description": "Choose any photo — a selfie, a pet photo, a baby picture, or even a historical figure. Clear, front-facing photos produce the best dance videos."
+          },
+          {
+            "title": "Select a Dance Style",
+            "description": "Browse our library of dance templates organized by category: TikTok Viral, K-Pop, Hip-Hop, Fun, Baby Dance, Pet Dance, Wedding, and Sway. Preview each style before selecting."
+          },
+          {
+            "title": "Generate & Download",
+            "description": "Click generate and your dance video will be ready in about 30 seconds. Download in HD quality with no watermarks. Ready to share anywhere."
+          }
+        ]
+      },
+      "examples": {
+        "id": "examples",
+        "block": "showcases",
+        "title": "Dance Video Examples",
+        "description": "See the variety of dance videos you can create",
+        "items": [
+          {
+            "title": "Baby Doing Hip-Hop Moves",
+            "description": "Adorable baby photos transformed into hilarious dance videos"
+          },
+          {
+            "title": "Pet Cat Doing K-Pop Dance",
+            "description": "Cute pet photos animated with popular K-pop choreography"
+          },
+          {
+            "title": "Couple's Romantic Sway",
+            "description": "Engagement photos turned into beautiful swaying dance videos"
+          },
+          {
+            "title": "Celebrity Photo Viral Dance",
+            "description": "Famous faces doing trending TikTok dances for comedy content"
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "block": "faq",
+        "title": "Dance Video Maker FAQ",
+        "items": [
+          {
+            "question": "What types of dance videos can I make?",
+            "answer": "You can create TikTok viral dances, K-Pop choreography, hip-hop moves, gentle sways, baby dances, pet dances, wedding dances, and more. We have 20+ templates across 8 categories."
+          },
+          {
+            "question": "What photo formats are supported?",
+            "answer": "We support JPG, PNG, and WebP images. For best results, use a clear photo where the subject's face is visible and front-facing. Photos should be at least 512x512 pixels."
+          },
+          {
+            "question": "How long does it take to generate a video?",
+            "answer": "Most dance videos are generated in 30-60 seconds. The AI processes your photo and applies the dance motion in real-time."
+          },
+          {
+            "question": "Can I use the videos commercially?",
+            "answer": "Yes. Videos you generate are yours to use for any purpose, including social media content, marketing materials, and commercial projects."
+          },
+          {
+            "question": "Is there a watermark on the videos?",
+            "answer": "No. All generated videos are watermark-free and ready to use immediately."
+          },
+          {
+            "question": "What video resolution do I get?",
+            "answer": "Videos are generated in 720p HD quality in vertical 9:16 format, optimized for mobile viewing and social media platforms."
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "title": "Ready to Make Your First Dance Video?",
+        "description": "Upload a photo and create a professional dance video in under a minute.",
+        "buttons": [
+          {
+            "title": "Start Making Videos",
+            "url": "#generator",
+            "target": "_self",
+            "icon": "Sparkles"
+          },
+          {
+            "title": "View All Dance Styles",
+            "url": "/ai-dance-generator",
+            "target": "_self",
+            "variant": "outline",
+            "icon": "Grid"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "related_pages": {
+        "id": "related_pages",
+        "block": "related-pages",
+        "title": "Explore More AI Dance Tools",
+        "description": "Discover all the ways you can create amazing dance videos with AI.",
+        "current_slug": "template/ai-dance-video-maker"
+      }
+    }
+  }
+}

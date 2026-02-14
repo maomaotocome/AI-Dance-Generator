@@ -1,0 +1,176 @@
+{
+  "metadata": {
+    "title": "AI 宠物跳舞生成器 - 让你的猫狗用 AI 跳舞",
+    "description": "将任何宠物照片变成搞笑的舞蹈视频。让你的狗、猫或任何宠物用 AI 跳舞。互联网上最可爱的内容，几秒钟内生成。",
+    "keywords": "AI 宠物跳舞, 让狗跳舞 AI, 猫跳舞视频 AI, 宠物舞蹈生成器, 动物跳舞视频制作"
+  },
+  "page": {
+    "show_sections": [
+      "hero",
+      "generator",
+      "about",
+      "howto",
+      "examples",
+      "faq",
+      "cta",
+      "related_pages"
+    ],
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "AI 宠物跳舞生成器",
+        "highlight_text": "宠物跳舞",
+        "description": "让你的狗、猫或任何宠物用 AI 跳舞。上传宠物照片，选择舞蹈风格，创建互联网上最可爱的内容。<br/><br/>宠物跳舞视频是终极治愈内容。你的宠物即将走红。",
+        "announcement": {
+          "badge": "超萌",
+          "title": "宠物跳舞视频始终是网上分享量最高的内容之一",
+          "url": "#generator"
+        },
+        "buttons": [
+          {
+            "title": "让你的宠物跳舞",
+            "icon": "Sparkles",
+            "url": "#generator",
+            "target": "_self",
+            "variant": "default"
+          },
+          {
+            "title": "查看宠物跳舞示例",
+            "icon": "Play",
+            "url": "#examples",
+            "target": "_self",
+            "variant": "outline"
+          }
+        ],
+        "show_avatars": true,
+        "avatars_tip": "宠物主人喜欢为毛孩子创建 AI 跳舞视频",
+        "show_award": false
+      },
+      "generator": { "id": "generator", "block": "dance-generator" },
+      "about": {
+        "id": "about",
+        "block": "features-list",
+        "title": "为什么宠物跳舞视频能刷爆网络",
+        "label": "可爱的科学",
+        "description": "宠物内容主导社交媒体是有原因的。给已经很可爱的宠物照片加上跳舞，你就拥有了让人无法划过的内容。",
+        "items": [
+          {
+            "title": "即时情感连接",
+            "description": "宠物会触发即时的情感反应。跳舞的宠物将这种感觉放大十倍，创造出人们忍不住与朋友和家人分享的内容。",
+            "icon": "RiHeartLine"
+          },
+          {
+            "title": "跨平台吸引力",
+            "description": "宠物跳舞视频在所有平台上都表现出色——TikTok、Instagram、Facebook、Twitter，甚至 LinkedIn。它们超越人群，总能获得互动。",
+            "icon": "RiShareLine"
+          },
+          {
+            "title": "无限多样性",
+            "description": "狗、猫、仓鼠、兔子、鸟——任何宠物照片都可以变成舞蹈视频。每只宠物独特的外表创造出独一无二的效果。",
+            "icon": "RiStarLine"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "howto": {
+        "id": "howto",
+        "block": "features-step",
+        "title": "3 步让你的宠物跳舞",
+        "items": [
+          {
+            "title": "上传宠物照片",
+            "description": "选择一张清晰的宠物照片。宠物看向镜头的正面照效果最佳。特写和全身照都能产生很好的效果。"
+          },
+          {
+            "title": "选择舞蹈风格",
+            "description": "从有趣的活力舞蹈或温柔摇摆中选择。我们的宠物舞蹈模板专门设计为与动物主角搭配时看起来自然可爱。"
+          },
+          {
+            "title": "生成并分享",
+            "description": "约 30 秒即可获得你的宠物跳舞视频。下载并在社交媒体上分享、发送给朋友，或保存到你的可爱内容收藏中。"
+          }
+        ]
+      },
+      "examples": {
+        "id": "examples",
+        "block": "showcases",
+        "title": "宠物跳舞视频示例",
+        "description": "看看 AI 宠物跳舞视频有多可爱",
+        "items": [
+          {
+            "title": "金毛犬跳 TikTok 舞蹈",
+            "description": "快乐的狗狗照片变成值得走红的舞蹈视频"
+          },
+          {
+            "title": "猫咪表演 K-Pop 编舞",
+            "description": "严肃的猫脸配上完美同步的舞蹈动作"
+          },
+          {
+            "title": "小狗跳摇摆舞",
+            "description": "可爱的小狗照片配上温柔有节奏的摇摆动作"
+          },
+          {
+            "title": "仓鼠嘻哈舞蹈",
+            "description": "小仓鼠照片配上令人惊讶的活力舞蹈动作"
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "block": "faq",
+        "title": "宠物跳舞生成器常见问题",
+        "items": [
+          {
+            "question": "什么类型的宠物效果最好？",
+            "answer": "狗和猫效果最好，因为 AI 针对可识别的面部进行了优化。但任何面部清晰可见的宠物照片都可以——兔子、仓鼠、鸟等。"
+          },
+          {
+            "question": "宠物需要看向镜头吗？",
+            "answer": "宠物看向镜头的正面照会产生最自然的跳舞视频。侧面照也可以，但效果可能不太逼真。"
+          },
+          {
+            "question": "哪种舞蹈风格最适合宠物？",
+            "answer": "宠物舞蹈和趣味模板专门设计为与动物主角搭配时看起来自然。温柔摇摆也很受欢迎，适合创建可爱、治愈的宠物内容。"
+          },
+          {
+            "question": "可以用多张宠物照片吗？",
+            "answer": "每次生成使用一张照片。要创建多只宠物的视频，可以分别生成并用视频编辑器组合，或使用两只宠物都可见的照片。"
+          },
+          {
+            "question": "宠物跳舞视频适合分享吗？",
+            "answer": "当然！宠物跳舞视频是适合全家的内容，非常适合在任何平台上分享。它们是你能创建的最安全的病毒内容类型之一。"
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "title": "准备好让你的宠物成为明星了吗？",
+        "description": "创建可爱的舞蹈视频，展示你宠物的隐藏才华。",
+        "buttons": [
+          {
+            "title": "让你的宠物跳舞",
+            "url": "#generator",
+            "target": "_self",
+            "icon": "Sparkles"
+          },
+          {
+            "title": "浏览所有风格",
+            "url": "/ai-dance-generator",
+            "target": "_self",
+            "variant": "outline",
+            "icon": "Grid"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "related_pages": {
+        "id": "related_pages",
+        "block": "related-pages",
+        "title": "探索更多 AI 舞蹈工具",
+        "description": "发现所有用 AI 创建精彩舞蹈视频的方式。",
+        "current_slug": "template/ai-pet-dance-generator",
+        "locale": "zh"
+      }
+    }
+  }
+}

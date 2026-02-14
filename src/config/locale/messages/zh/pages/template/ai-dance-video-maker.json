@@ -1,0 +1,176 @@
+{
+  "metadata": {
+    "title": "AI 舞蹈视频制作器 - 在线免费创建专业舞蹈视频",
+    "description": "用 AI 制作舞蹈视频的最简单方式。上传任何照片，选择舞蹈风格，几秒钟内生成高清舞蹈视频。无需剪辑技巧，免费试用。",
+    "keywords": "AI 舞蹈视频制作, 在线舞蹈视频创作, AI 制作舞蹈视频, 舞蹈视频生成器, 在线舞蹈视频制作器"
+  },
+  "page": {
+    "show_sections": [
+      "hero",
+      "generator",
+      "about",
+      "howto",
+      "examples",
+      "faq",
+      "cta",
+      "related_pages"
+    ],
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "AI 舞蹈视频制作器",
+        "highlight_text": "舞蹈视频制作",
+        "description": "创建专业舞蹈视频的最简单方式。无需拍摄、无需剪辑、无需编舞。只需上传照片，选择舞蹈，让 AI 完成其余工作。<br/><br/>从 TikTok 热门到婚礼舞蹈——几秒钟内制作任何类型的舞蹈视频。",
+        "announcement": {
+          "badge": "简单",
+          "title": "60 秒内创建你的第一个舞蹈视频",
+          "url": "#generator"
+        },
+        "buttons": [
+          {
+            "title": "立即制作舞蹈视频",
+            "icon": "Sparkles",
+            "url": "#generator",
+            "target": "_self",
+            "variant": "default"
+          },
+          {
+            "title": "了解使用方法",
+            "icon": "Info",
+            "url": "#howto",
+            "target": "_self",
+            "variant": "outline"
+          }
+        ],
+        "show_avatars": true,
+        "avatars_tip": "全球内容创作者、营销人员和家庭都在使用",
+        "show_award": false
+      },
+      "generator": { "id": "generator", "block": "dance-generator" },
+      "about": {
+        "id": "about",
+        "block": "features-list",
+        "title": "为什么选择我们的 AI 舞蹈视频制作器",
+        "label": "为每个人打造",
+        "description": "无论你是 TikTok 创作者、想要有趣家庭内容的父母，还是寻找吸引人视频的营销人员——我们的 AI 舞蹈视频制作器都能满足。",
+        "items": [
+          {
+            "title": "20+ 舞蹈风格",
+            "description": "从病毒式 TikTok 舞蹈到优雅摇摆、嘻哈动作到 K-Pop 编舞。我们的模板库涵盖每种风格并持续增长。",
+            "icon": "RiGridLine"
+          },
+          {
+            "title": "高清品质输出",
+            "description": "每个视频都以高清品质生成，可直接用于社交媒体。竖版 9:16 格式，针对 TikTok、Instagram Reels 和 YouTube Shorts 优化。",
+            "icon": "RiVideoLine"
+          },
+          {
+            "title": "无需任何技能",
+            "description": "如果你能上传照片并点击按钮，你就能制作舞蹈视频。我们的 AI 自动处理所有复杂的动作生成。",
+            "icon": "RiCheckLine"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "howto": {
+        "id": "howto",
+        "block": "features-step",
+        "title": "3 步制作舞蹈视频",
+        "items": [
+          {
+            "title": "上传你的照片",
+            "description": "选择任何照片——自拍、宠物照、宝宝照片，甚至历史人物。清晰的正面照片效果最佳。"
+          },
+          {
+            "title": "选择舞蹈风格",
+            "description": "浏览按类别组织的舞蹈模板库：TikTok 热门、K-Pop、嘻哈、趣味、宝宝舞蹈、宠物舞蹈、婚礼和摇摆。选择前可预览每种风格。"
+          },
+          {
+            "title": "生成并下载",
+            "description": "点击生成，约 30 秒即可获得舞蹈视频。下载高清品质，无水印。随时随地分享。"
+          }
+        ]
+      },
+      "examples": {
+        "id": "examples",
+        "block": "showcases",
+        "title": "舞蹈视频示例",
+        "description": "看看你可以创建的各种舞蹈视频",
+        "items": [
+          {
+            "title": "宝宝跳嘻哈舞",
+            "description": "可爱的宝宝照片变成搞笑的舞蹈视频"
+          },
+          {
+            "title": "宠物猫跳 K-Pop 舞",
+            "description": "可爱的宠物照片配上流行的 K-Pop 编舞"
+          },
+          {
+            "title": "情侣浪漫摇摆",
+            "description": "订婚照变成美丽的摇摆舞蹈视频"
+          },
+          {
+            "title": "名人照片病毒式舞蹈",
+            "description": "名人面孔跳热门 TikTok 舞蹈的搞笑内容"
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "block": "faq",
+        "title": "舞蹈视频制作器常见问题",
+        "items": [
+          {
+            "question": "我可以制作哪些类型的舞蹈视频？",
+            "answer": "你可以创建 TikTok 病毒式舞蹈、K-Pop 编舞、嘻哈动作、温柔摇摆、宝宝舞蹈、宠物舞蹈、婚礼舞蹈等。我们有 8 个类别的 20 多个模板。"
+          },
+          {
+            "question": "支持什么照片格式？",
+            "answer": "我们支持 JPG、PNG 和 WebP 图片。为获得最佳效果，请使用主体面部清晰可见的正面照片。照片应至少为 512x512 像素。"
+          },
+          {
+            "question": "生成视频需要多长时间？",
+            "answer": "大多数舞蹈视频在 30-60 秒内生成。AI 实时处理你的照片并应用舞蹈动作。"
+          },
+          {
+            "question": "我可以将视频用于商业用途吗？",
+            "answer": "可以。你生成的视频可以用于任何目的，包括社交媒体内容、营销材料和商业项目。"
+          },
+          {
+            "question": "视频有水印吗？",
+            "answer": "没有。所有生成的视频都没有水印，可以立即使用。"
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "title": "准备好制作你的第一个舞蹈视频了吗？",
+        "description": "上传照片，不到一分钟即可创建专业舞蹈视频。",
+        "buttons": [
+          {
+            "title": "开始制作视频",
+            "url": "#generator",
+            "target": "_self",
+            "icon": "Sparkles"
+          },
+          {
+            "title": "查看所有舞蹈风格",
+            "url": "/ai-dance-generator",
+            "target": "_self",
+            "variant": "outline",
+            "icon": "Grid"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "related_pages": {
+        "id": "related_pages",
+        "block": "related-pages",
+        "title": "探索更多 AI 舞蹈工具",
+        "description": "发现所有用 AI 创建精彩舞蹈视频的方式。",
+        "current_slug": "template/ai-dance-video-maker",
+        "locale": "zh"
+      }
+    }
+  }
+}

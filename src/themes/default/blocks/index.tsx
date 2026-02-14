@@ -30,3 +30,5 @@ export * from './page-detail';
 
 export * from './dance-generator';
 export * from './dance-generator-premium';
+
+export * from './related-pages';

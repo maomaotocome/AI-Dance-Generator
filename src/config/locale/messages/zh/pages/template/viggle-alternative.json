@@ -11,7 +11,8 @@
       "generator",
       "features",
       "faq",
-      "cta"
+      "cta",
+      "related_pages"
     ],
     "sections": {
       "hero": {
@@ -167,6 +168,14 @@
           }
         ],
         "className": "bg-muted"
+      },
+      "related_pages": {
+        "id": "related_pages",
+        "block": "related-pages",
+        "title": "探索更多 AI 舞蹈工具",
+        "description": "发现所有用 AI 创建精彩舞蹈视频的方式。",
+        "current_slug": "template/viggle-alternative",
+        "locale": "zh"
       }
     }
   }

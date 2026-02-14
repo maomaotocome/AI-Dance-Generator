@@ -1,0 +1,175 @@
+{
+  "metadata": {
+    "title": "AI Pet Dance Generator - Make Your Dog or Cat Dance with AI",
+    "description": "Transform any pet photo into a hilarious dance video. Make your dog, cat, or any pet dance with AI. The cutest content on the internet, generated in seconds.",
+    "keywords": "AI pet dance, make dog dance AI, cat dance video AI, pet dance generator, animal dance video maker, AI pet video generator"
+  },
+  "page": {
+    "show_sections": [
+      "hero",
+      "generator",
+      "about",
+      "howto",
+      "examples",
+      "faq",
+      "cta",
+      "related_pages"
+    ],
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "AI Pet Dance Generator",
+        "highlight_text": "Pet Dance",
+        "description": "Make your dog, cat, or any pet dance with AI. Upload a pet photo, choose a dance style, and create the most adorable content on the internet.<br/><br/>Pet dance videos are the ultimate feel-good content. Your pet is about to go viral.",
+        "announcement": {
+          "badge": "Adorable",
+          "title": "Pet dance videos consistently rank among the most shared content online",
+          "url": "#generator"
+        },
+        "buttons": [
+          {
+            "title": "Make Your Pet Dance",
+            "icon": "Sparkles",
+            "url": "#generator",
+            "target": "_self",
+            "variant": "default"
+          },
+          {
+            "title": "See Pet Dance Examples",
+            "icon": "Play",
+            "url": "#examples",
+            "target": "_self",
+            "variant": "outline"
+          }
+        ],
+        "show_avatars": true,
+        "avatars_tip": "Pet owners love creating AI dance videos of their furry friends",
+        "show_award": false
+      },
+      "generator": { "id": "generator", "block": "dance-generator" },
+      "about": {
+        "id": "about",
+        "block": "features-list",
+        "title": "Why Pet Dance Videos Break the Internet",
+        "label": "The Science of Cute",
+        "description": "Pet content dominates social media for a reason. Add dancing to an already adorable pet photo and you have content that's impossible to scroll past.",
+        "items": [
+          {
+            "title": "Instant Emotional Connection",
+            "description": "Pets trigger an immediate emotional response. A dancing pet amplifies that feeling tenfold, creating content that people can't help but share with friends and family.",
+            "icon": "RiHeartLine"
+          },
+          {
+            "title": "Cross-Platform Appeal",
+            "description": "Pet dance videos perform well everywhere — TikTok, Instagram, Facebook, Twitter, and even LinkedIn. They transcend demographics and always get engagement.",
+            "icon": "RiShareLine"
+          },
+          {
+            "title": "Endless Variety",
+            "description": "Dogs, cats, hamsters, rabbits, birds — any pet photo can become a dance video. Each pet's unique appearance creates a one-of-a-kind result that feels personal and special.",
+            "icon": "RiStarLine"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "howto": {
+        "id": "howto",
+        "block": "features-step",
+        "title": "Make Your Pet Dance in 3 Steps",
+        "items": [
+          {
+            "title": "Upload a Pet Photo",
+            "description": "Choose a clear photo of your pet. Front-facing photos where your pet is looking at the camera work best. Both close-ups and full-body shots produce great results."
+          },
+          {
+            "title": "Pick a Dance Style",
+            "description": "Choose from fun, energetic dances or gentle sways. Our Pet Dance templates are specifically designed to look natural and adorable with animal subjects."
+          },
+          {
+            "title": "Generate & Share",
+            "description": "Get your pet dance video in about 30 seconds. Download and share on social media, send to friends, or save for your personal collection of adorable content."
+          }
+        ]
+      },
+      "examples": {
+        "id": "examples",
+        "block": "showcases",
+        "title": "Pet Dance Video Examples",
+        "description": "See how adorable AI pet dance videos can be",
+        "items": [
+          {
+            "title": "Golden Retriever Doing TikTok Dance",
+            "description": "A happy dog photo transformed into a viral-worthy dance video"
+          },
+          {
+            "title": "Cat Performing K-Pop Choreography",
+            "description": "A serious cat face with perfectly synchronized dance moves"
+          },
+          {
+            "title": "Puppy Doing the Sway Dance",
+            "description": "An adorable puppy photo with gentle, rhythmic swaying movements"
+          },
+          {
+            "title": "Hamster Hip-Hop Dance",
+            "description": "A tiny hamster photo animated with surprisingly energetic dance moves"
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "block": "faq",
+        "title": "Pet Dance Generator FAQ",
+        "items": [
+          {
+            "question": "What types of pets work best?",
+            "answer": "Dogs and cats produce the best results since the AI is optimized for recognizable faces. However, any pet photo with a clear, visible face can work — rabbits, hamsters, birds, and more."
+          },
+          {
+            "question": "Does my pet need to be looking at the camera?",
+            "answer": "Front-facing photos where your pet is looking toward the camera produce the most natural-looking dance videos. Side profiles can work but may have less realistic results."
+          },
+          {
+            "question": "Which dance style is best for pets?",
+            "answer": "The Pet Dance and Fun templates are specifically designed to look natural with animal subjects. Gentle Sway is also popular for creating cute, calming pet content."
+          },
+          {
+            "question": "Can I use multiple pet photos?",
+            "answer": "Each generation uses one photo. To create videos of multiple pets, generate them individually and combine using a video editor, or use a photo where both pets are visible."
+          },
+          {
+            "question": "Are pet dance videos safe to share?",
+            "answer": "Absolutely! Pet dance videos are family-friendly content that's perfect for sharing on any platform. They're one of the safest types of viral content you can create."
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "title": "Ready to Make Your Pet a Star?",
+        "description": "Create adorable dance videos that showcase your pet's hidden talent.",
+        "buttons": [
+          {
+            "title": "Make Your Pet Dance",
+            "url": "#generator",
+            "target": "_self",
+            "icon": "Sparkles"
+          },
+          {
+            "title": "Try Other Dance Styles",
+            "url": "/ai-dance-generator",
+            "target": "_self",
+            "variant": "outline",
+            "icon": "Grid"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "related_pages": {
+        "id": "related_pages",
+        "block": "related-pages",
+        "title": "Explore More AI Dance Tools",
+        "description": "Discover all the ways you can create amazing dance videos with AI.",
+        "current_slug": "template/ai-pet-dance-generator"
+      }
+    }
+  }
+}

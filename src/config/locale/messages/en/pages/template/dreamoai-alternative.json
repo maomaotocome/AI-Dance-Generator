@@ -1,0 +1,178 @@
+{
+  "metadata": {
+    "title": "DreamoAI Alternative - Web-Based AI Dance Generator | No App Download",
+    "description": "Looking for a DreamoAI alternative? Our web-based AI dance generator works directly in your browser. No app download, pre-made templates, and instant results. Try free.",
+    "keywords": "DreamoAI alternative, DreamoAI vs, better than DreamoAI, AI dance generator web, DreamoAI replacement, online dance video generator"
+  },
+  "page": {
+    "show_sections": [
+      "hero",
+      "comparison",
+      "generator",
+      "features",
+      "faq",
+      "cta",
+      "related_pages"
+    ],
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "The Web-Based DreamoAI Alternative",
+        "highlight_text": "DreamoAI Alternative",
+        "description": "Want AI dance generation without downloading an app? Our web-based tool gives you the same powerful AI dance generation — directly in your browser.<br/><br/>No downloads. No installations. Just upload and generate.",
+        "announcement": {
+          "badge": "Web-Based",
+          "title": "Create dance videos instantly in your browser",
+          "url": "#generator"
+        },
+        "buttons": [
+          {
+            "title": "Try Free — No Download",
+            "icon": "Sparkles",
+            "url": "#generator",
+            "target": "_self",
+            "variant": "default"
+          },
+          {
+            "title": "See Comparison",
+            "icon": "Scale",
+            "url": "#comparison",
+            "target": "_self",
+            "variant": "outline"
+          }
+        ],
+        "show_avatars": true,
+        "avatars_tip": "Creators choose web-based tools for convenience and speed",
+        "show_award": false
+      },
+      "comparison": {
+        "id": "comparison",
+        "block": "features-list",
+        "title": "Why Choose a Web-Based Alternative",
+        "label": "Honest Comparison",
+        "description": "DreamoAI offers solid AI dance generation. But if you prefer working in your browser without app downloads, here's why our web-based approach might be a better fit.",
+        "items": [
+          {
+            "title": "No App Download Required",
+            "description": "Access our AI dance generator from any device with a browser. No app store, no installation, no storage space needed. Works on desktop, tablet, and mobile.",
+            "icon": "RiSmartphoneLine"
+          },
+          {
+            "title": "Pre-Made Dance Templates",
+            "description": "Choose from 20+ ready-to-use dance templates. No need to find or upload reference videos — just pick a style and generate. From TikTok viral to K-Pop to wedding dances.",
+            "icon": "RiGridLine"
+          },
+          {
+            "title": "Instant Browser Access",
+            "description": "Open the website, upload a photo, and generate. No account setup required to browse templates. Sign up only when you're ready to generate.",
+            "icon": "RiTimeLine"
+          },
+          {
+            "title": "Mobile-Optimized Interface",
+            "description": "Creating TikTok content on your phone? Our responsive web interface is designed for mobile-first content creation. No clunky app UI.",
+            "icon": "RiCheckLine"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "generator": { "id": "generator", "block": "dance-generator" },
+      "features": {
+        "id": "features",
+        "block": "features",
+        "title": "What Makes Us Different",
+        "description": "Features designed for fast, easy dance video creation",
+        "items": [
+          {
+            "title": "20+ Dance Templates",
+            "description": "TikTok viral, K-Pop, hip-hop, baby dance, pet dance, wedding, sway filter, and more. New templates added weekly.",
+            "icon": "RiGridLine"
+          },
+          {
+            "title": "HD Quality Output",
+            "description": "720p vertical videos optimized for TikTok, Instagram Reels, and YouTube Shorts. No watermarks on any plan.",
+            "icon": "RiVideoLine"
+          },
+          {
+            "title": "30-Second Generation",
+            "description": "Most videos are ready in under a minute. No queue waiting, no batch processing delays.",
+            "icon": "RiTimeLine"
+          },
+          {
+            "title": "Works on Any Device",
+            "description": "Desktop, laptop, tablet, or phone. Any modern browser is all you need.",
+            "icon": "RiSmartphoneLine"
+          },
+          {
+            "title": "Multiple Categories",
+            "description": "Organized by use case: viral content, fan content, family content, wedding content, and more.",
+            "icon": "RiStarLine"
+          },
+          {
+            "title": "Free Credits to Start",
+            "description": "Try before you buy. Get free credits on signup — no credit card required.",
+            "icon": "RiCheckLine"
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "block": "faq",
+        "title": "DreamoAI Alternative FAQ",
+        "items": [
+          {
+            "question": "How does this compare to DreamoAI?",
+            "answer": "Both tools use AI to generate dance videos. The main difference is our web-based approach — no app download needed. We also offer pre-made dance templates for faster creation, while DreamoAI may offer different features through their app."
+          },
+          {
+            "question": "Do I need to download anything?",
+            "answer": "No. Our AI dance generator runs entirely in your browser. Just visit the website, upload a photo, and start generating. Works on any device with a modern browser."
+          },
+          {
+            "question": "Is the video quality comparable?",
+            "answer": "Yes. We use advanced AI models (including Kling AI) to generate high-quality dance videos. Output is 720p HD in vertical 9:16 format, optimized for social media."
+          },
+          {
+            "question": "Can I try it before paying?",
+            "answer": "Absolutely. Sign up for free and receive starter credits. No credit card required. You can generate multiple dance videos to test the quality before purchasing additional credits."
+          },
+          {
+            "question": "What if I need a dance style you don't have?",
+            "answer": "We add new templates weekly based on trending content and user requests. If you need a specific dance style, let us know and we'll prioritize adding it."
+          },
+          {
+            "question": "Is my data safe?",
+            "answer": "Yes. Uploaded photos are used only for generation and are not stored permanently. We don't use your photos for training or share them with third parties."
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "title": "Try the Web-Based Alternative",
+        "description": "No downloads, no installations. Create AI dance videos directly in your browser.",
+        "buttons": [
+          {
+            "title": "Generate Your First Video",
+            "url": "#generator",
+            "target": "_self",
+            "icon": "Sparkles"
+          },
+          {
+            "title": "View All Templates",
+            "url": "/ai-dance-generator",
+            "target": "_self",
+            "variant": "outline",
+            "icon": "Grid"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "related_pages": {
+        "id": "related_pages",
+        "block": "related-pages",
+        "title": "Explore More AI Dance Tools",
+        "description": "Discover all the ways you can create amazing dance videos with AI.",
+        "current_slug": "template/dreamoai-alternative"
+      }
+    }
+  }
+}

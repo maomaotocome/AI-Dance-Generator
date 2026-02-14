@@ -1,0 +1,179 @@
+{
+  "metadata": {
+    "title": "AI Wedding Dance Generator - Create Beautiful First Dance Videos",
+    "description": "Transform any couple photo into a stunning wedding dance video with AI. Create romantic first dance videos, wedding reception content, and anniversary dance videos in seconds.",
+    "keywords": "AI wedding dance video, wedding first dance AI, wedding dance generator, couple dance video AI, first dance video maker, wedding video generator"
+  },
+  "page": {
+    "show_sections": [
+      "hero",
+      "generator",
+      "about",
+      "howto",
+      "examples",
+      "faq",
+      "cta",
+      "related_pages"
+    ],
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "AI Wedding Dance Generator",
+        "highlight_text": "Wedding Dance",
+        "description": "Create breathtaking wedding dance videos from any couple photo. Whether it's a first dance preview, a reception surprise, or an anniversary celebration — AI makes every moment magical.<br/><br/>No choreography needed. Just upload and let AI create the romance.",
+        "announcement": {
+          "badge": "Popular",
+          "title": "Wedding dance videos are the fastest-growing AI content category",
+          "url": "#generator"
+        },
+        "buttons": [
+          {
+            "title": "Create Wedding Dance Video",
+            "icon": "Sparkles",
+            "url": "#generator",
+            "target": "_self",
+            "variant": "default"
+          },
+          {
+            "title": "See Examples",
+            "icon": "Play",
+            "url": "#examples",
+            "target": "_self",
+            "variant": "outline"
+          }
+        ],
+        "show_avatars": true,
+        "avatars_tip": "Couples and wedding planners love AI dance videos",
+        "show_award": false
+      },
+      "generator": { "id": "generator", "block": "dance-generator" },
+      "about": {
+        "id": "about",
+        "block": "features-list",
+        "title": "Why AI Wedding Dance Videos Are Trending",
+        "label": "The Perfect Wedding Content",
+        "description": "Wedding dance videos created with AI are becoming a must-have for modern couples. They're perfect for save-the-dates, reception entertainment, and social media sharing.",
+        "items": [
+          {
+            "title": "Romantic First Dance Preview",
+            "description": "See what your first dance could look like before the big day. Try different dance styles with your engagement photos to find the perfect vibe.",
+            "icon": "RiHeartLine"
+          },
+          {
+            "title": "Reception Entertainment",
+            "description": "Surprise your guests with AI-generated dance videos of the wedding party. Create a slideshow of everyone dancing for the reception.",
+            "icon": "RiStarLine"
+          },
+          {
+            "title": "Social Media Ready",
+            "description": "Generate vertical videos perfect for Instagram Reels and TikTok. Share your wedding dance moments with friends and family who couldn't attend.",
+            "icon": "RiShareLine"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "howto": {
+        "id": "howto",
+        "block": "features-step",
+        "title": "Create Your Wedding Dance in 3 Steps",
+        "items": [
+          {
+            "title": "Upload a Couple Photo",
+            "description": "Choose a clear photo of the couple — engagement photos, wedding portraits, or casual shots all work great. Front-facing photos with both people visible produce the best results."
+          },
+          {
+            "title": "Choose a Dance Style",
+            "description": "Pick from romantic sway, elegant waltz, fun party dance, or trending TikTok moves. Each style sets a different mood for your wedding content."
+          },
+          {
+            "title": "Generate & Share",
+            "description": "Get your wedding dance video in about 30 seconds. Download in HD and share on social media, include in your wedding website, or play at the reception."
+          }
+        ]
+      },
+      "examples": {
+        "id": "examples",
+        "block": "showcases",
+        "title": "Wedding Dance Video Ideas",
+        "description": "Inspiration for your AI-generated wedding dance content",
+        "items": [
+          {
+            "title": "Romantic First Dance with Elegant Sway",
+            "description": "A gentle, romantic dance perfect for save-the-date announcements"
+          },
+          {
+            "title": "Fun Reception Party Dance",
+            "description": "Upbeat dance moves that capture the joy of the celebration"
+          },
+          {
+            "title": "Vintage Photo Wedding Dance",
+            "description": "Transform old family wedding photos into dancing videos for anniversary celebrations"
+          },
+          {
+            "title": "Wedding Party Group Dance",
+            "description": "Create fun dance videos with the entire bridal party"
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "block": "faq",
+        "title": "Wedding Dance Generator FAQ",
+        "items": [
+          {
+            "question": "What kind of photos work best for wedding dance videos?",
+            "answer": "Clear, front-facing couple photos work best. Engagement photos, wedding portraits, and even casual couple selfies all produce great results. Make sure both faces are clearly visible."
+          },
+          {
+            "question": "Can I use this for a save-the-date video?",
+            "answer": "Absolutely! Many couples create AI dance videos from their engagement photos for save-the-date announcements. It's a unique, memorable way to share the news."
+          },
+          {
+            "question": "What dance styles are available for weddings?",
+            "answer": "We offer romantic sway, elegant waltz-inspired moves, fun party dances, and even trending TikTok dances. The Gentle Sway and Romantic Sway templates are most popular for weddings."
+          },
+          {
+            "question": "Can I make my parents' old wedding photo dance?",
+            "answer": "Yes! AI works with any photo, including vintage and old photographs. Creating a dance video from your parents' or grandparents' wedding photo makes a wonderful anniversary gift."
+          },
+          {
+            "question": "How long are the generated videos?",
+            "answer": "Wedding dance videos are typically 5-15 seconds, perfect for social media sharing and reception slideshows. The length depends on the dance template you choose."
+          },
+          {
+            "question": "Is the video quality good enough for a wedding slideshow?",
+            "answer": "Yes, all videos are generated in HD quality suitable for projection at receptions, sharing on social media, or embedding in wedding websites."
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "title": "Make Your Wedding Unforgettable",
+        "description": "Create stunning AI dance videos that capture the magic of your special day.",
+        "buttons": [
+          {
+            "title": "Create Wedding Dance Video",
+            "url": "#generator",
+            "target": "_self",
+            "icon": "Sparkles"
+          },
+          {
+            "title": "Explore All Dance Styles",
+            "url": "/ai-dance-generator",
+            "target": "_self",
+            "variant": "outline",
+            "icon": "Grid"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "related_pages": {
+        "id": "related_pages",
+        "block": "related-pages",
+        "title": "Explore More AI Dance Tools",
+        "description": "Discover all the ways you can create amazing dance videos with AI.",
+        "current_slug": "template/ai-wedding-dance-generator"
+      }
+    }
+  }
+}

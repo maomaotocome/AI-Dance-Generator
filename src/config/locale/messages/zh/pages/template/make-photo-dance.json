@@ -1,0 +1,176 @@
+{
+  "metadata": {
+    "title": "让照片跳舞 - AI 将任何图片变成舞蹈视频",
+    "description": "上传任何照片，看它随着舞蹈动作活起来。我们的 AI 将静态图片变成逼真的舞蹈视频。适用于自拍、宝宝照片、宠物图片等。",
+    "keywords": "让照片跳舞, 图片变舞蹈, 照片转舞蹈视频 AI, 动画照片跳舞, 图片跳舞生成器"
+  },
+  "page": {
+    "show_sections": [
+      "hero",
+      "generator",
+      "about",
+      "howto",
+      "examples",
+      "faq",
+      "cta",
+      "related_pages"
+    ],
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "用 AI 让任何照片跳舞",
+        "highlight_text": "照片跳舞",
+        "description": "将任何静态照片变成逼真的舞蹈视频。我们的 AI 分析照片中的人物并应用自然的舞蹈动作，效果令人惊叹。<br/><br/>自拍、宝宝照片、宠物图片、老家庭照——只要有脸，就能跳舞。",
+        "announcement": {
+          "badge": "AI 魔法",
+          "title": "照片转舞蹈 AI 已经改变了内容创作方式",
+          "url": "#generator"
+        },
+        "buttons": [
+          {
+            "title": "让你的照片跳舞",
+            "icon": "Sparkles",
+            "url": "#generator",
+            "target": "_self",
+            "variant": "default"
+          },
+          {
+            "title": "照片技巧",
+            "icon": "Info",
+            "url": "#about",
+            "target": "_self",
+            "variant": "outline"
+          }
+        ],
+        "show_avatars": true,
+        "avatars_tip": "数百万张照片已被 AI 变成舞蹈视频",
+        "show_award": false
+      },
+      "generator": { "id": "generator", "block": "dance-generator" },
+      "about": {
+        "id": "about",
+        "block": "features-list",
+        "title": "最佳舞蹈照片技巧",
+        "label": "获得更好效果",
+        "description": "虽然我们的 AI 几乎适用于任何照片，但遵循这些技巧将为你带来最逼真、最令人印象深刻的舞蹈视频。",
+        "items": [
+          {
+            "title": "使用正面照片",
+            "description": "主体面向镜头的照片会产生最自然的舞蹈动作。侧面和斜角照片也可以，但效果可能不太逼真。",
+            "icon": "RiImageLine"
+          },
+          {
+            "title": "面部清晰可见",
+            "description": "确保面部清晰可见且光线充足。AI 使用面部特征来锚定舞蹈动画，因此模糊或遮挡的面部会降低质量。",
+            "icon": "RiUserLine"
+          },
+          {
+            "title": "全身或半身效果最佳",
+            "description": "展示至少上半身的照片给 AI 更多发挥空间。特写面部照片也可以，但全身照片会创建最令人印象深刻的舞蹈视频。",
+            "icon": "RiCheckLine"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "howto": {
+        "id": "howto",
+        "block": "features-step",
+        "title": "将你的照片变成舞蹈视频",
+        "items": [
+          {
+            "title": "选择你的照片",
+            "description": "选择任何有人物、宝宝、宠物或角色的照片。支持 JPG、PNG 和 WebP 格式。照片应至少为 512x512 像素以获得最佳质量。"
+          },
+          {
+            "title": "选择舞蹈动作",
+            "description": "浏览 8 个类别的 20 多个舞蹈模板。每个模板都有预览，让你在选择前看到舞蹈风格。从温柔摇摆到活力嘻哈。"
+          },
+          {
+            "title": "观看它跳舞",
+            "description": "点击生成，约 30 秒后你的照片就会跳舞。下载高清视频，随处分享——无水印，无限制。"
+          }
+        ]
+      },
+      "examples": {
+        "id": "examples",
+        "block": "showcases",
+        "title": "照片转舞蹈示例",
+        "description": "看看不同类型的照片如何变成舞蹈视频",
+        "items": [
+          {
+            "title": "自拍变 TikTok 舞蹈",
+            "description": "休闲自拍变成热门 TikTok 舞蹈视频"
+          },
+          {
+            "title": "老家庭照跳舞",
+            "description": "复古黑白照片配上现代舞蹈动作焕发新生"
+          },
+          {
+            "title": "宝宝照片跳可爱舞蹈",
+            "description": "宝宝肖像配上可爱的舞蹈动作"
+          },
+          {
+            "title": "宠物照片摇摆",
+            "description": "狗狗照片变成搞笑的跳舞视频"
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "block": "faq",
+        "title": "照片跳舞常见问题",
+        "items": [
+          {
+            "question": "什么类型的照片可以跳舞？",
+            "answer": "几乎任何有可识别主体的照片都可以——自拍、肖像、宝宝照片、宠物照片、合照、卡通角色，甚至历史照片。AI 对清晰的正面图像效果最好。"
+          },
+          {
+            "question": "照片需要展示全身吗？",
+            "answer": "不需要，但全身或半身照片会产生最令人印象深刻的效果。AI 也可以处理仅面部的照片，创建上半身舞蹈动作。"
+          },
+          {
+            "question": "可以让旧照片或低质量照片跳舞吗？",
+            "answer": "可以！AI 适用于任何年代或质量的照片。老家庭照、复古肖像，甚至略微模糊的图像都可以变成舞蹈视频。更高质量的照片会产生更好的效果。"
+          },
+          {
+            "question": "舞蹈看起来有多逼真？",
+            "answer": "我们的 AI 使用先进的运动控制技术，产生令人惊讶的逼真效果。舞蹈动作流畅自然，特别是使用清晰、光线充足的源照片时。"
+          },
+          {
+            "question": "可以让合照跳舞吗？",
+            "answer": "AI 对单人照片效果最好。对于合照，它通常会让最突出的人动起来。为获得最佳效果，裁剪聚焦到一个人。"
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "title": "准备好让你的照片跳舞了吗？",
+        "description": "上传任何照片，几秒钟内看它随着舞蹈动作活起来。",
+        "buttons": [
+          {
+            "title": "让照片跳舞",
+            "url": "#generator",
+            "target": "_self",
+            "icon": "Sparkles"
+          },
+          {
+            "title": "浏览所有风格",
+            "url": "/ai-dance-generator",
+            "target": "_self",
+            "variant": "outline",
+            "icon": "Grid"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "related_pages": {
+        "id": "related_pages",
+        "block": "related-pages",
+        "title": "探索更多 AI 舞蹈工具",
+        "description": "发现所有用 AI 创建精彩舞蹈视频的方式。",
+        "current_slug": "template/make-photo-dance",
+        "locale": "zh"
+      }
+    }
+  }
+}

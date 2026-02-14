@@ -1,0 +1,175 @@
+{
+  "metadata": {
+    "title": "AI Sway Dance Filter - Create the Viral TikTok Sway Effect",
+    "description": "Apply the viral sway dance filter to any photo with AI. The gentle swaying effect that took over TikTok and Instagram. Create romantic, aesthetic sway videos in seconds.",
+    "keywords": "AI sway dance filter, sway filter TikTok, sway dance effect, photo sway AI, gentle sway video, romantic sway filter, TikTok sway trend"
+  },
+  "page": {
+    "show_sections": [
+      "hero",
+      "generator",
+      "about",
+      "howto",
+      "examples",
+      "faq",
+      "cta",
+      "related_pages"
+    ],
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "AI Sway Dance Filter",
+        "highlight_text": "Sway Dance Filter",
+        "description": "The viral sway effect that took over TikTok. Make any photo gently sway and dance with this aesthetic AI filter. Romantic, dreamy, and endlessly watchable.<br/><br/>The perfect effect for couples, portraits, and aesthetic content.",
+        "announcement": {
+          "badge": "Viral Effect",
+          "title": "The sway filter is one of the most-used AI effects on TikTok",
+          "url": "#generator"
+        },
+        "buttons": [
+          {
+            "title": "Apply Sway Filter",
+            "icon": "Sparkles",
+            "url": "#generator",
+            "target": "_self",
+            "variant": "default"
+          },
+          {
+            "title": "What is the Sway Filter?",
+            "icon": "Info",
+            "url": "#about",
+            "target": "_self",
+            "variant": "outline"
+          }
+        ],
+        "show_avatars": true,
+        "avatars_tip": "The sway filter creates the most aesthetic AI content",
+        "show_award": false
+      },
+      "generator": { "id": "generator", "block": "dance-generator" },
+      "about": {
+        "id": "about",
+        "block": "features-list",
+        "title": "What is the AI Sway Dance Filter?",
+        "label": "The Aesthetic Trend",
+        "description": "The sway dance filter creates a gentle, rhythmic swaying motion on any photo. Unlike energetic dance videos, the sway effect is calm, romantic, and hypnotic — making it perfect for aesthetic content that viewers watch on loop.",
+        "items": [
+          {
+            "title": "Hypnotic Loop Effect",
+            "description": "The gentle swaying motion creates a mesmerizing loop that viewers watch multiple times. This high watch-time signals algorithms to push your content to more people.",
+            "icon": "RiTimeLine"
+          },
+          {
+            "title": "Romantic & Aesthetic",
+            "description": "The sway filter adds a dreamy, romantic quality to any photo. It's perfect for couple content, portrait photography, and aesthetic feeds.",
+            "icon": "RiHeartLine"
+          },
+          {
+            "title": "Works with Any Photo",
+            "description": "Unlike complex dance moves, the gentle sway effect looks natural with any subject — people, pets, artwork, even landscapes. It's the most versatile AI dance effect.",
+            "icon": "RiImageLine"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "howto": {
+        "id": "howto",
+        "block": "features-step",
+        "title": "Apply the Sway Filter in 3 Steps",
+        "items": [
+          {
+            "title": "Upload Your Photo",
+            "description": "Choose any photo — a portrait, couple photo, pet picture, or even artwork. The sway filter works beautifully with all types of images."
+          },
+          {
+            "title": "Select a Sway Style",
+            "description": "Choose from Gentle Sway, Romantic Sway, or Sway Filter templates. Each offers a slightly different rhythm and intensity of movement."
+          },
+          {
+            "title": "Generate & Share",
+            "description": "Get your sway video in about 30 seconds. The looping motion is perfect for TikTok, Instagram Stories, and aesthetic content feeds."
+          }
+        ]
+      },
+      "examples": {
+        "id": "examples",
+        "block": "showcases",
+        "title": "Sway Filter Examples",
+        "description": "See the dreamy, aesthetic results of the AI sway filter",
+        "items": [
+          {
+            "title": "Couple Portrait with Romantic Sway",
+            "description": "A couple photo transformed into a dreamy, swaying video"
+          },
+          {
+            "title": "Portrait Photography Sway Effect",
+            "description": "Professional portraits brought to life with gentle movement"
+          },
+          {
+            "title": "Pet Photo Gentle Sway",
+            "description": "A cute pet photo with calming, rhythmic swaying motion"
+          },
+          {
+            "title": "Vintage Photo Sway Filter",
+            "description": "Old photographs given new life with the aesthetic sway effect"
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "block": "faq",
+        "title": "Sway Dance Filter FAQ",
+        "items": [
+          {
+            "question": "What's the difference between sway and dance?",
+            "answer": "The sway filter creates gentle, rhythmic side-to-side movement — more like a slow dance or gentle rocking. Regular dance templates have more energetic, complex choreography. Sway is calmer and more aesthetic."
+          },
+          {
+            "question": "Which sway template should I choose?",
+            "answer": "Gentle Sway has the subtlest movement, perfect for portraits. Romantic Sway adds slightly more motion with a dreamy quality. Sway Filter is the classic TikTok effect with moderate movement."
+          },
+          {
+            "question": "Does the sway filter work with non-human subjects?",
+            "answer": "Yes! The sway filter is the most versatile effect we offer. It works beautifully with pet photos, artwork, landscapes, and even product photos. Any image can benefit from the gentle motion."
+          },
+          {
+            "question": "Why do sway videos get so many views?",
+            "answer": "The hypnotic, looping motion keeps viewers watching multiple times. TikTok and Instagram algorithms detect this high watch-time and push the content to more viewers, creating a viral loop."
+          },
+          {
+            "question": "Can I use the sway filter for business content?",
+            "answer": "Absolutely. The sway filter is popular for product showcases, brand aesthetics, and professional content. The gentle motion adds visual interest without being distracting."
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "title": "Ready to Create Aesthetic Sway Content?",
+        "description": "Apply the viral sway filter to any photo and create mesmerizing videos.",
+        "buttons": [
+          {
+            "title": "Apply Sway Filter Now",
+            "url": "#generator",
+            "target": "_self",
+            "icon": "Sparkles"
+          },
+          {
+            "title": "Try Other Dance Styles",
+            "url": "/ai-dance-generator",
+            "target": "_self",
+            "variant": "outline",
+            "icon": "Grid"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "related_pages": {
+        "id": "related_pages",
+        "block": "related-pages",
+        "title": "Explore More AI Dance Tools",
+        "description": "Discover all the ways you can create amazing dance videos with AI.",
+        "current_slug": "template/ai-sway-dance-filter"
+      }
+    }
+  }
+}

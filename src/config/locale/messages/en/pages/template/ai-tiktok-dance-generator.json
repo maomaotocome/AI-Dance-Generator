@@ -1,0 +1,178 @@
+{
+  "metadata": {
+    "title": "AI TikTok Dance Generator - Create Viral TikTok Dance Videos Free",
+    "description": "Transform any photo into a viral TikTok dance video with AI. Choose from trending TikTok dances, apply the latest dance filters, and create scroll-stopping content in seconds.",
+    "keywords": "AI TikTok dance generator, TikTok dance filter AI, make TikTok dance video, TikTok dance trend AI, viral TikTok dance maker, AI dance filter"
+  },
+  "page": {
+    "show_sections": [
+      "hero",
+      "generator",
+      "about",
+      "howto",
+      "examples",
+      "faq",
+      "cta",
+      "related_pages"
+    ],
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "AI TikTok Dance Generator",
+        "highlight_text": "TikTok Dance",
+        "description": "Create the viral TikTok dance videos that dominate For You pages. Upload any photo, pick a trending dance, and generate scroll-stopping content in seconds.<br/><br/>No editing skills. No choreography. Just viral-ready videos.",
+        "announcement": {
+          "badge": "Trending",
+          "title": "TikTok dance content drives the highest engagement rates",
+          "url": "#generator"
+        },
+        "buttons": [
+          {
+            "title": "Create TikTok Dance Video",
+            "icon": "Sparkles",
+            "url": "#generator",
+            "target": "_self",
+            "variant": "default"
+          },
+          {
+            "title": "See How It Works",
+            "icon": "Play",
+            "url": "#howto",
+            "target": "_self",
+            "variant": "outline"
+          }
+        ],
+        "show_avatars": true,
+        "avatars_tip": "Creators worldwide use AI dance for TikTok content",
+        "show_award": false
+      },
+      "generator": {
+        "id": "generator",
+        "block": "dance-generator"
+      },
+      "about": {
+        "id": "about",
+        "block": "features-list",
+        "title": "Why AI Dance Videos Dominate TikTok",
+        "label": "The Algorithm Advantage",
+        "description": "Dance content consistently outperforms other formats on TikTok. AI-generated dance videos combine the surprise factor of unexpected characters dancing with proven viral choreography.",
+        "items": [
+          {
+            "title": "Algorithm-Optimized Content",
+            "description": "TikTok's algorithm prioritizes high watch-time content. Dance videos with unexpected subjects get watched on repeat, boosting your reach exponentially.",
+            "icon": "RiFireLine"
+          },
+          {
+            "title": "Trending Sound Integration",
+            "description": "Every dance template is synced to trending audio. Using popular sounds is one of the strongest signals for TikTok's recommendation engine.",
+            "icon": "RiMusicLine"
+          },
+          {
+            "title": "Instant Content Creation",
+            "description": "Skip the hours of learning choreography and filming takes. Generate professional-quality dance content in under a minute, ready to post.",
+            "icon": "RiTimeLine"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "howto": {
+        "id": "howto",
+        "block": "features-step",
+        "title": "Create Your TikTok Dance in 3 Steps",
+        "items": [
+          {
+            "title": "Upload Any Photo",
+            "description": "Choose a photo of anyone or anything — yourself, a friend, a celebrity, even a pet. Front-facing photos with clear faces work best for TikTok content."
+          },
+          {
+            "title": "Pick a Trending Dance",
+            "description": "Browse our library of TikTok-viral dance templates. From the latest trends to classic viral moves, each template is optimized for maximum engagement."
+          },
+          {
+            "title": "Generate & Post",
+            "description": "Hit generate and get your video in about 30 seconds. Download in HD quality, add your caption, and post directly to TikTok. No watermarks."
+          }
+        ]
+      },
+      "examples": {
+        "id": "examples",
+        "block": "showcases",
+        "title": "TikTok Dance Video Examples",
+        "description": "See what creators are making with AI dance generation",
+        "items": [
+          {
+            "title": "Corporate Photo Doing Viral Dance",
+            "description": "Turn serious headshots into hilarious dance content"
+          },
+          {
+            "title": "Historical Figure Dancing to Modern Beats",
+            "description": "The contrast between old photos and new dances creates instant comedy"
+          },
+          {
+            "title": "Group Photo Dance Challenge",
+            "description": "Make entire friend groups dance in sync for maximum shares"
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "block": "faq",
+        "title": "TikTok Dance Generator FAQ",
+        "items": [
+          {
+            "question": "What makes a good TikTok dance video?",
+            "answer": "The best TikTok dance videos combine an unexpected subject with a trending dance. The surprise factor drives rewatches, which signals TikTok's algorithm to push your content to more viewers."
+          },
+          {
+            "question": "Which dance templates work best for TikTok?",
+            "answer": "Our trending templates are updated regularly based on what's currently viral. The Silhouette Groove, Lil Yachty Walk, and Aura Farming templates consistently perform well on TikTok."
+          },
+          {
+            "question": "Can I use these videos commercially on TikTok?",
+            "answer": "Yes. Videos you generate are yours to use however you want, including for TikTok creator programs, brand content, and monetized accounts."
+          },
+          {
+            "question": "What video format works best for TikTok?",
+            "answer": "All our templates generate vertical 9:16 videos optimized for TikTok's full-screen format. Videos are HD quality and ready to upload without any editing."
+          },
+          {
+            "question": "How often are new TikTok dance templates added?",
+            "answer": "We monitor TikTok trends and add new templates as dances go viral. Popular templates are typically added within days of a trend emerging."
+          },
+          {
+            "question": "Will TikTok flag AI-generated dance videos?",
+            "answer": "Our videos are generated using motion-control AI that produces natural-looking movement. Many creators successfully post AI dance content on TikTok as entertainment content."
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "title": "Ready to Go Viral on TikTok?",
+        "description": "Create dance videos that stop the scroll and fill your For You page.",
+        "buttons": [
+          {
+            "title": "Generate Your First TikTok Dance",
+            "url": "#generator",
+            "target": "_self",
+            "icon": "Sparkles"
+          },
+          {
+            "title": "Browse All Dance Styles",
+            "url": "/ai-dance-generator",
+            "target": "_self",
+            "variant": "outline",
+            "icon": "Grid"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "related_pages": {
+        "id": "related_pages",
+        "block": "related-pages",
+        "title": "Explore More AI Dance Tools",
+        "description": "Discover all the ways you can create amazing dance videos with AI.",
+        "current_slug": "template/ai-tiktok-dance-generator"
+      }
+    }
+  }
+}

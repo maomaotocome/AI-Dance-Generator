@@ -2,10 +2,12 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 import { getThemePage } from '@/core/theme';
 import { DANCE_TEMPLATES } from '@/config/dance-templates';
+import { SEO_TEMPLATE_PAGES } from '@/config/seo-pages';
 import { DanceGenerator } from '@/shared/blocks/generator';
 import { getMetadata } from '@/shared/lib/seo';
 import { DynamicPage } from '@/shared/types/blocks/landing';
 
+import { SeoPageLinkGrid } from './seo-page-link-grid';
 import { TemplateLinkGrid } from './template-link-grid';
 
 export const revalidate = 3600;
@@ -129,6 +131,7 @@ export default async function AiDanceGeneratorPage({
       />
       <Page locale={locale} page={page} />
       <TemplateLinkGrid templates={DANCE_TEMPLATES} />
+      <SeoPageLinkGrid />
     </>
   );
 }

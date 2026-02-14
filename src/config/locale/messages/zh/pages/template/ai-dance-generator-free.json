@@ -1,0 +1,180 @@
+{
+  "metadata": {
+    "title": "免费 AI 舞蹈生成器 - 在线免费创建舞蹈视频",
+    "description": "完全免费创建 AI 舞蹈视频。无需下载、无水印、无需信用卡。上传照片，选择舞蹈风格，几秒钟内生成高清舞蹈视频。",
+    "keywords": "AI 舞蹈生成器免费, 免费舞蹈视频制作, 免费 AI 舞蹈工具, 无水印舞蹈视频生成器, 免费在线舞蹈制作"
+  },
+  "page": {
+    "show_sections": [
+      "hero",
+      "generator",
+      "about",
+      "howto",
+      "examples",
+      "faq",
+      "cta",
+      "related_pages"
+    ],
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "免费 AI 舞蹈生成器",
+        "highlight_text": "免费",
+        "description": "不花一分钱创建 AI 舞蹈视频。注册即获免费积分——无需信用卡。生成无水印的高清舞蹈视频。<br/><br/>让任何人跳舞的最简单免费工具。",
+        "announcement": {
+          "badge": "免费",
+          "title": "注册即可获得免费积分，立即开始创作",
+          "url": "#generator"
+        },
+        "buttons": [
+          {
+            "title": "免费开始 — 无需信用卡",
+            "icon": "Sparkles",
+            "url": "#generator",
+            "target": "_self",
+            "variant": "default"
+          },
+          {
+            "title": "免费包含什么",
+            "icon": "Info",
+            "url": "#about",
+            "target": "_self",
+            "variant": "outline"
+          }
+        ],
+        "show_avatars": true,
+        "avatars_tip": "数千名创作者从免费积分开始",
+        "show_award": false
+      },
+      "generator": { "id": "generator", "block": "dance-generator" },
+      "about": {
+        "id": "about",
+        "block": "features-list",
+        "title": "免费版包含什么",
+        "label": "没有附加条件",
+        "description": "我们相信每个人都应该能够尝试 AI 舞蹈生成。这就是为什么我们提供无需信用卡的免费积分。以下是包含的内容。",
+        "items": [
+          {
+            "title": "免费入门积分",
+            "description": "注册即可立即获得免费积分。每个舞蹈视频花费 10 积分，所以你可以创建多个视频来尝试不同的风格，看看哪种效果最好。",
+            "icon": "RiCheckLine"
+          },
+          {
+            "title": "无水印",
+            "description": "与许多免费工具不同，我们生成的视频没有任何水印。你的免费视频与付费视频看起来完全一样——高清品质，随时可分享。",
+            "icon": "RiStarLine"
+          },
+          {
+            "title": "完整模板访问",
+            "description": "免费用户可以访问完整的 20 多个舞蹈模板库，涵盖所有类别。没有模板被锁在付费墙后面。",
+            "icon": "RiGridLine"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "howto": {
+        "id": "howto",
+        "block": "features-step",
+        "title": "免费开始使用",
+        "items": [
+          {
+            "title": "注册（30 秒）",
+            "description": "用邮箱创建免费账户。无需信用卡，无隐藏费用。你将立即获得免费积分。"
+          },
+          {
+            "title": "上传并选择",
+            "description": "上传任何照片并浏览完整的模板库。所有 20 多种舞蹈风格对免费用户开放——TikTok 热门、K-Pop、嘻哈、宝宝舞蹈等。"
+          },
+          {
+            "title": "生成并下载",
+            "description": "点击生成，约 30 秒即可获得高清舞蹈视频。下载无水印。随处分享。"
+          }
+        ]
+      },
+      "examples": {
+        "id": "examples",
+        "block": "showcases",
+        "title": "用免费积分制作",
+        "description": "这些视频都是用免费入门积分创建的",
+        "items": [
+          {
+            "title": "宝宝舞蹈视频 — 免费",
+            "description": "零成本创建的可爱宝宝舞蹈视频"
+          },
+          {
+            "title": "宠物跳舞 — 无水印",
+            "description": "完全无水印的可爱宠物舞蹈视频"
+          },
+          {
+            "title": "TikTok 病毒式舞蹈 — 免费",
+            "description": "用免费积分创建的热门舞蹈内容"
+          },
+          {
+            "title": "情侣摇摆 — 免费高清",
+            "description": "全高清品质的浪漫摇摆视频，无需付费"
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "block": "faq",
+        "title": "免费 AI 舞蹈生成器常见问题",
+        "items": [
+          {
+            "question": "我可以免费创建多少个视频？",
+            "answer": "注册时你会获得免费入门积分。每个舞蹈视频花费 10 积分。免费积分的确切数量可能有所不同，但足够你尝试多种舞蹈风格。"
+          },
+          {
+            "question": "需要信用卡才能注册吗？",
+            "answer": "不需要。你只需用邮箱注册即可立即开始创作。我们永远不会在未经你明确同意的情况下收费。"
+          },
+          {
+            "question": "免费视频质量更低吗？",
+            "answer": "不会。免费视频与付费视频完全相同——同样的高清品质、同样的分辨率、无水印。免费和付费积分的输出质量没有任何区别。"
+          },
+          {
+            "question": "免费积分用完后怎么办？",
+            "answer": "你可以从我们的定价页面购买额外积分。我们提供实惠的积分套餐，让你可以继续创建舞蹈视频。"
+          },
+          {
+            "question": "免费用户有每日限制吗？",
+            "answer": "免费积分不会过期，也没有每日生成限制。你可以随时使用免费积分，按自己的节奏来。"
+          },
+          {
+            "question": "免费视频可以用于商业用途吗？",
+            "answer": "可以。用免费积分生成的视频与付费视频具有相同的使用权。你可以将它们用于社交媒体、营销或任何其他目的。"
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "title": "免费开始创作",
+        "description": "无需信用卡。无水印。没有套路。只有免费的 AI 舞蹈视频。",
+        "buttons": [
+          {
+            "title": "立即获取免费积分",
+            "url": "#generator",
+            "target": "_self",
+            "icon": "Sparkles"
+          },
+          {
+            "title": "查看定价",
+            "url": "/pricing",
+            "target": "_self",
+            "variant": "outline",
+            "icon": "CreditCard"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "related_pages": {
+        "id": "related_pages",
+        "block": "related-pages",
+        "title": "探索更多 AI 舞蹈工具",
+        "description": "发现所有用 AI 创建精彩舞蹈视频的方式。",
+        "current_slug": "template/ai-dance-generator-free",
+        "locale": "zh"
+      }
+    }
+  }
+}

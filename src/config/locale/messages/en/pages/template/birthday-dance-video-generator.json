@@ -1,0 +1,175 @@
+{
+  "metadata": {
+    "title": "Birthday Dance Video Generator - Create Fun Birthday Dance Greetings with AI",
+    "description": "Make personalized birthday dance videos with AI. Upload a photo of the birthday person and create a hilarious dancing birthday greeting. Perfect for parties and social media.",
+    "keywords": "birthday dance video AI, happy birthday dance generator, birthday video maker AI, birthday dance greeting, personalized birthday video, AI birthday video"
+  },
+  "page": {
+    "show_sections": [
+      "hero",
+      "generator",
+      "about",
+      "howto",
+      "examples",
+      "faq",
+      "cta",
+      "related_pages"
+    ],
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "Birthday Dance Video Generator",
+        "highlight_text": "Birthday Dance",
+        "description": "Create the most memorable birthday greeting ever. Upload a photo of the birthday person and watch them dance. Hilarious, personal, and guaranteed to make them smile.<br/><br/>Better than a birthday card. Way better.",
+        "announcement": {
+          "badge": "Celebration",
+          "title": "AI birthday dance videos are the new must-have party content",
+          "url": "#generator"
+        },
+        "buttons": [
+          {
+            "title": "Create Birthday Dance",
+            "icon": "Sparkles",
+            "url": "#generator",
+            "target": "_self",
+            "variant": "default"
+          },
+          {
+            "title": "See Examples",
+            "icon": "Play",
+            "url": "#examples",
+            "target": "_self",
+            "variant": "outline"
+          }
+        ],
+        "show_avatars": true,
+        "avatars_tip": "Families and friends create birthday dance videos for every celebration",
+        "show_award": false
+      },
+      "generator": { "id": "generator", "block": "dance-generator" },
+      "about": {
+        "id": "about",
+        "block": "features-list",
+        "title": "Why Birthday Dance Videos Are the Best Gift",
+        "label": "The Perfect Celebration Content",
+        "description": "Forget generic birthday cards. An AI dance video of the birthday person is personal, hilarious, and something they'll watch over and over. It's the gift that keeps on giving.",
+        "items": [
+          {
+            "title": "Deeply Personal",
+            "description": "Using their actual photo makes it uniquely theirs. No generic template — this is a birthday greeting made specifically for them, featuring them as the star.",
+            "icon": "RiHeartLine"
+          },
+          {
+            "title": "Party Entertainment",
+            "description": "Play the birthday dance video at the party for instant laughs. It works as an icebreaker, a toast accompaniment, or the highlight of the celebration.",
+            "icon": "RiStarLine"
+          },
+          {
+            "title": "Shareable Memory",
+            "description": "Send it in the group chat, post it on social media, or save it as a digital keepsake. Birthday dance videos get shared and rewatched for years.",
+            "icon": "RiShareLine"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "howto": {
+        "id": "howto",
+        "block": "features-step",
+        "title": "Create a Birthday Dance Video",
+        "items": [
+          {
+            "title": "Upload Their Photo",
+            "description": "Choose a clear photo of the birthday person. Funny photos, formal portraits, and candid shots all work great. The more unexpected the photo, the funnier the result."
+          },
+          {
+            "title": "Pick a Dance Style",
+            "description": "Choose from fun, energetic dances for a hilarious result, or gentle sways for a more sentimental feel. TikTok viral dances are popular for younger recipients."
+          },
+          {
+            "title": "Share the Surprise",
+            "description": "Generate the video in about 30 seconds. Send it directly, play it at the party, or post it on social media with a birthday message."
+          }
+        ]
+      },
+      "examples": {
+        "id": "examples",
+        "block": "showcases",
+        "title": "Birthday Dance Video Ideas",
+        "description": "Inspiration for the perfect birthday dance greeting",
+        "items": [
+          {
+            "title": "Grandma Doing TikTok Dance",
+            "description": "A grandmother's photo animated with trending dance moves for her birthday"
+          },
+          {
+            "title": "Boss Doing Hip-Hop Moves",
+            "description": "A formal work photo transformed into a hilarious birthday dance"
+          },
+          {
+            "title": "Baby's First Birthday Dance",
+            "description": "A baby photo with adorable dance moves for their special day"
+          },
+          {
+            "title": "Best Friend K-Pop Birthday",
+            "description": "A friend's selfie animated with K-Pop choreography as a birthday surprise"
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "block": "faq",
+        "title": "Birthday Dance Video FAQ",
+        "items": [
+          {
+            "question": "What's the best photo to use for a birthday video?",
+            "answer": "The funniest results come from formal or serious photos — work headshots, passport photos, or stern-looking portraits. The contrast between the serious photo and the dance moves creates the best comedy."
+          },
+          {
+            "question": "Can I make a birthday video for a child?",
+            "answer": "Yes! Birthday dance videos are perfect for kids. Use a clear photo of the child and choose a fun or baby dance template. It's a great way to celebrate their special day."
+          },
+          {
+            "question": "How do I share the birthday video?",
+            "answer": "Download the HD video and share it however you like — text message, WhatsApp, email, social media, or play it on a screen at the party. The video has no watermarks."
+          },
+          {
+            "question": "Can I make a group birthday video?",
+            "answer": "The AI works best with single-subject photos. For a group birthday video, create individual dance videos for each person and compile them into a montage using a video editor."
+          },
+          {
+            "question": "Is this appropriate for all ages?",
+            "answer": "Absolutely! All our dance templates are family-friendly. Birthday dance videos work for kids, teens, adults, and seniors. The fun is universal."
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "title": "Make Their Birthday Unforgettable",
+        "description": "Create a personalized birthday dance video they'll never forget.",
+        "buttons": [
+          {
+            "title": "Create Birthday Dance",
+            "url": "#generator",
+            "target": "_self",
+            "icon": "Sparkles"
+          },
+          {
+            "title": "Explore All Dances",
+            "url": "/ai-dance-generator",
+            "target": "_self",
+            "variant": "outline",
+            "icon": "Grid"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "related_pages": {
+        "id": "related_pages",
+        "block": "related-pages",
+        "title": "Explore More AI Dance Tools",
+        "description": "Discover all the ways you can create amazing dance videos with AI.",
+        "current_slug": "template/birthday-dance-video-generator"
+      }
+    }
+  }
+}

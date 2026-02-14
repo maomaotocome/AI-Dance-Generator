@@ -11,7 +11,8 @@
       "generator",
       "features",
       "faq",
-      "cta"
+      "cta",
+      "related_pages"
     ],
     "sections": {
       "hero": {
@@ -167,6 +168,13 @@
           }
         ],
         "className": "bg-muted"
+      },
+      "related_pages": {
+        "id": "related_pages",
+        "block": "related-pages",
+        "title": "Explore More AI Dance Tools",
+        "description": "Discover all the ways you can create amazing dance videos with AI.",
+        "current_slug": "template/viggle-alternative"
       }
     }
   }

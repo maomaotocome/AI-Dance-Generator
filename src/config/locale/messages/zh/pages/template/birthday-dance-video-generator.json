@@ -1,0 +1,176 @@
+{
+  "metadata": {
+    "title": "生日舞蹈视频生成器 - 用 AI 创建有趣的生日舞蹈祝福",
+    "description": "用 AI 制作个性化的生日舞蹈视频。上传寿星的照片，创建搞笑的跳舞生日祝福。完美适合派对和社交媒体。",
+    "keywords": "生日舞蹈视频 AI, 生日快乐舞蹈生成器, 生日视频制作 AI, 生日舞蹈祝福, 个性化生日视频"
+  },
+  "page": {
+    "show_sections": [
+      "hero",
+      "generator",
+      "about",
+      "howto",
+      "examples",
+      "faq",
+      "cta",
+      "related_pages"
+    ],
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "生日舞蹈视频生成器",
+        "highlight_text": "生日舞蹈",
+        "description": "创建最难忘的生日祝福。上传寿星的照片，看他们跳舞。搞笑、个性化，保证让他们笑出来。<br/><br/>比生日贺卡好多了。好太多了。",
+        "announcement": {
+          "badge": "庆祝",
+          "title": "AI 生日舞蹈视频是新的派对必备内容",
+          "url": "#generator"
+        },
+        "buttons": [
+          {
+            "title": "创建生日舞蹈",
+            "icon": "Sparkles",
+            "url": "#generator",
+            "target": "_self",
+            "variant": "default"
+          },
+          {
+            "title": "查看示例",
+            "icon": "Play",
+            "url": "#examples",
+            "target": "_self",
+            "variant": "outline"
+          }
+        ],
+        "show_avatars": true,
+        "avatars_tip": "家人和朋友为每次庆祝创建生日舞蹈视频",
+        "show_award": false
+      },
+      "generator": { "id": "generator", "block": "dance-generator" },
+      "about": {
+        "id": "about",
+        "block": "features-list",
+        "title": "为什么生日舞蹈视频是最好的礼物",
+        "label": "完美的庆祝内容",
+        "description": "忘掉普通的生日贺卡吧。寿星的 AI 舞蹈视频是个性化的、搞笑的，而且他们会反复观看。这是一份持续给予的礼物。",
+        "items": [
+          {
+            "title": "深度个性化",
+            "description": "使用他们的真实照片使其独一无二。没有通用模板——这是专门为他们制作的生日祝福，以他们为主角。",
+            "icon": "RiHeartLine"
+          },
+          {
+            "title": "派对娱乐",
+            "description": "在派对上播放生日舞蹈视频，瞬间引爆笑声。它可以作为破冰器、祝酒伴奏或庆祝的高潮。",
+            "icon": "RiStarLine"
+          },
+          {
+            "title": "可分享的回忆",
+            "description": "在群聊中发送、在社交媒体上发布或保存为数字纪念品。生日舞蹈视频会被分享和反复观看多年。",
+            "icon": "RiShareLine"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "howto": {
+        "id": "howto",
+        "block": "features-step",
+        "title": "创建生日舞蹈视频",
+        "items": [
+          {
+            "title": "上传他们的照片",
+            "description": "选择一张寿星的清晰照片。搞笑照片、正式肖像和抓拍照都效果很好。照片越出人意料，效果越搞笑。"
+          },
+          {
+            "title": "选择舞蹈风格",
+            "description": "选择有趣的活力舞蹈获得搞笑效果，或温柔摇摆获得更感性的感觉。TikTok 病毒式舞蹈在年轻人中很受欢迎。"
+          },
+          {
+            "title": "分享惊喜",
+            "description": "约 30 秒即可生成视频。直接发送、在派对上播放或在社交媒体上发布生日祝福。"
+          }
+        ]
+      },
+      "examples": {
+        "id": "examples",
+        "block": "showcases",
+        "title": "生日舞蹈视频创意",
+        "description": "完美生日舞蹈祝福的灵感",
+        "items": [
+          {
+            "title": "奶奶跳 TikTok 舞蹈",
+            "description": "奶奶的照片配上热门舞蹈动作庆祝她的生日"
+          },
+          {
+            "title": "老板跳嘻哈舞",
+            "description": "正式的工作照变成搞笑的生日舞蹈"
+          },
+          {
+            "title": "宝宝的第一个生日舞蹈",
+            "description": "宝宝照片配上可爱的舞蹈动作庆祝特别的日子"
+          },
+          {
+            "title": "闺蜜 K-Pop 生日",
+            "description": "朋友的自拍配上 K-Pop 编舞作为生日惊喜"
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "block": "faq",
+        "title": "生日舞蹈视频常见问题",
+        "items": [
+          {
+            "question": "什么照片最适合生日视频？",
+            "answer": "最搞笑的效果来自正式或严肃的照片——工作证件照、护照照片或严肃表情的肖像。严肃照片与舞蹈动作之间的反差创造最好的喜剧效果。"
+          },
+          {
+            "question": "可以为孩子制作生日视频吗？",
+            "answer": "当然可以！生日舞蹈视频非常适合孩子。使用孩子的清晰照片，选择趣味或宝宝舞蹈模板。这是庆祝他们特别日子的好方式。"
+          },
+          {
+            "question": "如何分享生日视频？",
+            "answer": "下载高清视频，随意分享——短信、微信、邮件、社交媒体，或在派对上用屏幕播放。视频没有水印。"
+          },
+          {
+            "question": "可以制作集体生日视频吗？",
+            "answer": "AI 对单人照片效果最好。要制作集体生日视频，可以为每个人创建单独的舞蹈视频，然后用视频编辑器编辑成合集。"
+          },
+          {
+            "question": "适合所有年龄段吗？",
+            "answer": "当然！我们所有的舞蹈模板都适合全家观看。生日舞蹈视频适合儿童、青少年、成人和老年人。乐趣是普遍的。"
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "title": "让他们的生日难以忘怀",
+        "description": "创建一个他们永远不会忘记的个性化生日舞蹈视频。",
+        "buttons": [
+          {
+            "title": "创建生日舞蹈",
+            "url": "#generator",
+            "target": "_self",
+            "icon": "Sparkles"
+          },
+          {
+            "title": "浏览所有风格",
+            "url": "/ai-dance-generator",
+            "target": "_self",
+            "variant": "outline",
+            "icon": "Grid"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "related_pages": {
+        "id": "related_pages",
+        "block": "related-pages",
+        "title": "探索更多 AI 舞蹈工具",
+        "description": "发现所有用 AI 创建精彩舞蹈视频的方式。",
+        "current_slug": "template/birthday-dance-video-generator",
+        "locale": "zh"
+      }
+    }
+  }
+}

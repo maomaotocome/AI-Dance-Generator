@@ -1,0 +1,172 @@
+{
+  "metadata": {
+    "title": "嘻哈舞蹈 AI 生成器 - 用 AI 创建街舞视频",
+    "description": "用 AI 从任何照片生成嘻哈舞蹈视频。从霹雳舞到街舞动作，创建震撼的城市舞蹈内容。完美适合 TikTok 和 Instagram。",
+    "keywords": "嘻哈舞蹈 AI 生成器, AI 嘻哈舞蹈视频, 街舞 AI, 嘻哈舞蹈制作, 霹雳舞 AI 生成器"
+  },
+  "page": {
+    "show_sections": [
+      "hero",
+      "generator",
+      "about",
+      "howto",
+      "examples",
+      "faq",
+      "cta",
+      "related_pages"
+    ],
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "嘻哈舞蹈 AI 生成器",
+        "highlight_text": "嘻哈舞蹈",
+        "description": "将嘻哈的能量带到任何照片中。我们的 AI 生成真实的街舞动作——从流畅的律动到硬核编舞。<br/><br/>无需舞蹈技巧。只需上传，让节拍响起。",
+        "announcement": {
+          "badge": "街头风格",
+          "title": "嘻哈舞蹈内容在所有平台上持续走红",
+          "url": "#generator"
+        },
+        "buttons": [
+          {
+            "title": "创建嘻哈舞蹈视频",
+            "icon": "Sparkles",
+            "url": "#generator",
+            "target": "_self",
+            "variant": "default"
+          },
+          {
+            "title": "查看示例",
+            "icon": "Play",
+            "url": "#examples",
+            "target": "_self",
+            "variant": "outline"
+          }
+        ],
+        "show_avatars": true,
+        "avatars_tip": "创作者每天使用 AI 嘻哈舞蹈制作病毒内容",
+        "show_award": false
+      },
+      "generator": { "id": "generator", "block": "dance-generator" },
+      "about": {
+        "id": "about",
+        "block": "features-list",
+        "title": "为什么嘻哈舞蹈视频会爆火",
+        "label": "运动的文化",
+        "description": "嘻哈舞蹈从一开始就是互联网文化的核心。AI 生成的嘻哈舞蹈视频将街舞的能量与意想不到的主角的惊喜感相结合。",
+        "items": [
+          {
+            "title": "高能量内容",
+            "description": "嘻哈动作充满活力且引人注目。快速、有节奏的动作让观众反复观看，这正是算法所喜爱的。",
+            "icon": "RiFireLine"
+          },
+          {
+            "title": "全球吸引力",
+            "description": "嘻哈舞蹈超越语言和文化。无论你的观众在纽约、东京还是拉各斯，动作本身就能说明一切。",
+            "icon": "RiStarLine"
+          },
+          {
+            "title": "喜剧金矿潜力",
+            "description": "意想不到的主角（宝宝、宠物、历史人物）与硬核嘻哈动作之间的反差创造即时喜剧效果，被大量分享。",
+            "icon": "RiShareLine"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "howto": {
+        "id": "howto",
+        "block": "features-step",
+        "title": "创建你的嘻哈舞蹈视频",
+        "items": [
+          {
+            "title": "上传任意照片",
+            "description": "选择任何人的照片——你自己、朋友、名人、宝宝或宠物。与嘻哈动作的反差越大，病毒潜力越大。"
+          },
+          {
+            "title": "选择嘻哈风格",
+            "description": "从我们的嘻哈舞蹈模板中选择。每个模板都有不同风格的街舞，从流畅律动到活力编舞。"
+          },
+          {
+            "title": "生成并分享",
+            "description": "约 30 秒即可获得你的嘻哈舞蹈视频。下载高清版本，发布到 TikTok、Instagram 或 YouTube Shorts。"
+          }
+        ]
+      },
+      "examples": {
+        "id": "examples",
+        "block": "showcases",
+        "title": "嘻哈舞蹈视频示例",
+        "description": "感受 AI 生成嘻哈舞蹈内容的能量",
+        "items": [
+          {
+            "title": "宝宝跳街舞",
+            "description": "可爱的宝宝照片配上硬核嘻哈编舞"
+          },
+          {
+            "title": "职业照嗨起来",
+            "description": "严肃的商务照片变成街舞视频"
+          },
+          {
+            "title": "宠物猫嘻哈范",
+            "description": "可爱的宠物照片配上城市舞蹈动作"
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "block": "faq",
+        "title": "嘻哈舞蹈生成器常见问题",
+        "items": [
+          {
+            "question": "有哪些嘻哈舞蹈风格？",
+            "answer": "我们提供多种嘻哈舞蹈模板，包括流畅律动、活力编舞和街舞动作。新的嘻哈模板会根据流行趋势定期添加。"
+          },
+          {
+            "question": "任何照片都可以用于嘻哈舞蹈吗？",
+            "answer": "可以！任何清晰的正面照片都可以。最有趣的效果来自意想不到的主角——宝宝、宠物、历史人物或正式肖像跳嘻哈舞。"
+          },
+          {
+            "question": "舞蹈动作逼真吗？",
+            "answer": "我们的 AI 使用运动控制技术生成流畅、自然的舞蹈动作。嘻哈模板旨在捕捉真实街舞的能量和节奏。"
+          },
+          {
+            "question": "包含什么音乐？",
+            "answer": "每个模板都配有与舞蹈风格匹配的预同步音频。嘻哈模板配有城市节拍和节奏，与动作完美配合。"
+          },
+          {
+            "question": "可以用于音乐视频吗？",
+            "answer": "可以。生成的视频可以用于任何目的，包括音乐视频内容、社交媒体和商业项目。"
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "title": "准备好释放节拍了吗？",
+        "description": "创建将街头能量带到任何照片的嘻哈舞蹈视频。",
+        "buttons": [
+          {
+            "title": "创建嘻哈舞蹈",
+            "url": "#generator",
+            "target": "_self",
+            "icon": "Sparkles"
+          },
+          {
+            "title": "浏览所有风格",
+            "url": "/ai-dance-generator",
+            "target": "_self",
+            "variant": "outline",
+            "icon": "Grid"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "related_pages": {
+        "id": "related_pages",
+        "block": "related-pages",
+        "title": "探索更多 AI 舞蹈工具",
+        "description": "发现所有用 AI 创建精彩舞蹈视频的方式。",
+        "current_slug": "template/hip-hop-dance-generator",
+        "locale": "zh"
+      }
+    }
+  }
+}

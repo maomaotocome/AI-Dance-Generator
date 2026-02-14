@@ -1,0 +1,172 @@
+{
+  "metadata": {
+    "title": "K-Pop 舞蹈 AI 生成器 - 免费创建 K-Pop 编舞视频",
+    "description": "用 AI 将任何照片变成 K-Pop 舞蹈视频。重现 BLACKPINK、BTS、TWICE 等偶像的标志性编舞。完美适合粉丝内容和舞蹈翻跳。",
+    "keywords": "K-Pop 舞蹈 AI 生成器, K-Pop 编舞 AI, BLACKPINK 舞蹈 AI, BTS 舞蹈 AI, K-Pop 翻跳生成器"
+  },
+  "page": {
+    "show_sections": [
+      "hero",
+      "generator",
+      "about",
+      "howto",
+      "examples",
+      "faq",
+      "cta",
+      "related_pages"
+    ],
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "K-Pop 舞蹈 AI 生成器",
+        "highlight_text": "K-Pop 舞蹈",
+        "description": "用任何照片创建 K-Pop 舞蹈视频。从标志性的 BLACKPINK 编舞到 BTS 风格动作——AI 将 K-Pop 舞蹈的精准和能量带到你的内容中。<br/><br/>K-Pop 粉丝和内容创作者的终极工具。",
+        "announcement": {
+          "badge": "粉丝最爱",
+          "title": "K-Pop 舞蹈内容是全球分享量最高的内容之一",
+          "url": "#generator"
+        },
+        "buttons": [
+          {
+            "title": "创建 K-Pop 舞蹈视频",
+            "icon": "Sparkles",
+            "url": "#generator",
+            "target": "_self",
+            "variant": "default"
+          },
+          {
+            "title": "查看舞蹈风格",
+            "icon": "Play",
+            "url": "#examples",
+            "target": "_self",
+            "variant": "outline"
+          }
+        ],
+        "show_avatars": true,
+        "avatars_tip": "全球 K-Pop 粉丝每天创建 AI 舞蹈内容",
+        "show_award": false
+      },
+      "generator": { "id": "generator", "block": "dance-generator" },
+      "about": {
+        "id": "about",
+        "block": "features-list",
+        "title": "为什么 K-Pop 舞蹈视频令人无法抗拒",
+        "label": "全球 K-Pop 浪潮",
+        "description": "K-Pop 编舞天生就具有视觉吸引力和可分享性。AI 生成的 K-Pop 舞蹈视频利用庞大的全球粉丝群，同时添加驱动病毒传播的惊喜元素。",
+        "items": [
+          {
+            "title": "庞大的全球粉丝群",
+            "description": "K-Pop 拥有世界上最活跃的在线社区之一。以 K-Pop 动作为特色的舞蹈内容会立即获得数百万忠实粉丝的关注。",
+            "icon": "RiStarLine"
+          },
+          {
+            "title": "精准编舞",
+            "description": "K-Pop 舞蹈以其锐利、同步的动作而闻名。我们的 AI 模板捕捉了使 K-Pop 编舞如此令人满足的标志性精准度。",
+            "icon": "RiMagicLine"
+          },
+          {
+            "title": "连接粉丝的内容",
+            "description": "创建 K-Pop 舞蹈内容是与粉丝群连接的方式。AI 让每个人都能参与，无论舞蹈能力如何。",
+            "icon": "RiHeartLine"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "howto": {
+        "id": "howto",
+        "block": "features-step",
+        "title": "创建你的 K-Pop 舞蹈视频",
+        "items": [
+          {
+            "title": "上传照片",
+            "description": "选择任何照片——你自己、朋友、爱豆照片，甚至宠物。K-Pop 舞蹈视频适用于任何清晰的正面图像。"
+          },
+          {
+            "title": "选择 K-Pop 编舞",
+            "description": "浏览我们的 K-Pop 舞蹈模板，包含不同的编舞风格。从强力团体舞蹈动作到流畅的独舞表演。"
+          },
+          {
+            "title": "生成并与粉丝分享",
+            "description": "约 30 秒即可获得你的 K-Pop 舞蹈视频。分享到 TikTok、Twitter/X 或粉丝社区。标记你最喜欢的团体以获得最大曝光。"
+          }
+        ]
+      },
+      "examples": {
+        "id": "examples",
+        "block": "showcases",
+        "title": "K-Pop 舞蹈视频示例",
+        "description": "看看 AI 如何将 K-Pop 编舞带到任何照片",
+        "items": [
+          {
+            "title": "宠物猫跳 K-Pop 编舞",
+            "description": "可爱的猫咪照片配上锐利的 K-Pop 舞蹈动作"
+          },
+          {
+            "title": "宝宝表演偶像舞蹈",
+            "description": "可爱的宝宝照片配上同步的 K-Pop 编舞"
+          },
+          {
+            "title": "历史人物 K-Pop 翻跳",
+            "description": "经典肖像变成 K-Pop 舞蹈表演"
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "block": "faq",
+        "title": "K-Pop 舞蹈生成器常见问题",
+        "items": [
+          {
+            "question": "有哪些 K-Pop 舞蹈风格？",
+            "answer": "我们提供受各种编舞风格启发的 K-Pop 舞蹈模板——从强力同步团体动作到流畅的独舞表演。模板会定期更新新风格。"
+          },
+          {
+            "question": "可以重现特定的 K-Pop 编舞吗？",
+            "answer": "我们的模板受流行 K-Pop 舞蹈风格启发，而非特定歌曲的精确复制。它们捕捉了 K-Pop 编舞闻名的能量和精准度。"
+          },
+          {
+            "question": "适合粉丝内容吗？",
+            "answer": "当然！K-Pop AI 舞蹈视频非常适合粉丝账号、粉丝剪辑和社区内容。很多粉丝用这些来创建以爱豆或粉丝艺术为特色的有趣内容。"
+          },
+          {
+            "question": "可以制作团体舞蹈视频吗？",
+            "answer": "AI 对单人照片效果最好。要获得团体舞蹈效果，可以为每个人创建单独的视频并用视频编辑器组合，或使用一个人突出的合照。"
+          },
+          {
+            "question": "哪些平台最适合 K-Pop 舞蹈内容？",
+            "answer": "TikTok、Twitter/X 和 Instagram 是 K-Pop 内容的顶级平台。我们的视频以竖版 9:16 格式生成，针对 TikTok 和 Instagram Reels 优化。"
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "title": "准备好创建 K-Pop 舞蹈内容了吗？",
+        "description": "用 AI 生成的舞蹈视频加入全球 K-Pop 社区。",
+        "buttons": [
+          {
+            "title": "制作 K-Pop 舞蹈视频",
+            "url": "#generator",
+            "target": "_self",
+            "icon": "Sparkles"
+          },
+          {
+            "title": "浏览所有风格",
+            "url": "/ai-dance-generator",
+            "target": "_self",
+            "variant": "outline",
+            "icon": "Grid"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "related_pages": {
+        "id": "related_pages",
+        "block": "related-pages",
+        "title": "探索更多 AI 舞蹈工具",
+        "description": "发现所有用 AI 创建精彩舞蹈视频的方式。",
+        "current_slug": "template/kpop-dance-generator",
+        "locale": "zh"
+      }
+    }
+  }
+}

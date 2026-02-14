@@ -1,0 +1,175 @@
+{
+  "metadata": {
+    "title": "Make Photo Dance with AI - Turn Any Picture into a Dance Video",
+    "description": "Upload any photo and watch it come alive with dance moves. Our AI transforms still images into realistic dance videos. Works with selfies, baby photos, pet pictures, and more.",
+    "keywords": "make photo dance, turn picture into dance, photo to dance video AI, animate photo dancing, make image dance, photo dance generator"
+  },
+  "page": {
+    "show_sections": [
+      "hero",
+      "generator",
+      "about",
+      "howto",
+      "examples",
+      "faq",
+      "cta",
+      "related_pages"
+    ],
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "Make Any Photo Dance with AI",
+        "highlight_text": "Photo Dance",
+        "description": "Turn any still photo into a realistic dance video. Our AI analyzes the person in your photo and applies natural dance movements that look surprisingly real.<br/><br/>Selfies, baby photos, pet pictures, old family photos — if it has a face, it can dance.",
+        "announcement": {
+          "badge": "AI Magic",
+          "title": "Photo-to-dance AI has transformed content creation",
+          "url": "#generator"
+        },
+        "buttons": [
+          {
+            "title": "Make Your Photo Dance",
+            "icon": "Sparkles",
+            "url": "#generator",
+            "target": "_self",
+            "variant": "default"
+          },
+          {
+            "title": "Photo Tips",
+            "icon": "Info",
+            "url": "#about",
+            "target": "_self",
+            "variant": "outline"
+          }
+        ],
+        "show_avatars": true,
+        "avatars_tip": "Millions of photos have been turned into dance videos with AI",
+        "show_award": false
+      },
+      "generator": { "id": "generator", "block": "dance-generator" },
+      "about": {
+        "id": "about",
+        "block": "features-list",
+        "title": "Tips for the Best Dance Photos",
+        "label": "Get Better Results",
+        "description": "While our AI works with almost any photo, following these tips will give you the most realistic and impressive dance videos.",
+        "items": [
+          {
+            "title": "Use Front-Facing Photos",
+            "description": "Photos where the subject faces the camera directly produce the most natural dance movements. Side profiles and angled shots can work but may have less realistic results.",
+            "icon": "RiImageLine"
+          },
+          {
+            "title": "Clear Face Visibility",
+            "description": "Make sure the face is clearly visible and well-lit. The AI uses facial features to anchor the dance animation, so blurry or obscured faces reduce quality.",
+            "icon": "RiUserLine"
+          },
+          {
+            "title": "Full or Half Body Works Best",
+            "description": "Photos showing at least the upper body give the AI more to work with. Close-up face shots work too, but full-body photos create the most impressive dance videos.",
+            "icon": "RiCheckLine"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "howto": {
+        "id": "howto",
+        "block": "features-step",
+        "title": "Turn Your Photo into a Dance Video",
+        "items": [
+          {
+            "title": "Choose Your Photo",
+            "description": "Select any photo with a person, baby, pet, or character. JPG, PNG, and WebP formats are supported. The photo should be at least 512x512 pixels for best quality."
+          },
+          {
+            "title": "Pick a Dance Move",
+            "description": "Browse 20+ dance templates across 8 categories. Each template shows a preview so you can see the dance style before selecting. From gentle sways to energetic hip-hop."
+          },
+          {
+            "title": "Watch It Dance",
+            "description": "Hit generate and in about 30 seconds, your photo will be dancing. Download the HD video and share it anywhere — no watermarks, no restrictions."
+          }
+        ]
+      },
+      "examples": {
+        "id": "examples",
+        "block": "showcases",
+        "title": "Photo-to-Dance Examples",
+        "description": "See how different types of photos transform into dance videos",
+        "items": [
+          {
+            "title": "Selfie to TikTok Dance",
+            "description": "A casual selfie transformed into a trending TikTok dance video"
+          },
+          {
+            "title": "Old Family Photo Dancing",
+            "description": "Vintage black-and-white photos brought to life with modern dance moves"
+          },
+          {
+            "title": "Baby Photo Doing Cute Dance",
+            "description": "A baby portrait animated with adorable dance movements"
+          },
+          {
+            "title": "Pet Photo Grooving",
+            "description": "A dog photo turned into a hilarious dancing video"
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "block": "faq",
+        "title": "Photo Dance FAQ",
+        "items": [
+          {
+            "question": "What types of photos can I make dance?",
+            "answer": "Almost any photo with a recognizable subject works — selfies, portraits, baby photos, pet photos, group photos, cartoon characters, and even historical photographs. The AI is most effective with clear, front-facing images."
+          },
+          {
+            "question": "Does the photo need to show the full body?",
+            "answer": "No, but full-body or half-body photos produce the most impressive results. The AI can work with face-only photos too, creating upper-body dance movements."
+          },
+          {
+            "question": "Can I make old or low-quality photos dance?",
+            "answer": "Yes! The AI works with photos of any age or quality. Old family photos, vintage portraits, and even slightly blurry images can be transformed into dance videos. Higher quality photos will produce better results."
+          },
+          {
+            "question": "How realistic does the dance look?",
+            "answer": "Our AI uses advanced motion-control technology that produces surprisingly realistic results. The dance movements are smooth and natural-looking, especially with clear, well-lit source photos."
+          },
+          {
+            "question": "Can I make a group photo dance?",
+            "answer": "The AI works best with single-subject photos. For group photos, it will typically animate the most prominent person. For best results, crop to focus on one person."
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "title": "Ready to Make Your Photo Dance?",
+        "description": "Upload any photo and watch it come alive with dance moves in seconds.",
+        "buttons": [
+          {
+            "title": "Upload Your Photo",
+            "url": "#generator",
+            "target": "_self",
+            "icon": "Sparkles"
+          },
+          {
+            "title": "Browse Dance Styles",
+            "url": "/ai-dance-generator",
+            "target": "_self",
+            "variant": "outline",
+            "icon": "Grid"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "related_pages": {
+        "id": "related_pages",
+        "block": "related-pages",
+        "title": "Explore More AI Dance Tools",
+        "description": "Discover all the ways you can create amazing dance videos with AI.",
+        "current_slug": "template/make-photo-dance"
+      }
+    }
+  }
+}

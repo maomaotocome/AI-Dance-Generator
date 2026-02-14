@@ -1,0 +1,179 @@
+{
+  "metadata": {
+    "title": "DreamoAI 替代方案 - 基于网页的 AI 舞蹈生成器 | 无需下载应用",
+    "description": "寻找 DreamoAI 替代方案？我们基于网页的 AI 舞蹈生成器直接在浏览器中运行。无需下载应用，预制模板，即时出结果。免费试用。",
+    "keywords": "DreamoAI 替代方案, DreamoAI 对比, AI 舞蹈生成器网页版, DreamoAI 替代品, 在线舞蹈视频生成器"
+  },
+  "page": {
+    "show_sections": [
+      "hero",
+      "comparison",
+      "generator",
+      "features",
+      "faq",
+      "cta",
+      "related_pages"
+    ],
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "基于网页的 DreamoAI 替代方案",
+        "highlight_text": "DreamoAI 替代方案",
+        "description": "想要 AI 舞蹈生成但不想下载应用？我们基于网页的工具提供同样强大的 AI 舞蹈生成——直接在你的浏览器中。<br/><br/>无需下载。无需安装。只需上传并生成。",
+        "announcement": {
+          "badge": "网页版",
+          "title": "在浏览器中即时创建舞蹈视频",
+          "url": "#generator"
+        },
+        "buttons": [
+          {
+            "title": "免费试用 — 无需下载",
+            "icon": "Sparkles",
+            "url": "#generator",
+            "target": "_self",
+            "variant": "default"
+          },
+          {
+            "title": "查看对比",
+            "icon": "Scale",
+            "url": "#comparison",
+            "target": "_self",
+            "variant": "outline"
+          }
+        ],
+        "show_avatars": true,
+        "avatars_tip": "创作者选择网页工具是因为方便和速度",
+        "show_award": false
+      },
+      "comparison": {
+        "id": "comparison",
+        "block": "features-list",
+        "title": "为什么选择网页版替代方案",
+        "label": "诚实对比",
+        "description": "DreamoAI 提供可靠的 AI 舞蹈生成。但如果你更喜欢在浏览器中工作而不下载应用，以下是我们的网页版方案可能更适合你的原因。",
+        "items": [
+          {
+            "title": "无需下载应用",
+            "description": "从任何有浏览器的设备访问我们的 AI 舞蹈生成器。无需应用商店、无需安装、无需占用存储空间。在桌面、平板和手机上都能使用。",
+            "icon": "RiSmartphoneLine"
+          },
+          {
+            "title": "预制舞蹈模板",
+            "description": "从 20 多个即用型舞蹈模板中选择。无需寻找或上传参考视频——只需选择风格并生成。从 TikTok 热门到 K-Pop 到婚礼舞蹈。",
+            "icon": "RiGridLine"
+          },
+          {
+            "title": "即时浏览器访问",
+            "description": "打开网站，上传照片，开始生成。浏览模板无需注册账户。准备好生成时再注册。",
+            "icon": "RiTimeLine"
+          },
+          {
+            "title": "移动端优化界面",
+            "description": "在手机上创建 TikTok 内容？我们的响应式网页界面专为移动优先的内容创作设计。没有笨重的应用界面。",
+            "icon": "RiCheckLine"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "generator": { "id": "generator", "block": "dance-generator" },
+      "features": {
+        "id": "features",
+        "block": "features",
+        "title": "我们的不同之处",
+        "description": "为快速、简单的舞蹈视频创作设计的功能",
+        "items": [
+          {
+            "title": "20+ 舞蹈模板",
+            "description": "TikTok 热门、K-Pop、嘻哈、宝宝舞蹈、宠物舞蹈、婚礼、摇摆滤镜等。每周添加新模板。",
+            "icon": "RiGridLine"
+          },
+          {
+            "title": "高清品质输出",
+            "description": "720p 竖版视频，针对 TikTok、Instagram Reels 和 YouTube Shorts 优化。所有方案均无水印。",
+            "icon": "RiVideoLine"
+          },
+          {
+            "title": "30 秒生成",
+            "description": "大多数视频在一分钟内就绪。无需排队等待，无批处理延迟。",
+            "icon": "RiTimeLine"
+          },
+          {
+            "title": "任何设备可用",
+            "description": "桌面、笔记本、平板或手机。任何现代浏览器就是你所需要的一切。",
+            "icon": "RiSmartphoneLine"
+          },
+          {
+            "title": "多种类别",
+            "description": "按用途组织：病毒内容、粉丝内容、家庭内容、婚礼内容等。",
+            "icon": "RiStarLine"
+          },
+          {
+            "title": "免费积分开始",
+            "description": "先试后买。注册即获免费积分——无需信用卡。",
+            "icon": "RiCheckLine"
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "block": "faq",
+        "title": "DreamoAI 替代方案常见问题",
+        "items": [
+          {
+            "question": "与 DreamoAI 相比如何？",
+            "answer": "两种工具都使用 AI 生成舞蹈视频。主要区别是我们的网页版方案——无需下载应用。我们还提供预制舞蹈模板以加快创作速度，而 DreamoAI 可能通过其应用提供不同的功能。"
+          },
+          {
+            "question": "需要下载任何东西吗？",
+            "answer": "不需要。我们的 AI 舞蹈生成器完全在浏览器中运行。只需访问网站，上传照片，开始生成。在任何有现代浏览器的设备上都能使用。"
+          },
+          {
+            "question": "视频质量可以媲美吗？",
+            "answer": "可以。我们使用先进的 AI 模型（包括 Kling AI）生成高质量的舞蹈视频。输出为 720p 高清竖版 9:16 格式，针对社交媒体优化。"
+          },
+          {
+            "question": "可以在付费前试用吗？",
+            "answer": "当然可以。免费注册即可获得入门积分。无需信用卡。你可以生成多个舞蹈视频来测试质量，然后再决定是否购买额外积分。"
+          },
+          {
+            "question": "如果我需要的舞蹈风格你们没有怎么办？",
+            "answer": "我们每周根据热门内容和用户请求添加新模板。如果你需要特定的舞蹈风格，请告诉我们，我们会优先添加。"
+          },
+          {
+            "question": "我的数据安全吗？",
+            "answer": "安全。上传的照片仅用于生成，不会永久存储。我们不会使用你的照片进行训练或与第三方分享。"
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "title": "试试网页版替代方案",
+        "description": "在浏览器中体验 AI 舞蹈生成——无需下载，无需安装。",
+        "buttons": [
+          {
+            "title": "免费开始生成",
+            "url": "#generator",
+            "target": "_self",
+            "icon": "Sparkles"
+          },
+          {
+            "title": "查看所有舞蹈模板",
+            "url": "/ai-dance-generator",
+            "target": "_self",
+            "variant": "outline",
+            "icon": "Grid"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "related_pages": {
+        "id": "related_pages",
+        "block": "related-pages",
+        "title": "探索更多 AI 舞蹈工具",
+        "description": "发现所有用 AI 创建精彩舞蹈视频的方式。",
+        "current_slug": "template/dreamoai-alternative",
+        "locale": "zh"
+      }
+    }
+  }
+}

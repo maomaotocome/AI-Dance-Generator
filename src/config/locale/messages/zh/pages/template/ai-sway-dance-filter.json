@@ -1,0 +1,176 @@
+{
+  "metadata": {
+    "title": "AI 摇摆舞蹈滤镜 - 创建病毒式 TikTok 摇摆效果",
+    "description": "用 AI 将摇摆舞蹈滤镜应用到任何照片。席卷 TikTok 和 Instagram 的温柔摇摆效果。几秒钟内创建浪漫、唯美的摇摆视频。",
+    "keywords": "AI 摇摆舞蹈滤镜, 摇摆滤镜 TikTok, 摇摆舞蹈效果, 照片摇摆 AI, 温柔摇摆视频, 浪漫摇摆滤镜"
+  },
+  "page": {
+    "show_sections": [
+      "hero",
+      "generator",
+      "about",
+      "howto",
+      "examples",
+      "faq",
+      "cta",
+      "related_pages"
+    ],
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "AI 摇摆舞蹈滤镜",
+        "highlight_text": "摇摆舞蹈滤镜",
+        "description": "席卷 TikTok 的病毒式摇摆效果。让任何照片温柔地摇摆和舞动。浪漫、梦幻、令人着迷。<br/><br/>情侣照、肖像和唯美内容的完美效果。",
+        "announcement": {
+          "badge": "病毒效果",
+          "title": "摇摆滤镜是 TikTok 上使用最多的 AI 效果之一",
+          "url": "#generator"
+        },
+        "buttons": [
+          {
+            "title": "应用摇摆滤镜",
+            "icon": "Sparkles",
+            "url": "#generator",
+            "target": "_self",
+            "variant": "default"
+          },
+          {
+            "title": "什么是摇摆滤镜？",
+            "icon": "Info",
+            "url": "#about",
+            "target": "_self",
+            "variant": "outline"
+          }
+        ],
+        "show_avatars": true,
+        "avatars_tip": "摇摆滤镜创造最唯美的 AI 内容",
+        "show_award": false
+      },
+      "generator": { "id": "generator", "block": "dance-generator" },
+      "about": {
+        "id": "about",
+        "block": "features-list",
+        "title": "什么是 AI 摇摆舞蹈滤镜？",
+        "label": "唯美趋势",
+        "description": "摇摆舞蹈滤镜在任何照片上创建温柔、有节奏的摇摆动作。与活力舞蹈视频不同，摇摆效果平静、浪漫且令人着迷——非常适合观众循环观看的唯美内容。",
+        "items": [
+          {
+            "title": "催眠循环效果",
+            "description": "温柔的摇摆动作创造令人着迷的循环，观众会反复观看。这种高观看时长向算法发出信号，将你的内容推送给更多人。",
+            "icon": "RiTimeLine"
+          },
+          {
+            "title": "浪漫与唯美",
+            "description": "摇摆滤镜为任何照片增添梦幻、浪漫的品质。非常适合情侣内容、肖像摄影和唯美风格。",
+            "icon": "RiHeartLine"
+          },
+          {
+            "title": "适用于任何照片",
+            "description": "与复杂的舞蹈动作不同，温柔的摇摆效果与任何主题都看起来自然——人物、宠物、艺术品，甚至风景。它是最通用的 AI 舞蹈效果。",
+            "icon": "RiImageLine"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "howto": {
+        "id": "howto",
+        "block": "features-step",
+        "title": "3 步应用摇摆滤镜",
+        "items": [
+          {
+            "title": "上传你的照片",
+            "description": "选择任何照片——肖像、情侣照、宠物图片，甚至艺术品。摇摆滤镜与所有类型的图像都效果出色。"
+          },
+          {
+            "title": "选择摇摆风格",
+            "description": "从温柔摇摆、浪漫摇摆或摇摆滤镜模板中选择。每种都提供略有不同的节奏和运动强度。"
+          },
+          {
+            "title": "生成并分享",
+            "description": "约 30 秒即可获得你的摇摆视频。循环动作非常适合 TikTok、Instagram Stories 和唯美内容。"
+          }
+        ]
+      },
+      "examples": {
+        "id": "examples",
+        "block": "showcases",
+        "title": "摇摆滤镜示例",
+        "description": "感受 AI 摇摆滤镜的梦幻唯美效果",
+        "items": [
+          {
+            "title": "情侣肖像浪漫摇摆",
+            "description": "情侣照片变成梦幻的摇摆视频"
+          },
+          {
+            "title": "肖像摄影摇摆效果",
+            "description": "专业肖像通过温柔动作焕发生机"
+          },
+          {
+            "title": "宠物照片温柔摇摆",
+            "description": "可爱的宠物照片配上平静有节奏的摇摆动作"
+          },
+          {
+            "title": "复古照片摇摆滤镜",
+            "description": "老照片通过唯美摇摆效果获得新生"
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "block": "faq",
+        "title": "摇摆舞蹈滤镜常见问题",
+        "items": [
+          {
+            "question": "摇摆和舞蹈有什么区别？",
+            "answer": "摇摆滤镜创建温柔、有节奏的左右摆动——更像慢舞或轻柔摇晃。普通舞蹈模板有更活力、更复杂的编舞。摇摆更平静、更唯美。"
+          },
+          {
+            "question": "应该选择哪个摇摆模板？",
+            "answer": "温柔摇摆动作最微妙，适合肖像。浪漫摇摆增加稍多动作，带有梦幻品质。摇摆滤镜是经典的 TikTok 效果，动作适中。"
+          },
+          {
+            "question": "摇摆滤镜适用于非人类主题吗？",
+            "answer": "可以！摇摆滤镜是我们提供的最通用的效果。它与宠物照片、艺术品、风景，甚至产品照片都效果出色。任何图像都能从温柔的动作中受益。"
+          },
+          {
+            "question": "为什么摇摆视频能获得这么多观看？",
+            "answer": "催眠的循环动作让观众反复观看。TikTok 和 Instagram 算法检测到这种高观看时长，将内容推送给更多观众，创造病毒循环。"
+          },
+          {
+            "question": "可以将摇摆滤镜用于商业内容吗？",
+            "answer": "当然可以。摇摆滤镜在产品展示、品牌美学和专业内容中很受欢迎。温柔的动作增加视觉趣味而不会分散注意力。"
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "title": "准备好创建唯美摇摆内容了吗？",
+        "description": "将病毒式摇摆滤镜应用到任何照片，创建令人着迷的内容。",
+        "buttons": [
+          {
+            "title": "应用摇摆滤镜",
+            "url": "#generator",
+            "target": "_self",
+            "icon": "Sparkles"
+          },
+          {
+            "title": "浏览所有风格",
+            "url": "/ai-dance-generator",
+            "target": "_self",
+            "variant": "outline",
+            "icon": "Grid"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "related_pages": {
+        "id": "related_pages",
+        "block": "related-pages",
+        "title": "探索更多 AI 舞蹈工具",
+        "description": "发现所有用 AI 创建精彩舞蹈视频的方式。",
+        "current_slug": "template/ai-sway-dance-filter",
+        "locale": "zh"
+      }
+    }
+  }
+}

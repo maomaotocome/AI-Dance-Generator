@@ -1,0 +1,171 @@
+{
+  "metadata": {
+    "title": "K-Pop Dance AI Generator - Create K-Pop Choreography Videos Free",
+    "description": "Transform any photo into a K-Pop dance video with AI. Recreate iconic choreography from BLACKPINK, BTS, TWICE, and more. Perfect for fan content and dance covers.",
+    "keywords": "K-pop dance AI generator, K-pop choreography AI, BLACKPINK dance AI, BTS dance AI, K-pop dance cover generator, AI idol dance video"
+  },
+  "page": {
+    "show_sections": [
+      "hero",
+      "generator",
+      "about",
+      "howto",
+      "examples",
+      "faq",
+      "cta",
+      "related_pages"
+    ],
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "K-Pop Dance AI Generator",
+        "highlight_text": "K-Pop Dance",
+        "description": "Create K-Pop dance videos with any photo. From iconic BLACKPINK choreography to BTS-style moves — AI brings the precision and energy of K-Pop dance to your content.<br/><br/>The ultimate tool for K-Pop fans and content creators.",
+        "announcement": {
+          "badge": "Fan Favorite",
+          "title": "K-Pop dance content is among the most shared globally",
+          "url": "#generator"
+        },
+        "buttons": [
+          {
+            "title": "Create K-Pop Dance Video",
+            "icon": "Sparkles",
+            "url": "#generator",
+            "target": "_self",
+            "variant": "default"
+          },
+          {
+            "title": "See Dance Styles",
+            "icon": "Play",
+            "url": "#examples",
+            "target": "_self",
+            "variant": "outline"
+          }
+        ],
+        "show_avatars": true,
+        "avatars_tip": "K-Pop fans worldwide create AI dance content daily",
+        "show_award": false
+      },
+      "generator": { "id": "generator", "block": "dance-generator" },
+      "about": {
+        "id": "about",
+        "block": "features-list",
+        "title": "Why K-Pop Dance Videos Are Irresistible",
+        "label": "The Global K-Pop Wave",
+        "description": "K-Pop choreography is designed to be visually captivating and shareable. AI-generated K-Pop dance videos tap into the massive global fandom while adding the surprise element that drives virality.",
+        "items": [
+          {
+            "title": "Massive Global Fandom",
+            "description": "K-Pop has one of the most engaged online communities in the world. Dance content featuring K-Pop moves gets instant attention from millions of dedicated fans.",
+            "icon": "RiStarLine"
+          },
+          {
+            "title": "Precision Choreography",
+            "description": "K-Pop dances are known for their sharp, synchronized movements. Our AI templates capture the signature precision that makes K-Pop choreography so satisfying to watch.",
+            "icon": "RiMagicLine"
+          },
+          {
+            "title": "Fan Content That Connects",
+            "description": "Creating K-Pop dance content is a way to connect with the fandom. AI makes it accessible to everyone, regardless of dance ability.",
+            "icon": "RiHeartLine"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "howto": {
+        "id": "howto",
+        "block": "features-step",
+        "title": "Create Your K-Pop Dance Video",
+        "items": [
+          {
+            "title": "Upload a Photo",
+            "description": "Choose any photo — yourself, a friend, a bias photo, or even a pet. K-Pop dance videos work with any clear, front-facing image."
+          },
+          {
+            "title": "Choose K-Pop Choreography",
+            "description": "Browse our K-Pop dance templates featuring different choreography styles. From powerful group dance moves to smooth solo performances."
+          },
+          {
+            "title": "Generate & Share with Fans",
+            "description": "Get your K-Pop dance video in about 30 seconds. Share on TikTok, Twitter/X, or fan communities. Tag your favorite groups for maximum reach."
+          }
+        ]
+      },
+      "examples": {
+        "id": "examples",
+        "block": "showcases",
+        "title": "K-Pop Dance Video Examples",
+        "description": "See how AI brings K-Pop choreography to any photo",
+        "items": [
+          {
+            "title": "Pet Cat Doing K-Pop Choreography",
+            "description": "Cute cat photos animated with sharp K-Pop dance moves"
+          },
+          {
+            "title": "Baby Performing Idol Dance",
+            "description": "Adorable baby photos with synchronized K-Pop choreography"
+          },
+          {
+            "title": "Historical Figure K-Pop Cover",
+            "description": "Classic portraits transformed into K-Pop dance performances"
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "block": "faq",
+        "title": "K-Pop Dance Generator FAQ",
+        "items": [
+          {
+            "question": "Which K-Pop dance styles are available?",
+            "answer": "We offer K-Pop dance templates inspired by various choreography styles — from powerful, synchronized group moves to smooth solo performances. Templates are updated regularly with new styles."
+          },
+          {
+            "question": "Can I recreate specific K-Pop choreography?",
+            "answer": "Our templates are inspired by popular K-Pop dance styles rather than exact copies of specific songs. They capture the energy and precision that K-Pop choreography is known for."
+          },
+          {
+            "question": "Is this good for fan content?",
+            "answer": "Absolutely! K-Pop AI dance videos are perfect for fan accounts, fan edits, and community content. Many fans use these to create fun content featuring their bias or fan art."
+          },
+          {
+            "question": "Can I make a group dance video?",
+            "answer": "The AI works best with single-subject photos. For group dance effects, create individual videos and combine them using a video editor, or use a group photo where one person is prominent."
+          },
+          {
+            "question": "What platforms work best for K-Pop dance content?",
+            "answer": "TikTok, Twitter/X, and Instagram are the top platforms for K-Pop content. Our videos are generated in vertical 9:16 format, optimized for TikTok and Instagram Reels."
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "title": "Ready to Create K-Pop Dance Content?",
+        "description": "Join the global K-Pop community with AI-generated dance videos.",
+        "buttons": [
+          {
+            "title": "Make K-Pop Dance Video",
+            "url": "#generator",
+            "target": "_self",
+            "icon": "Sparkles"
+          },
+          {
+            "title": "Explore All Styles",
+            "url": "/ai-dance-generator",
+            "target": "_self",
+            "variant": "outline",
+            "icon": "Grid"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "related_pages": {
+        "id": "related_pages",
+        "block": "related-pages",
+        "title": "Explore More AI Dance Tools",
+        "description": "Discover all the ways you can create amazing dance videos with AI.",
+        "current_slug": "template/kpop-dance-generator"
+      }
+    }
+  }
+}

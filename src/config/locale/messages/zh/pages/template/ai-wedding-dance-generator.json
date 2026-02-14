@@ -1,0 +1,176 @@
+{
+  "metadata": {
+    "title": "AI 婚礼舞蹈生成器 - 创建浪漫的婚礼第一支舞视频",
+    "description": "用 AI 将任何情侣照片变成令人惊叹的婚礼舞蹈视频。创建浪漫的第一支舞视频、婚礼接待内容和周年纪念舞蹈视频。",
+    "keywords": "AI 婚礼舞蹈视频, 婚礼第一支舞 AI, 婚礼舞蹈生成器, 情侣舞蹈视频 AI, 婚礼视频制作"
+  },
+  "page": {
+    "show_sections": [
+      "hero",
+      "generator",
+      "about",
+      "howto",
+      "examples",
+      "faq",
+      "cta",
+      "related_pages"
+    ],
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "AI 婚礼舞蹈生成器",
+        "highlight_text": "婚礼舞蹈",
+        "description": "用任何情侣照片创建令人惊叹的婚礼舞蹈视频。无论是第一支舞预览、接待惊喜还是周年庆祝——AI 让每一刻都充满魔力。<br/><br/>无需编舞。只需上传，让 AI 创造浪漫。",
+        "announcement": {
+          "badge": "热门",
+          "title": "婚礼舞蹈视频是增长最快的 AI 内容类别",
+          "url": "#generator"
+        },
+        "buttons": [
+          {
+            "title": "创建婚礼舞蹈视频",
+            "icon": "Sparkles",
+            "url": "#generator",
+            "target": "_self",
+            "variant": "default"
+          },
+          {
+            "title": "查看示例",
+            "icon": "Play",
+            "url": "#examples",
+            "target": "_self",
+            "variant": "outline"
+          }
+        ],
+        "show_avatars": true,
+        "avatars_tip": "情侣和婚礼策划师都喜欢 AI 舞蹈视频",
+        "show_award": false
+      },
+      "generator": { "id": "generator", "block": "dance-generator" },
+      "about": {
+        "id": "about",
+        "block": "features-list",
+        "title": "为什么 AI 婚礼舞蹈视频正在流行",
+        "label": "完美的婚礼内容",
+        "description": "AI 创建的婚礼舞蹈视频正在成为现代情侣的必备品。它们非常适合用于请柬、接待娱乐和社交媒体分享。",
+        "items": [
+          {
+            "title": "浪漫第一支舞预览",
+            "description": "在大日子之前看看你的第一支舞会是什么样子。用你的订婚照尝试不同的舞蹈风格，找到完美的氛围。",
+            "icon": "RiHeartLine"
+          },
+          {
+            "title": "接待娱乐",
+            "description": "用婚礼派对的 AI 生成舞蹈视频给宾客一个惊喜。为接待创建一个所有人跳舞的幻灯片。",
+            "icon": "RiStarLine"
+          },
+          {
+            "title": "社交媒体就绪",
+            "description": "生成适合 Instagram Reels 和 TikTok 的竖版视频。与无法出席的亲友分享你的婚礼舞蹈时刻。",
+            "icon": "RiShareLine"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "howto": {
+        "id": "howto",
+        "block": "features-step",
+        "title": "3 步创建你的婚礼舞蹈",
+        "items": [
+          {
+            "title": "上传情侣照片",
+            "description": "选择一张清晰的情侣照片——订婚照、婚纱照或休闲照都可以。两个人都清晰可见的正面照效果最佳。"
+          },
+          {
+            "title": "选择舞蹈风格",
+            "description": "从浪漫摇摆、优雅华尔兹、欢乐派对舞蹈或热门 TikTok 动作中选择。每种风格为你的婚礼内容营造不同的氛围。"
+          },
+          {
+            "title": "生成并分享",
+            "description": "约 30 秒即可获得你的婚礼舞蹈视频。下载高清版本，在社交媒体上分享、放在婚礼网站上或在接待时播放。"
+          }
+        ]
+      },
+      "examples": {
+        "id": "examples",
+        "block": "showcases",
+        "title": "婚礼舞蹈视频创意",
+        "description": "AI 生成婚礼舞蹈内容的灵感",
+        "items": [
+          {
+            "title": "浪漫第一支舞优雅摇摆",
+            "description": "温柔浪漫的舞蹈，完美适合请柬公告"
+          },
+          {
+            "title": "欢乐接待派对舞蹈",
+            "description": "欢快的舞蹈动作，捕捉庆祝的喜悦"
+          },
+          {
+            "title": "老照片婚礼舞蹈",
+            "description": "将旧家庭婚礼照片变成跳舞视频，用于周年庆祝"
+          },
+          {
+            "title": "婚礼派对集体舞",
+            "description": "为整个伴郎伴娘团创建有趣的舞蹈视频"
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "block": "faq",
+        "title": "婚礼舞蹈生成器常见问题",
+        "items": [
+          {
+            "question": "什么样的照片最适合婚礼舞蹈视频？",
+            "answer": "清晰的正面情侣照效果最佳。订婚照、婚纱照，甚至休闲的情侣自拍都能产生很好的效果。确保两个人的脸都清晰可见。"
+          },
+          {
+            "question": "可以用来制作请柬视频吗？",
+            "answer": "当然可以！很多情侣用订婚照创建 AI 舞蹈视频作为请柬公告。这是一种独特、令人难忘的分享方式。"
+          },
+          {
+            "question": "有哪些适合婚礼的舞蹈风格？",
+            "answer": "我们提供浪漫摇摆、优雅华尔兹风格动作、欢乐派对舞蹈，甚至热门 TikTok 舞蹈。温柔摇摆和浪漫摇摆模板最受婚礼欢迎。"
+          },
+          {
+            "question": "可以让父母的老婚纱照跳舞吗？",
+            "answer": "可以！AI 适用于任何照片，包括老照片和复古照片。用父母或祖父母的婚纱照创建舞蹈视频是很棒的周年礼物。"
+          },
+          {
+            "question": "生成的视频有多长？",
+            "answer": "婚礼舞蹈视频通常为 5-15 秒，非常适合社交媒体分享和接待幻灯片。长度取决于你选择的舞蹈模板。"
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "title": "让你的婚礼更加难忘",
+        "description": "用 AI 创建令人惊叹的婚礼舞蹈视频。",
+        "buttons": [
+          {
+            "title": "创建婚礼舞蹈",
+            "url": "#generator",
+            "target": "_self",
+            "icon": "Sparkles"
+          },
+          {
+            "title": "浏览所有风格",
+            "url": "/ai-dance-generator",
+            "target": "_self",
+            "variant": "outline",
+            "icon": "Grid"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "related_pages": {
+        "id": "related_pages",
+        "block": "related-pages",
+        "title": "探索更多 AI 舞蹈工具",
+        "description": "发现所有用 AI 创建精彩舞蹈视频的方式。",
+        "current_slug": "template/ai-wedding-dance-generator",
+        "locale": "zh"
+      }
+    }
+  }
+}
