@@ -322,7 +322,8 @@ export function ShowcasesPremium({
                 <Sparkles className="text-muted-foreground h-8 w-8" />
               </div>
               <p className="text-muted-foreground mt-4">
-                No videos found in this category yet.
+                {(section as any).empty_state ??
+                  'No videos found in this category yet.'}
               </p>
             </motion.div>
           )}

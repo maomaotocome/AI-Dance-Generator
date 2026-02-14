@@ -164,6 +164,8 @@ function TemplateCard({
   featured = false,
   hotLabel = 'HOT',
   newLabel = 'NEW',
+  trendingLabel = 'Trending',
+  usesLabel = 'uses',
 }: {
   template: DanceTemplate;
   isSelected: boolean;
@@ -172,6 +174,8 @@ function TemplateCard({
   featured?: boolean;
   hotLabel?: string;
   newLabel?: string;
+  trendingLabel?: string;
+  usesLabel?: string;
 }) {
   const [isHovering, setIsHovering] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -305,12 +309,12 @@ function TemplateCard({
         <div className="flex items-center justify-between text-[10px] text-white/50">
           <span className="flex items-center gap-1">
             <User className="h-3 w-3" />
-            {template.useCount || '1k+'} uses
+            {template.useCount || '1k+'} {usesLabel}
           </span>
           {template.popularity > 80 && (
             <span className="flex items-center gap-1 text-orange-400">
               <Flame className="h-3 w-3" />
-              Trending
+              {trendingLabel}
             </span>
           )}
         </div>
@@ -342,6 +346,9 @@ function MobileStickyBar({
   isLoggedIn,
   generateLabel,
   generatingLabel,
+  creditsLabel = 'credits',
+  leftLabel = 'left',
+  signInLabel = 'Sign in to Generate',
 }: {
   canGenerate: boolean;
   isGenerating: boolean;
@@ -352,6 +359,9 @@ function MobileStickyBar({
   isLoggedIn: boolean;
   generateLabel: string;
   generatingLabel: string;
+  creditsLabel?: string;
+  leftLabel?: string;
+  signInLabel?: string;
 }) {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -406,7 +416,7 @@ function MobileStickyBar({
             </Button>
             <div className="flex flex-col items-end text-right">
               <span className="text-xs font-medium text-white">
-                {costCredits} credits
+                {costCredits} {creditsLabel}
               </span>
               <span
                 className={cn(
@@ -416,7 +426,7 @@ function MobileStickyBar({
                     : 'text-green-400'
                 )}
               >
-                {remainingCredits} left
+                {remainingCredits} {leftLabel}
               </span>
             </div>
           </>
@@ -427,7 +437,7 @@ function MobileStickyBar({
             onClick={onSignIn}
           >
             <User className="mr-2 h-4 w-4" />
-            Sign in to Generate
+            {signInLabel}
           </Button>
         )}
       </div>
@@ -440,11 +450,13 @@ function FeaturedTemplatesRow({
   selectedId,
   onSelect,
   onPreview,
+  trendingNowLabel = 'Trending Now',
 }: {
   templates: DanceTemplate[];
   selectedId?: string;
   onSelect: (t: DanceTemplate) => void;
   onPreview: (t: DanceTemplate) => void;
+  trendingNowLabel?: string;
 }) {
   return (
     <div className="mb-8">
@@ -453,7 +465,7 @@ function FeaturedTemplatesRow({
           <Flame className="h-5 w-5 text-orange-500" fill="currentColor" />
         </div>
         <h3 className="text-lg font-bold tracking-tight text-white">
-          Trending Now
+          {trendingNowLabel}
         </h3>
       </div>
       <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
@@ -479,6 +491,8 @@ function TemplateGrid({
   onPreview,
   hotLabel,
   newLabel,
+  trendingLabel,
+  usesLabel,
 }: {
   templates: DanceTemplate[];
   selectedId?: string;
@@ -486,6 +500,8 @@ function TemplateGrid({
   onPreview: (t: DanceTemplate) => void;
   hotLabel?: string;
   newLabel?: string;
+  trendingLabel?: string;
+  usesLabel?: string;
 }) {
   return (
     <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
@@ -498,6 +514,8 @@ function TemplateGrid({
           onPreview={() => onPreview(template)}
           hotLabel={hotLabel}
           newLabel={newLabel}
+          trendingLabel={trendingLabel}
+          usesLabel={usesLabel}
         />
       ))}
     </div>
@@ -929,6 +947,8 @@ export function DanceGeneratorPremium({
                     onPreview={setPreviewingTemplate}
                     hotLabel={section?.hot_label}
                     newLabel={section?.new_label}
+                    trendingLabel={section?.trending_label}
+                    usesLabel={section?.uses_label}
                   />
                 </div>
               </div>
@@ -1075,10 +1095,7 @@ export function DanceGeneratorPremium({
                       <div className="flex items-center gap-2 text-white/60">
                         <Zap className="h-4 w-4" />
                         <span>
-                          Cost:{' '}
-                          <span className="font-medium text-white">
-                            {costCredits} credits
-                          </span>
+                          {t('credits_cost', { credits: costCredits })}
                         </span>
                       </div>
                       {isMounted && (
@@ -1090,7 +1107,9 @@ export function DanceGeneratorPremium({
                               : 'text-emerald-400'
                           )}
                         >
-                          Avail: {remainingCredits}
+                          {t('credits_remaining', {
+                            credits: remainingCredits,
+                          })}
                         </span>
                       )}
                     </div>
@@ -1171,6 +1190,9 @@ export function DanceGeneratorPremium({
           isLoggedIn={!!user}
           generateLabel={t('generate')}
           generatingLabel={t('generating')}
+          creditsLabel={section?.credits_label}
+          leftLabel={section?.left_label}
+          signInLabel={t('sign_in_to_generate')}
         />
       )}
     </section>

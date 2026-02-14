@@ -55,7 +55,10 @@
           { "name": "TikTok" },
           { "name": "Reels" },
           { "name": "Shorts" }
-        ]
+        ],
+        "audio_label": "原声音乐",
+        "viral_badge": "爆款就绪",
+        "viral_badge_sub": "TikTok 优化"
       },
       "generator": {
         "id": "generator",
@@ -69,41 +72,49 @@
         "category_all": "全部",
         "hot_label": "热门",
         "new_label": "新",
+        "trending_label": "热门",
+        "uses_label": "次使用",
+        "credits_label": "积分",
+        "left_label": "剩余",
         "use_template": "使用此模板"
       },
       "showcases": {
         "id": "showcases",
         "block": "showcases-premium",
-        "title": "正在病毒式传播的视频",
-        "description": "用户真实案例。这些视频都在 60 秒内制作完成。",
-        "badge": "正在热播",
+        "title": "看看 AI 跳舞生成器能创造什么",
+        "description": "探索不同风格的 AI 跳舞视频。从宝宝跳舞到韩流编舞 — 上传任何照片即可创建。",
+        "badge": "示例",
         "cta_button": "创建你自己的 AI 跳舞视频",
         "cta_sub": "无需信用卡 · 秒速生成",
         "share_label": "分享",
+        "empty_state": "该分类暂无视频。",
         "items": [
           {
-            "title": "TikTok 230万播放",
-            "description": "宝宝跳舞热门 - 30秒制作",
+            "title": "宝宝跳舞",
+            "description": "用 AI 把宝宝照片变成可爱的跳舞视频",
             "image": {
               "src": "/imgs/showcases/dance-1.jpg",
-              "alt": "病毒式 AI 跳舞视频"
-            }
+              "alt": "AI 宝宝跳舞视频示例"
+            },
+            "platform": "TikTok"
           },
           {
-            "title": "Reels 85万播放",
-            "description": "韩流风格完美同步",
+            "title": "韩流编舞",
+            "description": "AI 驱动的韩流舞蹈动作，完美同步",
             "image": {
               "src": "/imgs/showcases/dance-2.jpg",
-              "alt": "韩流 AI 跳舞"
-            }
+              "alt": "韩流 AI 跳舞视频示例"
+            },
+            "platform": "Instagram"
           },
           {
-            "title": "Shorts 150万播放",
-            "description": "Aura farming 舞蹈热潮",
+            "title": "热门 TikTok 舞蹈",
+            "description": "用任何照片创建病毒式 TikTok 跳舞视频",
             "image": {
               "src": "/imgs/showcases/dance-3.jpg",
-              "alt": "Aura 跳舞热潮"
-            }
+              "alt": "AI 跳舞生成器热门视频"
+            },
+            "platform": "TikTok"
           }
         ],
         "className": "bg-muted"

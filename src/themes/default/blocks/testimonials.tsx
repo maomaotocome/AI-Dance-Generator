@@ -2,6 +2,7 @@
 
 import { LazyImage } from '@/shared/blocks/common';
 import { ScrollAnimation } from '@/shared/components/ui/scroll-animation';
+import { cn } from '@/shared/lib/utils';
 import { Section, SectionItem } from '@/shared/types/blocks/landing';
 
 export function Testimonials({
@@ -42,7 +43,7 @@ export function Testimonials({
   return (
     <section
       id={section.id}
-      className={`py-16 md:py-24 ${section.className} ${className}`}
+      className={cn('py-16 md:py-24', section.className, className)}
     >
       <div className="container">
         <ScrollAnimation>

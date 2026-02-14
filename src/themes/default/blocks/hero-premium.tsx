@@ -105,10 +105,12 @@ function VideoShowcase({
   className,
   gradient = 'from-blue-600 via-violet-600 to-purple-600',
   active = false,
+  audioLabel,
 }: {
   className?: string;
   gradient?: string;
   active?: boolean;
+  audioLabel?: string;
 }) {
   return (
     <div
@@ -134,8 +136,10 @@ function VideoShowcase({
         />
 
         {/* Silhouette / Content Placeholder */}
-        <div className="absolute inset-0 flex items-center justify-center opacity-50 mix-blend-overlay">
-          <div className="h-full w-full bg-[url('https://images.unsplash.com/photo-1547153760-18fc86324498?q=80&w=1000&auto=format&fit=crop')] bg-cover bg-center grayscale" />
+        <div className="absolute inset-0 flex items-center justify-center opacity-30 mix-blend-overlay">
+          <div className="flex h-full w-full items-center justify-center">
+            <Music className="h-16 w-16 text-white/40" />
+          </div>
         </div>
 
         {/* Overlay gradient */}
@@ -149,7 +153,7 @@ function VideoShowcase({
             <div className="mt-2 flex items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 backdrop-blur-md">
               <Music className="h-3 w-3 text-white" />
               <span className="text-[10px] font-medium text-white">
-                Original Audio
+                {audioLabel ?? 'Original Audio'}
               </span>
             </div>
           </div>
@@ -195,7 +199,17 @@ function TransformationStep({
   );
 }
 
-function HeroVideoCarousel({ carouselLabel }: { carouselLabel?: string }) {
+function HeroVideoCarousel({
+  carouselLabel,
+  audioLabel,
+  viralBadge,
+  viralBadgeSub,
+}: {
+  carouselLabel?: string;
+  audioLabel?: string;
+  viralBadge?: string;
+  viralBadgeSub?: string;
+}) {
   const [active, setActive] = useState(0);
 
   const items = [
@@ -240,7 +254,11 @@ function HeroVideoCarousel({ carouselLabel }: { carouselLabel?: string }) {
           )}
           style={{ width: 'clamp(200px, 70vw, 280px)' }}
         >
-          <VideoShowcase gradient={item.gradient} active={index === active} />
+          <VideoShowcase
+            gradient={item.gradient}
+            active={index === active}
+            audioLabel={audioLabel}
+          />
         </div>
       ))}
 
@@ -250,8 +268,12 @@ function HeroVideoCarousel({ carouselLabel }: { carouselLabel?: string }) {
             <TrendingUp className="h-5 w-5 text-green-400" />
           </div>
           <div>
-            <p className="text-sm font-bold text-white">Viral Ready</p>
-            <p className="text-xs text-white/50">Optimized for TikTok</p>
+            <p className="text-sm font-bold text-white">
+              {viralBadge ?? 'Viral Ready'}
+            </p>
+            <p className="text-xs text-white/50">
+              {viralBadgeSub ?? 'Optimized for TikTok'}
+            </p>
           </div>
         </div>
       </div>
@@ -561,7 +583,12 @@ export function HeroPremium({
                 <div className="animate-pulse-glow absolute inset-0 rounded-full bg-fuchsia-600 blur-[100px] delay-1000" />
               </div>
 
-              <HeroVideoCarousel carouselLabel={section.carousel_label} />
+              <HeroVideoCarousel
+                carouselLabel={section.carousel_label}
+                audioLabel={(section as any).audio_label}
+                viralBadge={(section as any).viral_badge}
+                viralBadgeSub={(section as any).viral_badge_sub}
+              />
             </div>
           </div>
         </div>
