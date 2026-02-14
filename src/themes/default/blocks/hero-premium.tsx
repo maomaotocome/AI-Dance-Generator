@@ -195,7 +195,7 @@ function TransformationStep({
   );
 }
 
-function HeroVideoCarousel() {
+function HeroVideoCarousel({ carouselLabel }: { carouselLabel?: string }) {
   const [active, setActive] = useState(0);
 
   const items = [
@@ -227,7 +227,7 @@ function HeroVideoCarousel() {
     <div className="relative flex h-[400px] w-full items-center justify-center sm:h-[500px]">
       <div className="absolute -top-10 left-1/2 -translate-x-1/2 rounded-full border border-white/10 bg-black/40 px-3 py-1 backdrop-blur-md sm:-top-12 sm:px-4 sm:py-1.5">
         <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-xs font-bold tracking-wider text-transparent uppercase sm:text-sm">
-          Before → After
+          {carouselLabel}
         </span>
       </div>
 
@@ -273,6 +273,18 @@ export function HeroPremium({
   if (highlightText && section.title) {
     texts = section.title.split(highlightText, 2);
   }
+
+  const steps = (section as any).steps as { label: string }[] | undefined;
+  const platforms = (section as any).platforms as
+    | { name: string }[]
+    | undefined;
+  const socialProofText = (section as any).social_proof_text as
+    | string
+    | undefined;
+  const socialProofSub = (section as any).social_proof_sub as
+    | string
+    | undefined;
+  const platformsLabel = (section as any).platforms_label as string | undefined;
 
   return (
     <section
@@ -355,7 +367,7 @@ export function HeroPremium({
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-violet-500"></span>
                 </span>
                 <span className="text-sm font-medium text-violet-200">
-                  New: V2 Motion Model Released
+                  {section.announcement?.title ?? ''}
                 </span>
                 <ArrowRight className="h-3.5 w-3.5 text-violet-400 transition-transform group-hover:translate-x-0.5" />
               </div>
@@ -419,9 +431,19 @@ export function HeroPremium({
               className="animate-fade-in-up mt-8 flex items-center gap-2 opacity-0 lg:gap-4"
               style={{ animationDelay: '0.4s' }}
             >
-              <TransformationStep icon={Upload} label="Upload" />
-              <TransformationStep icon={Wand2} label="AI Magic" />
-              <TransformationStep icon={PlaySquare} label="Video" isLast />
+              <TransformationStep
+                icon={Upload}
+                label={steps?.[0]?.label ?? 'Upload'}
+              />
+              <TransformationStep
+                icon={Wand2}
+                label={steps?.[1]?.label ?? 'AI Magic'}
+              />
+              <TransformationStep
+                icon={PlaySquare}
+                label={steps?.[2]?.label ?? 'Video'}
+                isLast
+              />
             </div>
 
             {/* CTA Buttons */}
@@ -479,10 +501,10 @@ export function HeroPremium({
                   </div>
                   <div className="flex flex-col text-left">
                     <span className="text-sm font-bold text-white">
-                      Trusted by 50k+
+                      {socialProofText ?? 'Loved by Creators'}
                     </span>
                     <span className="text-muted-foreground text-xs">
-                      Content Creators
+                      {socialProofSub ?? 'Worldwide'}
                     </span>
                   </div>
                 </div>
@@ -492,7 +514,7 @@ export function HeroPremium({
 
               <div className="flex flex-col gap-2">
                 <span className="text-muted-foreground/80 text-[10px] font-semibold tracking-wider uppercase">
-                  Works with
+                  {platformsLabel ?? 'Works with'}
                 </span>
                 <div className="flex items-center gap-4 text-white/60">
                   <div
@@ -500,21 +522,27 @@ export function HeroPremium({
                     title="TikTok"
                   >
                     <TikTokIcon className="h-4 w-4" />
-                    <span className="text-xs font-medium">TikTok</span>
+                    <span className="text-xs font-medium">
+                      {platforms?.[0]?.name ?? 'TikTok'}
+                    </span>
                   </div>
                   <div
                     className="flex items-center gap-1.5 transition-colors hover:text-white"
                     title="Instagram"
                   >
                     <Instagram className="h-4 w-4" />
-                    <span className="text-xs font-medium">Reels</span>
+                    <span className="text-xs font-medium">
+                      {platforms?.[1]?.name ?? 'Reels'}
+                    </span>
                   </div>
                   <div
                     className="flex items-center gap-1.5 transition-colors hover:text-white"
                     title="YouTube Shorts"
                   >
                     <YouTubeShortsIcon className="h-4 w-4" />
-                    <span className="text-xs font-medium">Shorts</span>
+                    <span className="text-xs font-medium">
+                      {platforms?.[2]?.name ?? 'Shorts'}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -533,7 +561,7 @@ export function HeroPremium({
                 <div className="animate-pulse-glow absolute inset-0 rounded-full bg-fuchsia-600 blur-[100px] delay-1000" />
               </div>
 
-              <HeroVideoCarousel />
+              <HeroVideoCarousel carouselLabel={section.carousel_label} />
             </div>
           </div>
         </div>

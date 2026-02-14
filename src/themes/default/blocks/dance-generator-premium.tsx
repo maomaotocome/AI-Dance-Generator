@@ -40,6 +40,7 @@ import { useAppContext } from '@/shared/contexts/app';
 import { cn } from '@/shared/lib/utils';
 
 interface DanceGeneratorPremiumProps {
+  section?: any;
   templates?: DanceTemplate[];
   maxSizeMB?: number;
   srOnlyTitle?: string;
@@ -161,12 +162,16 @@ function TemplateCard({
   onSelect,
   onPreview,
   featured = false,
+  hotLabel = 'HOT',
+  newLabel = 'NEW',
 }: {
   template: DanceTemplate;
   isSelected: boolean;
   onSelect: () => void;
   onPreview: () => void;
   featured?: boolean;
+  hotLabel?: string;
+  newLabel?: string;
 }) {
   const [isHovering, setIsHovering] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -250,12 +255,12 @@ function TemplateCard({
         <div className="absolute top-2 left-2 flex flex-col gap-1">
           {featured && (
             <div className="rounded-md bg-gradient-to-r from-orange-500 to-red-600 px-1.5 py-0.5 text-[10px] font-bold tracking-wider text-white uppercase shadow-lg">
-              HOT
+              {hotLabel}
             </div>
           )}
           {!featured && template.new && (
             <div className="rounded-md bg-blue-500 px-1.5 py-0.5 text-[10px] font-bold tracking-wide text-white uppercase shadow-sm">
-              NEW
+              {newLabel}
             </div>
           )}
         </div>
@@ -472,11 +477,15 @@ function TemplateGrid({
   selectedId,
   onSelect,
   onPreview,
+  hotLabel,
+  newLabel,
 }: {
   templates: DanceTemplate[];
   selectedId?: string;
   onSelect: (t: DanceTemplate) => void;
   onPreview: (t: DanceTemplate) => void;
+  hotLabel?: string;
+  newLabel?: string;
 }) {
   return (
     <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
@@ -487,6 +496,8 @@ function TemplateGrid({
           isSelected={selectedId === template.id}
           onSelect={() => onSelect(template)}
           onPreview={() => onPreview(template)}
+          hotLabel={hotLabel}
+          newLabel={newLabel}
         />
       ))}
     </div>
@@ -494,6 +505,7 @@ function TemplateGrid({
 }
 
 export function DanceGeneratorPremium({
+  section,
   templates = DANCE_TEMPLATES,
   maxSizeMB = 50,
   srOnlyTitle,
@@ -812,21 +824,21 @@ export function DanceGeneratorPremium({
             <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-purple-500/20 bg-purple-500/10 px-4 py-1.5 backdrop-blur-md">
               <Zap className="h-4 w-4 text-purple-400" />
               <span className="text-sm font-medium text-purple-200">
-                AI-Powered Generation
+                {section?.badge ?? 'AI-Powered Generation'}
               </span>
             </div>
             <h2
               className="text-4xl font-bold text-white sm:text-5xl md:text-6xl"
               style={{ fontFamily: 'var(--font-display)' }}
             >
-              Create Your{' '}
+              {section?.title ?? 'Create Your'}{' '}
               <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
-                Dance Video
+                {section?.title_highlight ?? 'Dance Video'}
               </span>
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-white/60">
-              Upload a photo, choose a trending dance, and watch AI bring it to
-              life in seconds.
+              {section?.subtitle ??
+                'Upload a photo, choose a trending dance, and watch AI bring it to life in seconds.'}
             </p>
           </div>
 
@@ -842,7 +854,7 @@ export function DanceGeneratorPremium({
                       {t('step1_title')}
                     </h3>
                     <p className="text-sm text-white/50">
-                      Upload a full-body photo for best results
+                      {section?.upload_hint ?? t('upload_hint')}
                     </p>
                   </div>
                 </div>
@@ -875,7 +887,8 @@ export function DanceGeneratorPremium({
                         {t('step2_title')}
                       </h3>
                       <p className="text-sm text-white/50">
-                        Select a dance style from our library
+                        {section?.step2_hint ??
+                          'Select a dance style from our library'}
                       </p>
                     </div>
                   </div>
@@ -893,7 +906,7 @@ export function DanceGeneratorPremium({
                         )}
                       >
                         {cat.value === 'all'
-                          ? 'All'
+                          ? (section?.category_all ?? t('category_all'))
                           : t(`category_${cat.value}`)}
                         <span
                           className={cn(
@@ -914,6 +927,8 @@ export function DanceGeneratorPremium({
                     selectedId={selectedTemplate?.id}
                     onSelect={setSelectedTemplate}
                     onPreview={setPreviewingTemplate}
+                    hotLabel={section?.hot_label}
+                    newLabel={section?.new_label}
                   />
                 </div>
               </div>
@@ -963,12 +978,16 @@ export function DanceGeneratorPremium({
                           </>
                         ) : selectedTemplate ? (
                           <>
-                            <Image
-                              src={selectedTemplate.thumbnailUrl}
-                              alt="Preview"
-                              fill
-                              className="object-cover opacity-30 blur-sm"
-                            />
+                            {selectedTemplate.thumbnailUrl ? (
+                              <Image
+                                src={selectedTemplate.thumbnailUrl}
+                                alt="Preview"
+                                fill
+                                className="object-cover opacity-30 blur-sm"
+                              />
+                            ) : (
+                              <div className="absolute inset-0 bg-gradient-to-br from-violet-500/20 via-purple-500/10 to-fuchsia-500/20" />
+                            )}
                             <div className="z-10 mb-4 flex h-20 w-20 items-center justify-center rounded-full border border-white/20 bg-white/10 shadow-xl backdrop-blur-md">
                               <Sparkles className="h-8 w-8 text-white drop-shadow-lg" />
                             </div>
@@ -1134,7 +1153,7 @@ export function DanceGeneratorPremium({
                   setPreviewingTemplate(null);
                 }}
               >
-                Use This Template
+                {section?.use_template ?? 'Use This Template'}
               </Button>
             </div>
           </div>

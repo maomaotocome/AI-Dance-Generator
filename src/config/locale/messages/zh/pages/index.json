@@ -19,10 +19,10 @@
         "description": "用 AI 让任何人跳舞 - 上传照片，选择热门舞蹈，几秒钟创建 TikTok 爆款视频。<br/><br/>无水印。无需舞蹈技能。纯粹的病毒魔法。",
         "announcement": {
           "badge": "爆火",
-          "title": "本月视频累计播放量突破 5000 万",
+          "title": "每周更新全新 AI 舞蹈模板",
           "url": "#generator"
         },
-        "tip": "全球 50,000+ 创作者都在用",
+        "tip": "深受全球创作者喜爱",
         "buttons": [
           {
             "title": "免费让照片跳舞",
@@ -40,18 +40,46 @@
           }
         ],
         "show_avatars": true,
-        "avatars_tip": "加入 50,000+ 创作者",
-        "show_award": false
+        "avatars_tip": "深受全球创作者喜爱",
+        "show_award": false,
+        "carousel_label": "使用前 → 使用后",
+        "steps": [
+          { "label": "上传" },
+          { "label": "AI 魔法" },
+          { "label": "视频" }
+        ],
+        "social_proof_text": "深受创作者",
+        "social_proof_sub": "喜爱",
+        "platforms_label": "适用于",
+        "platforms": [
+          { "name": "TikTok" },
+          { "name": "Reels" },
+          { "name": "Shorts" }
+        ]
       },
       "generator": {
         "id": "generator",
-        "block": "dance-generator-premium"
+        "block": "dance-generator-premium",
+        "badge": "AI 驱动生成",
+        "title": "创建你的",
+        "title_highlight": "跳舞视频",
+        "subtitle": "上传照片，选择热门舞蹈，AI 几秒钟让它动起来。",
+        "upload_hint": "上传全身照效果最佳",
+        "step2_hint": "从舞蹈库中选择风格",
+        "category_all": "全部",
+        "hot_label": "热门",
+        "new_label": "新",
+        "use_template": "使用此模板"
       },
       "showcases": {
         "id": "showcases",
         "block": "showcases-premium",
         "title": "正在病毒式传播的视频",
         "description": "用户真实案例。这些视频都在 60 秒内制作完成。",
+        "badge": "正在热播",
+        "cta_button": "创建你自己的 AI 跳舞视频",
+        "cta_sub": "无需信用卡 · 秒速生成",
+        "share_label": "分享",
         "items": [
           {
             "title": "TikTok 230万播放",
@@ -233,7 +261,7 @@
       "cta": {
         "id": "cta",
         "title": "你的下一个爆款视频只需 60 秒",
-        "description": "加入 50,000+ 已经在做 AI 跳舞视频的创作者。今天免费开始。",
+        "description": "几秒钟创建病毒式 AI 跳舞视频。今天免费试用我们的 AI 跳舞生成器。",
         "buttons": [
           {
             "title": "免费创建第一个视频",

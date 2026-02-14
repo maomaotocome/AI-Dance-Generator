@@ -24,10 +24,10 @@
         "description": "Make anyone dance with our AI dance video generator - upload a photo, pick a trending dance template, and create TikTok-ready dance videos in seconds.<br/><br/>No watermarks. No dancing skills needed. The best AI dance generator for viral content.",
         "announcement": {
           "badge": "Trending",
-          "title": "50M+ AI dance videos generated",
+          "title": "New AI Dance Templates Added Weekly",
           "url": "#generator"
         },
-        "tip": "Trusted by 50,000+ creators using our AI dance generator",
+        "tip": "Loved by creators worldwide",
         "buttons": [
           {
             "title": "Create AI Dance Video Free",
@@ -45,18 +45,46 @@
           }
         ],
         "show_avatars": true,
-        "avatars_tip": "Join 50,000+ AI dance creators",
-        "show_award": false
+        "avatars_tip": "Loved by creators worldwide",
+        "show_award": false,
+        "carousel_label": "Before → After",
+        "steps": [
+          { "label": "Upload" },
+          { "label": "AI Magic" },
+          { "label": "Video" }
+        ],
+        "social_proof_text": "Loved by Creators",
+        "social_proof_sub": "Worldwide",
+        "platforms_label": "Works with",
+        "platforms": [
+          { "name": "TikTok" },
+          { "name": "Reels" },
+          { "name": "Shorts" }
+        ]
       },
       "generator": {
         "id": "generator",
-        "block": "dance-generator-premium"
+        "block": "dance-generator-premium",
+        "badge": "AI-Powered Generation",
+        "title": "Create Your",
+        "title_highlight": "Dance Video",
+        "subtitle": "Upload a photo, choose a trending dance, and watch AI bring it to life in seconds.",
+        "upload_hint": "Upload a full-body photo for best results",
+        "step2_hint": "Select a dance style from our library",
+        "category_all": "All",
+        "hot_label": "HOT",
+        "new_label": "NEW",
+        "use_template": "Use This Template"
       },
       "showcases": {
         "id": "showcases",
         "block": "showcases-premium",
         "title": "AI Dance Videos Going Viral Right Now",
         "description": "Real AI dance generator results from our users. These AI dance videos were created in under 60 seconds using our photo to dance video technology.",
+        "badge": "Trending Now",
+        "cta_button": "Create Your Own AI Dance Video",
+        "cta_sub": "No credit card required · Generates in seconds",
+        "share_label": "Share",
         "items": [
           {
             "title": "2.3M Views - Baby Dance",
@@ -302,7 +330,7 @@
       "cta": {
         "id": "cta",
         "title": "Create Your First AI Dance Video Now",
-        "description": "Join 50,000+ creators already making viral AI dance videos. Try our AI dance generator free today and see why it's the best AI dance video maker.",
+        "description": "Create viral AI dance videos in seconds. Try our AI dance generator free today and see why creators love it.",
         "buttons": [
           {
             "title": "Start AI Dance Generator Free",
